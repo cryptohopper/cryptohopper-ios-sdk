@@ -12,7 +12,7 @@ class HopperAPISessionManager {
     
     static let shared = HopperAPISessionManager()
     private init () {}
-    private let keychain = Keychain(service: "hooper-api-keychain")
+    private let keychain = Keychain(service: "cryptohopper-keychain-group")
     
     var session:HopperAPISession? {
         set {
@@ -35,8 +35,6 @@ class HopperAPISessionManager {
         guard let _ = session else {return false}
         return true
     }
-    
-
     
     func checkAuthentication(onSuccess:@escaping HopperAPIEmptySuccessClosure, onFail: HopperAPIRequestFailClosure? = nil) {
         if hasSession {

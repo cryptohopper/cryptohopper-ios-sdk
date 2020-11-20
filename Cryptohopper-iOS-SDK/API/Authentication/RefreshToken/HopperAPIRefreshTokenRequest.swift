@@ -12,11 +12,8 @@ class HopperAPIRefreshTokenRequest: HopperAPIRequest<HopperAPIAuthenticationResp
     
     convenience init(refreshToken:String) {
         self.init()
+        self.changeUrlPath(path: "/v1" + "/oauth2/refreshToken")
         addBodyItem(name: "refreshToken", value: refreshToken)
-    }
-    
-    override var path: String {
-        return "/oauth2/refreshToken"
     }
     
     override var httpMethod: HopperAPIHttpMethod {
