@@ -12,6 +12,8 @@ class HopperAPIAuthenticationRequest: HopperAPIRequest<HopperAPIAuthenticationRe
     
     convenience init(username : String , password : String) {
         self.init()
+        self.changeUrlPath(path:"/oauth2/token")
+        self.setIsAuthenticationRequest(isAuthenticationMethod: true)
         addBodyItem(name: "grant_type", value: "password")
         addBodyItem(name: "client_id", value: HopperAPIConfigurationManager.shared.config.clientId!)
         addBodyItem(name: "username", value: username)
@@ -21,10 +23,6 @@ class HopperAPIAuthenticationRequest: HopperAPIRequest<HopperAPIAuthenticationRe
         addBodyItem(name: "platform", value: "iOS")
     }
     
-    override var path: String {
-        return "/oauth2/token"
-    }
-    
     override var httpMethod: HopperAPIHttpMethod {
         return .POST
     }
@@ -32,4 +30,5 @@ class HopperAPIAuthenticationRequest: HopperAPIRequest<HopperAPIAuthenticationRe
     override var needsAuthentication: Bool {
         return false
     }
+    
 }
