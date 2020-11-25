@@ -31,7 +31,7 @@ class HopperAPISessionManager {
         }
     }
     
-    private var hasSession:Bool {
+    var hasSession:Bool {
         guard let _ = session else {return false}
         return true
     }
