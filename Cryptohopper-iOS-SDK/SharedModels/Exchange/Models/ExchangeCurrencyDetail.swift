@@ -10,7 +10,7 @@ import Foundation
 public class ExchangeCurrencyDetail : Codable {
     
     var id : Int?
-    //var name : String?
+    var name : String?
     var txFee : String?
     var minConf : String?
     var depositAddress : String?
@@ -21,7 +21,7 @@ public class ExchangeCurrencyDetail : Codable {
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
-        //case name = "name"
+        case name = "name"
         case txFee = "txFee"
         case minConf = "minConf"
         case depositAddress = "depositAddress"

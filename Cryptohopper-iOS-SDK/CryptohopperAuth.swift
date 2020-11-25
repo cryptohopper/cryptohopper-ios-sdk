@@ -20,4 +20,12 @@ import UIKit
         }
     }
     
+    public static func logout() {
+        HopperAPISessionManager.shared.removeSession()
+    }
+    
+    public static func isAuthenticated() -> Bool {
+        return HopperAPISessionManager.shared.hasSession
+    }
+    
 }
