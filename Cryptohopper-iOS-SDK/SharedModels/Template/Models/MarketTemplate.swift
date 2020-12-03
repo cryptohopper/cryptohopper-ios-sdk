@@ -9,23 +9,23 @@ import Foundation
 
 public class MarketTemplate : Codable {
     
-    var templateId : String?
-    var type : String?
-    var itemId : String?
-    var name : String?
-    var description : String?
-    var logo : String?
-    var exchange : String?
-    var baseCurrency : String?
-    var currencies : String?
-    var hiddenConfig : String?
-    var hasTriggers : Int?
-    var hasConfigPool : Int?
-    var hasSignals : Int?
-    var rating : String?
-    var totalVotes : String?
-    var createdDate : String?
-    var link : String?
+    public private(set) var templateId : String?
+    public private(set) var type : String?
+    public private(set) var itemId : String?
+    public private(set) var name : String?
+    public private(set) var description : String?
+    public private(set) var logo : String?
+    public private(set) var exchange : String?
+    public private(set) var baseCurrency : String?
+    public private(set) var currencies : String?
+    public private(set) var hiddenConfig : String?
+    public private(set) var hasTriggers : Int?
+    public private(set) var hasConfigPool : Int?
+    public private(set) var hasSignals : Int?
+    public private(set) var rating : String?
+    public private(set) var totalVotes : String?
+    public private(set) var createdDate : String?
+    public private(set) var link : String?
     
     private enum CodingKeys: String, CodingKey {
         case templateId = "template_id"

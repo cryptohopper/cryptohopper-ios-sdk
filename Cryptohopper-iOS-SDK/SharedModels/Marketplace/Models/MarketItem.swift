@@ -7,17 +7,17 @@
 
 import Foundation
 
-class MarketItem : Codable {
+public class MarketItem : Codable {
     
-    var id : String?
-    var itemType : String?
-    var logo : String?
-    var name : String?
-    var description : String?
-    var totalVotes : String?
-    var rating : String?
-    var sales : Int?
-    var price : Double?
+    public private(set) var id : String?
+    public private(set) var itemType : String?
+    public private(set) var logo : String?
+    public private(set) var name : String?
+    public private(set) var description : String?
+    public private(set) var totalVotes : String?
+    public private(set) var rating : String?
+    public private(set) var sales : Int?
+    public private(set) var price : Double?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

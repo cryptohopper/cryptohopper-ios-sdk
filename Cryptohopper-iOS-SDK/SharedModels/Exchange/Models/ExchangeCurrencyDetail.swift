@@ -9,15 +9,15 @@ import Foundation
 
 public class ExchangeCurrencyDetail : Codable {
     
-    var id : Int?
-    var name : String?
-    var txFee : String?
-    var minConf : String?
-    var depositAddress : String?
-    var disabled : Int?
-    var delisted : Int?
-    var frozen : Int?
-    var notice : String?
+    public private(set) var id : Int?
+    public private(set) var name : String?
+    public private(set) var txFee : String?
+    public private(set) var minConf : String?
+    public private(set) var depositAddress : String?
+    public private(set) var disabled : Int?
+    public private(set) var delisted : Int?
+    public private(set) var frozen : Int?
+    public private(set) var notice : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

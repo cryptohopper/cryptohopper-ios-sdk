@@ -9,30 +9,30 @@ import Foundation
 
 public class HopperPosition : Codable {
     
-    var id : String?
-    var pair : String?
-    var currency : String?
-    var amount : String?
-    var rate : String?
-    var buyId : String?
-    var orderId : String?
-    var sellId : String?
-    var buyTrigger : String?
-    var sellTrigger : String?
-    var taValues : String?
-    var percentageProfit : String?
-    var stopLoss : String?
-    var stopLossPercentage : String?
-    var sellRate : String?
-    var trailingPercentage : String?
-    var trailingArm : String?
-    var trailingArmPercentage : String?
-    var buyTime : String?
-    var sellTime : String?
-    var autoCloseTime : String?
-    var hold : String?
-    var sold : String?
-    var cost : String?
+    public private(set) var id : String?
+    public private(set) var pair : String?
+    public private(set) var currency : String?
+    public private(set) var amount : String?
+    public private(set) var rate : String?
+    public private(set) var buyId : String?
+    public private(set) var orderId : String?
+    public private(set) var sellId : String?
+    public private(set) var buyTrigger : String?
+    public private(set) var sellTrigger : String?
+    public private(set) var taValues : String?
+    public private(set) var percentageProfit : String?
+    public private(set) var stopLoss : String?
+    public private(set) var stopLossPercentage : String?
+    public private(set) var sellRate : String?
+    public private(set) var trailingPercentage : String?
+    public private(set) var trailingArm : String?
+    public private(set) var trailingArmPercentage : String?
+    public private(set) var buyTime : String?
+    public private(set) var sellTime : String?
+    public private(set) var autoCloseTime : String?
+    public private(set) var hold : String?
+    public private(set) var sold : String?
+    public private(set) var cost : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

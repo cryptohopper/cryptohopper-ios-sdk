@@ -9,15 +9,15 @@ import Foundation
 
 public class MarketReview : Codable {
     
-    var id : Int?
-    var itemId : Int?
-    var itemType : String?
-    var replyTo : String?
-    var reviewName : String?
-    var review : String?
-    var rating : Double?
-    var createdDate : Date?
-    var updatedDate : Date?
+    public private(set) var id : Int?
+    public private(set) var itemId : Int?
+    public private(set) var itemType : String?
+    public private(set) var replyTo : String?
+    public private(set) var reviewName : String?
+    public private(set) var review : String?
+    public private(set) var rating : Double?
+    public private(set) var createdDate : Date?
+    public private(set) var updatedDate : Date?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

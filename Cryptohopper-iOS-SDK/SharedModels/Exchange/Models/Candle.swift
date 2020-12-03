@@ -9,13 +9,13 @@ import Foundation
 
 public class Candle : Codable {
     
-    var date : Date?
-    var high : Double?
-    var low : Double?
-    var open : Double?
-    var close : Double?
-    var volume : Double?
-    var quoteVolume : Double?
+    public private(set) var date : Date?
+    public private(set) var high : Double?
+    public private(set) var low : Double?
+    public private(set) var open : Double?
+    public private(set) var close : Double?
+    public private(set) var volume : Double?
+    public private(set) var quoteVolume : Double?
     
     private enum CodingKeys: String, CodingKey {
         case date = "date"

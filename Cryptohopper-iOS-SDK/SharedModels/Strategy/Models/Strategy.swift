@@ -9,21 +9,21 @@ import Foundation
 
 public class Strategy : Codable {
     
-    var id : String?
-    var type : String?
-    var name : String?
-    var description : String?
-    var logo : String?
-    var createdDate : String?
-    var marketId : String?
-    var image : String?
-    var hiddenConfiguration : String?
-    var link : String?
+    public private(set) var id : String?
+    public private(set) var type : String?
+    public private(set) var name : String?
+    public private(set) var description : String?
+    public private(set) var logo : String?
+    public private(set) var createdDate : String?
+    public private(set) var marketId : String?
+    public private(set) var image : String?
+    public private(set) var hiddenConfiguration : String?
+    public private(set) var link : String?
     
-    var itemId : String?
-    var totalVotes : String?
-    var rating : String?
-    var sales : String?
+    public private(set) var itemId : String?
+    public private(set) var totalVotes : String?
+    public private(set) var rating : String?
+    public private(set) var sales : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

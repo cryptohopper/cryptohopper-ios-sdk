@@ -9,28 +9,28 @@ import Foundation
 
 public class MarketSignalPerformance : Codable {
     
-    var id : String?
-    var signalId : String?
-    var exchange : String?
-    var baseCurrency : String?
-    var currency : String?
-    var market : String?
-    var date : String?
-    var signalRate : String?
-    var signalType : String
-    var signalConfig : [String]?
-    var result5min : String?
-    var result15min : String?
-    var result1hour : String?
-    var result3hour : String?
-    var result6hour : String?
-    var result12hour : String?
-    var result1day : String?
-    var result3day : String?
-    var result1week : String?
-    var result1month : String?
-    var resultHighest : String?
-    var resultLowest : String?
+    public private(set) var id : String?
+    public private(set) var signalId : String?
+    public private(set) var exchange : String?
+    public private(set) var baseCurrency : String?
+    public private(set) var currency : String?
+    public private(set) var market : String?
+    public private(set) var date : String?
+    public private(set) var signalRate : String?
+    public private(set) var signalType : String
+    public private(set) var signalConfig : [String]?
+    public private(set) var result5min : String?
+    public private(set) var result15min : String?
+    public private(set) var result1hour : String?
+    public private(set) var result3hour : String?
+    public private(set) var result6hour : String?
+    public private(set) var result12hour : String?
+    public private(set) var result1day : String?
+    public private(set) var result3day : String?
+    public private(set) var result1week : String?
+    public private(set) var result1month : String?
+    public private(set) var resultHighest : String?
+    public private(set) var resultLowest : String?
     
     
     private enum CodingKeys: String, CodingKey {

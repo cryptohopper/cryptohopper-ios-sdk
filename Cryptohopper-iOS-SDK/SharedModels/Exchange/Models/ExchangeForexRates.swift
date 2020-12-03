@@ -9,9 +9,9 @@ import Foundation
 
 public class ExchangeForexRates : Codable {
     
-    var quoteCurrency : String?
-    var currency : String?
-    var exchangeRate : String?
+    public private(set) var quoteCurrency : String?
+    public private(set) var currency : String?
+    public private(set) var exchangeRate : String?
     
     private enum CodingKeys: String, CodingKey {
         case quoteCurrency = "quoteCurrency"

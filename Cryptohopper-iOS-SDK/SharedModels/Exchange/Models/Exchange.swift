@@ -10,27 +10,27 @@ import Foundation
 public class Exchange : Codable {
     
     //Basic
-    var exchangeKey : String?
-    var name : String?
+    public private(set) var exchangeKey : String?
+    public private(set) var name : String?
     
     //Details
-    var description : String?
-    var logo : String?
-    var websiteLink : String?
-    var signupLink : String?
-    var tutorialLink : String?
-    var apiLink : String?
-    var extraLinks : [[String:String]]?
-    var baseCurrencies : String?
-    var defaultBaseCurrency : String?
-    var apiConfigFields : [String]?
-    var exchangeStatus : String?
-    var uptimeOneHour : String?
-    var uptimeOneWeek : String?
-    var uptimeOneMonth : String?
-    var preiumPartner : String?
-    var maintence : String?
-    var maintanceMessage : String?
+    public private(set) var description : String?
+    public private(set) var logo : String?
+    public private(set) var websiteLink : String?
+    public private(set) var signupLink : String?
+    public private(set) var tutorialLink : String?
+    public private(set) var apiLink : String?
+    public private(set) var extraLinks : [[String:String]]?
+    public private(set) var baseCurrencies : String?
+    public private(set) var defaultBaseCurrency : String?
+    public private(set) var apiConfigFields : [String]?
+    public private(set) var exchangeStatus : String?
+    public private(set) var uptimeOneHour : String?
+    public private(set) var uptimeOneWeek : String?
+    public private(set) var uptimeOneMonth : String?
+    public private(set) var preiumPartner : String?
+    public private(set) var maintence : String?
+    public private(set) var maintanceMessage : String?
     
     private enum CodingKeys: String, CodingKey {
         case exchangeKey = "exchange_key"

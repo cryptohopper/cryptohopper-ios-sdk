@@ -9,14 +9,14 @@ import Foundation
 
 public class HopperSubscription : Codable {
     
-    let hopperId : Int?
-    let subscriptionId : Int?
-    let startTime : String?
-    let endTime : String?
-    let subscriptionStatus : String?
-    let autoRenewal : String?
-    let planName : String?
-    let planDescription : String?
+    public private(set) var hopperId : Int?
+    public private(set) var subscriptionId : Int?
+    public private(set) var startTime : String?
+    public private(set) var endTime : String?
+    public private(set) var subscriptionStatus : String?
+    public private(set) var autoRenewal : String?
+    public private(set) var planName : String?
+    public private(set) var planDescription : String?
     
     private enum CodingKeys: String, CodingKey {
         case hopperId = "hopper_id"

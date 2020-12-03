@@ -9,11 +9,11 @@ import Foundation
 
 public class Signal : Codable {
     
-    let name : String?
-    let collectCurrency : String?
-    let signalTime : Date?
-    let signalType : String?
-    let coin : String?
+    public private(set) var name : String?
+    public private(set) var collectCurrency : String?
+    public private(set) var signalTime : Date?
+    public private(set) var signalType : String?
+    public private(set) var coin : String?
     
     private enum CodingKeys: String, CodingKey {
         case name = "name"

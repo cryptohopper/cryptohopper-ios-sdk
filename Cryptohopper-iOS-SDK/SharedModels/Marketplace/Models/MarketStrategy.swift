@@ -9,30 +9,30 @@ import Foundation
 
 public class MarketStrategy : Codable {
     
-    var id : String?
-    var itemId : String?
-    var type : String?
-    var name : String?
-    var logo : String?
-    var featureImage : String?
-    var link : String?
-    var rating : String?
-    var totalVotes : String?
-    var sales : String?
-    var priceId : String?
+    public private(set) var id : String?
+    public private(set) var itemId : String?
+    public private(set) var type : String?
+    public private(set) var name : String?
+    public private(set) var logo : String?
+    public private(set) var featureImage : String?
+    public private(set) var link : String?
+    public private(set) var rating : String?
+    public private(set) var totalVotes : String?
+    public private(set) var sales : String?
+    public private(set) var priceId : String?
     
-    var exchange : String?
-    var baseCurrency : String?
-    var version : Int?
-    var updated : Date?
-    var updateInfo : String?
-    var created : Date?
-    var description : String?
-    var hidden_configuration : [String]?
-    var allowedCoins : [String]?
-    var reviews : MarketStrategyReviewData?
-    var price : Double?
-    var priceCurrency : String?
+    public private(set) var exchange : String?
+    public private(set) var baseCurrency : String?
+    public private(set) var version : Int?
+    public private(set) var updated : Date?
+    public private(set) var updateInfo : String?
+    public private(set) var created : Date?
+    public private(set) var description : String?
+    public private(set) var hidden_configuration : [String]?
+    public private(set) var allowedCoins : [String]?
+    public private(set) var reviews : MarketStrategyReviewData?
+    public private(set) var price : Double?
+    public private(set) var priceCurrency : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -64,9 +64,9 @@ public class MarketStrategy : Codable {
 }
 
 
-class MarketStrategyReviewData : Codable {
+public class MarketStrategyReviewData : Codable {
     
-    var data : [MarketReview]?
+    public private(set) var data : [MarketReview]?
     
     private enum CodingKeys : String,CodingKey {
         case data = "data"

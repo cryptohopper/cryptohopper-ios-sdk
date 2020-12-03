@@ -9,13 +9,13 @@ import Foundation
 
 public class UserNotification : Codable {
     
-    var id : String?
-    var messageType : String?
-    var title : String?
-    var message : String?
-    var link : String?
-    var extraData : String?
-    var date : String?
+    public private(set) var id : String?
+    public private(set) var messageType : String?
+    public private(set) var title : String?
+    public private(set) var message : String?
+    public private(set) var link : String?
+    public private(set) var extraData : String?
+    public private(set) var date : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

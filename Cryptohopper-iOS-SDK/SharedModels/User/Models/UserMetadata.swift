@@ -9,7 +9,7 @@ import Foundation
 
 public class UserMetadata : Codable {
     
-    var id : String?
+    public private(set) var id : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

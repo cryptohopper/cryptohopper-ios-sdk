@@ -10,16 +10,16 @@ import Foundation
 
 public class Ticker : Codable {
     
-    var currencyPair : String?
-    var last : String?
-    var lowestAsk : String?
-    var highestBid : String?
-    var percentChange : String?
-    var baseVolume : String
-    var quoteVolume : String?
-    var isFrozen : Int?
-    var oneDayHigh : String?
-    var oneDayLow : String?
+    public private(set) var currencyPair : String?
+    public private(set) var last : String?
+    public private(set) var lowestAsk : String?
+    public private(set) var highestBid : String?
+    public private(set) var percentChange : String?
+    public private(set) var baseVolume : String
+    public private(set) var quoteVolume : String?
+    public private(set) var isFrozen : Int?
+    public private(set) var oneDayHigh : String?
+    public private(set) var oneDayLow : String?
     
     private enum CodingKeys: String, CodingKey {
         case currencyPair = "currencyPair"

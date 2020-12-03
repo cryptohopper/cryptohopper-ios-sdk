@@ -9,10 +9,10 @@ import Foundation
 
 public class HopperDashboardStats : Codable {
     
-    let totalInvested : String?
-    let totalReturns : String?
-    let totalPositions : String?
-    let totalFees : String?
+    public private(set) var totalInvested : String?
+    public private(set) var totalReturns : String?
+    public private(set) var totalPositions : String?
+    public private(set) var totalFees : String?
     
     private enum CodingKeys: String, CodingKey {
         case totalInvested = "total_invest"

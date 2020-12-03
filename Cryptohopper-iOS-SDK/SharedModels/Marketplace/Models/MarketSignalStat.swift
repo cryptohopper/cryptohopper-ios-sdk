@@ -9,11 +9,11 @@ import Foundation
 
 public class MarketSignalStat : Codable {
     
-    var weekly : String?
-    var daily : String?
-    var totalSignals3Months : String?
-    var averageProfit : String?
-    var totalSubscribers : String?
+    public private(set) var weekly : String?
+    public private(set) var daily : String?
+    public private(set) var totalSignals3Months : String?
+    public private(set) var averageProfit : String?
+    public private(set) var totalSubscribers : String?
     
     private enum CodingKeys: String, CodingKey {
         case weekly = "weekly"
