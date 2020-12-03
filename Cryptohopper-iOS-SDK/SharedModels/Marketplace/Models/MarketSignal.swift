@@ -9,23 +9,23 @@ import Foundation
 
 public class MarketSignal : Codable {
     
-    var id : String?
-    var signalId : String?
-    var performance : [MarketSignalPerformanceTick]?
-    var planId : String?
-    var name : String?
-    var description : String?
-    var logo : String?
-    var type : String?
-    var featureImage : String?
-    var subscriptionFeeCurrency : String?
-    var subscriptionFee : String?
-    var exchanges : String?
-    var performancePct : String?
-    var rating : String?
-    var totalVotes : String?
-    var link : String?
-    var lastTenSignals : [Signal]?
+    public private(set) var id : String?
+    public private(set) var signalId : String?
+    public private(set) var performance : [MarketSignalPerformanceTick]?
+    public private(set) var planId : String?
+    public private(set) var name : String?
+    public private(set) var description : String?
+    public private(set) var logo : String?
+    public private(set) var type : String?
+    public private(set) var featureImage : String?
+    public private(set) var subscriptionFeeCurrency : String?
+    public private(set) var subscriptionFee : String?
+    public private(set) var exchanges : String?
+    public private(set) var performancePct : String?
+    public private(set) var rating : String?
+    public private(set) var totalVotes : String?
+    public private(set) var link : String?
+    public private(set) var lastTenSignals : [Signal]?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

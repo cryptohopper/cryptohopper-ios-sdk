@@ -9,16 +9,16 @@ import Foundation
 
 public class UserSubscription : Codable {
     
-    var subscriptionId : String?
-    var planId : String?
-    var paymentTerm : String?
-    var paymentMethodId : String?
-    var startTime : String?
-    var endTime : String?
-    var subscriptionStatus : String?
-    var autoRenewal : String?
-    var planName : String?
-    var planDescription : String?
+    public private(set) var subscriptionId : String?
+    public private(set) var planId : String?
+    public private(set) var paymentTerm : String?
+    public private(set) var paymentMethodId : String?
+    public private(set) var startTime : String?
+    public private(set) var endTime : String?
+    public private(set) var subscriptionStatus : String?
+    public private(set) var autoRenewal : String?
+    public private(set) var planName : String?
+    public private(set) var planDescription : String?
     
     private enum CodingKeys: String, CodingKey {
         case subscriptionId = "subscription_id"

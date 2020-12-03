@@ -9,169 +9,169 @@ import Foundation
 
 public class HopperConfig : Codable {
     
-    var name : String?
-    var live : String?
-    var submit : String?
-    var status : String?
-    var exchange : String?
-    var api_passphrase : String?
-    var api_key : String?
-    var api_secret : String?
-    var stop_buying : Int?
-    var stop_selling : Int?
-    var paper_trading : String?
-    var paper_trading_account : String?
-    var hopper_id : String?
-    var last_loaded_config : String?
-    var last_loaded_config_date : String?
-    var minimum_profit : String?
-    var gdax_post_only : String?
-    var extra_api_key : String?
-    var extra_api_secret : String?
-    var max_open_time : String?
-    var base_coins : [String]?
-    var trading_fees : [String:Double]?
-    var loop_waittime : Int?
-    var buy_btc_amount : Double?
-    var send_trade_email : Int?
-    var send_trade_error_email : Int?
-    var send_cancelled_email : Int?
-    var template_type : String?
-    var template_id : String?
-    var silent : Int?
-    var arbitrage : String?
-    var from_market_id : String?
-    var set_percentage : String?
-    var collect_currency : String?
-    var allowed_coins : [String]?
-    var walletscrubber_leftovers : Int?
-    var walletscrubber_auto : Int?
-    var walletscrubber_noopen : Int?
-    var autosync : Int?
-    var autosync_all_coins : Int?
-    var autosync_allowed_coins : [String]?
-    var auto_merge_positions : String?
-    var output_live_feed : Int?
-    var output_errors_only : Int?
-    var hold_assets : String?
-    var set_percentage_ask : String?
-    var set_percentage_bid : String?
-    var ticker_type : String?
-    var perc_buy_amount : String?
-    var min_buy_amount : String?
-    var min_buy_amount_force : String?
-    var max_amount_allocated : String?
-    var strategy : String?
-    var sell_with_strategy : String?
-    var num_targets_per_buy : String?
-    var rsi_candle_size : String?
-    var rsi_period : String?
-    var rsi_oversold : String?
-    var bbands_candle_size : String?
-    var bbands_days : String?
-    var bbands_deviation : String?
-    var bid_percentage : String?
-    var bid_percentage_type : String?
-    var max_open_time_buy : String?
-    var max_open_positions : String?
-    var max_open_positions_per_coin : String?
-    var one_open_order : String?
-    var only_when_positive : String?
-    var only_when_positive_time : String?
-    var cooldown : String?
-    var cooldown_when : String?
-    var cooldown_count : String?
-    var cooldown_val : String?
-    var ask_percentage : String?
-    var ask_percentage_type : String?
-    var advanced_ta_candle_size : String?
-    var allow_all_coins : String?
-    var buy_order_type : String?
-    var dca_order_type : String?
-    var sell_order_type : String?
-    var advanced_ta_rsi_period : String?
-    var advanced_ta_ema_disabled : String?
-    var advanced_ta_rsi_disabled : String?
-    var advanced_ta_rsi_oversold : String?
-    var advanced_ta_sma_disabled : String?
-    var advanced_ta_stoch_fast_k : String?
-    var advanced_ta_stoch_slow_d : String?
-    var advanced_ta_stoch_slow_k : String?
-    var advanced_ta_bbands_dev_up : String?
-    var advanced_ta_bbands_dev_low : String?
-    var advanced_ta_bbands_matype : String?
-    var advanced_ta_bbands_period : String?
-    var advanced_ta_ema_necessary : String?
-    var advanced_ta_kama_disabled : String?
-    var advanced_ta_kama_short_period : String?
-    var advanced_ta_kama_long_period : String?
-    var advanced_ta_sma_short_period : String?
-    var advanced_ta_sma_long_period : String?
-    var advanced_ta_macd_disabled : String?
-    var advanced_ta_rsi_necessary : String?
-    var advanced_ta_rsi_overbought : String?
-    var advanced_ta_stoch_disabled : String?
-    var advanced_ta_stoch_oversold : String?
-    var advanced_ta_bbands_disabled : String?
-    var advanced_ta_ema_long_period : String?
-    var advanced_ta_stochrsi_fast_d : String?
-    var advanced_ta_stochrsi_fast_k : String?
-    var advanced_ta_stochrsi_period : String?
-    var advanced_ta_bbands_necessary : String?
-    var advanced_ta_ema_short_period : String?
-    var advanced_ta_macd_fast_period : String?
-    var advanced_ta_macd_slow_period : String?
-    var advanced_ta_stoch_overbought : String?
-    var advanced_ta_stochrsi_disabled : String?
-    var advanced_ta_stochrsi_oversold : String?
-    var advanced_ta_macd_signal_period : String?
-    var advanced_ta_stoch_slow_d_matype : String?
-    var advanced_ta_stoch_slow_k_matype : String?
-    var advanced_ta_stochrsi_overbought : String?
-    var advanced_ta_stochrsi_fast_d_matype : String?
-    var advanced_ta_stoch_necessary : String?
-    var advanced_ta_stochrsi_necessary : String?
-    var advanced_ta_sma_necessary : String?
-    var advanced_ta_macd_necessary : String?
-    var advanced_ta_kama_necessary : String?
-    var stop_loss : String?
-    var stop_loss_percentage : String?
-    var trailing_buy : String?
-    var stop_loss_trailing : String?
-    var stop_loss_trailing_percentage : String?
-    var stop_loss_trailing_arm : String?
-    var stop_loss_trailing_only : String?
-    var trailing_stop_loss_reset : String?
-    var trailing_stop_loss_profit : String?
-    var trailing_buy_percentage : String?
-    var short_reset_position : String?
-    var short_restore_position : String?
-    var automatic_shorting : String?
-    var max_open_short_positions : String?
-    var short_sell_with_strategy : String?
-    var short_buy_with_strategy : String?
-    var short_always : String?
-    var short_percentage_profit : String?
-    var short_use_actual_profit : String?
-    var short_stop_loss_trailing : String?
-    var short_stop_loss_trailing_percentage : String?
-    var short_stop_loss_trailing_arm : String?
-    var short_stop_loss_trailing_only : String?
-    var short_auto_close_positions : String?
-    var short_auto_close_positions_time : String?
-    var short_auto_remove_positions : String?
-    var short_auto_remove_positions_time : String?
-    var short_remove_on_loss : String?
-    var short_ignore_max_pos : String?
-    var auto_close_positions : String?
-    var auto_close_positions_time : String?
-    var auto_dca : String?
-    var auto_dca_time : String?
-    var auto_dca_max : String?
-    var auto_dca_percentage : String?
-    var auto_dca_strategy : String?
-    var auto_dca_size : String?
-    var auto_dca_size_custom : String?
+    public private(set) var name : String?
+    public private(set) var live : String?
+    public private(set) var submit : String?
+    public private(set) var status : String?
+    public private(set) var exchange : String?
+    public private(set) var api_passphrase : String?
+    public private(set) var api_key : String?
+    public private(set) var api_secret : String?
+    public private(set) var stop_buying : Int?
+    public private(set) var stop_selling : Int?
+    public private(set) var paper_trading : String?
+    public private(set) var paper_trading_account : String?
+    public private(set) var hopper_id : String?
+    public private(set) var last_loaded_config : String?
+    public private(set) var last_loaded_config_date : String?
+    public private(set) var minimum_profit : String?
+    public private(set) var gdax_post_only : String?
+    public private(set) var extra_api_key : String?
+    public private(set) var extra_api_secret : String?
+    public private(set) var max_open_time : String?
+    public private(set) var base_coins : [String]?
+    public private(set) var trading_fees : [String:Double]?
+    public private(set) var loop_waittime : Int?
+    public private(set) var buy_btc_amount : Double?
+    public private(set) var send_trade_email : Int?
+    public private(set) var send_trade_error_email : Int?
+    public private(set) var send_cancelled_email : Int?
+    public private(set) var template_type : String?
+    public private(set) var template_id : String?
+    public private(set) var silent : Int?
+    public private(set) var arbitrage : String?
+    public private(set) var from_market_id : String?
+    public private(set) var set_percentage : String?
+    public private(set) var collect_currency : String?
+    public private(set) var allowed_coins : [String]?
+    public private(set) var walletscrubber_leftovers : Int?
+    public private(set) var walletscrubber_auto : Int?
+    public private(set) var walletscrubber_noopen : Int?
+    public private(set) var autosync : Int?
+    public private(set) var autosync_all_coins : Int?
+    public private(set) var autosync_allowed_coins : [String]?
+    public private(set) var auto_merge_positions : String?
+    public private(set) var output_live_feed : Int?
+    public private(set) var output_errors_only : Int?
+    public private(set) var hold_assets : String?
+    public private(set) var set_percentage_ask : String?
+    public private(set) var set_percentage_bid : String?
+    public private(set) var ticker_type : String?
+    public private(set) var perc_buy_amount : String?
+    public private(set) var min_buy_amount : String?
+    public private(set) var min_buy_amount_force : String?
+    public private(set) var max_amount_allocated : String?
+    public private(set) var strategy : String?
+    public private(set) var sell_with_strategy : String?
+    public private(set) var num_targets_per_buy : String?
+    public private(set) var rsi_candle_size : String?
+    public private(set) var rsi_period : String?
+    public private(set) var rsi_oversold : String?
+    public private(set) var bbands_candle_size : String?
+    public private(set) var bbands_days : String?
+    public private(set) var bbands_deviation : String?
+    public private(set) var bid_percentage : String?
+    public private(set) var bid_percentage_type : String?
+    public private(set) var max_open_time_buy : String?
+    public private(set) var max_open_positions : String?
+    public private(set) var max_open_positions_per_coin : String?
+    public private(set) var one_open_order : String?
+    public private(set) var only_when_positive : String?
+    public private(set) var only_when_positive_time : String?
+    public private(set) var cooldown : String?
+    public private(set) var cooldown_when : String?
+    public private(set) var cooldown_count : String?
+    public private(set) var cooldown_val : String?
+    public private(set) var ask_percentage : String?
+    public private(set) var ask_percentage_type : String?
+    public private(set) var advanced_ta_candle_size : String?
+    public private(set) var allow_all_coins : String?
+    public private(set) var buy_order_type : String?
+    public private(set) var dca_order_type : String?
+    public private(set) var sell_order_type : String?
+    public private(set) var advanced_ta_rsi_period : String?
+    public private(set) var advanced_ta_ema_disabled : String?
+    public private(set) var advanced_ta_rsi_disabled : String?
+    public private(set) var advanced_ta_rsi_oversold : String?
+    public private(set) var advanced_ta_sma_disabled : String?
+    public private(set) var advanced_ta_stoch_fast_k : String?
+    public private(set) var advanced_ta_stoch_slow_d : String?
+    public private(set) var advanced_ta_stoch_slow_k : String?
+    public private(set) var advanced_ta_bbands_dev_up : String?
+    public private(set) var advanced_ta_bbands_dev_low : String?
+    public private(set) var advanced_ta_bbands_matype : String?
+    public private(set) var advanced_ta_bbands_period : String?
+    public private(set) var advanced_ta_ema_necessary : String?
+    public private(set) var advanced_ta_kama_disabled : String?
+    public private(set) var advanced_ta_kama_short_period : String?
+    public private(set) var advanced_ta_kama_long_period : String?
+    public private(set) var advanced_ta_sma_short_period : String?
+    public private(set) var advanced_ta_sma_long_period : String?
+    public private(set) var advanced_ta_macd_disabled : String?
+    public private(set) var advanced_ta_rsi_necessary : String?
+    public private(set) var advanced_ta_rsi_overbought : String?
+    public private(set) var advanced_ta_stoch_disabled : String?
+    public private(set) var advanced_ta_stoch_oversold : String?
+    public private(set) var advanced_ta_bbands_disabled : String?
+    public private(set) var advanced_ta_ema_long_period : String?
+    public private(set) var advanced_ta_stochrsi_fast_d : String?
+    public private(set) var advanced_ta_stochrsi_fast_k : String?
+    public private(set) var advanced_ta_stochrsi_period : String?
+    public private(set) var advanced_ta_bbands_necessary : String?
+    public private(set) var advanced_ta_ema_short_period : String?
+    public private(set) var advanced_ta_macd_fast_period : String?
+    public private(set) var advanced_ta_macd_slow_period : String?
+    public private(set) var advanced_ta_stoch_overbought : String?
+    public private(set) var advanced_ta_stochrsi_disabled : String?
+    public private(set) var advanced_ta_stochrsi_oversold : String?
+    public private(set) var advanced_ta_macd_signal_period : String?
+    public private(set) var advanced_ta_stoch_slow_d_matype : String?
+    public private(set) var advanced_ta_stoch_slow_k_matype : String?
+    public private(set) var advanced_ta_stochrsi_overbought : String?
+    public private(set) var advanced_ta_stochrsi_fast_d_matype : String?
+    public private(set) var advanced_ta_stoch_necessary : String?
+    public private(set) var advanced_ta_stochrsi_necessary : String?
+    public private(set) var advanced_ta_sma_necessary : String?
+    public private(set) var advanced_ta_macd_necessary : String?
+    public private(set) var advanced_ta_kama_necessary : String?
+    public private(set) var stop_loss : String?
+    public private(set) var stop_loss_percentage : String?
+    public private(set) var trailing_buy : String?
+    public private(set) var stop_loss_trailing : String?
+    public private(set) var stop_loss_trailing_percentage : String?
+    public private(set) var stop_loss_trailing_arm : String?
+    public private(set) var stop_loss_trailing_only : String?
+    public private(set) var trailing_stop_loss_reset : String?
+    public private(set) var trailing_stop_loss_profit : String?
+    public private(set) var trailing_buy_percentage : String?
+    public private(set) var short_reset_position : String?
+    public private(set) var short_restore_position : String?
+    public private(set) var automatic_shorting : String?
+    public private(set) var max_open_short_positions : String?
+    public private(set) var short_sell_with_strategy : String?
+    public private(set) var short_buy_with_strategy : String?
+    public private(set) var short_always : String?
+    public private(set) var short_percentage_profit : String?
+    public private(set) var short_use_actual_profit : String?
+    public private(set) var short_stop_loss_trailing : String?
+    public private(set) var short_stop_loss_trailing_percentage : String?
+    public private(set) var short_stop_loss_trailing_arm : String?
+    public private(set) var short_stop_loss_trailing_only : String?
+    public private(set) var short_auto_close_positions : String?
+    public private(set) var short_auto_close_positions_time : String?
+    public private(set) var short_auto_remove_positions : String?
+    public private(set) var short_auto_remove_positions_time : String?
+    public private(set) var short_remove_on_loss : String?
+    public private(set) var short_ignore_max_pos : String?
+    public private(set) var auto_close_positions : String?
+    public private(set) var auto_close_positions_time : String?
+    public private(set) var auto_dca : String?
+    public private(set) var auto_dca_time : String?
+    public private(set) var auto_dca_max : String?
+    public private(set) var auto_dca_percentage : String?
+    public private(set) var auto_dca_strategy : String?
+    public private(set) var auto_dca_size : String?
+    public private(set) var auto_dca_size_custom : String?
 
     private enum CodingKeys: String, CodingKey {
             case submit = "submit"

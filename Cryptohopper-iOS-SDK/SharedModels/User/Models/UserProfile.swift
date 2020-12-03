@@ -9,19 +9,19 @@ import Foundation
 
 public class UserProfile : Codable {
     
-    var id : String?
-    var name : String?
-    var username : String?
-    var email : String?
-    var website : String?
-    var region : String?
-    var postalCode : String?
-    var phone : String?
-    var country : String?
-    var city : String?
-    var addressOne : String?
-    var addressTwo : String?
-    var enableTwoFactorAuth : Bool?
+    public private(set) var id : String?
+    public private(set) var name : String?
+    public private(set) var username : String?
+    public private(set) var email : String?
+    public private(set) var website : String?
+    public private(set) var region : String?
+    public private(set) var postalCode : String?
+    public private(set) var phone : String?
+    public private(set) var country : String?
+    public private(set) var city : String?
+    public private(set) var addressOne : String?
+    public private(set) var addressTwo : String?
+    public private(set) var enableTwoFactorAuth : Bool?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

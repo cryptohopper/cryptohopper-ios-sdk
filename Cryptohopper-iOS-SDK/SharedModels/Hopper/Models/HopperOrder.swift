@@ -9,23 +9,23 @@ import Foundation
 
 public class HopperOrder : Codable {
     
-    var id : String?
-    var pair : String?
-    var orderType : String?
-    var orderId : String?
-    var orderTrigger : String?
-    var amount : String?
-    var rate : String?
-    var taValues : String?
-    var percentageProfit : Double?
-    var hold : Int?
-    var sold : Int?
-    var openTime : String?
-    var closeTime : String?
-    var bundled : Int?
-    var marketOrder : Int?
-    var cost : Double?
-    var date : String?
+    public private(set) var id : String?
+    public private(set) var pair : String?
+    public private(set) var orderType : String?
+    public private(set) var orderId : String?
+    public private(set) var orderTrigger : String?
+    public private(set) var amount : String?
+    public private(set) var rate : String?
+    public private(set) var taValues : String?
+    public private(set) var percentageProfit : Double?
+    public private(set) var hold : Int?
+    public private(set) var sold : Int?
+    public private(set) var openTime : String?
+    public private(set) var closeTime : String?
+    public private(set) var bundled : Int?
+    public private(set) var marketOrder : Int?
+    public private(set) var cost : Double?
+    public private(set) var date : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

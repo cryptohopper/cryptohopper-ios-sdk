@@ -9,16 +9,16 @@ import Foundation
 
 public class BasicTemplate : Codable {
     
-    var id : String?
-    var name : String?
-    var baseCurrency : String?
-    var image : String?
-    var coins : String?
-    var botType : String?
+    public private(set) var id : String?
+    public private(set) var name : String?
+    public private(set) var baseCurrency : String?
+    public private(set) var image : String?
+    public private(set) var coins : String?
+    public private(set) var botType : String?
     //var config : HopperConfig?
-    var configPools : [HopperConfigPool]?
-    var signals : [MarketSignal]?
-    var triggers : [String]?
+    public private(set) var configPools : [HopperConfigPool]?
+    public private(set) var signals : [MarketSignal]?
+    public private(set) var triggers : [String]?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

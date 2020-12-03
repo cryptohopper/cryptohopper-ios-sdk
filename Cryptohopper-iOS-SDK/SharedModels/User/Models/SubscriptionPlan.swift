@@ -9,11 +9,11 @@ import Foundation
 
 public class SubscriptionPlan : Codable {
     
-    var planId : String?
-    var name : String?
-    var description : String?
-    var priceMonth : String?
-    var priceYear : String?
+    public private(set) var planId : String?
+    public private(set) var name : String?
+    public private(set) var description : String?
+    public private(set) var priceMonth : String?
+    public private(set) var priceYear : String?
     
     private enum CodingKeys: String, CodingKey {
         case planId = "planId"

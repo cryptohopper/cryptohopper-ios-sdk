@@ -9,12 +9,12 @@ import Foundation
 
 public class HopperConfigPool : Codable {
     
-    let id : String?
-    let name : String?
-    let coins : String?
-    let config : HopperConfig?
-    let updated : String?
-    let status : String?
+    public private(set) var id : String?
+    public private(set) var name : String?
+    public private(set) var coins : String?
+    public private(set) var config : HopperConfig?
+    public private(set) var updated : String?
+    public private(set) var status : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

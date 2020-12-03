@@ -8,11 +8,11 @@
 import Foundation
 
 
-class MarketSignalPerformanceTick : Codable {
+public class MarketSignalPerformanceTick : Codable {
     
-    var signalTime : Date?
-    var resultSum : Double?
-    var resultSumPerct : Double?
+    public private(set) var signalTime : Date?
+    public private(set) var resultSum : Double?
+    public private(set) var resultSumPerct : Double?
     
     private enum CodingKeys: String, CodingKey {
         case signalTime = "signal_time"

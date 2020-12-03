@@ -9,17 +9,17 @@ import Foundation
 
 public class Hopper : Codable {
     
-    var id : String?
-    var name : String?
-    var exchange : HopperConfigExchange?
-    var baseCurrency : String?
-    var buyingEnabled : Int?
-    var sellingEnabled : Int?
-    var enabled : Int?
-    var errorMessage : String?
-    var configError : String?
-    var created : String?
-    var startBalance : String?
+    public private(set) var id : String?
+    public private(set) var name : String?
+    public private(set) var exchange : HopperConfigExchange?
+    public private(set) var baseCurrency : String?
+    public private(set) var buyingEnabled : Int?
+    public private(set) var sellingEnabled : Int?
+    public private(set) var enabled : Int?
+    public private(set) var errorMessage : String?
+    public private(set) var configError : String?
+    public private(set) var created : String?
+    public private(set) var startBalance : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"

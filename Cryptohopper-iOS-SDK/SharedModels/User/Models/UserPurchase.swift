@@ -9,31 +9,31 @@ import Foundation
 
 public class UserPurchase : Codable {
     
-    var id : String?
-    var sellerId : String?
-    var buyerId : String?
-    var transactionId : String?
-    var itemId : String?
-    var itemType : String?
-    var status : String?
-    var price : String?
-    var subTotal : String?
-    var tax : String?
-    var total : String?
-    var userParams : String?
-    var taxId : String?
-    var created : String?
-    var currentVersion : String?
-    var autoUpdate : String?
-    var updateMonths : String?
-    var updateUntil : String?
-    var isEu : String?
-    var isEuBusiness :String?
-    var hidden : String?
-    var paid : String?
-    var payoutId : String?
-    var deleted : String?
-    var productName : String?
+    public private(set) var id : String?
+    public private(set) var sellerId : String?
+    public private(set) var buyerId : String?
+    public private(set) var transactionId : String?
+    public private(set) var itemId : String?
+    public private(set) var itemType : String?
+    public private(set) var status : String?
+    public private(set) var price : String?
+    public private(set) var subTotal : String?
+    public private(set) var tax : String?
+    public private(set) var total : String?
+    public private(set) var userParams : String?
+    public private(set) var taxId : String?
+    public private(set) var created : String?
+    public private(set) var currentVersion : String?
+    public private(set) var autoUpdate : String?
+    public private(set) var updateMonths : String?
+    public private(set) var updateUntil : String?
+    public private(set) var isEu : String?
+    public private(set) var isEuBusiness :String?
+    public private(set) var hidden : String?
+    public private(set) var paid : String?
+    public private(set) var payoutId : String?
+    public private(set) var deleted : String?
+    public private(set) var productName : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
