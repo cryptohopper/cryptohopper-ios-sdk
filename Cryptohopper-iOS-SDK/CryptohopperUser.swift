@@ -24,6 +24,17 @@ import UIKit
         }
     }
     
+    /// Forget Password
+    //
+    public static func forgetPassword(email :String, completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIForgetPasswordRequest.init(email: email).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    
     /// Update User Profile
     ///
     ///- Parameter name: (required) name

@@ -13,6 +13,7 @@
 		D00A914A257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9149257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift */; };
 		D00A914F257A529C00E30BE8 /* HopperShortPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */; };
 		D00A9154257A543800E30BE8 /* HopperReserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9153257A543700E30BE8 /* HopperReserved.swift */; };
+		D00A91A0257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */; };
 		D0231BC2255010B90057A293 /* HopperAPIUpdateShortPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231BC1255010B80057A293 /* HopperAPIUpdateShortPositionRequest.swift */; };
 		D0231BCE255011E10057A293 /* HopperAPICloseOneShortPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231BCD255011E10057A293 /* HopperAPICloseOneShortPositionRequest.swift */; };
 		D0231BD2255011F70057A293 /* HopperAPICloseMultipleShortPositionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231BD1255011F70057A293 /* HopperAPICloseMultipleShortPositionsRequest.swift */; };
@@ -357,6 +358,7 @@
 		D00A9149257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetReservedPositionsResponse.swift; sourceTree = "<group>"; };
 		D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperShortPosition.swift; sourceTree = "<group>"; };
 		D00A9153257A543700E30BE8 /* HopperReserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperReserved.swift; sourceTree = "<group>"; };
+		D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIForgetPasswordRequest.swift; sourceTree = "<group>"; };
 		D0231BC1255010B80057A293 /* HopperAPIUpdateShortPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdateShortPositionRequest.swift; sourceTree = "<group>"; };
 		D0231BCD255011E10057A293 /* HopperAPICloseOneShortPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICloseOneShortPositionRequest.swift; sourceTree = "<group>"; };
 		D0231BD1255011F70057A293 /* HopperAPICloseMultipleShortPositionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICloseMultipleShortPositionsRequest.swift; sourceTree = "<group>"; };
@@ -735,6 +737,14 @@
 				6E84DCFF19E779EF1D65FF26 /* Pods_Cryptohopper_iOS_SDKTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D00A919E257A918A00E30BE8 /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */,
+			);
+			path = ForgetPassword;
 			sourceTree = "<group>";
 		};
 		D0231BB825500DE70057A293 /* CloseOneShortPosition */ = {
@@ -1243,6 +1253,7 @@
 				D0231DB7255194470057A293 /* ResendActivationEmail */,
 				D0231DB8255194520057A293 /* GetUserTransactions */,
 				D0231DB9255194BE0057A293 /* GetUserMetadata */,
+				D00A919E257A918A00E30BE8 /* ForgetPassword */,
 				D0231DBA255194CA0057A293 /* ValidateTwoFactorAuth */,
 			);
 			path = General;
@@ -3183,6 +3194,7 @@
 				D086F11025483ECD00EB4DCC /* HopperAPIGetSingleHopperResponse.swift in Sources */,
 				D0231D2225514EC20057A293 /* HopperAPIGetAllUserSubscriptionsRequest.swift in Sources */,
 				D0231C5A255051710057A293 /* HopperAPIGetAvailableSignalsResponse.swift in Sources */,
+				D00A91A0257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift in Sources */,
 				D0231C22255040250057A293 /* MarketItem.swift in Sources */,
 				D0C76A6A2549BECA0094ED9B /* HopperAPIGetReservedPositionsRequest.swift in Sources */,
 				D0C76A7D2549C25E0094ED9B /* HopperAPIGetShortsRequest.swift in Sources */,
