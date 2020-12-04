@@ -17,14 +17,14 @@ public class HopperOrder : Codable {
     public private(set) var amount : String?
     public private(set) var rate : String?
     public private(set) var taValues : String?
-    public private(set) var percentageProfit : Double?
-    public private(set) var hold : Int?
-    public private(set) var sold : Int?
+    public private(set) var percentageProfit : String?
+    public private(set) var hold : String?
+    public private(set) var sold : String?
     public private(set) var openTime : String?
     public private(set) var closeTime : String?
-    public private(set) var bundled : Int?
+    public private(set) var bundled : String?
     public private(set) var marketOrder : Int?
-    public private(set) var cost : Double?
+    public private(set) var cost : String?
     public private(set) var date : String?
     
     private enum CodingKeys: String, CodingKey {
