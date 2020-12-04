@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HopperAPIGetReservedPositionsRequest: HopperAPIRequest<HopperCommonMessageResponse> {
+class HopperAPIGetReservedPositionsRequest: HopperAPIRequest<HopperAPIGetReservedPositionsResponse> {
     
     convenience init(hopperId : String) {
         self.init()

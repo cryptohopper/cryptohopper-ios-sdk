@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HopperAPIGetShortsRequest: HopperAPIRequest<HopperCommonMessageResponse> {
+class HopperAPIGetShortsRequest: HopperAPIRequest<HopperAPIGetShortsResponse> {
     
     convenience init(hopperId : String) {
         self.init()

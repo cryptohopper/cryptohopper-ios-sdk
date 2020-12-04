@@ -685,7 +685,7 @@ import UIKit
     /// Get Short Positions
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func getShortPositions(hopperId : String,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func getShortPositions(hopperId : String,completion: @escaping (Result<[HopperShortPosition]?, Error>) -> Void) {
         HopperAPIGetShortsRequest.init(hopperId: hopperId).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
@@ -697,7 +697,7 @@ import UIKit
     /// Get Reserved Positions
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func getReservedPositions(hopperId : String,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func getReservedPositions(hopperId : String,completion: @escaping (Result<[HopperReserved]?, Error>) -> Void) {
         HopperAPIGetReservedPositionsRequest.init(hopperId: hopperId).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
