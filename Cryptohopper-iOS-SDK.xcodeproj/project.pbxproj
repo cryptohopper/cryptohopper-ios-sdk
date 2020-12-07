@@ -323,6 +323,8 @@
 		D0C76B9E254C625C0094ED9B /* HopperAPIGetOnePositionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C76B9D254C625C0094ED9B /* HopperAPIGetOnePositionResponse.swift */; };
 		D0C76BA2254C647B0094ED9B /* HopperAPIGetHoldPositionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C76BA1254C647B0094ED9B /* HopperAPIGetHoldPositionsResponse.swift */; };
 		D0C76BA6254C64B20094ED9B /* HopperAPIUpdatePositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C76BA5254C64B20094ED9B /* HopperAPIUpdatePositionRequest.swift */; };
+		D0DB8E3A257E7D410009BB39 /* HopperOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB8E39257E7D410009BB39 /* HopperOutput.swift */; };
+		D0DB8E42257E7DB10009BB39 /* HopperAPIGetOutputResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB8E41257E7DB10009BB39 /* HopperAPIGetOutputResponse.swift */; };
 		D0F3D4E6256422640036B130 /* MarketplaceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D4E5256422640036B130 /* MarketplaceSpec.swift */; };
 		D0F3D4EF25655F020036B130 /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D4EE25655F020036B130 /* UserSpec.swift */; };
 		D0F3D4F8256570280036B130 /* TemplateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D4F7256570280036B130 /* TemplateSpec.swift */; };
@@ -674,6 +676,8 @@
 		D0C76B9D254C625C0094ED9B /* HopperAPIGetOnePositionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetOnePositionResponse.swift; sourceTree = "<group>"; };
 		D0C76BA1254C647B0094ED9B /* HopperAPIGetHoldPositionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetHoldPositionsResponse.swift; sourceTree = "<group>"; };
 		D0C76BA5254C64B20094ED9B /* HopperAPIUpdatePositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdatePositionRequest.swift; sourceTree = "<group>"; };
+		D0DB8E39257E7D410009BB39 /* HopperOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperOutput.swift; sourceTree = "<group>"; };
+		D0DB8E41257E7DB10009BB39 /* HopperAPIGetOutputResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetOutputResponse.swift; sourceTree = "<group>"; };
 		D0F3D4E5256422640036B130 /* MarketplaceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceSpec.swift; sourceTree = "<group>"; };
 		D0F3D4EE25655F020036B130 /* UserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSpec.swift; sourceTree = "<group>"; };
 		D0F3D4F7256570280036B130 /* TemplateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSpec.swift; sourceTree = "<group>"; };
@@ -826,6 +830,7 @@
 			isa = PBXGroup;
 			children = (
 				D0231BF025501C360057A293 /* HopperAPIGetOutputRequest.swift */,
+				D0DB8E41257E7DB10009BB39 /* HopperAPIGetOutputResponse.swift */,
 			);
 			path = GetOutput;
 			sourceTree = "<group>";
@@ -2638,6 +2643,7 @@
 				D0C76B95254C56550094ED9B /* HopperPosition.swift */,
 				D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */,
 				D00A9153257A543700E30BE8 /* HopperReserved.swift */,
+				D0DB8E39257E7D410009BB39 /* HopperOutput.swift */,
 				D0231F3A2552EBED0057A293 /* Signal.swift */,
 			);
 			path = Models;
@@ -3236,6 +3242,7 @@
 				D0231F732552F1250057A293 /* HopperAPIGetMarketStrategiesRequest.swift in Sources */,
 				D0231C352550458C0057A293 /* HopperAPIGetReviewResponse.swift in Sources */,
 				D0231F3B2552EBED0057A293 /* Signal.swift in Sources */,
+				D0DB8E3A257E7D410009BB39 /* HopperOutput.swift in Sources */,
 				D0231CB3255064040057A293 /* HopperAPIGetStrategyRequest.swift in Sources */,
 				D0C76AF2254AFAA30094ED9B /* HopperAPIGetAllConfigPoolsResponse.swift in Sources */,
 				D0231F6F2552F1180057A293 /* HopperAPIChangeImageOfStrategyRequest.swift in Sources */,
@@ -3428,6 +3435,7 @@
 				D0C76AFA254B0DD60094ED9B /* HopperAPICreatePoolConfigResponse.swift in Sources */,
 				D0231C72255051FC0057A293 /* HopperAPIGetSignalPerformanceResponse.swift in Sources */,
 				D0231F772552F12D0057A293 /* HopperAPIGetMarketStrategiesResponse.swift in Sources */,
+				D0DB8E42257E7DB10009BB39 /* HopperAPIGetOutputResponse.swift in Sources */,
 				D0231F9A255406B50057A293 /* CryptohopperMarketplace.swift in Sources */,
 				D0C76A762549BFDF0094ED9B /* HopperAPISetHopperAsDefaultRequest.swift in Sources */,
 				D0231E802552D2450057A293 /* HopperAPIGetExchangeDetailsRequest.swift in Sources */,

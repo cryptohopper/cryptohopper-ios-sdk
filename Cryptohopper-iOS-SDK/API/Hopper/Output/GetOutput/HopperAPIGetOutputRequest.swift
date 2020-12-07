@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HopperAPIGetOutputRequest: HopperAPIRequest<HopperCommonMessageResponse> {
+class HopperAPIGetOutputRequest: HopperAPIRequest<HopperAPIGetOutputResponse> {
     
     convenience init(hopperId : String,dateFrom : Date,dateTo : Date ,entryType : HopperSearchOptionsItemEntry , sortField : HopperSearchOptionsItemSortField, sortOrder : HopperSearchOptionsItemSortOrder , page : Int , perPage : Int) {
         self.init()

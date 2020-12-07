@@ -1037,7 +1037,7 @@ import UIKit
     /// Get Trade History of Hopper
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func getOutput(hopperId : String,dateFrom : Date , dateTo : Date, entryType: HopperSearchOptionsItemEntry , sortField : HopperSearchOptionsItemSortField,sortOrder : HopperSearchOptionsItemSortOrder, page : Int,perPage : Int,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func getOutput(hopperId : String,dateFrom : Date , dateTo : Date, entryType: HopperSearchOptionsItemEntry , sortField : HopperSearchOptionsItemSortField,sortOrder : HopperSearchOptionsItemSortOrder, page : Int,perPage : Int,completion: @escaping (Result<[HopperOutput]?, Error>) -> Void) {
         HopperAPIGetOutputRequest.init(hopperId: hopperId, dateFrom: dateFrom, dateTo: dateTo, entryType: entryType, sortField: sortField, sortOrder: sortOrder, page: page, perPage: perPage).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
