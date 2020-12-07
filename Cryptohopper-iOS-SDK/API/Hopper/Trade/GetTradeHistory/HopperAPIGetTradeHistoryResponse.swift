@@ -19,7 +19,7 @@ class HopperAPIGetTradeHistoryResponse: Codable {
 
 class HopperAPIGetTradeHistoryData: Codable {
     
-    var trades : [HopperOrder]?
+    var trades : [HopperTradeHistory]?
     
     private enum CodingKeys: String, CodingKey {
         case trades = "trades"

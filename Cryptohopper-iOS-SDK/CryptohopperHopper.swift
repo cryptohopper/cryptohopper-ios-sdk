@@ -1013,7 +1013,7 @@ import UIKit
     /// Get Trade History of Hopper
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func getTradeHistory(hopperId : String,completion: @escaping (Result<[HopperOrder]?, Error>) -> Void) {
+    public static func getTradeHistory(hopperId : String,completion: @escaping (Result<[HopperTradeHistory]?, Error>) -> Void) {
         HopperAPIGetTradeHistoryRequest.init(hopperId: hopperId).request { (data) in
             completion(.success(data.data?.trades))
         } _: { (err) in
