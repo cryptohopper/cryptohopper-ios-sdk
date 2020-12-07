@@ -228,7 +228,7 @@ class HopperGeneralSpec : QuickSpec {
                     CryptohopperHopper.getTradeHistory(hopperId: self.hopperId) { (result) in
                         switch(result){
                         case .success(let orders):
-                            expect(orders).to(beAKindOf([HopperOrder].self))
+                            expect(orders).to(beAKindOf([HopperTradeHistory].self))
                             done()
                         case .failure(let err):
                             expect(err).to(beNil())
