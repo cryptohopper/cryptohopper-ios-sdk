@@ -19,7 +19,7 @@ public class HopperPosition : Codable {
     public private(set) var sellId : String?
     public private(set) var buyTrigger : String?
     public private(set) var sellTrigger : String?
-    public private(set) var taValues : String?
+    public private(set) var taValues : TAValue?
     public private(set) var percentageProfit : String?
     public private(set) var stopLoss : String?
     public private(set) var stopLossPercentage : String?
