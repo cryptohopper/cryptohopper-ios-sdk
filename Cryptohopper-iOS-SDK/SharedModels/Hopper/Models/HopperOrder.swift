@@ -16,7 +16,7 @@ public class HopperOrder : Codable {
     public private(set) var orderTrigger : String?
     public private(set) var amount : String?
     public private(set) var rate : String?
-    public private(set) var taValues : String?
+    public private(set) var taValues : TAValue?
     public private(set) var percentageProfit : String?
     public private(set) var hold : String?
     public private(set) var sold : String?
