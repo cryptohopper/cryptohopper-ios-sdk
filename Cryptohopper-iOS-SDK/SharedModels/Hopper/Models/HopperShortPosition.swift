@@ -26,6 +26,14 @@ public class HopperShortPosition : Codable {
     public private(set) var sellTime : String?
     public private(set) var buyRate : String?
     public private(set) var buyTime : String?
+    public private(set) var stopLoss : String?
+    public private(set) var stopLossPercentage : String?
+    public private(set) var trailingPercentage : String?
+    public private(set) var trailingArm : String?
+    public private(set) var trailingArmPercentage : String?
+    public private(set) var autoCloseTime : String?
+    public private(set) var autoRemoveTime : String?
+    public private(set) var hold : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -45,6 +53,14 @@ public class HopperShortPosition : Codable {
         case sellTime = "sell_time"
         case buyRate = "buy_rate"
         case buyTime = "buy_time"
+        case stopLoss = "stop_loss"
+        case stopLossPercentage = "stop_loss_percentage"
+        case trailingPercentage = "trailing_percentage"
+        case trailingArm = "trailing_arm"
+        case trailingArmPercentage = "trailing_arm_percentage"
+        case autoCloseTime = "auto_close_time"
+        case autoRemoveTime = "auto_remove_time"
+        case hold = "hold"
     }
     
 }
