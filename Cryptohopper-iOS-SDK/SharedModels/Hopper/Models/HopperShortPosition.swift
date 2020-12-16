@@ -22,6 +22,7 @@ public class HopperShortPosition : Codable {
     public private(set) var buyTrigger : String?
     public private(set) var sellTrigger : String?
     public private(set) var percentageProfit : String?
+    public private(set) var taValues : TAValue?
     public private(set) var sellRate : String?
     public private(set) var sellTime : String?
     public private(set) var buyRate : String?
@@ -49,6 +50,7 @@ public class HopperShortPosition : Codable {
         case buyTrigger = "buy_trigger"
         case sellTrigger = "sell_trigger"
         case percentageProfit = "percentage_profit"
+        case taValues = "ta_values"
         case sellRate = "sell_rate"
         case sellTime = "sell_time"
         case buyRate = "buy_rate"
