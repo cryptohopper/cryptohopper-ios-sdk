@@ -24,7 +24,7 @@ public class HopperTradeHistory : Codable {
     public private(set) var fee : String?
     public private(set) var result : String?
     public private(set) var triggerStrategy : String?
-    public private(set) var strategyResult : [String]?
+    public private(set) var strategyResult : TAValue?
     public private(set) var buyId : String?
     public private(set) var isShort : String?
     public private(set) var resultShort : String?
