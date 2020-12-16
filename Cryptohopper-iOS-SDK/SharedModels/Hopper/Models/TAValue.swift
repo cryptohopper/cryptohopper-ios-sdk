@@ -15,7 +15,7 @@ public class TAValue : Codable {
     public private(set) var strategyId : String?
     public private(set) var values : [Double]?
     public private(set) var signals : [String]?
-    public private(set) var indicators : [Double]?
+    public private(set) var indicators : [TAIndicator]?
 
     
     private enum CodingKeys: String, CodingKey {
@@ -30,7 +30,7 @@ public class TAValue : Codable {
 
 }
 
-public class TAIndicators : Codable {
+public class TAIndicator : Codable {
     
     public private(set) var config : TAIndicatorConfig?
     public private(set) var chartPeriod : String?
