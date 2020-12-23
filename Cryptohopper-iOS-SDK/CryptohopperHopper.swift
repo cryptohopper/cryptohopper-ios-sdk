@@ -867,7 +867,7 @@ import UIKit
     /// Get Hopper Stats
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func getHopperStats(hopperId : String,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func getHopperStats(hopperId : String,completion: @escaping (Result<HopperAPIGetHopperStatsData?, Error>) -> Void) {
         HopperAPIGetHopperStatsRequest.init(hopperId: hopperId).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
