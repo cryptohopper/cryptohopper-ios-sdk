@@ -13,17 +13,15 @@ class HopperAPIGetOutputRequest: HopperAPIRequest<HopperAPIGetOutputResponse> {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/output")
         let formatter = DateFormatter()
-        formatter.dateFormat = "Y-m-d H:m:s"
+        formatter.dateFormat = "d/m/Y H:m"
         
-        var options = [String:Any]()
-        options["date_from"] = formatter.string(from: dateFrom)
-        options["date_to"] = formatter.string(from: dateTo)
-        options["entry_type"] = entryType.rawValue
-        options["sort_field"] = sortField.rawValue
-        options["sort_order"] = sortOrder.rawValue
-        options["page"] = page
-        options["perPage"] = perPage
-        addBodyItem(name: "search_opts", value: options)
+        addQueryItem(name: "dateFrom", value: formatter.string(from: dateFrom))
+        addQueryItem(name: "dateTo", value: formatter.string(from: dateTo))
+        addQueryItem(name: "entryType", value: entryType.rawValue)
+        addQueryItem(name: "sortBy", value: sortField.rawValue)
+        addQueryItem(name: "sortOrder", value: sortOrder.rawValue)
+        addQueryItem(name: "offset", value: page.description)
+        addQueryItem(name: "count", value: perPage.description)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

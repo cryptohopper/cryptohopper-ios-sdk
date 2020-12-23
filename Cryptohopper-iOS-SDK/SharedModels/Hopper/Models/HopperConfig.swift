@@ -52,7 +52,7 @@ public class HopperConfig : Codable {
     public private(set) var autosync_allowed_coins : [String]?
     public private(set) var auto_merge_positions : String?
     public private(set) var output_live_feed : Int?
-    public private(set) var output_errors_only : Int?
+    public private(set) var output_errors_only : String?
     public private(set) var hold_assets : String?
     public private(set) var set_percentage_ask : String?
     public private(set) var set_percentage_bid : String?

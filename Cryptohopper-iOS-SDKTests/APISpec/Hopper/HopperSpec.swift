@@ -97,12 +97,59 @@ class HopperGeneralSpec : QuickSpec {
         
         context("Hopper Position Context"){
             
+            it("Get Output Of Hopper"){
+                waitUntil(timeout: apiTimeout) { done in
+                    let now = Date()
+                    let tenDaysEarlier = Calendar.current.date(byAdding: .day, value: -2, to: now)!
+                    CryptohopperHopper.getOutput(hopperId: self.hopperId, dateFrom: tenDaysEarlier, dateTo: now, entryType: HopperSearchOptionsItemEntry.info, sortField: .entryDate, sortOrder: .descending, page: 1, perPage: 20) { (result) in
+                        switch(result){
+                        case .success(let output):
+                            expect(output).to(beAKindOf([HopperOutput].self))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    }
+                }
+            }
+            
             it("Get All Positions Of Hopper"){
                 waitUntil(timeout: apiTimeout) { done in
                     CryptohopperHopper.getAllPositions(hopperId: self.hopperId) { (result) in
                         switch(result){
                         case .success(let positions):
                             expect(positions).to(beAKindOf([HopperPosition].self))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    }
+                }
+            }
+            
+            it("Get Short Positions Of Hopper"){
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperHopper.getShortPositions(hopperId: self.hopperId) { (result) in
+                        switch(result){
+                        case .success(let shortPositions):
+                            expect(shortPositions).to(beAKindOf([HopperShortPosition].self))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    }
+                }
+            }
+            
+            it("Get Reserve Positions Of Hopper"){
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperHopper.getReservedPositions(hopperId: self.hopperId) { (result) in
+                        switch(result){
+                        case .success(let reservedPositions):
+                            expect(reservedPositions).to(beAKindOf([HopperReserved].self))
                             done()
                         case .failure(let err):
                             expect(err).to(beNil())
@@ -149,6 +196,21 @@ class HopperGeneralSpec : QuickSpec {
         }
         
         context("Hopper Dashboard Stats Context"){
+             
+            it("Get Hopper Stats"){
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperHopper.getHopperStats(hopperId: self.hopperId) { (result) in
+                        switch(result){
+                        case .success(let stats):
+                            expect(stats).to(beAKindOf(HopperAPIGetHopperStatsData.self))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    }
+                }
+            }
             
             it("Get Dashboard Stats"){
                 waitUntil(timeout: apiTimeout) { done in
