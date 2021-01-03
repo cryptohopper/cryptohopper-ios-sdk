@@ -13,7 +13,7 @@ class HopperAPIGetOutputRequest: HopperAPIRequest<HopperAPIGetOutputResponse> {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/output")
         let formatter = DateFormatter()
-        formatter.dateFormat = "d/m/Y H:m"
+        formatter.dateFormat = "MM/dd/YYYY HH:mm"
         
         addQueryItem(name: "dateFrom", value: formatter.string(from: dateFrom))
         addQueryItem(name: "dateTo", value: formatter.string(from: dateTo))

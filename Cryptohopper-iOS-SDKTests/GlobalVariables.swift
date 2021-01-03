@@ -13,8 +13,9 @@ import Foundation
 let apiTimeout : DispatchTimeInterval = .seconds(10)
 let environment = HopperAPIEnvironment.Sandbox
 let isDebugEnabled = true
-// BUILD TEST
+
 let clientId = "#clientId#"
 let username = "#username#"
 let password = "#password#"
+
 

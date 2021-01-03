@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPIUpdateShortPositionRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(hopperId : String , shortId:Int , takeProfit : Int,stopLoss : Int,stopLossPercentage : Int,trailingStopLoss : Int, trailingStopLossPercentage : Int,trailingStopLossArm : Int,autoClose : Int,autoCloseTime : Int) {
+    convenience init(hopperId : String , shortId:Int , takeProfit : Int,stopLoss : Int,stopLossPercentage : Int,trailingStopLoss : Int, trailingStopLossPercentage : Int,trailingStopLossArm : Int,autoClose : Int,autoCloseTime : Int,autoRemove : Int,autoRemoveTime : Int) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/short/\(shortId)/update")
         addBodyItem(name: "take_profit", value: takeProfit)
@@ -21,6 +21,8 @@ class HopperAPIUpdateShortPositionRequest: HopperAPIRequest<HopperCommonMessageR
         addBodyItem(name: "trailing_stop_loss_arm", value: trailingStopLossArm)
         addBodyItem(name: "auto_close", value: autoClose)
         addBodyItem(name: "auto_close_time", value: autoCloseTime)
+        addBodyItem(name: "auto_remove", value: autoRemove)
+        addBodyItem(name: "auto_remove_time", value: autoRemoveTime)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

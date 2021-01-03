@@ -246,6 +246,7 @@
 		D07BDDA125472425008081E3 /* HopperAPIEnableHopperPapertradingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDDA025472425008081E3 /* HopperAPIEnableHopperPapertradingRequest.swift */; };
 		D07BDDA525472438008081E3 /* HopperAPIEnableHopperSellingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDDA425472438008081E3 /* HopperAPIEnableHopperSellingRequest.swift */; };
 		D07BDDAE25472797008081E3 /* HopperAPIHopperMostTradedCurrencyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDDAD25472797008081E3 /* HopperAPIHopperMostTradedCurrencyRequest.swift */; };
+		D07D082E25A2038D00B06614 /* HopperStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D082D25A2038D00B06614 /* HopperStats.swift */; };
 		D086F11025483ECD00EB4DCC /* HopperAPIGetSingleHopperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086F10F25483ECD00EB4DCC /* HopperAPIGetSingleHopperResponse.swift */; };
 		D086F11825485B0500EB4DCC /* HopperCommonMessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086F11725485B0500EB4DCC /* HopperCommonMessageResponse.swift */; };
 		D086F11E25485E5700EB4DCC /* HopperAPIHopperMostTradedCurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086F11D25485E5700EB4DCC /* HopperAPIHopperMostTradedCurrencyResponse.swift */; };
@@ -602,6 +603,7 @@
 		D07BDDA025472425008081E3 /* HopperAPIEnableHopperPapertradingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIEnableHopperPapertradingRequest.swift; sourceTree = "<group>"; };
 		D07BDDA425472438008081E3 /* HopperAPIEnableHopperSellingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIEnableHopperSellingRequest.swift; sourceTree = "<group>"; };
 		D07BDDAD25472797008081E3 /* HopperAPIHopperMostTradedCurrencyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIHopperMostTradedCurrencyRequest.swift; sourceTree = "<group>"; };
+		D07D082D25A2038D00B06614 /* HopperStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperStats.swift; sourceTree = "<group>"; };
 		D086F10F25483ECD00EB4DCC /* HopperAPIGetSingleHopperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetSingleHopperResponse.swift; sourceTree = "<group>"; };
 		D086F11725485B0500EB4DCC /* HopperCommonMessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperCommonMessageResponse.swift; sourceTree = "<group>"; };
 		D086F11D25485E5700EB4DCC /* HopperAPIHopperMostTradedCurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIHopperMostTradedCurrencyResponse.swift; sourceTree = "<group>"; };
@@ -2663,6 +2665,7 @@
 				D00A9153257A543700E30BE8 /* HopperReserved.swift */,
 				D0DB8E39257E7D410009BB39 /* HopperOutput.swift */,
 				D0DB8E49257E85F70009BB39 /* HopperTradeHistory.swift */,
+				D07D082D25A2038D00B06614 /* HopperStats.swift */,
 				D0231F3A2552EBED0057A293 /* Signal.swift */,
 				D0E1929F25835F2F0013C7B0 /* TAValue.swift */,
 			);
@@ -3237,6 +3240,7 @@
 				D0C76AD4254AED260094ED9B /* HopperConfigPool.swift in Sources */,
 				D07BDD6125471A6D008081E3 /* HopperAPICreateHopperRequest.swift in Sources */,
 				D023B402259354A000EC97CD /* AnyType.swift in Sources */,
+				D07D082E25A2038D00B06614 /* HopperStats.swift in Sources */,
 				D0231DE025519F650057A293 /* UserMetadata.swift in Sources */,
 				D0231CCB2550650F0057A293 /* HopperAPIPostStrategyReviewRequest.swift in Sources */,
 				D0231E8C2552D2680057A293 /* HopperAPIGetExchangeForexRatesResponse.swift in Sources */,
