@@ -20,7 +20,7 @@ class HopperAPIForgetPasswordRequest: HopperAPIRequest<HopperCommonMessageRespon
     }
     
     override var needsAuthentication: Bool {
-        return true
+        return false
     }
     
 }

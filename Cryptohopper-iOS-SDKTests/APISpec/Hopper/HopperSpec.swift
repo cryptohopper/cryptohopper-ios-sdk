@@ -100,7 +100,7 @@ class HopperGeneralSpec : QuickSpec {
             it("Get Output Of Hopper"){
                 waitUntil(timeout: apiTimeout) { done in
                     let now = Date()
-                    let tenDaysEarlier = Calendar.current.date(byAdding: .day, value: -2, to: now)!
+                    let tenDaysEarlier = Calendar.current.date(byAdding: .day, value: -10, to: now)!
                     CryptohopperHopper.getOutput(hopperId: self.hopperId, dateFrom: tenDaysEarlier, dateTo: now, entryType: HopperSearchOptionsItemEntry.info, sortField: .entryDate, sortOrder: .descending, page: 1, perPage: 20) { (result) in
                         switch(result){
                         case .success(let output):

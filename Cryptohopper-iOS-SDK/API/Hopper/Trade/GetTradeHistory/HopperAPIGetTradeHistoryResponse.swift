@@ -17,7 +17,7 @@ class HopperAPIGetTradeHistoryResponse: Codable {
     
 }
 
-class HopperAPIGetTradeHistoryData: Codable {
+public class HopperAPIGetTradeHistoryData: Codable {
     
     var trades : [HopperTradeHistory]?
     

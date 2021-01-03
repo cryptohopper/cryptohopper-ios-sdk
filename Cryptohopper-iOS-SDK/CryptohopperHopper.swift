@@ -487,8 +487,8 @@ import UIKit
     /// - Parameter trailingStopLossArm:  (required) Trailing Stop Loss Arm
     /// - Parameter autoClose:  (required) Auto Close
     /// - Parameter autoCloseTime:  (required) Auto Close Time
-    public static func updateShortPosition(hopperId : String,shortId : Int,takeProfit : Int,stopLoss:Int,stopLossPercentage : Int,trailingStopLoss : Int,trailingStopLossPercentage : Int,trailingStopLossArm : Int,autoClose :Int,autoCloseTime : Int,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIUpdateShortPositionRequest.init(hopperId: hopperId, shortId: shortId, takeProfit: takeProfit, stopLoss: stopLoss, stopLossPercentage: stopLossPercentage, trailingStopLoss: trailingStopLoss, trailingStopLossPercentage: trailingStopLossPercentage, trailingStopLossArm: trailingStopLossArm, autoClose: autoClose, autoCloseTime: autoCloseTime).request { (data) in
+    public static func updateShortPosition(hopperId : String,shortId : Int,takeProfit : Int,stopLoss:Int,stopLossPercentage : Int,trailingStopLoss : Int,trailingStopLossPercentage : Int,trailingStopLossArm : Int,autoClose :Int,autoCloseTime : Int,autoRemove : Int, autoRemoveTime: Int,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIUpdateShortPositionRequest.init(hopperId: hopperId, shortId: shortId, takeProfit: takeProfit, stopLoss: stopLoss, stopLossPercentage: stopLossPercentage, trailingStopLoss: trailingStopLoss, trailingStopLossPercentage: trailingStopLossPercentage, trailingStopLossArm: trailingStopLossArm, autoClose: autoClose, autoCloseTime: autoCloseTime,autoRemove: autoRemove,autoRemoveTime:  autoRemoveTime).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -867,7 +867,7 @@ import UIKit
     /// Get Hopper Stats
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func getHopperStats(hopperId : String,completion: @escaping (Result<HopperAPIGetHopperStatsData?, Error>) -> Void) {
+    public static func getHopperStats(hopperId : String,completion: @escaping (Result<HopperStats?, Error>) -> Void) {
         HopperAPIGetHopperStatsRequest.init(hopperId: hopperId).request { (data) in
             completion(.success(data.data))
         } _: { (err) in

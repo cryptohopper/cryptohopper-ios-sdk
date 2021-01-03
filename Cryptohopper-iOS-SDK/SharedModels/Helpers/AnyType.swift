@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum QuantumValue: Codable {
+public enum QuantumValue: Codable {
     
     case double(Double), string(String)
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         if let double = try? decoder.singleValueContainer().decode(Double.self) {
             self = .double(double)
             return
