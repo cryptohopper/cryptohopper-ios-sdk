@@ -530,6 +530,44 @@ import UIKit
         }
     }
     
+    /// Get Unsynced Positions
+    ///
+    /// - Parameter hopperId:  (required) Hopper Id
+    public static func getUnsyncedPositions(hopperId : String,completion: @escaping (Result<HopperAPIGetUnsyncedPositionResponseData?, Error>) -> Void) {
+        HopperAPIGetUnsyncedPositionRequest.init(hopperId: hopperId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /// Sync Position
+    ///
+    /// - Parameter hopperId:  (required) Hopper Id
+    /// - Parameter currency:  (required) currency
+    /// - Parameter amount:  (required) amount
+    /// - Parameter rate:  (required) rate
+    public static func syncPosition(hopperId : String,currency: String,amount: Double, rate : Double,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPISyncPositionRequest.init(hopperId: hopperId, currency: currency, amount: amount, rate: rate).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /// Sync Position
+    ///
+    /// - Parameter hopperId:  (required) Hopper Id
+    /// - Parameter currency:  (required) currency
+    /// - Parameter amount:  (required) amount
+    /// - Parameter rate:  (required) rate
+    public static func editStartBalance(hopperId : String,balance : Double,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIEditStartBalanceRequest.init(hopperId: hopperId, balance: balance).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
     
     /// Merge Positions
     ///
