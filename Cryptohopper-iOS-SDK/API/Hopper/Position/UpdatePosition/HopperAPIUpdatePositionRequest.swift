@@ -12,13 +12,21 @@ class HopperAPIUpdatePositionRequest: HopperAPIRequest<HopperCommonMessageRespon
     
     convenience init(hopperId : String , positionId:Int,takeProfit : Int,stopLoss : Int,stopLossPercentage : Int,trailingStopLoss : Int, trailingStopLossPercentage : Int,trailingStopLossArm : Int,autoClose : Int,autoCloseTime : Int) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/position/\(positionId)/update")
+        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/position/setpositionsetting")
+        
         addBodyItem(name: "take_profit", value: takeProfit)
-        addBodyItem(name: "stop_loss", value: stopLoss)
-        addBodyItem(name: "stop_loss_percentage", value: stopLossPercentage)
-        addBodyItem(name: "trailing_stop_loss", value: trailingStopLoss)
-        addBodyItem(name: "trailing_stop_loss_percentage", value: trailingStopLossPercentage)
-        addBodyItem(name: "trailing_stop_loss_arm", value: trailingStopLossArm)
+        
+        addBodyItem(name: "stop_loss_enabled", value: stopLoss)
+        if(stopLoss == 1){
+            addBodyItem(name: "stop_loss_percentage", value: stopLossPercentage)
+        }
+        
+        addBodyItem(name: "trailing_enabled", value: trailingStopLoss)
+        if(trailingStopLoss == 1){
+            addBodyItem(name: "trailing_percentage", value: trailingStopLossPercentage)
+            addBodyItem(name: "trailing_arm_percentage", value: trailingStopLossArm)
+        }
+        
         addBodyItem(name: "auto_close", value: autoClose)
         addBodyItem(name: "auto_close_time", value: autoCloseTime)
     }

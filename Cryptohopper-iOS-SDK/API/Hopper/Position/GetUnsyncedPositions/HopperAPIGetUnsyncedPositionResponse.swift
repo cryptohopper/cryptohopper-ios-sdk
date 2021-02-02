@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HopperAPIGetUnsyncedPositionResponse: Codable {
+public class HopperAPIGetUnsyncedPositionResponse: Codable {
     
     var data : HopperAPIGetUnsyncedPositionResponseData?
     
@@ -19,8 +19,8 @@ class HopperAPIGetUnsyncedPositionResponse: Codable {
 
 public class HopperAPIGetUnsyncedPositionResponseData : Codable {
     
-    var unsyned : [HopperUnsynedPosition]?
-    var dust : [HopperUnsynedPosition]?
+    public private(set) var unsyned : [HopperUnsynedPosition]?
+    public private(set) var dust : [HopperUnsynedPosition]?
     
     private enum CodingKeys: String, CodingKey {
         case unsyned = "unsyned"
