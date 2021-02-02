@@ -20,12 +20,12 @@ class HopperAPIGetHomePageResponse: Codable {
 
 public class HopperAPIGetHomePageData: Codable {
     
-    var featuredHome : [MarketItem]?
-    var homeEditorsPick : [MarketItem]?
-    var homeTopSignals : [MarketItem]?
-    var homeBestRatedStrategies : [MarketItem]?
-    var homeBestRatedTemplates : [MarketItem]?
-    var homeBestRatedSignals : [MarketItem]?
+    public private(set) var featuredHome : [MarketItem]?
+    public private(set) var homeEditorsPick : [MarketItem]?
+    public private(set) var homeTopSignals : [MarketItem]?
+    public private(set) var homeBestRatedStrategies : [MarketItem]?
+    public private(set) var homeBestRatedTemplates : [MarketItem]?
+    public private(set) var homeBestRatedSignals : [MarketItem]?
     
     private enum CodingKeys: String, CodingKey {
         case featuredHome = "featured_home"
