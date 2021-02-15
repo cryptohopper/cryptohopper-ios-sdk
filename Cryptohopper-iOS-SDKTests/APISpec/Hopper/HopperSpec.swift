@@ -202,7 +202,7 @@ class HopperGeneralSpec : QuickSpec {
                     CryptohopperHopper.getHopperStats(hopperId: self.hopperId) { (result) in
                         switch(result){
                         case .success(let stats):
-                            expect(stats).to(beAKindOf(HopperAPIGetHopperStatsData.self))
+                            expect(stats).to(beAKindOf(HopperStats.self))
                             done()
                         case .failure(let err):
                             expect(err).to(beNil())

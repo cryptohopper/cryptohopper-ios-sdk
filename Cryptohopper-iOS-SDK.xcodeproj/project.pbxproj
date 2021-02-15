@@ -226,6 +226,9 @@
 		D037FA612540A909003CF793 /* HopperAPIAuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA602540A909003CF793 /* HopperAPIAuthenticationRequest.swift */; };
 		D037FA672540A913003CF793 /* HopperAPIAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA662540A913003CF793 /* HopperAPIAuthenticationResponse.swift */; };
 		D0566B602566C92C007FEE5B /* StrategySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0566B5F2566C92C007FEE5B /* StrategySpec.swift */; };
+		D05E781625D6BF8E008C4E4A /* MarketplaceSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */; };
+		D05E781C25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E781B25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift */; };
+		D05E782125D6C233008C4E4A /* HopperAPIGetMarketSellerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E782025D6C233008C4E4A /* HopperAPIGetMarketSellerResponse.swift */; };
 		D07BDD0E2546D082008081E3 /* HopperAPIGetAllHoppersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDD0D2546D082008081E3 /* HopperAPIGetAllHoppersRequest.swift */; };
 		D07BDD122546D142008081E3 /* HopperAPIGetAllHoppersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDD112546D142008081E3 /* HopperAPIGetAllHoppersResponse.swift */; };
 		D07BDD172546D187008081E3 /* Hopper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDD162546D187008081E3 /* Hopper.swift */; };
@@ -588,6 +591,9 @@
 		D037FA602540A909003CF793 /* HopperAPIAuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthenticationRequest.swift; sourceTree = "<group>"; };
 		D037FA662540A913003CF793 /* HopperAPIAuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthenticationResponse.swift; sourceTree = "<group>"; };
 		D0566B5F2566C92C007FEE5B /* StrategySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategySpec.swift; sourceTree = "<group>"; };
+		D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceSeller.swift; sourceTree = "<group>"; };
+		D05E781B25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetMarketSellerRequest.swift; sourceTree = "<group>"; };
+		D05E782025D6C233008C4E4A /* HopperAPIGetMarketSellerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetMarketSellerResponse.swift; sourceTree = "<group>"; };
 		D07BDD0D2546D082008081E3 /* HopperAPIGetAllHoppersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAllHoppersRequest.swift; sourceTree = "<group>"; };
 		D07BDD112546D142008081E3 /* HopperAPIGetAllHoppersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAllHoppersResponse.swift; sourceTree = "<group>"; };
 		D07BDD162546D187008081E3 /* Hopper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hopper.swift; sourceTree = "<group>"; };
@@ -858,6 +864,7 @@
 		D0231C0A2550387F0057A293 /* Marketplace */ = {
 			isa = PBXGroup;
 			children = (
+				D05E781A25D6C212008C4E4A /* Seller */,
 				D0231C0F255038FE0057A293 /* General */,
 				D0231C0B255038C40057A293 /* Review */,
 				D0231C0C255038C80057A293 /* Signal */,
@@ -946,6 +953,7 @@
 				D0231C9F255061830057A293 /* MarketSignalStat.swift */,
 				D0231CCE255065AB0057A293 /* MarketStrategy.swift */,
 				D0231D01255069D20057A293 /* MarketplaceTemplate.swift */,
+				D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2079,6 +2087,15 @@
 				D0566B5F2566C92C007FEE5B /* StrategySpec.swift */,
 			);
 			path = Strategy;
+			sourceTree = "<group>";
+		};
+		D05E781A25D6C212008C4E4A /* Seller */ = {
+			isa = PBXGroup;
+			children = (
+				D05E781B25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift */,
+				D05E782025D6C233008C4E4A /* HopperAPIGetMarketSellerResponse.swift */,
+			);
+			path = Seller;
 			sourceTree = "<group>";
 		};
 		D07BDD0B2546C0A3008081E3 /* Hopper */ = {
@@ -3243,6 +3260,7 @@
 				D0231E902552D27A0057A293 /* HopperAPIGetBaseCurrenciesFromExchangeRequest.swift in Sources */,
 				D07BDD7325471C98008081E3 /* HopperAPIUpdateHopperRequest.swift in Sources */,
 				D07BDD4125470699008081E3 /* HopperConfigAPIConfig.swift in Sources */,
+				D05E782125D6C233008C4E4A /* HopperAPIGetMarketSellerResponse.swift in Sources */,
 				D0C76B00254B0E760094ED9B /* HopperAPIUpdateConfigRequest.swift in Sources */,
 				D0231E2F2552ACCA0057A293 /* HopperAPISaveTemplateRequest.swift in Sources */,
 				D07BDD8C2547230F008081E3 /* HopperAPIDisableHopperPapertradingRequest.swift in Sources */,
@@ -3350,6 +3368,7 @@
 				D0231EF62552D45D0057A293 /* HopperAPIGetPairOrderBookOfExchangeResponse.swift in Sources */,
 				D0231D1A25514CFF0057A293 /* UserSubscription.swift in Sources */,
 				D086F11E25485E5700EB4DCC /* HopperAPIHopperMostTradedCurrencyResponse.swift in Sources */,
+				D05E781625D6BF8E008C4E4A /* MarketplaceSeller.swift in Sources */,
 				D0C76A902549C3BD0094ED9B /* HopperAPIResetHopperStatsRequest.swift in Sources */,
 				D0231CFA2550690F0057A293 /* HopperAPIGetOneReviewForTemplateResponse.swift in Sources */,
 				D0C76B7E254C525D0094ED9B /* HopperAPISplitMultiplePositionsRequest.swift in Sources */,
@@ -3392,6 +3411,7 @@
 				D037FA4C2540955D003CF793 /* HopperError.swift in Sources */,
 				D07BDD7B254720DC008081E3 /* HopperAPIDisableHopperRequest.swift in Sources */,
 				D0C76AEA254AF6B40094ED9B /* HopperAPIUpdateConfigPoolRequest.swift in Sources */,
+				D05E781C25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift in Sources */,
 				D0231CEA255068BA0057A293 /* HopperAPIGetTemplateReviewsRequest.swift in Sources */,
 				D0231CCF255065AB0057A293 /* MarketStrategy.swift in Sources */,
 				D0231EC22552D38D0057A293 /* HopperAPIGetPrecisionForCurrencyOfExchangeRequest.swift in Sources */,

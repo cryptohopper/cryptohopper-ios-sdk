@@ -4,7 +4,6 @@
 //
 //  Created by Kaan Baris Bayrak on 02/11/2020.
 //
-
 import Foundation
 
 public class MarketStrategy : Codable {
@@ -23,16 +22,20 @@ public class MarketStrategy : Codable {
     
     public private(set) var exchange : String?
     public private(set) var baseCurrency : String?
-    public private(set) var version : Int?
-    public private(set) var updated : Date?
+    public private(set) var version : String?
+    public private(set) var updated : String?
     public private(set) var updateInfo : String?
-    public private(set) var created : Date?
+    public private(set) var created : String?
     public private(set) var description : String?
     public private(set) var hidden_configuration : [String]?
     public private(set) var allowedCoins : [String]?
     public private(set) var reviews : MarketStrategyReviewData?
-    public private(set) var price : Double?
+    public private(set) var price : String?
     public private(set) var priceCurrency : String?
+    
+    public private(set) var sellerId : String?
+    public private(set) var sellerName : String?
+    public private(set) var sellerLogo : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -59,6 +62,10 @@ public class MarketStrategy : Codable {
         case reviews = "reviews"
         case price = "price"
         case priceCurrency = "price_currency"
+        
+        case sellerId = "seller_id"
+        case sellerName = "seller_name"
+        case sellerLogo = "seller_logo"
     }
     
 }

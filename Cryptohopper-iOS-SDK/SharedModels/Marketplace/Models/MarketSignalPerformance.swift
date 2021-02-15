@@ -18,7 +18,7 @@ public class MarketSignalPerformance : Codable {
     public private(set) var date : String?
     public private(set) var signalRate : String?
     public private(set) var signalType : String
-    public private(set) var signalConfig : [String]?
+    public private(set) var signalConfig : [String:String]?
     public private(set) var result5min : String?
     public private(set) var result15min : String?
     public private(set) var result1hour : String?

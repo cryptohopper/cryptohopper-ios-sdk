@@ -27,6 +27,15 @@ public class MarketSignal : Codable {
     public private(set) var link : String?
     public private(set) var lastTenSignals : [Signal]?
     
+    public private(set) var signalDetails : [String:String]?
+    public private(set) var reviews : MarketSignalReviewData?
+    
+    public private(set) var sellerId : String?
+    public private(set) var sellerName : String?
+    public private(set) var sellerLogo : String?
+    
+    public private(set) var isRefundable : Int?
+    
     private enum CodingKeys: String, CodingKey {
         case id = "id"
         case signalId = "signal_id"
@@ -45,6 +54,22 @@ public class MarketSignal : Codable {
         case totalVotes = "total_votes"
         case link = "link"
         case lastTenSignals = "last_10_signals"
+        case signalDetails = "signal_details"
+        case reviews = "reviews"
+        case sellerId = "seller_id"
+        case sellerName = "seller_name"
+        case sellerLogo = "seller_logo"
+        case isRefundable = "is_refundable"
     }
     
+}
+
+public class MarketSignalReviewData : Codable {
+
+    public private(set) var data : [MarketReview]?
+
+    private enum CodingKeys : String,CodingKey {
+        case data = "data"
+    }
+
 }
