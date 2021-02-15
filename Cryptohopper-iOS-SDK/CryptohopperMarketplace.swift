@@ -170,6 +170,18 @@ import UIKit
         }
     }
     
+    /// Get  Marketplace Seller
+    ///
+    ///
+    ///- Parameter sellerId: (required) Seller Id
+    public static func getMarketplaceSeller(sellerId : String,completion: @escaping (Result<MarketplaceSeller?, Error>) -> Void) {
+        HopperAPIGetMarketSellerRequest.init(id: sellerId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     
     /// Post Signal Review
     ///

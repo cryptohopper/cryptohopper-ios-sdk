@@ -19,6 +19,8 @@ public class Strategy : Codable {
     public private(set) var image : String?
     public private(set) var hiddenConfiguration : String?
     public private(set) var link : String?
+    public private(set) var price : String?
+    public private(set) var priceCurrency : String?
     
     public private(set) var itemId : String?
     public private(set) var totalVotes : String?
@@ -40,6 +42,9 @@ public class Strategy : Codable {
         case totalVotes = "total_votes"
         case rating = "rating"
         case sales = "sales"
+        case price = "price"
+        case priceCurrency = "price_currency"
     }
     
 }
+

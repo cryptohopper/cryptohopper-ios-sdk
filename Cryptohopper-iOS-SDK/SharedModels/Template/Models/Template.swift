@@ -25,6 +25,9 @@ public class Template : Codable {
     public private(set) var allowedCoins : [String]?
     public private(set) var createdDate : String?
     
+    public private(set) var price : String?
+    public private(set) var priceCurrency : String?
+    
     private enum CodingKeys: String, CodingKey {
         case templateId = "template_id"
         case type = "type"
@@ -41,6 +44,8 @@ public class Template : Codable {
         case hasSignals = "hasSignals"
         case allowedCoins = "allowed_coins"
         case createdDate = "created_date"
+        case price = "price"
+        case priceCurrency = "price_currency"
     }
 }
 

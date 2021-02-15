@@ -27,6 +27,9 @@ public class MarketTemplate : Codable {
     public private(set) var createdDate : String?
     public private(set) var link : String?
     
+    public private(set) var price : String?
+    public private(set) var priceCurrency : String?
+    
     private enum CodingKeys: String, CodingKey {
         case templateId = "template_id"
         case type = "type"
@@ -45,7 +48,8 @@ public class MarketTemplate : Codable {
         case totalVotes = "total_votes"
         case createdDate = "created_date"
         case link = "link"
+        case price = "price"
+        case priceCurrency = "price_currency"
     }
     
 }
-

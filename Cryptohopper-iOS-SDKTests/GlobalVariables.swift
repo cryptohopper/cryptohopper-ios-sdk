@@ -17,5 +17,3 @@ let isDebugEnabled = true
 let clientId = "#clientId#"
 let username = "#username#"
 let password = "#password#"
-
-
