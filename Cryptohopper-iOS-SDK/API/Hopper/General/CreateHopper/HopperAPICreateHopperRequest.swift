@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HopperAPICreateHopperRequest: HopperAPIRequest<HopperCommonMessageResponse> {
+class HopperAPICreateHopperRequest: HopperAPIRequest<HopperAPICreateHopperResponse> {
     
     convenience init(name : String, enabled : Int?, templateId : Int?, apiConfig : HopperConfigAPIConfig?, config : HopperConfig? ) {
         self.init()

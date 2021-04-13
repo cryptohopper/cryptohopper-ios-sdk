@@ -9,12 +9,12 @@ import Foundation
 
 public class HopperConfigAPIConfig : Codable {
     
-    public private(set) var apiKey : String?
-    public private(set) var apiSecret : String?
-    public private(set) var krakenExtraKey : String?
-    public private(set) var krakenPrivateExtraKey : String?
-    public private(set) var gdaxApiPassphrase : String?
-    public private(set) var gdaxPostOnly : String?
+    public var apiKey : String?
+    public var apiSecret : String?
+    public var krakenExtraKey : String?
+    public var krakenPrivateExtraKey : String?
+    public var gdaxApiPassphrase : String?
+    public var gdaxPostOnly : String?
     
     private enum CodingKeys: String, CodingKey {
         case apiKey = "api_key"

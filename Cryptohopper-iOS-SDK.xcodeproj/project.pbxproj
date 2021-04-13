@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24A344C55C6E4872C74B4D82 /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA2B8E953EA0FC0A12B0999 /* Pods_Cryptohopper_iOS_SDK.framework */; };
 		409D33890908EA12B23F41F6 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E84DCFF19E779EF1D65FF26 /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
+		D007DF3C2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */; };
 		D00A9145257A525600E30BE8 /* HopperAPIGetShortsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9144257A525600E30BE8 /* HopperAPIGetShortsResponse.swift */; };
 		D00A914A257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9149257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift */; };
 		D00A914F257A529C00E30BE8 /* HopperShortPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */; };
@@ -266,6 +267,9 @@
 		D0A042B02542F5B400ECA43C /* AuthenticationAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A042AF2542F5B400ECA43C /* AuthenticationAPISpec.swift */; };
 		D0A042B62543401D00ECA43C /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A042B52543401D00ECA43C /* GlobalVariables.swift */; };
 		D0ADD8092541CAA50010CB72 /* HopperAPIRefreshTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADD8082541CAA50010CB72 /* HopperAPIRefreshTokenRequest.swift */; };
+		D0AF9E092625A3AC001FFDF3 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF9E082625A3AC001FFDF3 /* AnyCodable.swift */; };
+		D0AF9E0E2625A3B5001FFDF3 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF9E0D2625A3B5001FFDF3 /* AnyEncodable.swift */; };
+		D0AF9E132625A3BB001FFDF3 /* AnyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF9E122625A3BB001FFDF3 /* AnyDecodable.swift */; };
 		D0BD29AB25A5EFA70060C41B /* HopperUnsynedPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD29AA25A5EFA70060C41B /* HopperUnsynedPosition.swift */; };
 		D0BD29B325A63BC50060C41B /* HopperAPIEditStartBalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD29B225A63BC50060C41B /* HopperAPIEditStartBalanceRequest.swift */; };
 		D0C76A2F2549A4D60094ED9B /* HopperAPICancelOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C76A2E2549A4D60094ED9B /* HopperAPICancelOrderRequest.swift */; };
@@ -369,6 +373,7 @@
 		6FA2B8E953EA0FC0A12B0999 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99EE4DE2D226CEE8CA9F197 /* Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA2E893061884CF7104F46CC /* Pods-Cryptohopper_iOS_SDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper_iOS_SDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper_iOS_SDK_Tests/Pods-Cryptohopper_iOS_SDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICreateHopperResponse.swift; sourceTree = "<group>"; };
 		D00A9144257A525600E30BE8 /* HopperAPIGetShortsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetShortsResponse.swift; sourceTree = "<group>"; };
 		D00A9149257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetReservedPositionsResponse.swift; sourceTree = "<group>"; };
 		D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperShortPosition.swift; sourceTree = "<group>"; };
@@ -632,6 +637,9 @@
 		D0A042AF2542F5B400ECA43C /* AuthenticationAPISpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPISpec.swift; sourceTree = "<group>"; };
 		D0A042B52543401D00ECA43C /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		D0ADD8082541CAA50010CB72 /* HopperAPIRefreshTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIRefreshTokenRequest.swift; sourceTree = "<group>"; };
+		D0AF9E082625A3AC001FFDF3 /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
+		D0AF9E0D2625A3B5001FFDF3 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		D0AF9E122625A3BB001FFDF3 /* AnyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDecodable.swift; sourceTree = "<group>"; };
 		D0BD29AA25A5EFA70060C41B /* HopperUnsynedPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperUnsynedPosition.swift; sourceTree = "<group>"; };
 		D0BD29B225A63BC50060C41B /* HopperAPIEditStartBalanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIEditStartBalanceRequest.swift; sourceTree = "<group>"; };
 		D0C76A2E2549A4D60094ED9B /* HopperAPICancelOrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICancelOrderRequest.swift; sourceTree = "<group>"; };
@@ -2007,6 +2015,7 @@
 		D037FA1225406FD7003CF793 /* Cryptohopper-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				D0AF9E052625A392001FFDF3 /* Helpers */,
 				D037FA2D25408E77003CF793 /* SharedModels */,
 				D037FA2C25408E67003CF793 /* Managers */,
 				D037FA2E25408E7B003CF793 /* API */,
@@ -2160,6 +2169,7 @@
 			isa = PBXGroup;
 			children = (
 				D07BDD6025471A6D008081E3 /* HopperAPICreateHopperRequest.swift */,
+				D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */,
 			);
 			path = CreateHopper;
 			sourceTree = "<group>";
@@ -2456,6 +2466,24 @@
 				D0ADD8082541CAA50010CB72 /* HopperAPIRefreshTokenRequest.swift */,
 			);
 			path = RefreshToken;
+			sourceTree = "<group>";
+		};
+		D0AF9E052625A392001FFDF3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0AF9E062625A397001FFDF3 /* AnyCodable */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D0AF9E062625A397001FFDF3 /* AnyCodable */ = {
+			isa = PBXGroup;
+			children = (
+				D0AF9E082625A3AC001FFDF3 /* AnyCodable.swift */,
+				D0AF9E0D2625A3B5001FFDF3 /* AnyEncodable.swift */,
+				D0AF9E122625A3BB001FFDF3 /* AnyDecodable.swift */,
+			);
+			path = AnyCodable;
 			sourceTree = "<group>";
 		};
 		D0BD29B025A63B720060C41B /* Balance */ = {
@@ -3355,6 +3383,7 @@
 				D0231CC7255064490057A293 /* HopperAPIGetOneReviewForStrategyResponse.swift in Sources */,
 				D0231EEA2552D4380057A293 /* HopperAPIGetExchangeTickerPairRequest.swift in Sources */,
 				D0231F312552EB890057A293 /* HopperAPISubscribeToSignalRequest.swift in Sources */,
+				D007DF3C2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift in Sources */,
 				D0231C86255053EF0057A293 /* HopperAPIGetSignalStatsRequest.swift in Sources */,
 				D0231F252552EB4F0057A293 /* HopperAPIGetSignalByIdRequest.swift in Sources */,
 				D0231EA02552D2C10057A293 /* HopperAPIGetCandlesFromExchangeRequest.swift in Sources */,
@@ -3393,6 +3422,7 @@
 				D0C76A492549B5BE0094ED9B /* HopperAPIActivateDCAForMultiplePositionsRequest.swift in Sources */,
 				D0231F4D2552F0920057A293 /* HopperAPIGetStrategiesRequest.swift in Sources */,
 				D0231FA6255406DB0057A293 /* CryptohopperExchange.swift in Sources */,
+				D0AF9E0E2625A3B5001FFDF3 /* AnyEncodable.swift in Sources */,
 				D0231C7E2550522E0057A293 /* HopperAPIGetOneReviewRequest.swift in Sources */,
 				D0231BC2255010B90057A293 /* HopperAPIUpdateShortPositionRequest.swift in Sources */,
 				D0231CA0255061830057A293 /* MarketSignalStat.swift in Sources */,
@@ -3401,6 +3431,7 @@
 				D0231F9E255406C60057A293 /* CryptohopperUser.swift in Sources */,
 				D0C76B58254C49FB0094ED9B /* HopperAPIReleaseMultiplePositionsRequest.swift in Sources */,
 				D0231D2A25514EDA0057A293 /* HopperAPIGetOneUserSubscriptionResponse.swift in Sources */,
+				D0AF9E132625A3BB001FFDF3 /* AnyDecodable.swift in Sources */,
 				D00A914F257A529C00E30BE8 /* HopperShortPosition.swift in Sources */,
 				D0C76B04254B0EDB0094ED9B /* HopperAPIUpdateConfigResponse.swift in Sources */,
 				D0231C5225504FB50057A293 /* MarketSignal.swift in Sources */,
@@ -3553,6 +3584,7 @@
 				D0C76B20254B152E0094ED9B /* HopperAPIDeleteOneOrderRequest.swift in Sources */,
 				D0231F1C2552E6F60057A293 /* HopperAPIGetSignalsInHopperRequest.swift in Sources */,
 				D0231F082552E0120057A293 /* Ticker.swift in Sources */,
+				D0AF9E092625A3AC001FFDF3 /* AnyCodable.swift in Sources */,
 				D0231ECA2552D3A80057A293 /* HopperAPIGetTradingPairOfExchangeRequest.swift in Sources */,
 				D0231F5B2552F0AE0057A293 /* HopperAPIGetStrategyByIdResponse.swift in Sources */,
 			);

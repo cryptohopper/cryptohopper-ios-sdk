@@ -10,7 +10,7 @@
 import Foundation
 @testable import Cryptohopper_iOS_SDK
 
-let apiTimeout : DispatchTimeInterval = .seconds(10)
+let apiTimeout : DispatchTimeInterval = .seconds(20)
 let environment = HopperAPIEnvironment.Sandbox
 let isDebugEnabled = true
 
