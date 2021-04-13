@@ -12,6 +12,9 @@ class HopperAPIGetAvailableStrategiesRequest: HopperAPIRequest<HopperAPIGetAvail
     convenience init(_ data : String) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/market/strategies")
+        addQueryItem(name: "available_in_app", value: "1")
+        addQueryItem(name: "start", value: "0")
+        addQueryItem(name: "limit", value: "500")
     }
     
     override var httpMethod: HopperAPIHttpMethod {

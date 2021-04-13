@@ -44,9 +44,9 @@ import UIKit
     /// - Parameter templateId: (optional) Hopper templateId if you are creating hopper from a template
     /// - Parameter apiConfig: (optional) Hopper api config defined with HopperConfigAPIConfig
     /// - Parameter config: (optional) Hopper config defined with HopperConfig object
-    public static func createHopper(name: String, enabled: Int?, templateId: Int?, apiConfig: HopperConfigAPIConfig?, config: HopperConfig?,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func createHopper(name: String, enabled: Int?, templateId: Int?, apiConfig: HopperConfigAPIConfig?, config: HopperConfig?,completion: @escaping (Result<HopperAPICreateHopperResponse?, Error>) -> Void) {
         HopperAPICreateHopperRequest.init(name: name, enabled: enabled, templateId: templateId, apiConfig: apiConfig, config: config).request { (message) in
-            completion(.success(message.data))
+            completion(.success(message))
         } _: { (err) in
             completion(.failure(err))
         }
@@ -977,8 +977,8 @@ import UIKit
     /// Update Config of Hopper
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func updateConfig(hopperId : String,completion: @escaping (Result<HopperConfig?, Error>) -> Void) {
-        HopperAPIUpdateConfigRequest.init(hopperId: hopperId).request { (data) in
+    public static func updateConfig(hopperId : String,config: [String:Any],completion: @escaping (Result<HopperConfig?, Error>) -> Void) {
+        HopperAPIUpdateConfigRequest.init(hopperId: hopperId, config: config).request { (data) in
             completion(.success(data.data?.hoppers))
         } _: { (err) in
             completion(.failure(err))

@@ -61,4 +61,32 @@ public class HopperPosition : Codable {
         case cost = "cost"
     }
     
+//    required public init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        id = try container.decode(String.self, forKey: .id)
+//        pair = try container.decode(String.self, forKey: .pair)
+//        currency = try container.decode(String.self, forKey: .currency)
+//        amount = try container.decode(String.self, forKey: .amount)
+//        rate = try container.decode(String.self, forKey: .rate)
+//        buyId = try container.decode(String.self, forKey: .buyId)
+//        orderId = try container.decode(String.self, forKey: .orderId)
+//        sellId = try container.decode(String.self, forKey: .sellId)
+//        buyTrigger = try container.decode(String.self, forKey: .buyTrigger)
+//        sellTrigger = try container.decode(String.self, forKey: .sellTrigger)
+//        percentageProfit = try container.decode(String.self, forKey: .percentageProfit)
+//        stopLoss = try container.decode(String.self, forKey: .stopLoss)
+//        stopLossPercentage = try container.decode(String.self, forKey: .stopLossPercentage)
+//        sellRate = try container.decode(String.self, forKey: .sellRate)
+//        trailingPercentage = try container.decode(String.self, forKey: .trailingPercentage)
+//        trailingArm = try container.decode(String.self, forKey: .trailingArm)
+//        trailingArmPercentage = try container.decode(String.self, forKey: .trailingArmPercentage)
+//        buyTime = try container.decode(String.self, forKey: .buyTime)
+//        sellTime = try container.decode(String.self, forKey: .sellTime)
+//        autoCloseTime = try container.decode(String.self, forKey: .autoCloseTime)
+//        hold = try container.decode(String.self, forKey: .hold)
+//        sold = try container.decode(String.self, forKey: .sold)
+//        cost = try container.decode(String.self, forKey: .cost)
+//        //taValues : TAValue?
+//    }
+    
 }
