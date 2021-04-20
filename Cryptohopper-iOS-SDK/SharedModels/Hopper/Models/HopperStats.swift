@@ -12,7 +12,7 @@ public class HopperStats : Codable {
     public private(set) var dateRange: Bool?
     public private(set) var startTime : Int?
     public private(set) var endTime : Int?
-    public private(set) var buysSells : [[[Int]]]?
+    public private(set) var buysSells : [[AnyCodable]]?
     public private(set) var mostTraded : [String:Int]?
     public private(set) var averageHoldingTime : [String:Double]?
     public private(set) var averageProfit : [String:Double]?

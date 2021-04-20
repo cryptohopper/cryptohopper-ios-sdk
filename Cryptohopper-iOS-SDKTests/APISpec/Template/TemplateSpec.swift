@@ -83,7 +83,7 @@ class TemplateSpec : QuickSpec {
             it("Get Basic Template For Exchange"){
                 
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperTemplate.getBasicTemplateForExchange(exchange: "binance",completion: { (result) in
+                    CryptohopperTemplate.getBasicTemplateForExchange(exchange: "houbi",completion: { (result) in
                         switch(result){
                         case .success(let items):
                             expect(items).to(beAKindOf([BasicTemplate].self))

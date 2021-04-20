@@ -12,7 +12,7 @@ class HopperAPICreateOrderRequest: HopperAPIRequest<HopperCommonMessageResponse>
     
     convenience init(hopperId : String,orderType : String,marketOrder : Int,coin : String,price : Double,amount : Double,orderTrigger : String,percentageProfit : Double,trailingBuy : Double , trailingBuyPercentage : Double) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/config/pool")
+        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/order")
         
         addBodyItem(name: "order_type", value: orderType)
         addBodyItem(name: "market_order", value: marketOrder)
@@ -20,9 +20,9 @@ class HopperAPICreateOrderRequest: HopperAPIRequest<HopperCommonMessageResponse>
         addBodyItem(name: "price", value: price)
         addBodyItem(name: "amount", value: amount)
         addBodyItem(name: "order_trigger", value: orderTrigger)
-        addBodyItem(name: "percentage_profit", value: percentageProfit)
+        addBodyItem(name: "pct_profit", value: percentageProfit)
         addBodyItem(name: "trailing_buy", value: trailingBuy)
-        addBodyItem(name: "trailing_buy_percentage", value: trailingBuyPercentage)
+        addBodyItem(name: "trailing_buy_pct", value: trailingBuyPercentage)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

@@ -20,6 +20,7 @@ public class TAValue : Codable {
 
     
     private enum CodingKeys: String, CodingKey {
+        case settings = "settings"
         case strategy = "strategy"
         case coin = "coin"
         case strategyType = "strategy_type"
