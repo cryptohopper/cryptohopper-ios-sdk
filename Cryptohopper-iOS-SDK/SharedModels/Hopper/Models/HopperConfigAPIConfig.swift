@@ -16,6 +16,8 @@ public class HopperConfigAPIConfig : Codable {
     public var gdaxApiPassphrase : String?
     public var gdaxPostOnly : String?
     
+    public init(){}
+    
     private enum CodingKeys: String, CodingKey {
         case apiKey = "api_key"
         case apiSecret = "api_secret"

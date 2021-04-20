@@ -15,7 +15,7 @@ public class BasicTemplate : Codable {
     public private(set) var image : String?
     public private(set) var coins : String?
     public private(set) var botType : String?
-    //var config : HopperConfig?
+    public var config : HopperConfig?
     public private(set) var configPools : [HopperConfigPool]?
     public private(set) var signals : [MarketSignal]?
     public private(set) var triggers : [String]?
@@ -27,7 +27,7 @@ public class BasicTemplate : Codable {
         case image = "image"
         case coins = "coins"
         case botType = "bot_type"
-        //case config = "config"
+        case config = "config"
         case configPools = "config_pools"
         case signals = "signals"
         case triggers = "triggers"
