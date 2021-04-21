@@ -12,7 +12,7 @@ public class HopperStats : Codable {
     public private(set) var dateRange: Bool?
     public private(set) var startTime : Int?
     public private(set) var endTime : Int?
-    public private(set) var buysSells : [[AnyCodable]]?
+    public private(set) var buysSells : AnyCodable?
     public private(set) var mostTraded : [String:Int]?
     public private(set) var averageHoldingTime : [String:Double]?
     public private(set) var averageProfit : [String:Double]?
@@ -23,7 +23,7 @@ public class HopperStats : Codable {
     public private(set) var profitBuyTriggersTotal : Int?
     public private(set) var profitBuyTriggersCounts : [String:Int]?
     public private(set) var dailyProfits : [[Double]]?
-    public private(set) var allocationOfFunds : [String:String]?
+    public private(set) var allocationOfFunds : [String:AnyCodable]?
     public private(set) var currentInAssets : [[QuantumValue]]?
     public private(set) var currentUsdInAssets : [[QuantumValue]]?
     public private(set) var averageProfitTotal : Double?
@@ -67,7 +67,7 @@ public class HopperStatsOpenPosition : Codable {
     public private(set) var otherCoins : [String:[String:String]]?
     public private(set) var data : [HopperStatsOpenPositionData]?
     public private(set) var totalCost : String?
-    public private(set) var averagePercentage : String?
+    public private(set) var averagePercentage : AnyCodable?
     public private(set) var averageHold : String?
     public private(set) var totalPositions : Int?
     

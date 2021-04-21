@@ -14,6 +14,6 @@ let apiTimeout : DispatchTimeInterval = .seconds(20)
 let environment = HopperAPIEnvironment.Sandbox
 let isDebugEnabled = true
 
-let clientId = "#clientId#"
-let username = "#username#"
-let password = "#password#"
+let clientId = "CLIENT-ID-HERE"
+let username = "USERNAME-HERE"
+let password = "PASSWORD-HERE"
