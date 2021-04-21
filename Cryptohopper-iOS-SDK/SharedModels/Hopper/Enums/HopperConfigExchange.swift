@@ -19,6 +19,12 @@ public enum HopperConfigExchange : String,Codable {
     case kucoin = "kucoin"
     case cexio = "cexio"
     case hitbtc = "hitbtc"
+    case huobi = "huobi"
+    case bitpanda = "bitpanda"
+    case kraken2 = "kraken2"
+    case binanceus = "binanceus"
+    case bitvavo = "bitvavo"
+    case okex = "okex"
     
     private enum CodingKeys: String, CodingKey {
         case poloniex = "poloniex"
@@ -31,5 +37,11 @@ public enum HopperConfigExchange : String,Codable {
         case kucoin = "kucoin"
         case cexio = "cexio"
         case hitbtc = "hitbtc"
+        case huobi = "huobi"
+        case bitpanda = "bitpanda"
+        case kraken2 = "kraken2"
+        case binanceus = "binanceus"
+        case bitvavo = "bitvavo"
+        case okex = "okex"
     }
 }
