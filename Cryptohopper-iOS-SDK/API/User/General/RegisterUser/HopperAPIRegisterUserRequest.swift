@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperCommonMessageResponse> {
+class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserResponse> {
     
     convenience init(name : String,email : String,username : String,subscribe_newsletter : Bool,password : String) {
         self.init()
@@ -24,7 +24,7 @@ class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperCommonMessageResponse
     }
     
     override var needsAuthentication: Bool {
-        return true
+        return false
     }
     
 }

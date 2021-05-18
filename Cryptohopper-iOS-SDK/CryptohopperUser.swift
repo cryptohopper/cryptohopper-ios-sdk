@@ -151,9 +151,9 @@ import UIKit
     ///- Parameter username: (required) username
     ///- Parameter subscribeNewsletter: (required) subscribe newsletter
     ///- Parameter password: (required) password
-    public static func registerUser(name : String, email : String, username : String, subscribeNewsLetter : Bool , password : String,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func registerUser(name : String, email : String, username : String, subscribeNewsLetter : Bool , password : String,completion: @escaping (Result<HopperAPIRegisterUserResponse?, Error>) -> Void) {
         HopperAPIRegisterUserRequest.init(name: name, email: email, username: username, subscribe_newsletter: subscribeNewsLetter, password: password).request { (data) in
-            completion(.success(data.data))
+            completion(.success(data))
         } _: { (err) in
             completion(.failure(err))
         }
