@@ -29,7 +29,7 @@ Replace "YOUR_CLIENT_ID_HERE" string with client id that is given to you by Cryp
 
 # Contexts
 
-There are 7 differen contexts in the SDK that you can request data from which are :
+There are 8 different contexts in the SDK that you can request data from which are :
 
 ```
 CryptohopperAuth
@@ -57,6 +57,10 @@ CryptohopperExchange
 
 ```
 CryptohopperStrategy
+```
+
+```
+CryptohopperPurchase
 ```
 
 Each of the contexts above has some static methods that you can see from inside.
