@@ -64,7 +64,8 @@ public class HopperStats : Codable {
 public class HopperStatsOpenPosition : Codable {
     
     public private(set) var perCurrencyTotal : [String:[String:String]]?
-    public private(set) var otherCoins : [String:[String:String]]?
+    //public private(set) var otherCoins : [String:[String:String]]?
+    public private(set) var otherCoins : [String]?
     public private(set) var data : [HopperStatsOpenPositionData]?
     public private(set) var totalCost : String?
     public private(set) var averagePercentage : AnyCodable?

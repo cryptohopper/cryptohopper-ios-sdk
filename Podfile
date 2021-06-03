@@ -8,6 +8,7 @@ end
 target 'Cryptohopper-iOS-SDKTests' do
   use_frameworks!
   # Pods for testing
+  inherit! :search_paths
   pod 'Quick'
   pod 'Nimble'
 end
