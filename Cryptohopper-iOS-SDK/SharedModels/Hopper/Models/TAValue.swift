@@ -9,7 +9,7 @@ import Foundation
 
 public class TAValue : Codable {
     
-    public private(set) var settings : TASettings?
+    public private(set) var settings : [String:String]?
     public private(set) var strategy : String?
     public private(set) var coin : String?
     public private(set) var strategyType : String?

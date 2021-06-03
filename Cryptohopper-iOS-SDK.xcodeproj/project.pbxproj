@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24A344C55C6E4872C74B4D82 /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA2B8E953EA0FC0A12B0999 /* Pods_Cryptohopper_iOS_SDK.framework */; };
-		409D33890908EA12B23F41F6 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E84DCFF19E779EF1D65FF26 /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
+		1782BB3EBFA96D2E71C3B6EC /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4AA6D440730232B3BD601E6 /* Pods_Cryptohopper_iOS_SDK.framework */; };
 		D007DF3C2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */; };
 		D00A9145257A525600E30BE8 /* HopperAPIGetShortsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9144257A525600E30BE8 /* HopperAPIGetShortsResponse.swift */; };
 		D00A914A257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9149257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift */; };
@@ -350,6 +349,7 @@
 		D0F3D4EF25655F020036B130 /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D4EE25655F020036B130 /* UserSpec.swift */; };
 		D0F3D4F8256570280036B130 /* TemplateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D4F7256570280036B130 /* TemplateSpec.swift */; };
 		D0F3D50125657EDB0036B130 /* ExchangeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D50025657EDB0036B130 /* ExchangeSpec.swift */; };
+		F78A0DFA7C5D82FBC2710B6F /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CD88054C4826CD5F017BCC /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,13 +370,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1141AEDB658B8B32DC56FBAC /* Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.release.xcconfig"; sourceTree = "<group>"; };
-		342CC9B4FA13DACA9B4F716A /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
-		36DAF180B61AD7C4A8477CE5 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; sourceTree = "<group>"; };
-		6E84DCFF19E779EF1D65FF26 /* Pods_Cryptohopper_iOS_SDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FA2B8E953EA0FC0A12B0999 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C99EE4DE2D226CEE8CA9F197 /* Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CA2E893061884CF7104F46CC /* Pods-Cryptohopper_iOS_SDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper_iOS_SDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper_iOS_SDK_Tests/Pods-Cryptohopper_iOS_SDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		37CD88054C4826CD5F017BCC /* Pods_Cryptohopper_iOS_SDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		410EDBC577BB0C5808DFD24A /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7296243D426B7AF70EFD92CC /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		86C14D0C7771439F41C0C74C /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
+		B2CD7B98F0C43DA11A7880F7 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICreateHopperResponse.swift; sourceTree = "<group>"; };
 		D00A9144257A525600E30BE8 /* HopperAPIGetShortsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetShortsResponse.swift; sourceTree = "<group>"; };
 		D00A9149257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetReservedPositionsResponse.swift; sourceTree = "<group>"; };
@@ -724,11 +722,7 @@
 		D0F3D4EE25655F020036B130 /* UserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSpec.swift; sourceTree = "<group>"; };
 		D0F3D4F7256570280036B130 /* TemplateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSpec.swift; sourceTree = "<group>"; };
 		D0F3D50025657EDB0036B130 /* ExchangeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeSpec.swift; sourceTree = "<group>"; };
-		D39206AAEBBF8F8B4DC011C0 /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
-		D5DDA16F99C694A68C15D42E /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D91A7D7E9A65508C5068777D /* Pods-Cryptohopper_iOS_SDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper_iOS_SDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper_iOS_SDK_Tests/Pods-Cryptohopper_iOS_SDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F8D613B80CF31B6CB2879436 /* Pods_Cryptohopper_iOS_SDK_Cryptohopper_iOS_SDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK_Cryptohopper_iOS_SDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE739C4333A08AA6173760D2 /* Pods_Cryptohopper_iOS_SDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4AA6D440730232B3BD601E6 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -743,7 +737,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A344C55C6E4872C74B4D82 /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */,
+				1782BB3EBFA96D2E71C3B6EC /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,7 +746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A0427E2542D84400ECA43C /* Cryptohopper_iOS_SDK.framework in Frameworks */,
-				409D33890908EA12B23F41F6 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */,
+				F78A0DFA7C5D82FBC2710B6F /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,25 +756,19 @@
 		1AF7BFB7D52C96D9AE8AE457 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				342CC9B4FA13DACA9B4F716A /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */,
-				D39206AAEBBF8F8B4DC011C0 /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */,
-				C99EE4DE2D226CEE8CA9F197 /* Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.debug.xcconfig */,
-				1141AEDB658B8B32DC56FBAC /* Pods-Cryptohopper-iOS-SDK-Cryptohopper-iOS-SDKTests.release.xcconfig */,
-				D91A7D7E9A65508C5068777D /* Pods-Cryptohopper_iOS_SDK_Tests.debug.xcconfig */,
-				CA2E893061884CF7104F46CC /* Pods-Cryptohopper_iOS_SDK_Tests.release.xcconfig */,
-				D5DDA16F99C694A68C15D42E /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */,
-				36DAF180B61AD7C4A8477CE5 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */,
+				7296243D426B7AF70EFD92CC /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */,
+				86C14D0C7771439F41C0C74C /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */,
+				410EDBC577BB0C5808DFD24A /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */,
+				B2CD7B98F0C43DA11A7880F7 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		4B7C453DEDCF045847BC5053 /* Frameworks */ = {
+		A8E54C9F4C6250A42BCA8246 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6FA2B8E953EA0FC0A12B0999 /* Pods_Cryptohopper_iOS_SDK.framework */,
-				F8D613B80CF31B6CB2879436 /* Pods_Cryptohopper_iOS_SDK_Cryptohopper_iOS_SDKTests.framework */,
-				FE739C4333A08AA6173760D2 /* Pods_Cryptohopper_iOS_SDK_Tests.framework */,
-				6E84DCFF19E779EF1D65FF26 /* Pods_Cryptohopper_iOS_SDKTests.framework */,
+				D4AA6D440730232B3BD601E6 /* Pods_Cryptohopper_iOS_SDK.framework */,
+				37CD88054C4826CD5F017BCC /* Pods_Cryptohopper_iOS_SDKTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2024,7 +2012,7 @@
 				D0231FBF25542CAF0057A293 /* TestHostApp */,
 				D037FA1125406FD7003CF793 /* Products */,
 				1AF7BFB7D52C96D9AE8AE457 /* Pods */,
-				4B7C453DEDCF045847BC5053 /* Frameworks */,
+				A8E54C9F4C6250A42BCA8246 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3111,7 +3099,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D037FA2425406FD8003CF793 /* Build configuration list for PBXNativeTarget "Cryptohopper-iOS-SDK" */;
 			buildPhases = (
-				FB5986C527E083073E67F9DF /* [CP] Check Pods Manifest.lock */,
+				2C748DFB59F9429B2EA82720 /* [CP] Check Pods Manifest.lock */,
 				D037FA0B25406FD7003CF793 /* Headers */,
 				D037FA0C25406FD7003CF793 /* Sources */,
 				D037FA0D25406FD7003CF793 /* Frameworks */,
@@ -3130,11 +3118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A042812542D84400ECA43C /* Build configuration list for PBXNativeTarget "Cryptohopper-iOS-SDKTests" */;
 			buildPhases = (
-				7F312FDE4839B32EB506C1EA /* [CP] Check Pods Manifest.lock */,
+				BCCAF569E15896ECD0BA27FB /* [CP] Check Pods Manifest.lock */,
 				D0A042752542D84400ECA43C /* Sources */,
 				D0A042762542D84400ECA43C /* Frameworks */,
 				D0A042772542D84400ECA43C /* Resources */,
-				50CB7B4C5A1B0DF3B25F4DC7 /* [CP] Embed Pods Frameworks */,
+				C91F6250F634404C17A9911A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3216,24 +3204,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50CB7B4C5A1B0DF3B25F4DC7 /* [CP] Embed Pods Frameworks */ = {
+		2C748DFB59F9429B2EA82720 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cryptohopper-iOS-SDK-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F312FDE4839B32EB506C1EA /* [CP] Check Pods Manifest.lock */ = {
+		BCCAF569E15896ECD0BA27FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3255,26 +3248,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB5986C527E083073E67F9DF /* [CP] Check Pods Manifest.lock */ = {
+		C91F6250F634404C17A9911A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cryptohopper-iOS-SDK-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3753,6 +3741,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3811,6 +3800,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -3824,7 +3814,7 @@
 		};
 		D037FA2525406FD8003CF793 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 342CC9B4FA13DACA9B4F716A /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */;
+			baseConfigurationReference = 7296243D426B7AF70EFD92CC /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -3854,7 +3844,7 @@
 		};
 		D037FA2625406FD8003CF793 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D39206AAEBBF8F8B4DC011C0 /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */;
+			baseConfigurationReference = 86C14D0C7771439F41C0C74C /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -3883,7 +3873,7 @@
 		};
 		D0A042822542D84400ECA43C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5DDA16F99C694A68C15D42E /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */;
+			baseConfigurationReference = 410EDBC577BB0C5808DFD24A /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7MFX4TNW4;
@@ -3903,7 +3893,7 @@
 		};
 		D0A042832542D84400ECA43C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36DAF180B61AD7C4A8477CE5 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */;
+			baseConfigurationReference = B2CD7B98F0C43DA11A7880F7 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7MFX4TNW4;
