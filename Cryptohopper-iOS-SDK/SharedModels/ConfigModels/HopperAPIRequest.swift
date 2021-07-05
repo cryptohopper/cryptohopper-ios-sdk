@@ -130,11 +130,24 @@ class HopperAPIRequest<T:Codable> {
                 //On success
                 let responseOK = {
                     do {
-                      let decoder = JSONDecoder()
-                      decoder.dateDecodingStrategy = self.dateDecodingStrategy
-                        let response = try decoder.decode(T.self , from: data)
-                        onSuccess?(response)
-
+                        let decoder = JSONDecoder()
+                        decoder.dateDecodingStrategy = self.dateDecodingStrategy
+                        let errCode = try? decoder.decode(HopperCommonMessageResponse.self, from: data)
+                        if(errCode != nil){
+                            if(
+                                errCode?.error != nil &&
+                                errCode?.status != nil
+                            ){
+                                let err = CustomError(localizedDescription: errCode?.message ?? "")
+                                onFail?(err)
+                            }else{
+                                let response = try decoder.decode(T.self , from: data)
+                                onSuccess?(response)
+                            }
+                        }else{
+                            let response = try decoder.decode(T.self , from: data)
+                            onSuccess?(response)
+                        }
                     } catch {
                         onFail?(error)
                     }

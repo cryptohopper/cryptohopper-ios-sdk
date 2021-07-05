@@ -14,6 +14,8 @@
 		D00A914F257A529C00E30BE8 /* HopperShortPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */; };
 		D00A9154257A543800E30BE8 /* HopperReserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9153257A543700E30BE8 /* HopperReserved.swift */; };
 		D00A91A0257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */; };
+		D017A1242692F345000B62F5 /* HopperAPIMoveReservedPositionToOpenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017A1232692F345000B62F5 /* HopperAPIMoveReservedPositionToOpenRequest.swift */; };
+		D017A12626932A11000B62F5 /* HopperCustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017A12526932A11000B62F5 /* HopperCustomError.swift */; };
 		D0231BC2255010B90057A293 /* HopperAPIUpdateShortPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231BC1255010B80057A293 /* HopperAPIUpdateShortPositionRequest.swift */; };
 		D0231BCE255011E10057A293 /* HopperAPICloseOneShortPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231BCD255011E10057A293 /* HopperAPICloseOneShortPositionRequest.swift */; };
 		D0231BD2255011F70057A293 /* HopperAPICloseMultipleShortPositionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231BD1255011F70057A293 /* HopperAPICloseMultipleShortPositionsRequest.swift */; };
@@ -265,6 +267,8 @@
 		D094401D25A3680A008A4818 /* HopperAPISyncPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D094401C25A3680A008A4818 /* HopperAPISyncPositionRequest.swift */; };
 		D094402225A36838008A4818 /* HopperAPIGetUnsyncedPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D094402125A36838008A4818 /* HopperAPIGetUnsyncedPositionRequest.swift */; };
 		D094402725A36845008A4818 /* HopperAPIGetUnsyncedPositionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D094402625A36845008A4818 /* HopperAPIGetUnsyncedPositionResponse.swift */; };
+		D09CA43C2672975300C69CB1 /* HopperAPIGetAssetsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CA43B2672975300C69CB1 /* HopperAPIGetAssetsRequest.swift */; };
+		D09CA43E2672975B00C69CB1 /* HopperAPIGetAssetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CA43D2672975B00C69CB1 /* HopperAPIGetAssetsResponse.swift */; };
 		D0A0427E2542D84400ECA43C /* Cryptohopper_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D037FA1025406FD7003CF793 /* Cryptohopper_iOS_SDK.framework */; };
 		D0A042A12542E3DD00ECA43C /* ConfigManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A042A02542E3DD00ECA43C /* ConfigManagerSpec.swift */; };
 		D0A042B02542F5B400ECA43C /* AuthenticationAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A042AF2542F5B400ECA43C /* AuthenticationAPISpec.swift */; };
@@ -381,6 +385,8 @@
 		D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperShortPosition.swift; sourceTree = "<group>"; };
 		D00A9153257A543700E30BE8 /* HopperReserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperReserved.swift; sourceTree = "<group>"; };
 		D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIForgetPasswordRequest.swift; sourceTree = "<group>"; };
+		D017A1232692F345000B62F5 /* HopperAPIMoveReservedPositionToOpenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIMoveReservedPositionToOpenRequest.swift; sourceTree = "<group>"; };
+		D017A12526932A11000B62F5 /* HopperCustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperCustomError.swift; sourceTree = "<group>"; };
 		D0231BC1255010B80057A293 /* HopperAPIUpdateShortPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdateShortPositionRequest.swift; sourceTree = "<group>"; };
 		D0231BCD255011E10057A293 /* HopperAPICloseOneShortPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICloseOneShortPositionRequest.swift; sourceTree = "<group>"; };
 		D0231BD1255011F70057A293 /* HopperAPICloseMultipleShortPositionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICloseMultipleShortPositionsRequest.swift; sourceTree = "<group>"; };
@@ -637,6 +643,8 @@
 		D094401C25A3680A008A4818 /* HopperAPISyncPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPISyncPositionRequest.swift; sourceTree = "<group>"; };
 		D094402125A36838008A4818 /* HopperAPIGetUnsyncedPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetUnsyncedPositionRequest.swift; sourceTree = "<group>"; };
 		D094402625A36845008A4818 /* HopperAPIGetUnsyncedPositionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetUnsyncedPositionResponse.swift; sourceTree = "<group>"; };
+		D09CA43B2672975300C69CB1 /* HopperAPIGetAssetsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAssetsRequest.swift; sourceTree = "<group>"; };
+		D09CA43D2672975B00C69CB1 /* HopperAPIGetAssetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAssetsResponse.swift; sourceTree = "<group>"; };
 		D0A042792542D84400ECA43C /* Cryptohopper-iOS-SDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cryptohopper-iOS-SDKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A0427D2542D84400ECA43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A042A02542E3DD00ECA43C /* ConfigManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManagerSpec.swift; sourceTree = "<group>"; };
@@ -779,6 +787,14 @@
 				D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */,
 			);
 			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		D017A1222692F2DC000B62F5 /* MoveReservedPositionToOpen */ = {
+			isa = PBXGroup;
+			children = (
+				D017A1232692F345000B62F5 /* HopperAPIMoveReservedPositionToOpenRequest.swift */,
+			);
+			path = MoveReservedPositionToOpen;
 			sourceTree = "<group>";
 		};
 		D0231BB825500DE70057A293 /* CloseOneShortPosition */ = {
@@ -2159,6 +2175,7 @@
 				D037FA4725409544003CF793 /* HopperAPIError.swift */,
 				D037FA4B2540955D003CF793 /* HopperError.swift */,
 				D037FA4F254095A1003CF793 /* HopperAPIRequest.swift */,
+				D017A12526932A11000B62F5 /* HopperCustomError.swift */,
 			);
 			path = ConfigModels;
 			sourceTree = "<group>";
@@ -2300,6 +2317,7 @@
 				D07BDDAA25472742008081E3 /* GetHopperMostTradedCurrency */,
 				D086F12125486F8D00EB4DCC /* EnableHopperPanic */,
 				D086F12225486F9F00EB4DCC /* DisableHopperPanic */,
+				D09CA43A2672973900C69CB1 /* GetAssets */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -2374,6 +2392,7 @@
 				D0C76A432549B58F0094ED9B /* ActivateDCAForMultiplePositions */,
 				D0C76A4C2549BACA0094ED9B /* MoveMultiplePositionsToReserved */,
 				D0C76A572549BB680094ED9B /* MoveOnePositionToReserved */,
+				D017A1222692F2DC000B62F5 /* MoveReservedPositionToOpen */,
 			);
 			path = Position;
 			sourceTree = "<group>";
@@ -2433,6 +2452,15 @@
 				D094401C25A3680A008A4818 /* HopperAPISyncPositionRequest.swift */,
 			);
 			path = SyncPosition;
+			sourceTree = "<group>";
+		};
+		D09CA43A2672973900C69CB1 /* GetAssets */ = {
+			isa = PBXGroup;
+			children = (
+				D09CA43B2672975300C69CB1 /* HopperAPIGetAssetsRequest.swift */,
+				D09CA43D2672975B00C69CB1 /* HopperAPIGetAssetsResponse.swift */,
+			);
+			path = GetAssets;
 			sourceTree = "<group>";
 		};
 		D0A0427A2542D84400ECA43C /* Cryptohopper-iOS-SDKTests */ = {
@@ -3363,6 +3391,7 @@
 				D0231DFF2552A9330057A293 /* HopperAPIGetBasicTemplatesRequest.swift in Sources */,
 				D0231BE7255018530057A293 /* HopperAPIGetTradeHistoryRequest.swift in Sources */,
 				D0231CC32550643F0057A293 /* HopperAPIGetOneReviewForStrategyRequest.swift in Sources */,
+				D09CA43E2672975B00C69CB1 /* HopperAPIGetAssetsResponse.swift in Sources */,
 				D0231D7B2551825E0057A293 /* HopperAPIGetUserEmailResponse.swift in Sources */,
 				D0231F7B2552F1360057A293 /* HopperAPIGetMarketStrategyRequest.swift in Sources */,
 				D0231BF125501C360057A293 /* HopperAPIGetOutputRequest.swift in Sources */,
@@ -3443,6 +3472,7 @@
 				D0231C7E2550522E0057A293 /* HopperAPIGetOneReviewRequest.swift in Sources */,
 				D0231BC2255010B90057A293 /* HopperAPIUpdateShortPositionRequest.swift in Sources */,
 				D0231CA0255061830057A293 /* MarketSignalStat.swift in Sources */,
+				D017A1242692F345000B62F5 /* HopperAPIMoveReservedPositionToOpenRequest.swift in Sources */,
 				D037FA382540922C003CF793 /* HopperAPISession.swift in Sources */,
 				D0231ED62552D3D30057A293 /* HopperAPIGetMarketsOfExchangeResponse.swift in Sources */,
 				D0231F9E255406C60057A293 /* CryptohopperUser.swift in Sources */,
@@ -3566,6 +3596,7 @@
 				D0C76B6A254C50DD0094ED9B /* HopperAPIRemoveMultiplePositionsRequest.swift in Sources */,
 				D0C76AB42549C9750094ED9B /* HopperAPIGetSubscriptionResponse.swift in Sources */,
 				D0231E842552D24E0057A293 /* HopperAPIGetExchangeDetailsResponse.swift in Sources */,
+				D09CA43C2672975300C69CB1 /* HopperAPIGetAssetsRequest.swift in Sources */,
 				D086F1332548710A00EB4DCC /* HopperAPIPapertradingDepositRequest.swift in Sources */,
 				D0231BEB255018620057A293 /* HopperAPIGetTradeHistoryByIdRequest.swift in Sources */,
 				D0231BD2255011F70057A293 /* HopperAPICloseMultipleShortPositionsRequest.swift in Sources */,
@@ -3581,6 +3612,7 @@
 				D0231EC62552D3960057A293 /* HopperAPIGetPrecisionForCurrencyOfExchangeResponse.swift in Sources */,
 				D0C76B52254C49EF0094ED9B /* HopperAPIGetReleasePositionsRequest.swift in Sources */,
 				D0C76A6F2549BF6E0094ED9B /* HopperAPIResetHopperRequest.swift in Sources */,
+				D017A12626932A11000B62F5 /* HopperCustomError.swift in Sources */,
 				D0231F8A2552F17A0057A293 /* Strategy.swift in Sources */,
 				D0231C412550468B0057A293 /* HopperAPISaveMarketReviewRequest.swift in Sources */,
 				D0C76AFA254B0DD60094ED9B /* HopperAPICreatePoolConfigResponse.swift in Sources */,

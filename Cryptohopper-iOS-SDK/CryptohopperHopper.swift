@@ -731,6 +731,17 @@ import UIKit
         }
     }
     
+    /// Get Assets
+    ///
+    /// - Parameter hopperId:  (required) Hopper Id
+    public static func getAssets(hopperId : String,completion: @escaping (Result<[String:String]?, Error>) -> Void) {
+        HopperAPIGetAssetsRequest.init(id: hopperId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     
     /// Get Reserved Positions
     ///
@@ -814,12 +825,24 @@ import UIKit
     }
     
     
-    /// Short One Position
+    /// Move One Position
     ///
     /// - Parameter hopperId:  (required) Hopper Id
     /// - Parameter positionId:  (required) Position Ids
     public static func moveOnePosition(hopperId : String,positionId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIMoveOnePositionsToReservedRequest.init(hopperId: hopperId, positionId: positionId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /// Move One Position
+    ///
+    /// - Parameter hopperId:  (required) Hopper Id
+    /// - Parameter positionId:  (required) Position Ids
+    public static func moveReservedPositionToOpen(hopperId : String,positionId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIMoveReservedPositionToOpenRequest.init(hopperId: hopperId, positionId: positionId).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -953,8 +976,8 @@ import UIKit
     /// ReAssign Of Hopper
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func reAssignSubscription(hopperId : String,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIReassignSubsriptionRequest.init(hopperId: hopperId).request { (data) in
+    public static func reAssignSubscription(hopperId : String,subscriptionId:String,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIReassignSubsriptionRequest.init(hopperId: hopperId, subscriptionId: subscriptionId).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
