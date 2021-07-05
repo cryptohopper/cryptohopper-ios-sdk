@@ -10,9 +10,11 @@ import UIKit
 
 class HopperAPIReassignSubsriptionRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(hopperId : String ) {
+    convenience init(hopperId : String,subscriptionId: String) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/subscription/remap")
+        self.changeUrlPath(path: "/v1" + "/subscription/assign")
+        addBodyItem(name: "hopper_id", value: hopperId)
+        addBodyItem(name: "subscription_id", value: subscriptionId)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

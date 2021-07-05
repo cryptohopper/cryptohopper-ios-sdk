@@ -24,7 +24,7 @@ class HopperGeneralSpec : QuickSpec {
             if(HopperAPISessionManager.shared.session?.accessToken == nil){
                 print("Hopper General Spec Authenication : Making Authentication ...")
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperAuth.login(username: username, password: password) { (result) in
+                    CryptohopperAuth.login(username: username, password: password, verificationCode: "") { (result) in
                         switch(result){
                         case .success(let successStr):
                             expect(successStr).toNot(beNil())
@@ -165,6 +165,21 @@ class HopperGeneralSpec : QuickSpec {
                         switch(result){
                         case .success(let holdPositions):
                             expect(holdPositions).to(beAKindOf([HopperPosition].self))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    }
+                }
+            }
+            
+            it("Get Assets Of Hopper"){
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperHopper.getAssets(hopperId: self.hopperId) { (result) in
+                        switch(result){
+                        case .success(let result):
+                            expect(result).to(beAKindOf([String:String].self))
                             done()
                         case .failure(let err):
                             expect(err).to(beNil())

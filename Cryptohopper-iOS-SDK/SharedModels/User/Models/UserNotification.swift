@@ -14,7 +14,7 @@ public class UserNotification : Codable {
     public private(set) var title : String?
     public private(set) var message : String?
     public private(set) var link : String?
-    public private(set) var extraData : String?
+    //public private(set) var extraData : String?
     public private(set) var date : String?
     
     private enum CodingKeys: String, CodingKey {
@@ -23,7 +23,7 @@ public class UserNotification : Codable {
         case title = "title"
         case message = "message"
         case link = "link"
-        case extraData = "extra_data"
+        //case extraData = "extra_data"
         case date = "date"
     }
     

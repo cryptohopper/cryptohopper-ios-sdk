@@ -11,8 +11,8 @@ import UIKit
 //Wrapper Base Object
 @objc public class CryptohopperAuth: NSObject {
 
-    public static func login(username: String,password: String,completion: @escaping (Result<String, Error>) -> Void) {
-        HopperAPIAuthenticationRequest.init(username: username, password: password).request { (authResponse) in
+    public static func login(username: String,password: String,verificationCode: String?,completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPIAuthenticationRequest.init(username: username, password: password, verificationCode: verificationCode).request { (authResponse) in
             HopperAPISessionManager.shared.handleAuthResponse(response: authResponse)
             completion(.success("Successfully Logged In"))
         } _: { (err) in

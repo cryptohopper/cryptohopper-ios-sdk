@@ -72,7 +72,9 @@ class HopperAPISessionManager {
         dayComponent.year    = 1
         let theCalendar     = Calendar.current
         let nextDate        = theCalendar.date(byAdding: dayComponent, to: Date())
-        self.session = HopperAPISession(accessToken: response.accessToken ?? "", refreshToken: response.accessToken ?? "", accessTokenExpiresAt: nextDate ?? Date())
+        if(response.accessToken != nil){
+            self.session = HopperAPISession(accessToken: response.accessToken ?? "", refreshToken: response.accessToken ?? "", accessTokenExpiresAt: nextDate ?? Date())
+        }
     }
     
 }
