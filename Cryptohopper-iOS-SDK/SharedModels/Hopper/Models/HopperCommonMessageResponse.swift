@@ -9,7 +9,7 @@ import Foundation
 
 class HopperCommonMessageResponse: Codable {
     
-    var data : String?
+    public var data : String?
     public var status : Int?
     public var error : Int?
     public var code : Int?

@@ -20,7 +20,7 @@ public class Hopper : Codable {
     public private(set) var configError : String?
     public private(set) var created : String?
     public private(set) var startBalance : String?
-    public private(set) var subscriptionId : Int?
+    public private(set) var subscriptionId : String?
     public private(set) var statTime : String?
     public private(set) var endTime : String?
     public private(set) var subscriptionStatus : String?
