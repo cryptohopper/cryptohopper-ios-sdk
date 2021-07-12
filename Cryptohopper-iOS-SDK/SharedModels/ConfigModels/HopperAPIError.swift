@@ -15,7 +15,7 @@ class HopperAPIError: Codable {
     var status:Int?
     
     private enum CodingKeys: String, CodingKey {
-        case errCode = "error"
+        case errCode = "code"
         case errMessage = "message"
         case status = "status"
     }
