@@ -593,6 +593,20 @@ import UIKit
         }
     }
     
+    
+    
+    /// Release Multiple Positions
+    ///
+    /// - Parameter hopperId:  (required) Hopper Id
+    /// - Parameter positionId:  (required) Position Id
+    public static func releaseReservedPosition(hopperId : String,positionId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIReleaseReservedPositionRequest.init(hopperId: hopperId, positionId: positionId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     /// Release Multiple Positions
     ///
     /// - Parameter hopperId:  (required) Hopper Id

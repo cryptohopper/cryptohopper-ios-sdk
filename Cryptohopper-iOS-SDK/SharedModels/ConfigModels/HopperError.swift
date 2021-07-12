@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum HopperError: Error {
+public enum HopperError: Error {
     case missingUrl
     case missingAccessToken
     case missingCrendetials

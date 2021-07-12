@@ -277,6 +277,7 @@
 		D0AF9E092625A3AC001FFDF3 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF9E082625A3AC001FFDF3 /* AnyCodable.swift */; };
 		D0AF9E0E2625A3B5001FFDF3 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF9E0D2625A3B5001FFDF3 /* AnyEncodable.swift */; };
 		D0AF9E132625A3BB001FFDF3 /* AnyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF9E122625A3BB001FFDF3 /* AnyDecodable.swift */; };
+		D0BD279E2697435400E0C5E1 /* HopperAPIReleaseReservedPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD279D2697435400E0C5E1 /* HopperAPIReleaseReservedPositionRequest.swift */; };
 		D0BD29AB25A5EFA70060C41B /* HopperUnsynedPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD29AA25A5EFA70060C41B /* HopperUnsynedPosition.swift */; };
 		D0BD29B325A63BC50060C41B /* HopperAPIEditStartBalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD29B225A63BC50060C41B /* HopperAPIEditStartBalanceRequest.swift */; };
 		D0C76A2F2549A4D60094ED9B /* HopperAPICancelOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C76A2E2549A4D60094ED9B /* HopperAPICancelOrderRequest.swift */; };
@@ -654,6 +655,7 @@
 		D0AF9E082625A3AC001FFDF3 /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
 		D0AF9E0D2625A3B5001FFDF3 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
 		D0AF9E122625A3BB001FFDF3 /* AnyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDecodable.swift; sourceTree = "<group>"; };
+		D0BD279D2697435400E0C5E1 /* HopperAPIReleaseReservedPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIReleaseReservedPositionRequest.swift; sourceTree = "<group>"; };
 		D0BD29AA25A5EFA70060C41B /* HopperUnsynedPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperUnsynedPosition.swift; sourceTree = "<group>"; };
 		D0BD29B225A63BC50060C41B /* HopperAPIEditStartBalanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIEditStartBalanceRequest.swift; sourceTree = "<group>"; };
 		D0C76A2E2549A4D60094ED9B /* HopperAPICancelOrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICancelOrderRequest.swift; sourceTree = "<group>"; };
@@ -2374,6 +2376,7 @@
 				D0C76B39254C314B0094ED9B /* HoldOnePosition */,
 				D0C76B49254C32600094ED9B /* MergePositions */,
 				D0C76B4E254C49140094ED9B /* GetReleasePositions */,
+				D0BD279A2697432500E0C5E1 /* ReleaseReservePosition */,
 				D0C76B4F254C49C00094ED9B /* ReleaseMultiplePositions */,
 				D0C76B50254C49D00094ED9B /* ReleaseOnePosition */,
 				D0C76B5F254C4D380094ED9B /* RemoveMultiplePositions */,
@@ -2528,6 +2531,14 @@
 				D0AF9E122625A3BB001FFDF3 /* AnyDecodable.swift */,
 			);
 			path = AnyCodable;
+			sourceTree = "<group>";
+		};
+		D0BD279A2697432500E0C5E1 /* ReleaseReservePosition */ = {
+			isa = PBXGroup;
+			children = (
+				D0BD279D2697435400E0C5E1 /* HopperAPIReleaseReservedPositionRequest.swift */,
+			);
+			path = ReleaseReservePosition;
 			sourceTree = "<group>";
 		};
 		D0BD29B025A63B720060C41B /* Balance */ = {
@@ -3555,6 +3566,7 @@
 				D0231CBF2550641B0057A293 /* HopperAPIGetStrategyReviewsResponse.swift in Sources */,
 				D0231EE22552D41B0057A293 /* HopperAPIGetAllTickerOfExchangeRequest.swift in Sources */,
 				D0231E482552B1B30057A293 /* BasicTemplate.swift in Sources */,
+				D0BD279E2697435400E0C5E1 /* HopperAPIReleaseReservedPositionRequest.swift in Sources */,
 				D0231C1625503C880057A293 /* HopperAPIDownloadItemRequest.swift in Sources */,
 				D0231BFD255035E60057A293 /* HopperSearchOptionsItemEntry.swift in Sources */,
 				D0231D69255182070057A293 /* HopperAPIUpdateUserProfileRequest.swift in Sources */,
