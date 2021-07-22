@@ -13,10 +13,11 @@ class HopperAPIDownloadItemRequest: HopperAPIRequest<HopperCommonMessageResponse
         self.init()
         self.changeUrlPath(path: "/v1" + "/market/downloaditem")
         addHeader(name: "marketplace_item_id", value: marketPlaceItemId)
+        addBodyItem(name: "marketplace_item_id", value: marketPlaceItemId)
     }
     
     override var httpMethod: HopperAPIHttpMethod {
-        return .GET
+        return .POST
     }
     
     override var needsAuthentication: Bool {
