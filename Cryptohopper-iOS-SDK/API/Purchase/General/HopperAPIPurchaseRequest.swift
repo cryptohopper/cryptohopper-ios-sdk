@@ -12,7 +12,7 @@ class HopperAPIPurchaseRequest: HopperAPIRequest<HopperAPIPurchaseResponse> {
     
     convenience init(planId : String? , marketplaceId : String?, hopperId : String?, receipt : String) {
         self.init()
-        self.changeUrlPath(path:"/mobile/receipt")
+        self.changeUrlPath(path: "/v1" + "/app/mobile/receipt")
         
         addBodyItem(name: "platform", value: "ios")
         

@@ -10,7 +10,7 @@ import Foundation
 public class HopperSubscription : Codable {
     
     public private(set) var hopperId : Int?
-    public private(set) var subscriptionId : Int?
+    public private(set) var subscriptionId : String?
     public private(set) var startTime : String?
     public private(set) var endTime : String?
     public private(set) var subscriptionStatus : String?
