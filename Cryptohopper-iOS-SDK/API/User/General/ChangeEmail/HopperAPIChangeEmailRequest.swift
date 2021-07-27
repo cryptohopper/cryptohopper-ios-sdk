@@ -11,7 +11,7 @@ class HopperAPIChangeEmailRequest: HopperAPIRequest<HopperCommonMessageResponse>
     
     convenience init(email : String) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/user")
+        self.changeUrlPath(path: "/v1" + "/user/email")
         addBodyItem(name: "email", value: email)
     }
     

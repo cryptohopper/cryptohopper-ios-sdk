@@ -172,6 +172,8 @@ public class HopperConfig : Codable {
     public var auto_dca_strategy : String?
     public var auto_dca_size : String?
     public var auto_dca_size_custom : String?
+    
+    public init(){}
 
     private enum CodingKeys: String, CodingKey {
             case submit = "submit"

@@ -44,7 +44,7 @@ import UIKit
     /// - Parameter templateId: (optional) Hopper templateId if you are creating hopper from a template
     /// - Parameter apiConfig: (optional) Hopper api config defined with HopperConfigAPIConfig
     /// - Parameter config: (optional) Hopper config defined with HopperConfig object
-    public static func createHopper(name: String, enabled: Int?, templateId: Int?, apiConfig: HopperConfigAPIConfig?, config: HopperConfig?,completion: @escaping (Result<HopperAPICreateHopperResponse?, Error>) -> Void) {
+    public static func createHopper(name: String, enabled: Int?, templateId: Int?, apiConfig: [String:Any]?, config: [String:Any]?,completion: @escaping (Result<HopperAPICreateHopperResponse?, Error>) -> Void) {
         HopperAPICreateHopperRequest.init(name: name, enabled: enabled, templateId: templateId, apiConfig: apiConfig, config: config).request { (message) in
             completion(.success(message))
         } _: { (err) in
@@ -748,8 +748,8 @@ import UIKit
     /// Get Assets
     ///
     /// - Parameter hopperId:  (required) Hopper Id
-    public static func getAssets(hopperId : String,completion: @escaping (Result<[String:String]?, Error>) -> Void) {
-        HopperAPIGetAssetsRequest.init(id: hopperId).request { (data) in
+    public static func getAssets(hopperId : String,reserved : Bool,completion: @escaping (Result<[String:Double]?, Error>) -> Void) {
+        HopperAPIGetAssetsRequest.init(id: hopperId,reserved: reserved).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))

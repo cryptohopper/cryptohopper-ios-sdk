@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPICreateHopperRequest: HopperAPIRequest<HopperAPICreateHopperResponse> {
     
-    convenience init(name : String, enabled : Int?, templateId : Int?, apiConfig : HopperConfigAPIConfig?, config : HopperConfig? ) {
+    convenience init(name : String, enabled : Int?, templateId : Int?, apiConfig : [String:Any]?, config : [String:Any]? ) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper")
         addBodyItem(name: "name", value: name)
