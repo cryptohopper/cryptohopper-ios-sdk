@@ -9,7 +9,7 @@ import Foundation
 
 class HopperAPIGetAssetsResponse: Codable {
     
-    var data : [String:String]?
+    var data : [String:Double]?
     
     private enum CodingKeys: String, CodingKey {
         case data = "data"

@@ -11,9 +11,10 @@ import UIKit
 
 class HopperAPIGetAssetsRequest: HopperAPIRequest<HopperAPIGetAssetsResponse> {
     
-    convenience init(id : String) {
+    convenience init(id : String,reserved : Bool) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(id)/assets")
+        addQueryItem(name: "reserved", value: (reserved ? "1" : "0"))
     }
     
     override var httpMethod: HopperAPIHttpMethod {

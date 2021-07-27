@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct CustomError: Error {
+public struct CustomError: Error {
     
-    var localizedDescription : String
+    public var localizedDescription : String
     
 }
