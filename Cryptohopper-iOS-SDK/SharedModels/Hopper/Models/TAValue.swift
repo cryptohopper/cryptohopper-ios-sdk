@@ -117,7 +117,7 @@ public class TASettings : Codable {
 
 public class TAIndicator : Codable {
     
-    public private(set) var config : TAIndicatorConfig?
+    //public private(set) var config : TAIndicatorConfig?
     public private(set) var chartPeriod : String?
     public private(set) var type : String?
     public private(set) var name : String?
