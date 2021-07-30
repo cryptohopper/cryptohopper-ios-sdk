@@ -15,7 +15,6 @@ public enum HopperConfigExchange : String,Codable {
     case gdax = "gdax"
     case binance = "binance"
     case cryptopia = "cryptopia"
-    case cryptocom = "crypto"
     case exmo = "exmo"
     case bitfinex = "bitfinex"
     case kucoin = "kucoin"
@@ -28,6 +27,7 @@ public enum HopperConfigExchange : String,Codable {
     case bitvavo = "bitvavo"
     case okex = "okex"
     case binanceFutures = "binance_futures"
+    case cryptocom = "crypto"
     
     private enum CodingKeys: String, CodingKey {
         case poloniex = "poloniex"
