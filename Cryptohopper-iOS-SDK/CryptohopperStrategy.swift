@@ -13,8 +13,9 @@ import UIKit
 
     // ------------- GENERAL ----------------------------------------
     
-    /// Get Strategies
-    ///
+    /*!
+    * @discussion Get Strategies
+    */
     public static func getStrategies(completion: @escaping (Result<[Strategy]?, Error>) -> Void) {
         HopperAPIGetStrategiesRequest.init("").request { (data) in
             completion(.success(data.data?.strategies))
@@ -23,9 +24,11 @@ import UIKit
         }
     }
     
-    /// Get Strategy
-    ///
-    ///- Parameter strategyId: (required) strategy id
+    /*!
+    * @discussion Get Strategy
+    *
+    * @param strategyId: (required) strategy id
+    */
     public static func getStrategy(strategyId : Int,completion: @escaping (Result<MarketStrategy?, Error>) -> Void) {
         HopperAPIGetStrategyRequest.init(strategyId: strategyId).request { (data) in
             completion(.success(data.data))
@@ -34,9 +37,11 @@ import UIKit
         }
     }
     
-    /// Update Strategy
-    ///
-    ///- Parameter strategyId: (required) strategy id
+    /*!
+    * @discussion Update Strategy
+    *
+    * @param strategyId: (required) strategy id
+    */
     public static func createStrategy(strategyId : Int,name : String,description : String, image : String, minBuys : Int , minSells : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPICrateStrategyRequest.init(strategyId: strategyId, name: name, description: description, image: image, minBuys: minBuys, minSells: minSells).request { (data) in
             completion(.success(data.data))
@@ -45,9 +50,11 @@ import UIKit
         }
     }
     
-    /// Update Strategy
-    ///
-    ///- Parameter strategyId: (required) strategy id
+    /*!
+    * @discussion Update Strategy
+    *
+    * @param strategyId: (required) strategy id
+     */
     public static func updateStrategy(strategyId : Int,name : String,description : String, image : String, minBuys : Int , minSells : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIUpdateStrategyRequest.init(strategyId: strategyId, name: name, description: description, image: image, minBuys: minBuys, minSells: minSells).request { (data) in
             completion(.success(data.data))
@@ -55,11 +62,12 @@ import UIKit
             completion(.failure(err))
         }
     }
-    
-    
-    /// Delete Strategy
-    ///
-    ///- Parameter strategyId: (required) strategy id
+        
+    /*!
+    * @discussion Delete Strategy
+    *
+    * @param strategyId: (required) strategy id
+    */
     public static func deleteStrategy(strategyId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIDeleteStrategyRequest.init(strategyId: strategyId).request { (data) in
             completion(.success(data.data))
@@ -68,9 +76,11 @@ import UIKit
         }
     }
     
-    /// Change Image Of Strategy
-    ///
-    ///- Parameter strategyId: (required) strategy id
+    /*!
+    * @discussion Change Image Of Strategy
+    *
+    * @param strategyId: (required) strategy id
+    */
     public static func changeImageOfStrategy(strategyId : Int,image : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIChangeImageOfStrategyRequest.init(strategyId: strategyId,image: image).request { (data) in
             completion(.success(data.data))
@@ -82,8 +92,10 @@ import UIKit
     // ------------- Market ----------------------------------------
     
     
-    /// Get Market Strategies
-    ///
+    /*!
+    * @discussion Get Market Strategies
+    *
+    */
     public static func getMarketStrategies(completion: @escaping (Result<[Strategy]?, Error>) -> Void) {
         HopperAPIGetMarketStrategiesRequest.init("").request { (data) in
             completion(.success(data.data?.strategies))
@@ -92,8 +104,9 @@ import UIKit
         }
     }
     
-    /// Get Market Strategy
-    ///
+    /*!
+    * @discussion Get Market Strategy
+    */
     public static func getMarketStrategy(strategyId: Int, completion: @escaping (Result<Strategy?, Error>) -> Void) {
         HopperAPIGetMarketStrategyRequest.init(strategyId: strategyId).request { (data) in
             completion(.success(data.data))
@@ -102,8 +115,9 @@ import UIKit
         }
     }
     
-    /// Get Market Strategies
-    ///
+    /*!
+    * @discussion Get Market Strategies
+    */
     public static func deleteMarketStrategy(strategyId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIDeleteMarketStrategyRequest.init(strategyId: strategyId).request { (data) in
             completion(.success(data.data))

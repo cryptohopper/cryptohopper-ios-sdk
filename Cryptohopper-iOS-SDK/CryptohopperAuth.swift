@@ -11,6 +11,14 @@ import UIKit
 //Wrapper Base Object
 @objc public class CryptohopperAuth: NSObject {
 
+    /*!
+     *
+     * @discussion Login with credentials
+     *
+     * @param username String
+     * @param password String
+     * @param verificationCode String? optional
+     */
     public static func login(username: String,password: String,verificationCode: String?,completion: @escaping (Result<String, Error>) -> Void) {
         HopperAPIAuthenticationRequest.init(username: username, password: password, verificationCode: verificationCode).request { (authResponse) in
             HopperAPISessionManager.shared.handleAuthResponse(response: authResponse)
@@ -20,10 +28,16 @@ import UIKit
         }
     }
     
+    /*!
+     * @discussion Logs out and removes your session
+     */
     public static func logout() {
         HopperAPISessionManager.shared.removeSession()
     }
     
+    /*!
+    * @discussion Cheks if you are authenticated or not
+    */
     public static func isAuthenticated() -> Bool {
         return HopperAPISessionManager.shared.hasSession
     }

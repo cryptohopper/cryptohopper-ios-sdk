@@ -23,7 +23,7 @@ public class HopperAPIGetUnsyncedPositionResponseData : Codable {
     public private(set) var dust : [HopperUnsynedPosition]?
     
     private enum CodingKeys: String, CodingKey {
-        case unsyned = "unsyned"
+        case unsyned = "unsynced"
         case dust = "dust"
     }
     

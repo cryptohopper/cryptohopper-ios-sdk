@@ -273,6 +273,7 @@
 		D0A042A12542E3DD00ECA43C /* ConfigManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A042A02542E3DD00ECA43C /* ConfigManagerSpec.swift */; };
 		D0A042B02542F5B400ECA43C /* AuthenticationAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A042AF2542F5B400ECA43C /* AuthenticationAPISpec.swift */; };
 		D0A042B62543401D00ECA43C /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A042B52543401D00ECA43C /* GlobalVariables.swift */; };
+		D0A14C4926B80B5600F1F6C5 /* HopperAPIDCAOnePositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A14C4826B80B5600F1F6C5 /* HopperAPIDCAOnePositionRequest.swift */; };
 		D0ADD8092541CAA50010CB72 /* HopperAPIRefreshTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADD8082541CAA50010CB72 /* HopperAPIRefreshTokenRequest.swift */; };
 		D0AF9E092625A3AC001FFDF3 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF9E082625A3AC001FFDF3 /* AnyCodable.swift */; };
 		D0AF9E0E2625A3B5001FFDF3 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF9E0D2625A3B5001FFDF3 /* AnyEncodable.swift */; };
@@ -651,6 +652,7 @@
 		D0A042A02542E3DD00ECA43C /* ConfigManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManagerSpec.swift; sourceTree = "<group>"; };
 		D0A042AF2542F5B400ECA43C /* AuthenticationAPISpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPISpec.swift; sourceTree = "<group>"; };
 		D0A042B52543401D00ECA43C /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		D0A14C4826B80B5600F1F6C5 /* HopperAPIDCAOnePositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIDCAOnePositionRequest.swift; sourceTree = "<group>"; };
 		D0ADD8082541CAA50010CB72 /* HopperAPIRefreshTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIRefreshTokenRequest.swift; sourceTree = "<group>"; };
 		D0AF9E082625A3AC001FFDF3 /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
 		D0AF9E0D2625A3B5001FFDF3 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
@@ -2391,6 +2393,7 @@
 				D0C76A682549BE990094ED9B /* GetReservedPositions */,
 				D0C76A5D2549BCEF0094ED9B /* ShortOnePosition */,
 				D0C76A5C2549BCE30094ED9B /* ShortMultiplePositions */,
+				D0A14C4726B80B3E00F1F6C5 /* DCAOnePosition */,
 				D0C76A422549B54E0094ED9B /* ActivateDCAForOnePosition */,
 				D0C76A432549B58F0094ED9B /* ActivateDCAForMultiplePositions */,
 				D0C76A4C2549BACA0094ED9B /* MoveMultiplePositionsToReserved */,
@@ -2505,6 +2508,14 @@
 				D0A042AF2542F5B400ECA43C /* AuthenticationAPISpec.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D0A14C4726B80B3E00F1F6C5 /* DCAOnePosition */ = {
+			isa = PBXGroup;
+			children = (
+				D0A14C4826B80B5600F1F6C5 /* HopperAPIDCAOnePositionRequest.swift */,
+			);
+			path = DCAOnePosition;
 			sourceTree = "<group>";
 		};
 		D0ADD7FD25419FD50010CB72 /* RefreshToken */ = {
@@ -3515,6 +3526,7 @@
 				D0231CF0255068D10057A293 /* HopperAPIGetTemplateReviewsResponse.swift in Sources */,
 				D0C76A2F2549A4D60094ED9B /* HopperAPICancelOrderRequest.swift in Sources */,
 				D0231D3625514F350057A293 /* HopperAPIGetAllSubscriptionPlansResponse.swift in Sources */,
+				D0A14C4926B80B5600F1F6C5 /* HopperAPIDCAOnePositionRequest.swift in Sources */,
 				D0231F92255406950057A293 /* CryptohopperAuth.swift in Sources */,
 				D0231D73255182420057A293 /* HopperAPIGetAvailableCreditsResponse.swift in Sources */,
 				D0231C82255052350057A293 /* HopperAPIGetOneReviewResponse.swift in Sources */,

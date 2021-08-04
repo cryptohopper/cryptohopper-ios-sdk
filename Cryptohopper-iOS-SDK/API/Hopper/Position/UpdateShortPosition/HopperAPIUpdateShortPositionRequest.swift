@@ -10,16 +10,11 @@ import UIKit
 
 class HopperAPIUpdateShortPositionRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(hopperId : String , shortId:Int , takeProfit : Int,stopLoss : Int,stopLossPercentage : Int,trailingStopLoss : Int, trailingStopLossPercentage : Int,trailingStopLossArm : Int,autoCloseTime : Int,autoRemoveTime : Int) {
+    convenience init(hopperId : String , shortId:Int , takeProfit : Double,trailingStopLoss : Int, trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoCloseTime : String,autoRemoveTime : String) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/setshortsetting")
 
         addBodyItem(name: "take_profit", value: takeProfit)
-        
-        addBodyItem(name: "stop_loss_enabled", value: stopLoss)
-        if(stopLoss == 1){
-            addBodyItem(name: "stop_loss_percentage", value: stopLossPercentage)
-        }
         
         addBodyItem(name: "trailing_enabled", value: trailingStopLoss)
         if(trailingStopLoss == 1){

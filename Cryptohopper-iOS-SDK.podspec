@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "Cryptohopper-iOS-SDK"
-  spec.version      = "1.0.23"
+  spec.version      = "1.2.0"
   spec.summary      = "Cryptohopper iOS SDK"
   spec.description  = "Cryptohopper iOS SDK , Swift "
   spec.homepage     = "https://cryptohopper.com" 

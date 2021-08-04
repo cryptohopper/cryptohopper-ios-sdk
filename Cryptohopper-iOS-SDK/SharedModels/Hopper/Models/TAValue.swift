@@ -123,7 +123,7 @@ public class TAIndicator : Codable {
     public private(set) var name : String?
     
     private enum CodingKeys: String, CodingKey {
-        case config = "config"
+        //case config = "config"
         case chartPeriod = "chartperiod"
         case type = "type"
         case name = "name"

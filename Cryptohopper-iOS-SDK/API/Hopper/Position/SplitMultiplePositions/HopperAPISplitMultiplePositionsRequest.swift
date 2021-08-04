@@ -12,7 +12,7 @@ class HopperAPISplitMultiplePositionsRequest: HopperAPIRequest<HopperCommonMessa
     
     convenience init(hopperId : String,positionIds : [Int]) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/split")
+        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/position/split")
         addBodyItem(name: "position_id", value: positionIds)
     }
     

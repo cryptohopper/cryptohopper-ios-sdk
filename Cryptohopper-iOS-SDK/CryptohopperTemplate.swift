@@ -13,9 +13,10 @@ import UIKit
 
     // ------------- GENERAL ----------------------------------------
 
-    
-    /// Get Templates
-    ///
+    /*!
+    * @discussion Get Templates
+    *
+    */
     public static func getTemplates(completion: @escaping (Result<[Template]?, Error>) -> Void) {
         HopperAPIGetTemplatesRequest.init("").request { (data) in
             completion(.success(data.data?.templates))
@@ -23,9 +24,11 @@ import UIKit
             completion(.failure(err))
         }
     }
-    
-    /// Get Basic Templates
-    ///
+
+    /*!
+    * @discussion Get Basic Templates
+    *
+     */
     public static func getBasicTemplates(completion: @escaping (Result<[BasicTemplate]?, Error>) -> Void) {
         HopperAPIGetBasicTemplatesRequest.init("").request { (data) in
             completion(.success(data.basicTemplates))
@@ -34,9 +37,11 @@ import UIKit
         }
     }
     
-    /// Get Basic Templates For Exchange
-    ///
-    ///- Parameter exchange: (required) exchange
+    /*!
+    * @discussion Get Basic Templates For Exchange
+    *
+    * @param exchange: (required) exchange
+    */
     public static func getBasicTemplateForExchange(exchange : String,completion: @escaping (Result<[BasicTemplate]?, Error>) -> Void) {
         HopperAPIGetBasicTemplateForExchangeRequest.init(exchange: exchange).request { (data) in
             completion(.success(data.basicTemplates))
@@ -45,10 +50,11 @@ import UIKit
         }
     }
     
-    
-    /// Get One Template
-    ///
-    ///- Parameter templateId: (required) templateId
+    /*!
+    * @discussion Get One Template
+    *
+    * @param templateId: (required) templateId
+    */
     public static func getOneTemplate(templateId : Int,completion: @escaping (Result<Template?, Error>) -> Void) {
         HopperAPIGetOneTemplateRequest.init(templateId: templateId).request { (data) in
             completion(.success(data.template))
@@ -57,13 +63,14 @@ import UIKit
         }
     }
 
-    
-    /// Save Template
-    ///
-    ///- Parameter hopperId: (required) hopper id
-    ///- Parameter saveAs: (required) save as
-    ///- Parameter name: (required) name
-    ///- Parameter description: (required) description
+    /*!
+    * @discussion Save Template
+    *
+    * @param hopperId: (required) hopper id
+    * @param saveAs: (required) save as
+    * @param name: (required) name
+    * @param description: (required) description
+    */
     public static func saveTemplate(hopperId : Int,saveAs : Int,name : String,description : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPISaveTemplateRequest.init(hopperId: hopperId, saveAs: saveAs, name: name, description: description).request { (data) in
             completion(.success(data.data))
@@ -72,10 +79,11 @@ import UIKit
         }
     }
     
-    
-    /// Delete Template
-    ///
-    ///- Parameter templateId: (required) templateId
+    /*!
+    * @discussion Delete Template
+    *
+    * @param templateId: (required) templateId
+    */
     public static func deleteTemplate(templateId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIDeleteTemplateRequest.init(templateId: templateId).request { (data) in
             completion(.success(data.data))
@@ -84,10 +92,12 @@ import UIKit
         }
     }
     
-    /// Change Image Of Template
-    ///
-    ///- Parameter templateId: (required) templateId
-    ///- Parameter image: (required) image url
+    /*!
+    * @discussion Change Image Of Template
+    *
+    * @param templateId: (required) templateId
+    * @param image: (required) image url
+    */
     public static func changeImageOfTemplate(templateId : Int,image: String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIChangeImageOfTemplateRequest.init(templateId: templateId,image: image).request { (data) in
             completion(.success(data.data))
@@ -96,10 +106,12 @@ import UIKit
         }
     }
     
-    /// Load Template into Hopper
-    ///
-    ///- Parameter templateId: (required) template id
-    ///- Parameter hopperId: (required) hopper id
+    /*!
+    * @discussion Load Template into Hopper
+    *
+    * @param templateId: (required) template id
+    * @param hopperId: (required) hopper id
+    */
     public static func loadTemplateIntoHopper(templateId : Int,hopperId: Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPILoadTemplateRequest.init(templateId: templateId,hopperId: hopperId).request { (data) in
             completion(.success(data.data))
@@ -111,8 +123,10 @@ import UIKit
     // ------------- Market ----------------------------------------
     
     
-    /// Get Market Templates
-    ///
+    /*!
+    * @discussion Get Market Templates
+    *
+    */
     public static func getMarketTemplates(completion: @escaping (Result<[MarketTemplate]?, Error>) -> Void) {
         HopperAPIGetMarketTemplatesRequest.init("").request { (data) in
             completion(.success(data.data?.templates))
@@ -121,9 +135,11 @@ import UIKit
         }
     }
     
-    /// Get One Market Template
-    ///
-    ///- Parameter templateId: (required) templateId
+    /*!
+    * @discussion Get One Market Template
+    *
+    * @param templateId: (required) templateId
+    */
     public static func getOneMarketTemplate(templateId : Int,completion: @escaping (Result<MarketTemplate?, Error>) -> Void) {
         HopperAPIGetOneMarketTemplateRequest.init(templateId: templateId).request { (data) in
             completion(.success(data.template))
@@ -132,9 +148,11 @@ import UIKit
         }
     }
     
-    /// Delete Market Template
-    ///
-    ///- Parameter templateId: (required) templateId
+    /*!
+    * @discussionDelete Market Template
+    *
+    * @param templateId: (required) templateId
+    */
     public static func deleteMarketTemplate(templateId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIDeleteMarketTemplateRequest.init(templateId: templateId).request { (data) in
             completion(.success(data.data))
@@ -143,10 +161,12 @@ import UIKit
         }
     }
     
-    /// Load Market Template into Hopper
-    ///
-    ///- Parameter templateId: (required) template id
-    ///- Parameter hopperId: (required) hopper id
+    /*!
+    * @discussion Load Market Template into Hopper
+    *
+    * @param templateId: (required) template id
+    * @param hopperId: (required) hopper id
+    */
     public static func loadMarketTemplateIntoHopper(templateId : Int,hopperId: Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPILoadMarketTemplateRequest.init(templateId: templateId,hopperId: hopperId).request { (data) in
             completion(.success(data.data))

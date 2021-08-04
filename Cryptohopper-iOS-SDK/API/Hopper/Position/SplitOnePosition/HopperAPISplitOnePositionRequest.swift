@@ -12,7 +12,7 @@ class HopperAPISplitOnePositionRequest: HopperAPIRequest<HopperCommonMessageResp
     
     convenience init(hopperId : String,positionId : Int) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/split/\(positionId)")
+        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/position/split/\(positionId)")
     }
     
     override var httpMethod: HopperAPIHttpMethod {

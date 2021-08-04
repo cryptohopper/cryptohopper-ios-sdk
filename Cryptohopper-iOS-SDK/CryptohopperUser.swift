@@ -13,9 +13,10 @@ import UIKit
 
     // ------------- GENERAL ----------------------------------------
 
-    
-    /// Get User Profile
-    ///
+    /*!
+    * @discussion Get User Profile
+    *
+    */
     public static func getUserProfile(completion: @escaping (Result<UserProfile?, Error>) -> Void) {
         HopperAPIGetUserProfileRequest.init("").request { (data) in
             completion(.success(data.userProfile))
@@ -24,8 +25,9 @@ import UIKit
         }
     }
     
-    /// Forget Password
-    //
+    /*!
+    * @discussion Forget Password
+    */
     public static func forgetPassword(email :String, completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIForgetPasswordRequest.init(email: email).request { (data) in
             completion(.success(data.data))
@@ -34,18 +36,19 @@ import UIKit
         }
     }
     
-    
-    /// Update User Profile
-    ///
-    ///- Parameter name: (required) name
-    ///- Parameter addressOne: (required) address one
-    ///- Parameter addressTwo: (required) address two
-    ///- Parameter city: (required) city
-    ///- Parameter region: (required) region
-    ///- Parameter country: (required) country
-    ///- Parameter postalCode: (required) postal code
-    ///- Parameter phone: (required) phone
-    ///- Parameter website: (required) website
+    /*!
+    * @discussion Update User Profile
+    *
+    * @param name: (required) name
+    * @param addressOne: (required) address one
+    * @param addressTwo: (required) address two
+    * @param city: (required) city
+    * @param region: (required) region
+    * @param country: (required) country
+    * @param postalCode: (required) postal code
+    * @param phone: (required) phone
+    * @param website: (required) website
+    */
     public static func updateUserProfile(name : String,addressOne : String,addressTwo : String,city : String,region : String,country : String,postalCode : String,phone : String,website : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIUpdateUserProfileRequest.init(name: name, addressOne: addressOne, addressTwo: addressTwo, city: city, region: region, country: country, postalCode: postalCode, phone: phone, website: website).request { (data) in
             completion(.success(data.data))
@@ -54,8 +57,10 @@ import UIKit
         }
     }
     
-    /// Get Available Credits
-    ///
+    /*!
+    * @discussion Get Available Credits
+    *
+    */
     public static func getAvailableCredits(completion: @escaping (Result<Int?, Error>) -> Void) {
         HopperAPIGetAvailableCreditsRequest.init("").request { (data) in
             completion(.success(data.credit))
@@ -64,9 +69,10 @@ import UIKit
         }
     }
     
-    
-    /// Get User Email
-    ///
+    /*!
+    * @discussion Get User Email
+    *
+    */
     public static func getUserEmail(completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIGetUserEmailRequest.init("").request { (data) in
             completion(.success(data.email))
@@ -75,10 +81,11 @@ import UIKit
         }
     }
     
-    
-    /// Get User Email
-    ///
-    ///- Parameter email: (required) email
+    /*!
+    * @discussion Get User Email
+    *
+    * @param email: (required) email
+    */
     public static func changeEmail(email : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIChangeEmailRequest.init(email: email).request { (data) in
             completion(.success(data.data))
@@ -87,10 +94,12 @@ import UIKit
         }
     }
     
-    /// Enable Mobile Push Notifications
-    ///
-    ///- Parameter enableAll: (required) enable all permissions
-    ///- Parameter permissions: (required)  enable with some permissions
+    /*!
+    * @discussion Enable Mobile Push Notifications
+    *
+    * @param enableAll: (required) enable all permissions
+    * @param permissions: (required)  enable with some permissions
+    */
     public static func enableMobilePushNotification(enableAll : Bool,permissions : [PushNotificationPermissions],completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIEnablePushNotificationRequest.init(enableAll: enableAll, permissions: permissions).request { (data) in
             completion(.success(data.data))
@@ -99,9 +108,10 @@ import UIKit
         }
     }
     
-    
-    /// Get User Id
-    ///
+    /*!
+    * @discussion Get User Id
+    *
+    */
     public static func getUserId(completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIGetUserIdRequest.init("").request { (data) in
             completion(.success(data.id))
@@ -110,8 +120,10 @@ import UIKit
         }
     }
     
-    /// Get User Notifications
-    ///
+    /*!
+    * @discussion Get User Notifications
+    *
+    */
     public static func getUserNotifications(completion: @escaping (Result<[UserNotification]?, Error>) -> Void) {
         HopperAPIGetUserNotificationsRequest.init("").request { (data) in
             completion(.success(data.notifications))
@@ -120,10 +132,11 @@ import UIKit
         }
     }
     
-    
-    /// Change Password
-    ///
-    ///- Parameter newPassword: (required) your new password
+    /*!
+    * @discussion Change Password
+    *
+    * @param newPassword: (required) your new password
+    */
     public static func changePassword(newPassword : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIChangePasswordRequest.init(password: newPassword).request { (data) in
             completion(.success(data.data))
@@ -132,9 +145,11 @@ import UIKit
         }
     }
     
-    /// Get User Purchases
-    ///
-    ///
+    /*!
+    * @discussion Get User Purchases
+    *
+    *
+    */
     public static func getUserPurchases(completion: @escaping (Result<[UserPurchase]?, Error>) -> Void) {
         HopperAPIGetUserPurchasesRequest.init("").request { (data) in
             completion(.success(data.purchases))
@@ -143,14 +158,15 @@ import UIKit
         }
     }
     
-    
-    /// Change Password
-    ///
-    ///- Parameter name: (required) name
-    ///- Parameter email: (required) email
-    ///- Parameter username: (required) username
-    ///- Parameter subscribeNewsletter: (required) subscribe newsletter
-    ///- Parameter password: (required) password
+    /*!
+    * @discussion Change Password
+    *
+    * @param name: (required) name
+    * @param email: (required) email
+    * @param username: (required) username
+    * @param subscribeNewsletter: (required) subscribe newsletter
+    * @param password: (required) password
+    */
     public static func registerUser(name : String, email : String, username : String, subscribeNewsLetter : Bool , password : String,completion: @escaping (Result<HopperAPIRegisterUserResponse?, Error>) -> Void) {
         HopperAPIRegisterUserRequest.init(name: name, email: email, username: username, subscribe_newsletter: subscribeNewsLetter, password: password).request { (data) in
             completion(.success(data))
@@ -159,11 +175,13 @@ import UIKit
         }
     }
     
-    /// Resend Activation Email
-    ///
-    ///
-    ///- Parameter email: (required) email
-    ///- Parameter username: (required) username
+    /*!
+    * @discussion Resend Activation Email
+    *
+    *
+    * @param email: (required) email
+    * @param username: (required) username
+    */
     public static func resendActivationEmail(email : String, username : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIResendActivationEmailRequest.init(email: email, username: username).request { (data) in
             completion(.success(data.data))
@@ -172,9 +190,11 @@ import UIKit
         }
     }
     
-    /// Get User Transactions
-    ///
-    ///
+    /*!
+    * @discussion Get User Transactions
+    *
+    *
+    */
     public static func getUserTransactions(completion: @escaping (Result<[UserTransaction]?, Error>) -> Void) {
         HopperAPIGetUserTransactionsRequest.init("").request { (data) in
             completion(.success(data.transactions))
@@ -183,9 +203,10 @@ import UIKit
         }
     }
     
-    /// Get User Metadata
-    ///
-    ///
+    /*!
+    * @discussion Get User Metadata
+    *
+    */
     public static func getUserMetadata(completion: @escaping (Result<UserMetadata?, Error>) -> Void) {
         HopperAPIGetUserMetadataRequest.init("").request { (data) in
             completion(.success(data.metadata))
@@ -194,10 +215,12 @@ import UIKit
         }
     }
     
-    /// Get User Metadata
-    ///
-    ///
-    ///- Parameter code: (required) Two factor authentication code
+    /*!
+    * @discussion Get User Metadata
+    *
+    *
+    * @param code: (required) Two factor authentication code
+    */
     public static func validateTwoFactorAuth(code : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIValidateTwoFactorAuthRequest.init(code: code).request { (data) in
             completion(.success(data.data))
@@ -209,9 +232,10 @@ import UIKit
     
     // ------------- Subscription ----------------------------------------
     
-    /// Get All User Subscriptions
-    ///
-    ///
+    /*!
+    * @discussion Get All User Subscriptions
+    *
+    */
     public static func getAllUserSubscriptions(completion: @escaping (Result<[UserSubscription]?, Error>) -> Void) {
         HopperAPIGetAllUserSubscriptionsRequest.init("").request { (data) in
             completion(.success(data.data))
@@ -220,10 +244,12 @@ import UIKit
         }
     }
     
-    /// Get One Subscription
-    ///
-    ///
-    ///- Parameter subscriptionId: (required) Subscription Id
+    /*!
+    * @discussion Get One Subscription
+    *
+    *
+    * @param subscriptionId: (required) Subscription Id
+    */
     public static func getOneUserSubscriptions(subscriptionId : Int, completion: @escaping (Result<UserSubscription?, Error>) -> Void) {
         HopperAPIGetOneUserSubscriptionRequest.init(subscriptionId: subscriptionId).request { (data) in
             completion(.success(data.data))
@@ -232,9 +258,10 @@ import UIKit
         }
     }
     
-    /// Get All Subscription Plans
-    ///
-    ///
+    /*!
+    * @discussion Get All Subscription Plans
+    *
+    */
     public static func getAllSubscriptionPlans(completion: @escaping (Result<[SubscriptionPlan]?, Error>) -> Void) {
         HopperAPIGetAllSubscriptionPlansRequest.init("").request { (data) in
             completion(.success(data.data))
@@ -243,10 +270,12 @@ import UIKit
         }
     }
     
-    /// Get One Subscription Plan
-    ///
-    ///
-    ///- Parameter planId: (required) Plan Id
+    /*!
+    * @discussion Get One Subscription Plan
+    *
+    *
+    * @param planId: (required) Plan Id
+     */
     public static func getOneSubscriptionPlan(planId: Int,completion: @escaping (Result<SubscriptionPlan?, Error>) -> Void) {
         HopperAPIGetOneSubscriptionPlanRequest.init(planId: planId).request { (data) in
             completion(.success(data.data))
@@ -255,11 +284,13 @@ import UIKit
         }
     }
     
-    /// Assign Subscriotion
-    ///
-    ///
-    ///- Parameter hopperId: (required) Hopper Id
-    ///- Parameter subscriptionId: (required) Subscription Id
+    /*!
+    * @discussion Assign Subscriotion
+    *
+    *
+    * @param hopperId: (required) Hopper Id
+    * @param subscriptionId: (required) Subscription Id
+    */
     public static func assignSubscription(hopperId : Int, subscriptionId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIAssignSubscriptionRequest.init(hopperId: hopperId, subscriptionId: subscriptionId).request { (data) in
             completion(.success(data.data))

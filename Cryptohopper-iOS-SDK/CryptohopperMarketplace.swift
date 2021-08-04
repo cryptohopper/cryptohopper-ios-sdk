@@ -13,9 +13,11 @@ import UIKit
 
     // ------------- GENERAL ----------------------------------------
     
-    /// Download item from marketplace
-    ///
-    /// - Parameter marketplaceItemId: (optional) Marketplace Item Id
+    /*!
+    * @discussion Download item from marketplace
+    *
+    *  @param marketplaceItemId: (optional) Marketplace Item Id
+    */
     public static func downloadItem(marketplaceItemId : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIDownloadItemRequest.init(marketPlaceItemId: marketplaceItemId).request { (data) in
             completion(.success(data.data))
@@ -24,8 +26,10 @@ import UIKit
         }
     }
     
-    /// Get Home Page of Marketplace
-    ///
+    /*!
+    * @discussion Get Home Page of Marketplace
+    *
+    */
     public static func getHomePage(completion: @escaping (Result<HopperAPIGetHomePageData?, Error>) -> Void) {
         HopperAPIGetHomePageRequest.init("").request { (data) in
             completion(.success(data.data))
@@ -36,9 +40,11 @@ import UIKit
     
     // ------------- REVIEW ----------------------------------------
     
-    /// Get Review
-    ///
-    ///- Parameter reviewId: (required) Review Id
+    /*!
+    * @discussion Get Review
+    *
+    * @param reviewId: (required) Review Id
+    */
     public static func getReview(reviewId : Int,completion: @escaping (Result<MarketReview?, Error>) -> Void) {
         HopperAPIGetReviewRequest.init(reviewId: reviewId).request { (data) in
             completion(.success(data.data))
@@ -47,12 +53,14 @@ import UIKit
         }
     }
     
-    /// Update Review
-    ///
-    ///- Parameter reviewId: (required) Review Id
-    ///- Parameter reviewName: (required) Review Name
-    ///- Parameter review: (required) Review Message
-    ///- Parameter rating: (required) Rating
+    /*!
+    * @discussion Update Review
+    *
+    * @param reviewId: (required) Review Id
+    * @param reviewName: (required) Review Name
+    * @param review: (required) Review Message
+    * @param rating: (required) Rating
+    */
     public static func updateReview(reviewId : Int,reviewName : String,review : String,rating : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIUpdateReviewRequest.init(reviewId: reviewId, reviewName: reviewName, review: review, rating: rating).request { (data) in
             completion(.success(data.data))
@@ -61,9 +69,11 @@ import UIKit
         }
     }
     
-    /// Delete Review
-    ///
-    ///- Parameter reviewId: (required) Review Id
+    /*!
+    * @discussion Delete Review
+    *
+    * @param reviewId: (required) Review Id
+    */
     public static func deleteReview(reviewId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIDeleteReviewRequest.init(reviewId: reviewId).request { (data) in
             completion(.success(data.data))
@@ -72,15 +82,17 @@ import UIKit
         }
     }
     
-    /// Save Market Review
-    ///
-    ///
-    ///- Parameter marketplaceId: (required) Marketplace Id
-    ///- Parameter marketItemType: (required) Market Item Type
-    ///- Parameter replyTo: (required) Reply Review Id
-    ///- Parameter reviewName: (required) Review Name
-    ///- Parameter review: (required) Review Message
-    ///- Parameter rating: (required) Rating
+    /*!
+    * @discussion Save Market Review
+    *
+    *
+    * @param marketplaceId: (required) Marketplace Id
+    * @param marketItemType: (required) Market Item Type
+    * @param replyTo: (required) Reply Review Id
+    * @param reviewName: (required) Review Name
+    * @param review: (required) Review Message
+    * @param rating: (required) Rating
+    */
     public static func saveMarketReview(marketplaceId : Int,marketItemType : String,reviewName : String,review : String,rating : Int,replyTo : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPISaveMarketReviewRequest.init(marketplaceId: marketplaceId, marketItemType: marketItemType, reviewName: reviewName, review: review, rating: rating, replyTo: replyTo).request { (data) in
             completion(.success(data.data))
@@ -89,14 +101,16 @@ import UIKit
         }
     }
     
-    /// Reply Market Review
-    ///
-    ///
-    ///- Parameter reviewId: (required) Review Id
-    ///- Parameter itemId: (required) Item Id
-    ///- Parameter itemType: (required) Item Type
-    ///- Parameter reviewName: (required) Review Name
-    ///- Parameter review: (required) Review Message
+    /*!
+    * @discussion Reply Market Review
+    *
+    *
+    * @param reviewId: (required) Review Id
+    * @param itemId: (required) Item Id
+    * @param itemType: (required) Item Type
+    * @param reviewName: (required) Review Name
+    * @param review: (required) Review Message
+    */
     public static func replyMarketReview(reviewId : Int,itemId : Int,itemType : String,reviewName : String,review : String,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIReplyMarketReviewRequest.init(reviewId: reviewId, itemId: itemId, itemType: itemType, reviewName: reviewName, review: review).request { (data) in
             completion(.success(data.data))
@@ -108,9 +122,11 @@ import UIKit
     
     // ------------- SIGNAL ----------------------------------------
     
-    /// Get Available Signals
-    ///
-    ///
+    /*!
+    * @discussion Get Available Signals
+    *
+    *
+     */
     public static func getAvailableSignals(completion: @escaping (Result<[MarketSignal]?, Error>) -> Void) {
         HopperAPIGetAvailableSignalsRequest.init("").request { (data) in
             completion(.success(data.data))
@@ -119,11 +135,12 @@ import UIKit
         }
     }
     
-    
-    /// Get  Signal
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
+    /*!
+    * @discussion Get  Signal
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
     public static func getSignal(signalId : Int ,completion: @escaping (Result<MarketSignal?, Error>) -> Void) {
         HopperAPIGetSignalRequest.init(signalId: signalId).request { (data) in
             completion(.success(data.data))
@@ -131,11 +148,13 @@ import UIKit
             completion(.failure(err))
         }
     }
-    
-    /// Get  Signal Distribution
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
+
+    /*!
+    * @discussion Get  Signal Distribution
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
     public static func getSignalDistribution(signalId : Int ,completion: @escaping (Result<[Int]?, Error>) -> Void) {
         HopperAPIGetSignalDistributionRequest.init(signalId: signalId).request { (data) in
             completion(.success(data.data))
@@ -144,10 +163,12 @@ import UIKit
         }
     }
     
-    /// Get  Signal Performance
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
+    /*!
+    * @discussion Get  Signal Performance
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
     public static func getSignalPerformance(signalId : Int ,completion: @escaping (Result<[MarketSignalPerformance]?, Error>) -> Void) {
         HopperAPIGetSignalPerformanceRequest.init(signalId: signalId).request { (data) in
             completion(.success(data.data))
@@ -157,11 +178,13 @@ import UIKit
     }
     
     
-    /// Get  One Review For Signal
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
-    ///- Parameter reviewId: (required) Review Id
+    /*!
+    * @discussion Get  One Review For Signal
+    *
+    *
+    * @param signalId: (required) Signal Id
+    * @param reviewId: (required) Review Id
+    */
     public static func getOneReviewForSignal(signalId : Int ,reviewId :Int,completion: @escaping (Result<MarketReview?, Error>) -> Void) {
         HopperAPIGetOneReviewRequest.init(signalId: signalId,reviewId: reviewId).request { (data) in
             completion(.success(data.data))
@@ -170,10 +193,12 @@ import UIKit
         }
     }
     
-    /// Get  Marketplace Seller
-    ///
-    ///
-    ///- Parameter sellerId: (required) Seller Id
+    /*!
+    * @discussion Get  Marketplace Seller
+    *
+    *
+    * @param sellerId: (required) Seller Id
+    */
     public static func getMarketplaceSeller(sellerId : String,completion: @escaping (Result<MarketplaceSeller?, Error>) -> Void) {
         HopperAPIGetMarketSellerRequest.init(id: sellerId).request { (data) in
             completion(.success(data.data))
@@ -182,14 +207,15 @@ import UIKit
         }
     }
     
-    
-    /// Post Signal Review
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
-    ///- Parameter reviewName: (required) Review Name
-    ///- Parameter review: (required) Review Message
-    ///- Parameter rating: (required) Rating 1-2-3-4-5
+    /*!
+    * @discussion Post Signal Review
+    *
+    *
+    * @param signalId: (required) Signal Id
+    * @param reviewName: (required) Review Name
+    * @param review: (required) Review Message
+    * @param rating: (required) Rating 1-2-3-4-5
+    */
     public static func postSignalReview(signalId : Int ,reviewName :String,review : String, rating : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIPostSignalReviewRequest.init(signalId: signalId, reviewName: reviewName, review: review, rating: rating).request { (data) in
             completion(.success(data.data))
@@ -198,10 +224,12 @@ import UIKit
         }
     }
     
-    /// Get  One Review For Signal
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
+    /*!
+    * @discussion Get  One Review For Signal
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
     public static func getSignalStats(signalId : Int,completion: @escaping (Result<MarketSignalStat?, Error>) -> Void) {
         HopperAPIGetSignalStatsRequest.init(signalId: signalId).request { (data) in
             completion(.success(data.data))
@@ -213,11 +241,12 @@ import UIKit
     
     // ------------- STRATEGY ----------------------------------------
     
-    
-    /// Get Available Strategies
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
+    /*!
+    * @discussion Get Available Strategies
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
     public static func getAvailableStrategies(completion: @escaping (Result<[MarketStrategy]?, Error>) -> Void) {
         HopperAPIGetAvailableStrategiesRequest.init("").request { (data) in
             completion(.success(data.data?.strategy))
@@ -226,10 +255,12 @@ import UIKit
         }
     }
     
-    /// Get  Strategies
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
+    /*!
+    * @discussion Get  Strategies
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
     public static func getStrategy(strategyId : Int ,completion: @escaping (Result<MarketStrategy?, Error>) -> Void) {
         HopperAPIGetStrategyRequest.init(strategyId: strategyId).request { (data) in
             completion(.success(data.data))
@@ -238,11 +269,13 @@ import UIKit
         }
     }
     
-    /// Get  Strategy Reviews
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
-    ///- Parameter reviewId: (required) Review Id
+    /*!
+    * @discussion Get  Strategy Reviews
+    *
+    *
+    * @param signalId: (required) Signal Id
+    * @param reviewId: (required) Review Id
+    */
     public static func getOneStrategyReview(strategyId : Int ,reviewId : Int,completion: @escaping (Result<MarketReview?, Error>) -> Void) {
         HopperAPIGetOneReviewForStrategyRequest.init(strageyId: strategyId,reviewId: reviewId).request { (data) in
             completion(.success(data.data))
@@ -251,13 +284,15 @@ import UIKit
         }
     }
     
-    /// Post Strategy Review
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
-    ///- Parameter reviewName: (required) Review Name
-    ///- Parameter review: (required) Review Message
-    ///- Parameter rating: (required) Rating 1-2-3-4-5
+    /*!
+    * @discussion Post Strategy Review
+    *
+    *
+    * @param signalId: (required) Signal Id
+    * @param reviewName: (required) Review Name
+    * @param review: (required) Review Message
+    * @param rating: (required) Rating 1-2-3-4-5
+    */
     public static func postStrategyReview(strategyId : Int ,reviewName : String, review : String,rating : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIPostStrategyReviewRequest.init(strategyId: strategyId, reviewName: reviewName, review: review, rating: rating).request { (data) in
             completion(.success(data.data))
@@ -270,11 +305,12 @@ import UIKit
     
     // ------------- Template ----------------------------------------
     
-    
-    /// Get Available Templates
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
+    /*!
+    * @discussion Get Available Templates
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
     public static func getAvailableTemplates(completion: @escaping (Result<[MarketplaceTemplate]?, Error>) -> Void) {
         HopperAPIGetAvailableTemplatesRequest.init("").request({ (resp) in
             completion(.success(resp.data?.templates))
@@ -283,11 +319,12 @@ import UIKit
         })
     }
     
-    
-    /// Get Template
-    ///
-    ///
-    ///- Parameter signalId: (required) Signal Id
+    /*!
+    * @discussion Get Template
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
     public static func getMarketTemplate(templateId : Int,completion: @escaping (Result<MarketplaceTemplate?, Error>) -> Void) {
         HopperAPIGetTemplateRequest.init(templateId: templateId).request({ (resp) in
             completion(.success(resp.data))
@@ -296,12 +333,13 @@ import UIKit
         })
     }
     
-    
-    /// Get  Template Reviews
-    ///
-    ///
-    ///- Parameter templateId: (required) Template Id
-    ///- Parameter reviewId: (required) Review Id
+    /*!
+    * @discussion Get  Template Reviews
+    *
+    *
+    * @param templateId: (required) Template Id
+    * @param reviewId: (required) Review Id
+    */
     public static func getOneTemplateReview(templateId : Int ,reviewId : Int,completion: @escaping (Result<MarketReview?, Error>) -> Void) {
         HopperAPIGetOneReviewForTemplateRequest.init(templateId: templateId, reviewId: reviewId).request { (data) in
             completion(.success(data.data))
@@ -309,14 +347,16 @@ import UIKit
             completion(.failure(err))
         }
     }
-    
-    /// Post Template Review
-    ///
-    ///
-    ///- Parameter templateId: (required) Template Id
-    ///- Parameter reviewName: (required) Review Name
-    ///- Parameter review: (required) Review Message
-    ///- Parameter rating: (required) Rating 1-2-3-4-5
+
+    /*!
+    * @discussion Post Template Review
+    *
+    *
+    * @param templateId: (required) Template Id
+    * @param reviewName: (required) Review Name
+    * @param review: (required) Review Message
+    * @param rating: (required) Rating 1-2-3-4-5
+    */
     public static func postTemplateReview(templateId : Int ,reviewName : String, review : String,rating : Int,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIPostTemplateReviewRequest.init(templateId: templateId, reviewName: reviewName, review: review, rating: rating).request { (data) in
             completion(.success(data.data))
