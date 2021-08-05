@@ -235,6 +235,7 @@
 		D05E781625D6BF8E008C4E4A /* MarketplaceSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */; };
 		D05E781C25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E781B25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift */; };
 		D05E782125D6C233008C4E4A /* HopperAPIGetMarketSellerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E782025D6C233008C4E4A /* HopperAPIGetMarketSellerResponse.swift */; };
+		D07A953926BBE5CD00BCA23A /* HopperBotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07A953826BBE5CD00BCA23A /* HopperBotType.swift */; };
 		D07BDD0E2546D082008081E3 /* HopperAPIGetAllHoppersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDD0D2546D082008081E3 /* HopperAPIGetAllHoppersRequest.swift */; };
 		D07BDD122546D142008081E3 /* HopperAPIGetAllHoppersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDD112546D142008081E3 /* HopperAPIGetAllHoppersResponse.swift */; };
 		D07BDD172546D187008081E3 /* Hopper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDD162546D187008081E3 /* Hopper.swift */; };
@@ -613,6 +614,7 @@
 		D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceSeller.swift; sourceTree = "<group>"; };
 		D05E781B25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetMarketSellerRequest.swift; sourceTree = "<group>"; };
 		D05E782025D6C233008C4E4A /* HopperAPIGetMarketSellerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetMarketSellerResponse.swift; sourceTree = "<group>"; };
+		D07A953826BBE5CD00BCA23A /* HopperBotType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperBotType.swift; sourceTree = "<group>"; };
 		D07BDD0D2546D082008081E3 /* HopperAPIGetAllHoppersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAllHoppersRequest.swift; sourceTree = "<group>"; };
 		D07BDD112546D142008081E3 /* HopperAPIGetAllHoppersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAllHoppersResponse.swift; sourceTree = "<group>"; };
 		D07BDD162546D187008081E3 /* Hopper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hopper.swift; sourceTree = "<group>"; };
@@ -961,7 +963,6 @@
 			isa = PBXGroup;
 			children = (
 				D0231C1125503B1E0057A293 /* Models */,
-				D0231C1225503B220057A293 /* Enums */,
 			);
 			path = Marketplace;
 			sourceTree = "<group>";
@@ -980,13 +981,6 @@
 				D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D0231C1225503B220057A293 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
 		D0231C1325503B9D0057A293 /* GetHomePage */ = {
@@ -2802,6 +2796,7 @@
 				D0231BFC255035E60057A293 /* HopperSearchOptionsItemEntry.swift */,
 				D0231C00255036270057A293 /* HopperSearchOptionsItemSortField.swift */,
 				D0231C04255036600057A293 /* HopperSearchOptionsItemSortOrder.swift */,
+				D07A953826BBE5CD00BCA23A /* HopperBotType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -3505,6 +3500,7 @@
 				D0C76B04254B0EDB0094ED9B /* HopperAPIUpdateConfigResponse.swift in Sources */,
 				D0231C5225504FB50057A293 /* MarketSignal.swift in Sources */,
 				D0231EB02552D3130057A293 /* HopperAPIGetPrecisionForCurrenciesOfExchangeResponse.swift in Sources */,
+				D07A953926BBE5CD00BCA23A /* HopperBotType.swift in Sources */,
 				D07BDD9125472351008081E3 /* HopperAPIDisableHopperSellingRequest.swift in Sources */,
 				D023F389265FD588001D1880 /* CryptohopperPurchase.swift in Sources */,
 				D0231D2E25514EE60057A293 /* HopperAPIGetAllUserSubscriptionsResponse.swift in Sources */,

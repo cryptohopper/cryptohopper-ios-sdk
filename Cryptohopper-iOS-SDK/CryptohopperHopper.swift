@@ -1262,8 +1262,8 @@ import UIKit
     *
     *  @param hopperId:  (required) Hopper Id
     */
-    public static func getTradeHistory(hopperId : String,completion: @escaping (Result<[HopperTradeHistory]?, Error>) -> Void) {
-        HopperAPIGetTradeHistoryRequest.init(hopperId: hopperId).request { (data) in
+    public static func getTradeHistory(hopperId : String,dateFrom : Date?,count : Int?,completion: @escaping (Result<[HopperTradeHistory]?, Error>) -> Void) {
+        HopperAPIGetTradeHistoryRequest.init(hopperId: hopperId,dateFrom: dateFrom,count: count).request { (data) in
             completion(.success(data.data?.trades))
         } _: { (err) in
             completion(.failure(err))

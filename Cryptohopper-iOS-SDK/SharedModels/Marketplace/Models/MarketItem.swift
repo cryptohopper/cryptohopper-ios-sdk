@@ -18,6 +18,7 @@ public class MarketItem : Codable {
     public private(set) var rating : String?
     public private(set) var sales : Int?
     public private(set) var price : Double?
+    public private(set) var averageProfitPerTrade : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -29,5 +30,6 @@ public class MarketItem : Codable {
         case rating = "rating"
         case sales = "sales"
         case price = "price"
+        case averageProfitPerTrade = "avg_profit_trade"
     }
 }

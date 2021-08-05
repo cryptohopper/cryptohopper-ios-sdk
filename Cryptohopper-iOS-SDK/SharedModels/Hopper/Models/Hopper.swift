@@ -35,7 +35,7 @@ public class Hopper : Codable {
     public private(set) var lastSignal : String?
     public private(set) var lastSignalEncoding : String?
     public private(set) var totalCurrency : String?
-    public private(set) var botType : String?
+    public private(set) var botType : HopperBotType?
     public private(set) var userId : String?
     public private(set) var allowedCoins : [String]?
     public private(set) var paperTrading : Int?
