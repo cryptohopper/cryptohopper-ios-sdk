@@ -17,7 +17,7 @@ public class MarketItem : Codable {
     public private(set) var totalVotes : String?
     public private(set) var rating : String?
     public private(set) var sales : Int?
-    public private(set) var price : Double?
+    public private(set) var price : String?
     public private(set) var averageProfitPerTrade : String?
     
     private enum CodingKeys: String, CodingKey {
