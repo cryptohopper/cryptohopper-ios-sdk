@@ -12,6 +12,7 @@ class HopperAPIGetHomePageRequest: HopperAPIRequest<HopperAPIGetHomePageResponse
     convenience init(_ homepage: String) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/market/homepage")
+        self.addQueryItem(name: "in_app", value: "1")
     }
     
     override var httpMethod: HopperAPIHttpMethod {

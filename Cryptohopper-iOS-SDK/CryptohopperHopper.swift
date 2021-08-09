@@ -315,8 +315,8 @@ import UIKit
     *  @param trailingBuy:  (required) Trailing Buy
     *  @param trailingBuyPercentage:  (required) Trailing Buy Percentage
     */
-    public static func createOrder(hopperId : String,orderType : String,marketOrder : Int,coin : String,price : Double,amount : Double,orderTrigger : String,percentageProfit : Double,trailingBuy : Double,trailingBuyPercentage : Double,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPICreateOrderRequest.init(hopperId: hopperId, orderType: orderType, marketOrder: marketOrder, coin: coin, price: price, amount: amount, orderTrigger: orderTrigger, percentageProfit: percentageProfit, trailingBuy: trailingBuy, trailingBuyPercentage: trailingBuyPercentage).request { (data) in
+    public static func createOrder(hopperId : String,orderType : String,marketOrder : Int,coin : String,price : Double,amount : Double,orderTrigger : String,percentageProfit : Double,trailingBuy : Double,trailingBuyPercentage : Double,stopLossPercentage:Double,trailingStopLossPercentage: Double,trailingArmPercentage:Double,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPICreateOrderRequest.init(hopperId: hopperId, orderType: orderType, marketOrder: marketOrder, coin: coin, price: price, amount: amount, orderTrigger: orderTrigger, percentageProfit: percentageProfit, trailingBuy: trailingBuy, trailingBuyPercentage: trailingBuyPercentage,stopLossPercentage: stopLossPercentage,trailingStopLossPercentage: trailingStopLossPercentage,trailingArmPercentage: trailingArmPercentage).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
