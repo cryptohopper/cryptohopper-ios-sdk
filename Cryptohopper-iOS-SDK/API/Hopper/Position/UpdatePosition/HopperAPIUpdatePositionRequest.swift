@@ -10,20 +10,39 @@ import UIKit
 
 class HopperAPIUpdatePositionRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(hopperId : String , positionId:Int,takeProfit : Double,trailingStopLoss : Int, trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoClose : Int,autoCloseTime : String) {
+    convenience init(hopperId : String , positionId:Int,takeProfit : Double,stopLoss:Int,stopLossPercentage : Double,trailingStopLoss : Int, trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoClose : Int,autoCloseTime : String) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/position/setpositionsetting")
         
-        addBodyItem(name: "take_profit", value: takeProfit)
+        addBodyItem(name: "position_ids", value: [positionId])
         
-        addBodyItem(name: "trailing_enabled", value: trailingStopLoss)
-        if(trailingStopLoss == 1){
-            addBodyItem(name: "trailing_percentage", value: trailingStopLossPercentage)
-            addBodyItem(name: "trailing_arm_percentage", value: trailingStopLossArm)
+        var settings = [String:Any]()
+        
+        settings["take_profit"] = takeProfit
+        
+        settings["stop_loss_enabled"] = stopLoss
+        if(stopLoss == 1){
+            settings["stop_loss_percentage"] = stopLossPercentage
+        }else{
+            settings["stop_loss_percentage"] = 0.0
         }
         
-        addBodyItem(name: "auto_close", value: autoClose)
-        addBodyItem(name: "auto_close_time", value: autoCloseTime)
+        settings["trailing_enabled"] = trailingStopLoss
+        if(trailingStopLoss == 1){
+            settings["trailing_percentage"] = trailingStopLossPercentage
+            settings["trailing_arm_percentage"] = trailingStopLossArm
+        }else{
+            settings["trailing_percentage"] = 0.0
+            settings["trailing_arm_percentage"] = 0.0
+        }
+        
+        if(autoClose == 1){
+            settings["auto_close_time"] = autoCloseTime
+        }else{
+            settings["auto_close_time"] = 0
+        }
+        
+        addBodyItem(name: "setting", value: settings)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

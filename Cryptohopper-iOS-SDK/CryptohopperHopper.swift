@@ -541,7 +541,7 @@ import UIKit
     *  @param autoCloseTime:  (required) Auto Close Time
     */
     public static func updatePosition(hopperId : String,positionId : Int,takeProfit : Double,stopLoss:Int,stopLossPercentage : Double,trailingStopLoss : Int,trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoClose :Int,autoCloseTime : String,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIUpdatePositionRequest.init(hopperId: hopperId, positionId: positionId, takeProfit: takeProfit, trailingStopLoss: trailingStopLoss, trailingStopLossPercentage: trailingStopLossPercentage, trailingStopLossArm: trailingStopLossArm, autoClose: autoClose, autoCloseTime: autoCloseTime).request { (data) in
+        HopperAPIUpdatePositionRequest.init(hopperId: hopperId, positionId: positionId, takeProfit: takeProfit,stopLoss:stopLoss,stopLossPercentage : stopLossPercentage, trailingStopLoss: trailingStopLoss, trailingStopLossPercentage: trailingStopLossPercentage, trailingStopLossArm: trailingStopLossArm, autoClose: autoClose, autoCloseTime: autoCloseTime).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -562,8 +562,8 @@ import UIKit
     *  @param autoClose:  (required) Auto Close
     *  @param autoCloseTime:  (required) Auto Close Time
     */
-    public static func updateShortPosition(hopperId : String,shortId : Int,takeProfit : Double,trailingStopLoss : Int,trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoClose :Int,autoCloseTime : String,autoRemove : Int, autoRemoveTime: String,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIUpdateShortPositionRequest.init(hopperId: hopperId, shortId: shortId, takeProfit: takeProfit, trailingStopLoss: trailingStopLoss, trailingStopLossPercentage: trailingStopLossPercentage, trailingStopLossArm: trailingStopLossArm, autoCloseTime: autoCloseTime,autoRemoveTime:  autoRemoveTime).request { (data) in
+    public static func updateShortPosition(hopperId : String,shortId : Int,takeProfit : Double,stopLoss:Int,stopLossPercentage : Double,trailingStopLoss : Int,trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoClose :Int,autoCloseTime : String,autoRemove : Int, autoRemoveTime: String,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIUpdateShortPositionRequest.init(hopperId: hopperId, shortId: shortId, takeProfit: takeProfit,stopLoss:stopLoss,stopLossPercentage : stopLossPercentage, trailingStopLoss: trailingStopLoss, trailingStopLossPercentage: trailingStopLossPercentage, trailingStopLossArm: trailingStopLossArm, autoCloseTime: autoCloseTime,autoRemoveTime:  autoRemoveTime).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -591,6 +591,21 @@ import UIKit
     */
     public static func holdOnePosition(hopperId : String,positionId : [Int],completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIHoldMultiplePositionsRequest.init(hopperId: hopperId, positionIds: positionId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    
+    /*!
+    * @discussion Hold One Position
+    *
+    *  @param hopperId:  (required) Hopper Id
+    *  @param positionId:  (required) Position Id
+    */
+    public static func holdShortPosition(hopperId : String,positionId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIHoldShortPositionRequest.init(hopperId: hopperId, positionId: positionId).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -859,7 +874,7 @@ import UIKit
     *
     *  @param hopperId:  (required) Hopper Id
     */
-    public static func getAssets(hopperId : String,reserved : Bool,completion: @escaping (Result<[String:Double]?, Error>) -> Void) {
+    public static func getAssets(hopperId : String,reserved : Bool,completion: @escaping (Result<[String:String]?, Error>) -> Void) {
         HopperAPIGetAssetsRequest.init(id: hopperId,reserved: reserved).request { (data) in
             completion(.success(data.data))
         } _: { (err) in

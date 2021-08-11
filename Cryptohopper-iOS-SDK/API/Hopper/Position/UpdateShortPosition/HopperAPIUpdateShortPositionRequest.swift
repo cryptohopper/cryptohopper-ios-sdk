@@ -10,20 +10,34 @@ import UIKit
 
 class HopperAPIUpdateShortPositionRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(hopperId : String , shortId:Int , takeProfit : Double,trailingStopLoss : Int, trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoCloseTime : String,autoRemoveTime : String) {
+    convenience init(hopperId : String , shortId:Int , takeProfit : Double,stopLoss : Int,stopLossPercentage : Double,trailingStopLoss : Int, trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoCloseTime : String,autoRemoveTime : String) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/setshortsetting")
-
-        addBodyItem(name: "take_profit", value: takeProfit)
         
-        addBodyItem(name: "trailing_enabled", value: trailingStopLoss)
-        if(trailingStopLoss == 1){
-            addBodyItem(name: "trailing_percentage", value: trailingStopLossPercentage)
-            addBodyItem(name: "trailing_arm_percentage", value: trailingStopLossArm)
+        var settings = [String:Any]()
+        
+        settings["take_profit"] = takeProfit
+        
+        settings["stop_loss_enabled"] = stopLoss
+        if(stopLoss == 1){
+            settings["stop_loss_percentage"] = stopLossPercentage
+        }else{
+            settings["stop_loss_percentage"] = 0.0
         }
         
-        addBodyItem(name: "auto_close_time", value: autoCloseTime)
-        addBodyItem(name: "auto_remove_time", value: autoRemoveTime)
+        settings["trailing_enabled"] = trailingStopLoss
+        if(trailingStopLoss == 1){
+            settings["trailing_percentage"] = trailingStopLossPercentage
+            settings["trailing_arm_percentage"] = trailingStopLossArm
+        }else{
+            settings["trailing_percentage"] = 0.0
+            settings["trailing_arm_percentage"] = 0.0
+        }
+        
+        settings["auto_close_time"] = autoCloseTime
+        settings["auto_remove_time"] = autoRemoveTime
+        
+        addBodyItem(name: "setting", value: settings)
     }
     
     override var httpMethod: HopperAPIHttpMethod {
