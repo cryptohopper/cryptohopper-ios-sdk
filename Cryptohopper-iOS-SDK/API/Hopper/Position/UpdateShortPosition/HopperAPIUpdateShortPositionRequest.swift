@@ -14,6 +14,8 @@ class HopperAPIUpdateShortPositionRequest: HopperAPIRequest<HopperCommonMessageR
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/setshortsetting")
         
+        addBodyItem(name: "position_ids", value: [shortId])
+        
         var settings = [String:Any]()
         
         settings["take_profit"] = takeProfit
