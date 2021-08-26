@@ -12,7 +12,7 @@ class HopperAPIUpdateShortPositionRequest: HopperAPIRequest<HopperCommonMessageR
     
     convenience init(hopperId : String , shortId:Int , takeProfit : Double,stopLoss : Int,stopLossPercentage : Double,trailingStopLoss : Int, trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoCloseTime : String,autoRemoveTime : String) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/setshortsetting")
+        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/position/setshortsetting")
         
         addBodyItem(name: "position_ids", value: [shortId])
         
@@ -36,8 +36,8 @@ class HopperAPIUpdateShortPositionRequest: HopperAPIRequest<HopperCommonMessageR
             settings["trailing_arm_percentage"] = 0.0
         }
         
-        settings["auto_close_time"] = autoCloseTime
-        settings["auto_remove_time"] = autoRemoveTime
+        //settings["auto_close_time"] = autoCloseTime
+        //settings["auto_remove_time"] = autoRemoveTime
         
         addBodyItem(name: "setting", value: settings)
     }

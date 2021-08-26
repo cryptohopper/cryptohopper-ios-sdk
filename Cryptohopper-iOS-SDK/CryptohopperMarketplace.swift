@@ -155,8 +155,22 @@ import UIKit
     *
     * @param signalId: (required) Signal Id
     */
-    public static func getSignalDistribution(signalId : Int ,completion: @escaping (Result<[Int]?, Error>) -> Void) {
+    public static func getSignalDistribution(signalId : Int ,completion: @escaping (Result<[String:Int]?, Error>) -> Void) {
         HopperAPIGetSignalDistributionRequest.init(signalId: signalId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+    * @discussion Get Signal Chart Data
+    *
+    *
+    * @param signalId: (required) Signal Id
+    */
+    public static func getSignalChartData(signalId : Int ,completion: @escaping (Result<[String:[SignalChartData]]?, Error>) -> Void) {
+        HopperAPIGetSignalChartDataRequest.init(signalId: signalId).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))

@@ -9,7 +9,7 @@ import Foundation
 
 class HopperAPIGetSignalDistributionResponse: Codable {
     
-    var data : [Int]?
+    var data : [String:Int]?
     
     private enum CodingKeys: String, CodingKey {
         case data = "data"
