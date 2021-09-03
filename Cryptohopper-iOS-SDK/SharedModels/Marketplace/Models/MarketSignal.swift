@@ -30,6 +30,8 @@ public class MarketSignal : Codable {
     public private(set) var signalDetails : [String:String]?
     public private(set) var reviews : MarketSignalReviewData?
     
+    public private(set) var priceId : String?
+    
     public private(set) var sellerId : String?
     public private(set) var sellerName : String?
     public private(set) var sellerLogo : String?
@@ -60,6 +62,7 @@ public class MarketSignal : Codable {
         case sellerName = "seller_name"
         case sellerLogo = "seller_logo"
         case isRefundable = "is_refundable"
+        case priceId = "price_id"
     }
     
 }
