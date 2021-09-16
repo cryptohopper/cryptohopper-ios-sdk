@@ -19,8 +19,8 @@ import UIKit
      * @param password String
      * @param verificationCode String? optional
      */
-    public static func login(username: String,password: String,verificationCode: String?,completion: @escaping (Result<String, Error>) -> Void) {
-        HopperAPIAuthenticationRequest.init(username: username, password: password, verificationCode: verificationCode).request { (authResponse) in
+    public static func login(username: String,password: String,verificationCode: String?,userAgent: String,completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPIAuthenticationRequest.init(username: username, password: password, verificationCode: verificationCode,userAgent : userAgent).request { (authResponse) in
             HopperAPISessionManager.shared.handleAuthResponse(response: authResponse)
             completion(.success("Successfully Logged In"))
         } _: { (err) in

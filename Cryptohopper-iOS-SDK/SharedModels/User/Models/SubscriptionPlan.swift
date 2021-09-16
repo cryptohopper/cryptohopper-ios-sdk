@@ -17,7 +17,7 @@ public class SubscriptionPlan : Codable {
     public private(set) var subscribed : Int?
     
     private enum CodingKeys: String, CodingKey {
-        case planId = "planId"
+        case planId = "plan_id"
         case name = "name"
         case description = "description"
         case priceMonth = "price_month"

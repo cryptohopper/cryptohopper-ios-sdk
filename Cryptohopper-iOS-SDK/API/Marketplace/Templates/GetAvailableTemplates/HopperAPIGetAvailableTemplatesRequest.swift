@@ -12,6 +12,7 @@ class HopperAPIGetAvailableTemplatesRequest: HopperAPIRequest<HopperAPIGetAvaila
     convenience init(_ data : String) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/market/templates")
+        addQueryItem(name: "available_in_app", value: "1")
     }
     
     override var httpMethod: HopperAPIHttpMethod {

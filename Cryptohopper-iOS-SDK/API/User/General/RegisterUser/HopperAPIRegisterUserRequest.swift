@@ -9,7 +9,7 @@ import Foundation
 
 class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserResponse> {
     
-    convenience init(name : String,email : String,username : String,subscribe_newsletter : Bool,password : String) {
+    convenience init(name : String,email : String,username : String,subscribe_newsletter : Bool,password : String,userAgent: String) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/user/register")
         addHeader(name: "name", value: name)
@@ -17,6 +17,8 @@ class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserRespon
         addHeader(name: "username", value: username)
         addHeader(name: "subscribe_newsletter", value: subscribe_newsletter.description)
         addHeader(name: "password", value: password)
+        
+        addHeader(name: "User-Agent", value: userAgent)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

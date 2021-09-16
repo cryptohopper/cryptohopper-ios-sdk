@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPIAuthenticationRequest: HopperAPIRequest<HopperAPIAuthenticationResponse> {
     
-    convenience init(username : String , password : String , verificationCode : String?) {
+    convenience init(username : String , password : String , verificationCode : String?, userAgent : String) {
         self.init()
         self.changeUrlPath(path:"/oauth2/token")
         self.setIsAuthenticationRequest(isAuthenticationMethod: true)
@@ -24,6 +24,8 @@ class HopperAPIAuthenticationRequest: HopperAPIRequest<HopperAPIAuthenticationRe
         if(verificationCode != nil){
             addBodyItem(name: "verification_code", value: (verificationCode ?? ""))
         }
+        
+        addHeader(name: "User-Agent", value: userAgent)
     }
     
     override var httpMethod: HopperAPIHttpMethod {
