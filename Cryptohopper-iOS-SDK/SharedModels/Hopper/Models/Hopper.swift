@@ -39,6 +39,7 @@ public class Hopper : Codable {
     public private(set) var userId : String?
     public private(set) var allowedCoins : [String]?
     public private(set) var paperTrading : Int?
+    public private(set) var openPositionsCount : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -71,6 +72,7 @@ public class Hopper : Codable {
         case userId = "user_id"
         case allowedCoins = "allowed_coins"
         case paperTrading = "paper_trading"
+        case openPositionsCount = "open_positions_count"
     }
     
 }

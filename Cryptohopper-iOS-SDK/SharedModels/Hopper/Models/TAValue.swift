@@ -16,7 +16,7 @@ public class TAValue : Codable {
     public private(set) var strategyId : String?
     public private(set) var values : AnyCodable?
     public private(set) var signals : AnyCodable?
-    public private(set) var indicators : [TAIndicator]?
+    //public private(set) var indicators : [TAIndicator]?
 
     
     private enum CodingKeys: String, CodingKey {
@@ -27,7 +27,7 @@ public class TAValue : Codable {
         case strategyId = "strategy_id"
         case values = "values"
         case signals = "signals"
-        case indicators = "indicators"
+        //case indicators = "indicators"
     }
 
 }

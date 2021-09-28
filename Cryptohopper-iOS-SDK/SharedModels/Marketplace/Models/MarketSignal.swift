@@ -38,6 +38,9 @@ public class MarketSignal : Codable {
     
     public private(set) var isRefundable : Int?
     
+    public private(set) var totalSubs : String?
+    public private(set) var totalReviews : String?
+    
     private enum CodingKeys: String, CodingKey {
         case id = "id"
         case signalId = "signal_id"
@@ -54,6 +57,8 @@ public class MarketSignal : Codable {
         case performancePct = "performance_pct"
         case rating = "rating"
         case totalVotes = "total_votes"
+        case totalSubs = "total_subs"
+        case totalReviews = "total_reviews"
         case link = "link"
         case lastTenSignals = "last_10_signals"
         case signalDetails = "signal_details"
