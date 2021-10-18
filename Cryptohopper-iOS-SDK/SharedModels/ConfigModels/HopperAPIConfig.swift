@@ -18,6 +18,7 @@ class HopperAPIConfiguration {
     var environment: HopperAPIEnvironment = .Production
     var debugModeEnabled: Bool = false
     var clientId : String?
+    var clientSecret : String?
     var isAuthenticationRequest = false
     
     var authenticationHost : String = "www.cryptohopper.com"

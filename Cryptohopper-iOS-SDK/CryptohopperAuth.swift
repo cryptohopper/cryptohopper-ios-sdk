@@ -28,6 +28,15 @@ import UIKit
         }
     }
     
+    public static func loginWithCode(code: String,userAgent: String,completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPIAuthWithCodeRequest.init(code: code, userAgent : userAgent).request { (authResponse) in
+            HopperAPISessionManager.shared.handleAuthResponse(response: authResponse)
+            completion(.success("Successfully Logged In"))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     /*!
      * @discussion Logs out and removes your session
      */

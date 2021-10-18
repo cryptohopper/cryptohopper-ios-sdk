@@ -19,7 +19,7 @@ class HopperGeneralSpec : QuickSpec {
         
         beforeEach {
             
-            CryptoHopperConfig.configure(clientId: clientId, environment: environment)
+            CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: environment)
 
             if(HopperAPISessionManager.shared.session?.accessToken == nil){
                 print("Hopper General Spec Authenication : Making Authentication ...")

@@ -36,6 +36,10 @@ class HopperAPISessionManager {
         return true
     }
     
+    func injectSession(accessToken : String , refreshToken : String , expireDate : Date){
+        session = HopperAPISession(accessToken: accessToken, refreshToken: refreshToken, accessTokenExpiresAt: expireDate)
+    }
+    
     func checkAuthentication(onSuccess:@escaping HopperAPIEmptySuccessClosure, onFail: HopperAPIRequestFailClosure? = nil) {
         if hasSession {
             updateRefreshTokenIfNeeded(onSuccess: onSuccess, onFail: onFail)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1782BB3EBFA96D2E71C3B6EC /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4AA6D440730232B3BD601E6 /* Pods_Cryptohopper_iOS_SDK.framework */; };
+		D0021D3C2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */; };
 		D007DF3C2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */; };
 		D00A9145257A525600E30BE8 /* HopperAPIGetShortsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9144257A525600E30BE8 /* HopperAPIGetShortsResponse.swift */; };
 		D00A914A257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9149257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift */; };
@@ -217,6 +218,9 @@
 		D023F385265FC77D001D1880 /* HopperAPIPurchaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023F384265FC77D001D1880 /* HopperAPIPurchaseRequest.swift */; };
 		D023F387265FC792001D1880 /* HopperAPIPurchaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023F386265FC792001D1880 /* HopperAPIPurchaseResponse.swift */; };
 		D023F389265FD588001D1880 /* CryptohopperPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023F388265FD588001D1880 /* CryptohopperPurchase.swift */; };
+		D025720D2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025720C2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift */; };
+		D02572102719A8BB0086FCD9 /* HopperAPIUpdateGetMobileNotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025720F2719A8BB0086FCD9 /* HopperAPIUpdateGetMobileNotificationRequest.swift */; };
+		D02572122719AD680086FCD9 /* HopperAPIUpdateGetMobileNotificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02572112719AD680086FCD9 /* HopperAPIUpdateGetMobileNotificationResponse.swift */; };
 		D037FA2125406FD8003CF793 /* Cryptohopper_iOS_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D037FA1325406FD7003CF793 /* Cryptohopper_iOS_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D037FA3025408EA3003CF793 /* CryptoHopperConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA2F25408EA3003CF793 /* CryptoHopperConfig.swift */; };
 		D037FA3425409145003CF793 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA3325409145003CF793 /* Keychain.swift */; };
@@ -385,6 +389,7 @@
 		7296243D426B7AF70EFD92CC /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		86C14D0C7771439F41C0C74C /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
 		B2CD7B98F0C43DA11A7880F7 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthWithCodeRequest.swift; sourceTree = "<group>"; };
 		D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICreateHopperResponse.swift; sourceTree = "<group>"; };
 		D00A9144257A525600E30BE8 /* HopperAPIGetShortsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetShortsResponse.swift; sourceTree = "<group>"; };
 		D00A9149257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetReservedPositionsResponse.swift; sourceTree = "<group>"; };
@@ -597,6 +602,9 @@
 		D023F384265FC77D001D1880 /* HopperAPIPurchaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIPurchaseRequest.swift; sourceTree = "<group>"; };
 		D023F386265FC792001D1880 /* HopperAPIPurchaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIPurchaseResponse.swift; sourceTree = "<group>"; };
 		D023F388265FD588001D1880 /* CryptohopperPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperPurchase.swift; sourceTree = "<group>"; };
+		D025720C2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdatePushNotificationRequest.swift; sourceTree = "<group>"; };
+		D025720F2719A8BB0086FCD9 /* HopperAPIUpdateGetMobileNotificationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdateGetMobileNotificationRequest.swift; sourceTree = "<group>"; };
+		D02572112719AD680086FCD9 /* HopperAPIUpdateGetMobileNotificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdateGetMobileNotificationResponse.swift; sourceTree = "<group>"; };
 		D037FA1025406FD7003CF793 /* Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D037FA1325406FD7003CF793 /* Cryptohopper_iOS_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cryptohopper_iOS_SDK.h; sourceTree = "<group>"; };
 		D037FA1425406FD7003CF793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -791,6 +799,14 @@
 				37CD88054C4826CD5F017BCC /* Pods_Cryptohopper_iOS_SDKTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0021D3A2718788F0050D7CC /* AuthWithCode */ = {
+			isa = PBXGroup;
+			children = (
+				D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */,
+			);
+			path = AuthWithCode;
 			sourceTree = "<group>";
 		};
 		D00A919E257A918A00E30BE8 /* ForgetPassword */ = {
@@ -1301,7 +1317,9 @@
 				D0231D582551811B0057A293 /* GetAvailableCredits */,
 				D0231D59255181230057A293 /* GetUserEmail */,
 				D0231D5A2551812B0057A293 /* ChangeEmail */,
+				D025720E2719A89C0086FCD9 /* GetMobilePushNotifications */,
 				D0231D5B255181300057A293 /* EnableMobilePushNotification */,
+				D025720B2719A67F0086FCD9 /* UpdateMobilePushNotification */,
 				D0231D5C2551813E0057A293 /* GetUserId */,
 				D0231D5D255181450057A293 /* GetUserNotifications */,
 				D0231D5E2551814F0057A293 /* ChangePassword */,
@@ -2024,6 +2042,23 @@
 			path = General;
 			sourceTree = "<group>";
 		};
+		D025720B2719A67F0086FCD9 /* UpdateMobilePushNotification */ = {
+			isa = PBXGroup;
+			children = (
+				D025720C2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift */,
+			);
+			path = UpdateMobilePushNotification;
+			sourceTree = "<group>";
+		};
+		D025720E2719A89C0086FCD9 /* GetMobilePushNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				D025720F2719A8BB0086FCD9 /* HopperAPIUpdateGetMobileNotificationRequest.swift */,
+				D02572112719AD680086FCD9 /* HopperAPIUpdateGetMobileNotificationResponse.swift */,
+			);
+			path = GetMobilePushNotifications;
+			sourceTree = "<group>";
+		};
 		D037FA0625406FD7003CF793 = {
 			isa = PBXGroup;
 			children = (
@@ -2111,6 +2146,7 @@
 		D037FA5B25409FE6003CF793 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D0021D3A2718788F0050D7CC /* AuthWithCode */,
 				D037FA5C2540A013003CF793 /* Authenticate */,
 				D0ADD7FD25419FD50010CB72 /* RefreshToken */,
 			);
@@ -3473,6 +3509,7 @@
 				D0231F312552EB890057A293 /* HopperAPISubscribeToSignalRequest.swift in Sources */,
 				D007DF3C2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift in Sources */,
 				D0231C86255053EF0057A293 /* HopperAPIGetSignalStatsRequest.swift in Sources */,
+				D02572122719AD680086FCD9 /* HopperAPIUpdateGetMobileNotificationResponse.swift in Sources */,
 				D0231F252552EB4F0057A293 /* HopperAPIGetSignalByIdRequest.swift in Sources */,
 				D0231EA02552D2C10057A293 /* HopperAPIGetCandlesFromExchangeRequest.swift in Sources */,
 				D0C76BA2254C647B0094ED9B /* HopperAPIGetHoldPositionsResponse.swift in Sources */,
@@ -3509,6 +3546,7 @@
 				D0231F0E2552E6C10057A293 /* HopperAPIGetLastSignalRequest.swift in Sources */,
 				D0C76A492549B5BE0094ED9B /* HopperAPIActivateDCAForMultiplePositionsRequest.swift in Sources */,
 				D0231F4D2552F0920057A293 /* HopperAPIGetStrategiesRequest.swift in Sources */,
+				D025720D2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift in Sources */,
 				D0231FA6255406DB0057A293 /* CryptohopperExchange.swift in Sources */,
 				D023F385265FC77D001D1880 /* HopperAPIPurchaseRequest.swift in Sources */,
 				D0AF9E0E2625A3B5001FFDF3 /* AnyEncodable.swift in Sources */,
@@ -3588,6 +3626,7 @@
 				D0231E372552AD1D0057A293 /* HopperAPIChangeImageOfTemplateRequest.swift in Sources */,
 				D00A9145257A525600E30BE8 /* HopperAPIGetShortsResponse.swift in Sources */,
 				D07BDD9D25472419008081E3 /* HopperAPIEnableHopperBuyingRequest.swift in Sources */,
+				D02572102719A8BB0086FCD9 /* HopperAPIUpdateGetMobileNotificationRequest.swift in Sources */,
 				D0231E622552BB3E0057A293 /* ExchangeForexRates.swift in Sources */,
 				D0C76B2C254B1E4E0094ED9B /* HopperAPIGetAllOpenOrdersResponse.swift in Sources */,
 				D0C76AC3254AD3A40094ED9B /* HopperAPIGetConfigResponse.swift in Sources */,
@@ -3609,6 +3648,7 @@
 				D0C76A4E2549BAE90094ED9B /* HopperAPIMoveMultiplePositionsToReservedRequest.swift in Sources */,
 				D0231E172552A99F0057A293 /* HopperAPIGetOneMarketTemplateRequest.swift in Sources */,
 				D037FA58254097C0003CF793 /* HopperAPISessionManager.swift in Sources */,
+				D0021D3C2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift in Sources */,
 				D0231ED22552D3C80057A293 /* HopperAPIGetMarketsOfExchangeRequest.swift in Sources */,
 				D07BDD992547240E008081E3 /* HopperAPIEnableHopperRequest.swift in Sources */,
 				D0C76B72254C50F90094ED9B /* HopperAPISellOnePositionRequest.swift in Sources */,

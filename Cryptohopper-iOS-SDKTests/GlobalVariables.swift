@@ -15,5 +15,6 @@ let environment = HopperAPIEnvironment.Sandbox
 let isDebugEnabled = true
 
 let clientId = "#Client-id-here#"
+let clientSecret = "#Client-secret-here#"
 let username = "#Username-here"
 let password = "#Password-here#"

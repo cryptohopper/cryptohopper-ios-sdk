@@ -108,6 +108,22 @@ import UIKit
         }
     }
     
+    public static func getMobilePushNotificationPrefs(completion: @escaping (Result<[String:String]?, Error>) -> Void) {
+        HopperAPIUpdateGetMobileNotificationRequest.init(data: "").request { (data) in
+            completion(.success(data.notifications))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    public static func updateMobilePushNotificationPrefs(permissions : [String : String],completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIUpdatePushNotificationRequest.init(permissions: permissions).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     /*!
     * @discussion Get User Id
     *

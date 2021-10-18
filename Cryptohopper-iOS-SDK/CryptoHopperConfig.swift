@@ -14,9 +14,10 @@ import UIKit
     /*!
      * @discussion Configure your sdk with your client id
      */
-    public static func configure(clientId: String, environment : HopperAPIEnvironment) {
+    public static func configure(clientId: String, clientSecret : String , environment : HopperAPIEnvironment) {
         
         HopperAPIConfigurationManager.shared.config.clientId = clientId
+        HopperAPIConfigurationManager.shared.config.clientSecret = clientSecret
         HopperAPIConfigurationManager.shared.config.environment = environment
     }
     

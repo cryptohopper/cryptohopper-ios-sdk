@@ -16,7 +16,7 @@ class AuthenticationAPISpec : QuickSpec {
     override func spec() {
         
         beforeEach {
-            CryptoHopperConfig.configure(clientId: clientId, environment: environment)
+            CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: environment)
         }
         
         context("Authentication"){
