@@ -263,6 +263,7 @@
 		D07BDDA525472438008081E3 /* HopperAPIEnableHopperSellingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDDA425472438008081E3 /* HopperAPIEnableHopperSellingRequest.swift */; };
 		D07BDDAE25472797008081E3 /* HopperAPIHopperMostTradedCurrencyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BDDAD25472797008081E3 /* HopperAPIHopperMostTradedCurrencyRequest.swift */; };
 		D07D082E25A2038D00B06614 /* HopperStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D082D25A2038D00B06614 /* HopperStats.swift */; };
+		D08359982729621600495D08 /* HopperAPIReleaseOnePositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08359972729621600495D08 /* HopperAPIReleaseOnePositionRequest.swift */; };
 		D086F11025483ECD00EB4DCC /* HopperAPIGetSingleHopperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086F10F25483ECD00EB4DCC /* HopperAPIGetSingleHopperResponse.swift */; };
 		D086F11825485B0500EB4DCC /* HopperCommonMessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086F11725485B0500EB4DCC /* HopperCommonMessageResponse.swift */; };
 		D086F11E25485E5700EB4DCC /* HopperAPIHopperMostTradedCurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086F11D25485E5700EB4DCC /* HopperAPIHopperMostTradedCurrencyResponse.swift */; };
@@ -649,6 +650,7 @@
 		D07BDDA425472438008081E3 /* HopperAPIEnableHopperSellingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIEnableHopperSellingRequest.swift; sourceTree = "<group>"; };
 		D07BDDAD25472797008081E3 /* HopperAPIHopperMostTradedCurrencyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIHopperMostTradedCurrencyRequest.swift; sourceTree = "<group>"; };
 		D07D082D25A2038D00B06614 /* HopperStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperStats.swift; sourceTree = "<group>"; };
+		D08359972729621600495D08 /* HopperAPIReleaseOnePositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIReleaseOnePositionRequest.swift; sourceTree = "<group>"; };
 		D086F10F25483ECD00EB4DCC /* HopperAPIGetSingleHopperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetSingleHopperResponse.swift; sourceTree = "<group>"; };
 		D086F11725485B0500EB4DCC /* HopperCommonMessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperCommonMessageResponse.swift; sourceTree = "<group>"; };
 		D086F11D25485E5700EB4DCC /* HopperAPIHopperMostTradedCurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIHopperMostTradedCurrencyResponse.swift; sourceTree = "<group>"; };
@@ -2425,6 +2427,7 @@
 				D0C76B49254C32600094ED9B /* MergePositions */,
 				D0C76B4E254C49140094ED9B /* GetReleasePositions */,
 				D0BD279A2697432500E0C5E1 /* ReleaseReservePosition */,
+				D0835996272961FE00495D08 /* ReleaseShortPosition */,
 				D0C76B4F254C49C00094ED9B /* ReleaseMultiplePositions */,
 				D0C76B50254C49D00094ED9B /* ReleaseOnePosition */,
 				D0C76B5F254C4D380094ED9B /* RemoveMultiplePositions */,
@@ -2447,6 +2450,14 @@
 				D017A1222692F2DC000B62F5 /* MoveReservedPositionToOpen */,
 			);
 			path = Position;
+			sourceTree = "<group>";
+		};
+		D0835996272961FE00495D08 /* ReleaseShortPosition */ = {
+			isa = PBXGroup;
+			children = (
+				D08359972729621600495D08 /* HopperAPIReleaseOnePositionRequest.swift */,
+			);
+			path = ReleaseShortPosition;
 			sourceTree = "<group>";
 		};
 		D086F12125486F8D00EB4DCC /* EnableHopperPanic */ = {
@@ -3681,6 +3692,7 @@
 				D0C76B3B254C31620094ED9B /* HopperAPIHoldOnePositionRequest.swift in Sources */,
 				D0C76B96254C56550094ED9B /* HopperPosition.swift in Sources */,
 				D0C76AF6254B00CB0094ED9B /* HopperAPIGetOneConfigPoolResponse.swift in Sources */,
+				D08359982729621600495D08 /* HopperAPIReleaseOnePositionRequest.swift in Sources */,
 				D0C76B6A254C50DD0094ED9B /* HopperAPIRemoveMultiplePositionsRequest.swift in Sources */,
 				D0C76AB42549C9750094ED9B /* HopperAPIGetSubscriptionResponse.swift in Sources */,
 				D0231E842552D24E0057A293 /* HopperAPIGetExchangeDetailsResponse.swift in Sources */,

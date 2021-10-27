@@ -741,6 +741,20 @@ import UIKit
         }
     }
     
+    /*!
+    * @discussion Release Short Positions
+    *
+    *  @param hopperId:  (required) Hopper Id
+    *  @param positionId:  (required) Position Id
+    */
+    public static func releaseShortPosition(hopperId : String,positionId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIReleaseShortPositionRequest.init(hopperId: hopperId, positionId: positionId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     
     /*!
     * @discussion Remove Multiple Position
