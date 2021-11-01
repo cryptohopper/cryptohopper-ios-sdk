@@ -41,6 +41,8 @@ public class MarketSignal : Codable {
     public private(set) var totalSubs : String?
     public private(set) var totalReviews : String?
     
+    public private(set) var config : [String:String]?
+    
     private enum CodingKeys: String, CodingKey {
         case id = "id"
         case signalId = "signal_id"
@@ -68,6 +70,7 @@ public class MarketSignal : Codable {
         case sellerLogo = "seller_logo"
         case isRefundable = "is_refundable"
         case priceId = "price_id"
+        case config = "config"
     }
     
 }

@@ -1105,8 +1105,8 @@ import UIKit
     *
     *  @param hopperId:  (required) Hopper Id
     */
-    public static func updateSignalConfig(hopperId : String,signalId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIUpdateSignalConfigRequest.init(hopperId: hopperId,signalId: signalId).request { (data) in
+    public static func updateSignalConfig(hopperId : String,signalId : Int,config: [String:Any],completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIUpdateSignalConfigRequest.init(hopperId: hopperId,signalId: signalId,config : config).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
