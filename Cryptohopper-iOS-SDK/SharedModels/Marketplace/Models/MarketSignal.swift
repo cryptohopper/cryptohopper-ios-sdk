@@ -25,7 +25,7 @@ public class MarketSignal : Codable {
     public private(set) var rating : String?
     public private(set) var totalVotes : String?
     public private(set) var link : String?
-    public private(set) var lastTenSignals : [Signal]?
+    //public private(set) var lastTenSignals : [Signal]?
     
     public private(set) var signalDetails : [String:String]?
     public private(set) var reviews : MarketSignalReviewData?
@@ -62,7 +62,7 @@ public class MarketSignal : Codable {
         case totalSubs = "total_subs"
         case totalReviews = "total_reviews"
         case link = "link"
-        case lastTenSignals = "last_10_signals"
+        //case lastTenSignals = "last_10_signals"
         case signalDetails = "signal_details"
         case reviews = "reviews"
         case sellerId = "seller_id"

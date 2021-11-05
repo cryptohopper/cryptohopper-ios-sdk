@@ -11,7 +11,7 @@ class HopperAPIGetSignalByIdRequest: HopperAPIRequest<HopperAPIGetSignalByIdResp
     
     convenience init(hopperId : String,signalId: Int) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/signal")
+        self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/signal/\(signalId)")
     }
     
     override var httpMethod: HopperAPIHttpMethod {
