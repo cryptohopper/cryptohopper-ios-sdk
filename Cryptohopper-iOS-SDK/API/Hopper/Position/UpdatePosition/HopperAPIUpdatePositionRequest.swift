@@ -37,7 +37,7 @@ class HopperAPIUpdatePositionRequest: HopperAPIRequest<HopperCommonMessageRespon
         }
         
         if(autoClose == 1){
-            settings["auto_close_time"] = autoCloseTime
+            settings["auto_close_time"] = Double(autoCloseTime) ?? 0.0
         }else{
             settings["auto_close_time"] = 0
         }
