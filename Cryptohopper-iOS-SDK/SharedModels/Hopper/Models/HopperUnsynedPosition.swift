@@ -11,7 +11,7 @@ public class HopperUnsynedPosition: Codable {
     
     public private(set) var pair : String?
     public private(set) var currency : String?
-    public private(set) var amount : Double?
+    public private(set) var amount : QuantumValue?
     public private(set) var rate : String?
     
     private enum CodingKeys: String, CodingKey {

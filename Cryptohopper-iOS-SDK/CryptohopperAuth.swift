@@ -51,4 +51,10 @@ import UIKit
         return HopperAPISessionManager.shared.hasSession
     }
     
+    public static func loginWithAutCode(authCode : String ) {
+        let calendar = Calendar.current
+        let dd = calendar.date(byAdding: .day, value: 90, to: Date())!
+        HopperAPISessionManager.shared.session = HopperAPISession(accessToken: authCode, refreshToken:authCode, accessTokenExpiresAt: dd)
+    }
+    
 }

@@ -1,8 +1,8 @@
 //
-//  AuthenticationAPISpec.swift
+//  AISpec.swift
 //  Cryptohopper-iOS-SDKTests
 //
-//  Created by Kaan Baris Bayrak on 23/10/2020.
+//  Created by CH Kaan Bayrak on 27/12/2021.
 //
 
 import Foundation
@@ -11,16 +11,18 @@ import Quick
 import Nimble
 @testable import Cryptohopper_iOS_SDK
 
-class AuthenticationAPISpec : QuickSpec {
+class AISpec : QuickSpec {
+    
+    var aiId = ""
     
     override func spec() {
         
         beforeEach {
+            
             CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: environment)
-        }
-        
-        context("Authentication"){
-            it("Correct Credentials"){
+
+            if(HopperAPISessionManager.shared.session?.accessToken == nil){
+                print("Hopper General Spec Authenication : Making Authentication ...")
                 waitUntil(timeout: apiTimeout) { done in
                     CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent) { (result) in
                         switch(result){
@@ -33,23 +35,34 @@ class AuthenticationAPISpec : QuickSpec {
                         }
                     }
                 }
+            }else{
+                print("Hopper General Spec Authenication : Already Authenticated")
             }
             
-            it("Wrong Credentials"){
+        }
+        
+        context("AI Context"){
+            
+            
+            it("Get All AIs"){
+                
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperAuth.login(username: username, password: "WrongPassword", verificationCode: "", userAgent: "") { (result) in
+                    CryptohopperAI.getAIs(completion: { (result) in
                         switch(result){
-                        case .success(let successStr):
-                            expect(successStr).to(beNil())
+                        case .success(let items):
+                            expect(items).to(beAKindOf([AI].self))
                             done()
                         case .failure(let err):
-                            expect(err).notTo(beNil())
+                            expect(err).to(beNil())
                             done()
                         }
-                    }
+                    })
                 }
+                
             }
+            
         }
+       
         
     }
     

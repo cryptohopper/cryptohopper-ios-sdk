@@ -234,6 +234,11 @@
 		D037FA58254097C0003CF793 /* HopperAPISessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA57254097C0003CF793 /* HopperAPISessionManager.swift */; };
 		D037FA612540A909003CF793 /* HopperAPIAuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA602540A909003CF793 /* HopperAPIAuthenticationRequest.swift */; };
 		D037FA672540A913003CF793 /* HopperAPIAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA662540A913003CF793 /* HopperAPIAuthenticationResponse.swift */; };
+		D047A8B32779C96C007D5485 /* HopperAPIGetAIsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047A8B22779C96C007D5485 /* HopperAPIGetAIsRequest.swift */; };
+		D047A8B52779C973007D5485 /* HopperAPIGetAIsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047A8B42779C973007D5485 /* HopperAPIGetAIsResponse.swift */; };
+		D047A8B92779C9E2007D5485 /* AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047A8B82779C9E2007D5485 /* AI.swift */; };
+		D047A8BB2779CA3C007D5485 /* CryptohopperAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047A8BA2779CA3C007D5485 /* CryptohopperAI.swift */; };
+		D047A8BE2779CAC4007D5485 /* AISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047A8BD2779CAC4007D5485 /* AISpec.swift */; };
 		D0566B602566C92C007FEE5B /* StrategySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0566B5F2566C92C007FEE5B /* StrategySpec.swift */; };
 		D05D92D72653B42A00094911 /* HopperAPIRegisterUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D92D62653B42A00094911 /* HopperAPIRegisterUserResponse.swift */; };
 		D05E781625D6BF8E008C4E4A /* MarketplaceSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */; };
@@ -621,6 +626,11 @@
 		D037FA57254097C0003CF793 /* HopperAPISessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPISessionManager.swift; sourceTree = "<group>"; };
 		D037FA602540A909003CF793 /* HopperAPIAuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthenticationRequest.swift; sourceTree = "<group>"; };
 		D037FA662540A913003CF793 /* HopperAPIAuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthenticationResponse.swift; sourceTree = "<group>"; };
+		D047A8B22779C96C007D5485 /* HopperAPIGetAIsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAIsRequest.swift; sourceTree = "<group>"; };
+		D047A8B42779C973007D5485 /* HopperAPIGetAIsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAIsResponse.swift; sourceTree = "<group>"; };
+		D047A8B82779C9E2007D5485 /* AI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI.swift; sourceTree = "<group>"; };
+		D047A8BA2779CA3C007D5485 /* CryptohopperAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperAI.swift; sourceTree = "<group>"; };
+		D047A8BD2779CAC4007D5485 /* AISpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISpec.swift; sourceTree = "<group>"; };
 		D0566B5F2566C92C007FEE5B /* StrategySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategySpec.swift; sourceTree = "<group>"; };
 		D05D92D62653B42A00094911 /* HopperAPIRegisterUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIRegisterUserResponse.swift; sourceTree = "<group>"; };
 		D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceSeller.swift; sourceTree = "<group>"; };
@@ -2101,6 +2111,7 @@
 				D0231FA5255406DB0057A293 /* CryptohopperExchange.swift */,
 				D0231FA9255406E40057A293 /* CryptohopperStrategy.swift */,
 				D023F388265FD588001D1880 /* CryptohopperPurchase.swift */,
+				D047A8BA2779CA3C007D5485 /* CryptohopperAI.swift */,
 			);
 			path = "Cryptohopper-iOS-SDK";
 			sourceTree = "<group>";
@@ -2126,6 +2137,7 @@
 				D0231E3E2552AE040057A293 /* Template */,
 				D0231E552552B91E0057A293 /* Exchange */,
 				D0231F862552F1600057A293 /* Strategy */,
+				D047A8B62779C9D1007D5485 /* AI */,
 			);
 			path = SharedModels;
 			sourceTree = "<group>";
@@ -2141,6 +2153,7 @@
 				D0231DE52551A4B50057A293 /* Template */,
 				D0231E562552B9250057A293 /* Exchange */,
 				D0231F402552EE350057A293 /* Strategy */,
+				D047A8AF2779C917007D5485 /* AI */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -2162,6 +2175,55 @@
 				D037FA662540A913003CF793 /* HopperAPIAuthenticationResponse.swift */,
 			);
 			path = Authenticate;
+			sourceTree = "<group>";
+		};
+		D047A8AF2779C917007D5485 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				D047A8B02779C934007D5485 /* General */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		D047A8B02779C934007D5485 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				D047A8B12779C939007D5485 /* GetAIs */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		D047A8B12779C939007D5485 /* GetAIs */ = {
+			isa = PBXGroup;
+			children = (
+				D047A8B22779C96C007D5485 /* HopperAPIGetAIsRequest.swift */,
+				D047A8B42779C973007D5485 /* HopperAPIGetAIsResponse.swift */,
+			);
+			path = GetAIs;
+			sourceTree = "<group>";
+		};
+		D047A8B62779C9D1007D5485 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				D047A8B72779C9D9007D5485 /* Models */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		D047A8B72779C9D9007D5485 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D047A8B82779C9E2007D5485 /* AI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D047A8BC2779CABB007D5485 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				D047A8BD2779CAC4007D5485 /* AISpec.swift */,
+			);
+			path = AI;
 			sourceTree = "<group>";
 		};
 		D0566B5E2566C913007FEE5B /* Strategy */ = {
@@ -2555,6 +2617,7 @@
 				D0F3D4F625656FF90036B130 /* Template */,
 				D0F3D4FF25657ECE0036B130 /* Exchange */,
 				D0566B5E2566C913007FEE5B /* Strategy */,
+				D047A8BC2779CABB007D5485 /* AI */,
 			);
 			path = APISpec;
 			sourceTree = "<group>";
@@ -3443,6 +3506,7 @@
 				D0231C45255046980057A293 /* HopperAPIReplyMarketReviewRequest.swift in Sources */,
 				D0C76B0E254B13BD0094ED9B /* HopperAPIGetAllOpenOrdersRequest.swift in Sources */,
 				D0C76AE2254AF6840094ED9B /* HopperAPIGetOneConfigPoolRequest.swift in Sources */,
+				D047A8B92779C9E2007D5485 /* AI.swift in Sources */,
 				D0231E3B2552AD2D0057A293 /* HopperAPILoadTemplateRequest.swift in Sources */,
 				D0C76A3F2549AB680094ED9B /* HopperAPIGetAllPositionsRequest.swift in Sources */,
 				D0BD29B325A63BC50060C41B /* HopperAPIEditStartBalanceRequest.swift in Sources */,
@@ -3504,6 +3568,7 @@
 				D0231CB3255064040057A293 /* HopperAPIGetStrategyRequest.swift in Sources */,
 				D0C76AF2254AFAA30094ED9B /* HopperAPIGetAllConfigPoolsResponse.swift in Sources */,
 				D0231F6F2552F1180057A293 /* HopperAPIChangeImageOfStrategyRequest.swift in Sources */,
+				D047A8BB2779CA3C007D5485 /* CryptohopperAI.swift in Sources */,
 				D0C76AA82549C88F0094ED9B /* HopperAPIGetSubscriptionRequest.swift in Sources */,
 				D0231BF5255028990057A293 /* HopperAPIGetTradeHistoryResponse.swift in Sources */,
 				D0C76A862549C3920094ED9B /* HopperAPIGetHopperStatsRequest.swift in Sources */,
@@ -3555,6 +3620,7 @@
 				D0231DA325518C900057A293 /* HopperAPIGetUserPurchasesResponse.swift in Sources */,
 				D037FA50254095A1003CF793 /* HopperAPIRequest.swift in Sources */,
 				D0231F0E2552E6C10057A293 /* HopperAPIGetLastSignalRequest.swift in Sources */,
+				D047A8B32779C96C007D5485 /* HopperAPIGetAIsRequest.swift in Sources */,
 				D0C76A492549B5BE0094ED9B /* HopperAPIActivateDCAForMultiplePositionsRequest.swift in Sources */,
 				D0231F4D2552F0920057A293 /* HopperAPIGetStrategiesRequest.swift in Sources */,
 				D025720D2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift in Sources */,
@@ -3733,6 +3799,7 @@
 				D0231D9725518BE30057A293 /* HopperAPIGetUserNotificationsResponse.swift in Sources */,
 				D00A914A257A526200E30BE8 /* HopperAPIGetReservedPositionsResponse.swift in Sources */,
 				D0C76B82254C52670094ED9B /* HopperAPISplitOnePositionRequest.swift in Sources */,
+				D047A8B52779C973007D5485 /* HopperAPIGetAIsResponse.swift in Sources */,
 				D0C76B20254B152E0094ED9B /* HopperAPIDeleteOneOrderRequest.swift in Sources */,
 				D0231F1C2552E6F60057A293 /* HopperAPIGetSignalsInHopperRequest.swift in Sources */,
 				D0231F082552E0120057A293 /* Ticker.swift in Sources */,
@@ -3752,6 +3819,7 @@
 				D0566B602566C92C007FEE5B /* StrategySpec.swift in Sources */,
 				D0F3D50125657EDB0036B130 /* ExchangeSpec.swift in Sources */,
 				D0A042A12542E3DD00ECA43C /* ConfigManagerSpec.swift in Sources */,
+				D047A8BE2779CAC4007D5485 /* AISpec.swift in Sources */,
 				D0A042B02542F5B400ECA43C /* AuthenticationAPISpec.swift in Sources */,
 				D0F3D4F8256570280036B130 /* TemplateSpec.swift in Sources */,
 				D0F3D4EF25655F020036B130 /* UserSpec.swift in Sources */,
