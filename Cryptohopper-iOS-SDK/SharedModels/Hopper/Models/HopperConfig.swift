@@ -173,6 +173,13 @@ public class HopperConfig : Codable {
     public var auto_dca_size : String?
     public var auto_dca_size_custom : String?
     
+    //AI Configs
+    public var buy_score_corrected : String?
+    public var sell_score_corrected : String?
+    public var min_buy_score : String?
+    public var min_sell_score : String?
+    
+    
     public init(){}
 
     private enum CodingKeys: String, CodingKey {
@@ -339,6 +346,10 @@ public class HopperConfig : Codable {
             case auto_dca_strategy = "auto_dca_strategy"
             case auto_dca_size = "auto_dca_size"
             case auto_dca_size_custom = "auto_dca_size_custom"
+            case buy_score_corrected = "buy_score_corrected"
+            case sell_score_corrected = "sell_score_corrected"
+            case min_buy_score = "min_buy_score"
+            case min_sell_score = "min_sell_score"
     }
     
 }

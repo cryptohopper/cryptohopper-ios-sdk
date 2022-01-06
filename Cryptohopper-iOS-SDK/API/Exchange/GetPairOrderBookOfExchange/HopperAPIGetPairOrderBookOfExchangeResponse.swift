@@ -7,9 +7,9 @@
 
 import Foundation
 
-class HopperAPIGetPairOrderBookOfExchangeResponse: Codable {
+public class HopperAPIGetPairOrderBookOfExchangeResponse: Codable {
     
-    var data : HopperAPIGetPairOrderBookOfExchangeData?
+    public var data : HopperAPIGetPairOrderBookOfExchangeData?
     
     private enum CodingKeys: String, CodingKey {
         case data = "data"
@@ -19,8 +19,8 @@ class HopperAPIGetPairOrderBookOfExchangeResponse: Codable {
 
 public class HopperAPIGetPairOrderBookOfExchangeData: Codable {
     
-    var asks : [[Double]]?
-    var bids : [[Double]]?
+    public var asks : [[Double]]?
+    public var bids : [[Double]]?
     
     private enum CodingKeys: String, CodingKey {
         case asks = "asks"

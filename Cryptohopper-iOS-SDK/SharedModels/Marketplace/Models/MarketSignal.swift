@@ -25,6 +25,7 @@ public class MarketSignal : Codable {
     public private(set) var rating : String?
     public private(set) var totalVotes : String?
     public private(set) var link : String?
+    public private(set) var ratingValue : Double?
     //public private(set) var lastTenSignals : [Signal]?
     
     public private(set) var signalDetails : [String:String]?
@@ -71,6 +72,7 @@ public class MarketSignal : Codable {
         case isRefundable = "is_refundable"
         case priceId = "price_id"
         case config = "config"
+        case ratingValue = "rating_value"
     }
     
 }
