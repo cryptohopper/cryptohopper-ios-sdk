@@ -33,6 +33,8 @@ public class HopperPosition : Codable {
     public private(set) var hold : String?
     public private(set) var sold : String?
     public private(set) var cost : String?
+    public private(set) var tslEnabled : String?
+    public private(set) var dcaEnabled : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -59,6 +61,8 @@ public class HopperPosition : Codable {
         case hold = "hold"
         case sold = "sold"
         case cost = "cost"
+        case tslEnabled = "tsl_enabled"
+        case dcaEnabled = "dca_enabled"
     }
     
 //    required public init(from decoder: Decoder) throws {

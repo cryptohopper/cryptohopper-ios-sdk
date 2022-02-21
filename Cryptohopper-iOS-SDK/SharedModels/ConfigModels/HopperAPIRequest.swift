@@ -156,11 +156,16 @@ class HopperAPIRequest<T:Codable> {
                 //On fail
                 let apiError = {
                     do {
-                      let decoder = JSONDecoder()
-                      decoder.dateDecodingStrategy = self.dateDecodingStrategy
-                        let response = try decoder.decode(HopperAPIError.self , from: data)
-                        onFail?(response.error)
-
+                        let decoder = JSONDecoder()
+                        let dataStr = String(decoding: data, as: UTF8.self)
+                        if(dataStr.contains("html") && dataStr.contains("403")){
+                            let err = CustomError(localizedDescription: "IP Blocked")
+                            onFail?(err)
+                        }else{
+                            decoder.dateDecodingStrategy = self.dateDecodingStrategy
+                            let response = try decoder.decode(HopperAPIError.self , from: data)
+                            onFail?(response.error)
+                        }
                     } catch {
                         onFail?(error)
                     }

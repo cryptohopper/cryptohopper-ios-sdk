@@ -11,7 +11,7 @@ public class Hopper : Codable {
     
     public private(set) var id : String?
     public private(set) var name : String?
-    public private(set) var exchange : HopperConfigExchange?
+    public private(set) var exchange : String?
     public private(set) var baseCurrency : String?
     public private(set) var buyingEnabled : Int?
     public private(set) var sellingEnabled : Int?

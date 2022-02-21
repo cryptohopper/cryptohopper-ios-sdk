@@ -11,9 +11,9 @@ public class HopperConfigAPIConfig : Codable {
     
     public var apiKey : String?
     public var apiSecret : String?
-    public var krakenExtraKey : String?
-    public var krakenPrivateExtraKey : String?
-    public var gdaxApiPassphrase : String?
+    public var apiPassphrase : String?
+    public var extraApiKey : String?
+    public var extraApiSecret : String?
     public var gdaxPostOnly : String?
     
     public init(){}
@@ -21,9 +21,9 @@ public class HopperConfigAPIConfig : Codable {
     private enum CodingKeys: String, CodingKey {
         case apiKey = "api_key"
         case apiSecret = "api_secret"
-        case krakenExtraKey = "kraken_extra_key"
-        case krakenPrivateExtraKey = "kraken_private_extra_key"
-        case gdaxApiPassphrase = "gdax_api_passphrase"
+        case apiPassphrase = "api_passphrase"
+        case extraApiKey = "extra_api_key"
+        case extraApiSecret = "extra_api_secret"
         case gdaxPostOnly = "gdax_post_only"
     }
 

@@ -24,6 +24,7 @@ public class Exchange : Codable {
     public private(set) var baseCurrencies : String?
     public private(set) var defaultBaseCurrency : String?
     public private(set) var apiConfigFields : [String]?
+    public private(set) var optionalConfigFields : [String]?
     public private(set) var exchangeStatus : String?
     public private(set) var uptimeOneHour : String?
     public private(set) var uptimeOneWeek : String?
@@ -45,6 +46,7 @@ public class Exchange : Codable {
         case baseCurrencies = "base_currencies"
         case defaultBaseCurrency = "default_base_cur"
         case apiConfigFields = "api_config_fields"
+        case optionalConfigFields = "optional_config_fields"
         case exchangeStatus = "exchange_status"
         case uptimeOneHour = "uptime_1h"
         case uptimeOneWeek = "uptime_1w"

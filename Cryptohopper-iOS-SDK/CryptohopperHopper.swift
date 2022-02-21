@@ -1328,5 +1328,21 @@ import UIKit
     }
     
     
+    // ------------- Activity ----------------------------------------
+    
+    /*!
+    * @discussion Get Hopper Activity
+    *
+    *  @param hopperId:  (required) Hopper Id
+     */
+    public static func getHopperActivity(hopperId : String,completion: @escaping (Result<HopperActivity?, Error>) -> Void) {
+        HopperAPIGetActivityRequest.init(hopperId: hopperId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    
     
 }
