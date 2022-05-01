@@ -17,7 +17,7 @@ class HopperAPIGetOutputRequest: HopperAPIRequest<HopperAPIGetOutputResponse> {
         
         addQueryItem(name: "dateFrom", value: formatter.string(from: dateFrom))
         addQueryItem(name: "dateTo", value: formatter.string(from: dateTo))
-        addQueryItem(name: "entryType", value: entryType.rawValue)
+        //addQueryItem(name: "entryType", value: entryType.rawValue)
         addQueryItem(name: "sortBy", value: sortField.rawValue)
         addQueryItem(name: "sortOrder", value: sortOrder.rawValue)
         addQueryItem(name: "offset", value: page.description)

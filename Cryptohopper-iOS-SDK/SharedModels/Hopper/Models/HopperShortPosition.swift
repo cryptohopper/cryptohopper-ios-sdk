@@ -36,6 +36,12 @@ public class HopperShortPosition : Codable {
     public private(set) var autoRemoveTime : String?
     public private(set) var hold : String?
     
+    public private(set) var trailingStopLossEnabled : String?
+    public private(set) var trailingStopLossOnly : String?
+    public private(set) var stopLossEnabled : String?
+    public private(set) var autoCloseEnabled : String?
+    public private(set) var autoRemoveEnabled : String?
+    
     private enum CodingKeys: String, CodingKey {
         case id = "id"
         case pair = "pair"
@@ -63,6 +69,11 @@ public class HopperShortPosition : Codable {
         case autoCloseTime = "auto_close_time"
         case autoRemoveTime = "auto_remove_time"
         case hold = "hold"
+        case trailingStopLossEnabled = "trailing_stop_loss_enabled"
+        case trailingStopLossOnly = "trailing_stop_loss_only"
+        case stopLossEnabled = "stop_loss_enabled"
+        case autoCloseEnabled = "auto_close_enabled"
+        case autoRemoveEnabled = "auto_remove_enabled"
     }
     
 }

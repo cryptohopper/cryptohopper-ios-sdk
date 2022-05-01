@@ -322,6 +322,28 @@ import UIKit
             completion(.failure(err))
         }
     }
+    
+    /*!
+    * @discussion Create Order
+    *
+    *  @param hopperId:  (required) Hoppe Id
+    *  @param orderType:  (required) Order Type
+    *  @param marketOrder:  (required) Market Order
+    *  @param coin:  (required) Coin
+    *  @param price:  (required) Price
+    *  @param amount:  (required) Amount
+    *  @param orderTrigger:  (required) Order Trigger
+    *  @param percentageProfit:  (required) Percentage Profit
+    *  @param trailingBuy:  (required) Trailing Buy
+    *  @param trailingBuyPercentage:  (required) Trailing Buy Percentage
+    */
+    public static func createSimpleOrder(hopperId : String,orderType : String,marketOrder : Int,coin : String,price : Double,amount : Double,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPICreateSimpleOrderRequest.init(hopperId: hopperId, orderType: orderType, marketOrder: marketOrder, coin: coin, price: price, amount: amount).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
 
     /*!
     * @discussion Delete Multiple Orders
@@ -540,8 +562,8 @@ import UIKit
     *  @param autoClose:  (required) Auto Close
     *  @param autoCloseTime:  (required) Auto Close Time
     */
-    public static func updatePosition(hopperId : String,positionId : Int,takeProfit : Double,stopLoss:Int,stopLossPercentage : Double,trailingStopLoss : Int,trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoClose :Int,autoCloseTime : String,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIUpdatePositionRequest.init(hopperId: hopperId, positionId: positionId, takeProfit: takeProfit,stopLoss:stopLoss,stopLossPercentage : stopLossPercentage, trailingStopLoss: trailingStopLoss, trailingStopLossPercentage: trailingStopLossPercentage, trailingStopLossArm: trailingStopLossArm, autoClose: autoClose, autoCloseTime: autoCloseTime).request { (data) in
+    public static func updatePosition(hopperId : String,positionId : Int,values : [String:Any],completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIUpdatePositionRequest.init(hopperId: hopperId, positionId: positionId, values : values).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -562,8 +584,8 @@ import UIKit
     *  @param autoClose:  (required) Auto Close
     *  @param autoCloseTime:  (required) Auto Close Time
     */
-    public static func updateShortPosition(hopperId : String,shortId : Int,takeProfit : Double,stopLoss:Int,stopLossPercentage : Double,trailingStopLoss : Int,trailingStopLossPercentage : Double,trailingStopLossArm : Double,autoClose :Int,autoCloseTime : String,autoRemove : Int, autoRemoveTime: String,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIUpdateShortPositionRequest.init(hopperId: hopperId, shortId: shortId, takeProfit: takeProfit,stopLoss:stopLoss,stopLossPercentage : stopLossPercentage, trailingStopLoss: trailingStopLoss, trailingStopLossPercentage: trailingStopLossPercentage, trailingStopLossArm: trailingStopLossArm, autoCloseTime: autoCloseTime,autoRemoveTime:  autoRemoveTime).request { (data) in
+    public static func updateShortPosition(hopperId : String,shortId : Int,values : [String:Any],completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIUpdateShortPositionRequest.init(hopperId: hopperId, shortId: shortId, values : values).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))

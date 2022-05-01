@@ -35,6 +35,10 @@ public class HopperPosition : Codable {
     public private(set) var cost : String?
     public private(set) var tslEnabled : String?
     public private(set) var dcaEnabled : String?
+    public private(set) var trailingStopLossEnabled : String?
+    public private(set) var trailingStopLossOnly : String?
+    public private(set) var stopLossEnabled : String?
+    public private(set) var autoCloseEnabled : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -63,6 +67,10 @@ public class HopperPosition : Codable {
         case cost = "cost"
         case tslEnabled = "tsl_enabled"
         case dcaEnabled = "dca_enabled"
+        case trailingStopLossEnabled = "trailing_stop_loss_enabled"
+        case trailingStopLossOnly = "trailing_stop_loss_only"
+        case stopLossEnabled = "stop_loss_enabled"
+        case autoCloseEnabled = "auto_close_enabled"
     }
     
 //    required public init(from decoder: Decoder) throws {
