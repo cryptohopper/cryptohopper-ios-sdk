@@ -20,7 +20,8 @@ class HopperAPIConfiguration {
     var clientId : String?
     var clientSecret : String?
     var isAuthenticationRequest = false
-    
+    var v2ApiValidationKey : String = ""
+    var v2ApiValidationValue : String = ""
     var authenticationHost : String = "www.cryptohopper.com"
     
     var host: String {
@@ -29,6 +30,15 @@ class HopperAPIConfiguration {
             return "api.cryptohopper.com"
         case .Production:
             return "api.cryptohopper.com"
+        }
+    }
+    
+    var v2Host: String {
+        switch environment {
+        case .Sandbox:
+            return "www-dev.cryptohopper.com/rest/api/v2"
+        case .Production:
+            return "www.cryptohopper.com/rest/api/v2"
         }
     }
     

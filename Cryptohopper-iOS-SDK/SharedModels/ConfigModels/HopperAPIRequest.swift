@@ -39,6 +39,7 @@ class HopperAPIRequest<T:Codable> {
     }
     
     var isAuthenticationRequest:Bool = false
+    var isV2Api:Bool = false
     
     private var httpHeaders:[String:String] = [
         "Content-Type":"application/json",
@@ -57,6 +58,11 @@ class HopperAPIRequest<T:Codable> {
         }else{
             components.host = HopperAPIConfigurationManager.shared.config.host
         }
+        
+        if(isV2Api){
+            components.host = HopperAPIConfigurationManager.shared.config.v2Host
+        }
+        
         components.path = path
         components.queryItems = queryItems
         return components.url
@@ -70,8 +76,9 @@ class HopperAPIRequest<T:Codable> {
         httpHeaders[name] = value
     }
     
-    func changeUrlPath(path: String){
+    func changeUrlPath(path: String,isV2Endpoint : Bool = false){
         self.path = path
+        self.isV2Api = isV2Endpoint
     }
     
     
@@ -190,6 +197,10 @@ class HopperAPIRequest<T:Codable> {
     
     
     func request(_ onSuccess:HopperAPIRequestSuccessClosure? = nil, _ onFail:HopperAPIRequestFailClosure? = nil) {
+        if(isV2Api){
+            self.addV2Headers()
+        }
+        
         if needsAuthentication {
             self.authenticateAndRequestAgain(onSuccess, onFail)
         }else {
@@ -218,9 +229,20 @@ class HopperAPIRequest<T:Codable> {
                 self.handleError(failClosure: onFail, error: HopperError.missingAccessToken)
                 return
             }
-            self.addHeader(name: "access-token", value: accessToken)
+            
+            if(self.isV2Api){
+                self.addHeader(name: "Auth-Type", value: "oauth")
+                self.addHeader(name: "Authorization", value: "Bearer \(accessToken)")
+            }else{
+                self.addHeader(name: "access-token", value: accessToken)
+            }
+        
             self.startRequest(onSuccess, onFail)
         }, onFail: onFail)
+    }
+    
+    func addV2Headers(){
+        self.addHeader(name: HopperAPIConfigurationManager.shared.config.v2ApiValidationKey, value: HopperAPIConfigurationManager.shared.config.v2ApiValidationValue)
     }
 
 }
