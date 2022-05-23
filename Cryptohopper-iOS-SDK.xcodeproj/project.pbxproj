@@ -221,6 +221,15 @@
 		D025720D2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025720C2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift */; };
 		D02572102719A8BB0086FCD9 /* HopperAPIUpdateGetMobileNotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025720F2719A8BB0086FCD9 /* HopperAPIUpdateGetMobileNotificationRequest.swift */; };
 		D02572122719AD680086FCD9 /* HopperAPIUpdateGetMobileNotificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02572112719AD680086FCD9 /* HopperAPIUpdateGetMobileNotificationResponse.swift */; };
+		D02AAFB4283B7F220044BCE7 /* CryptohopperV2Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFB3283B7F220044BCE7 /* CryptohopperV2Currency.swift */; };
+		D02AAFB6283B7F520044BCE7 /* CryptohopperV2Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFB5283B7F520044BCE7 /* CryptohopperV2Exchange.swift */; };
+		D02AAFB8283B7F680044BCE7 /* CryptohopperV2Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFB7283B7F680044BCE7 /* CryptohopperV2Onboarding.swift */; };
+		D02AAFBA283B7F720044BCE7 /* CryptohopperV2Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFB9283B7F720044BCE7 /* CryptohopperV2Signal.swift */; };
+		D02AAFBC283B7F7B0044BCE7 /* CryptohopperV2Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFBB283B7F7B0044BCE7 /* CryptohopperV2Strategy.swift */; };
+		D02AAFBE283B7F860044BCE7 /* CryptohopperV2Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFBD283B7F860044BCE7 /* CryptohopperV2Tournament.swift */; };
+		D02AAFC0283B7F910044BCE7 /* CryptohopperV2User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFBF283B7F910044BCE7 /* CryptohopperV2User.swift */; };
+		D02AAFC3283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFC2283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift */; };
+		D02AAFC5283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFC4283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift */; };
 		D037FA2125406FD8003CF793 /* Cryptohopper_iOS_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D037FA1325406FD7003CF793 /* Cryptohopper_iOS_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D037FA3025408EA3003CF793 /* CryptoHopperConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA2F25408EA3003CF793 /* CryptoHopperConfig.swift */; };
 		D037FA3425409145003CF793 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA3325409145003CF793 /* Keychain.swift */; };
@@ -615,6 +624,15 @@
 		D025720C2719A69D0086FCD9 /* HopperAPIUpdatePushNotificationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdatePushNotificationRequest.swift; sourceTree = "<group>"; };
 		D025720F2719A8BB0086FCD9 /* HopperAPIUpdateGetMobileNotificationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdateGetMobileNotificationRequest.swift; sourceTree = "<group>"; };
 		D02572112719AD680086FCD9 /* HopperAPIUpdateGetMobileNotificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdateGetMobileNotificationResponse.swift; sourceTree = "<group>"; };
+		D02AAFB3283B7F220044BCE7 /* CryptohopperV2Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2Currency.swift; sourceTree = "<group>"; };
+		D02AAFB5283B7F520044BCE7 /* CryptohopperV2Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2Exchange.swift; sourceTree = "<group>"; };
+		D02AAFB7283B7F680044BCE7 /* CryptohopperV2Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2Onboarding.swift; sourceTree = "<group>"; };
+		D02AAFB9283B7F720044BCE7 /* CryptohopperV2Signal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2Signal.swift; sourceTree = "<group>"; };
+		D02AAFBB283B7F7B0044BCE7 /* CryptohopperV2Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2Strategy.swift; sourceTree = "<group>"; };
+		D02AAFBD283B7F860044BCE7 /* CryptohopperV2Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2Tournament.swift; sourceTree = "<group>"; };
+		D02AAFBF283B7F910044BCE7 /* CryptohopperV2User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2User.swift; sourceTree = "<group>"; };
+		D02AAFC2283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2GetAllCurrenciesRequest.swift; sourceTree = "<group>"; };
+		D02AAFC4283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2GetAllCurrenciesResponse.swift; sourceTree = "<group>"; };
 		D037FA1025406FD7003CF793 /* Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D037FA1325406FD7003CF793 /* Cryptohopper_iOS_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cryptohopper_iOS_SDK.h; sourceTree = "<group>"; };
 		D037FA1425406FD7003CF793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -2079,6 +2097,186 @@
 			path = GetMobilePushNotifications;
 			sourceTree = "<group>";
 		};
+		D02AAFA8283B794F0044BCE7 /* APIV2 */ = {
+			isa = PBXGroup;
+			children = (
+				D02AAFAA283B795E0044BCE7 /* Currencies */,
+				D02AAFAB283B79650044BCE7 /* Exchanges */,
+				D02AAFAC283B79780044BCE7 /* Onboarding */,
+				D02AAFAF283B79B30044BCE7 /* Signals */,
+				D02AAFB0283B79B70044BCE7 /* Strategies */,
+				D02AAFAE283B79AF0044BCE7 /* Tournaments */,
+				D02AAFAD283B79A90044BCE7 /* Users */,
+			);
+			path = APIV2;
+			sourceTree = "<group>";
+		};
+		D02AAFAA283B795E0044BCE7 /* Currencies */ = {
+			isa = PBXGroup;
+			children = (
+				D02AAFC1283B809E0044BCE7 /* GetCurrencies */,
+			);
+			path = Currencies;
+			sourceTree = "<group>";
+		};
+		D02AAFAB283B79650044BCE7 /* Exchanges */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exchanges;
+			sourceTree = "<group>";
+		};
+		D02AAFAC283B79780044BCE7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D02AAFAD283B79A90044BCE7 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		D02AAFAE283B79AF0044BCE7 /* Tournaments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tournaments;
+			sourceTree = "<group>";
+		};
+		D02AAFAF283B79B30044BCE7 /* Signals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signals;
+			sourceTree = "<group>";
+		};
+		D02AAFB0283B79B70044BCE7 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		D02AAFB1283B7D880044BCE7 /* APIContext */ = {
+			isa = PBXGroup;
+			children = (
+				D0231F91255406950057A293 /* CryptohopperAuth.swift */,
+				D0231F95255406A70057A293 /* CryptohopperHopper.swift */,
+				D0231F99255406B50057A293 /* CryptohopperMarketplace.swift */,
+				D0231F9D255406C60057A293 /* CryptohopperUser.swift */,
+				D0231FA1255406D10057A293 /* CryptohopperTemplate.swift */,
+				D0231FA5255406DB0057A293 /* CryptohopperExchange.swift */,
+				D0231FA9255406E40057A293 /* CryptohopperStrategy.swift */,
+				D023F388265FD588001D1880 /* CryptohopperPurchase.swift */,
+				D047A8BA2779CA3C007D5485 /* CryptohopperAI.swift */,
+			);
+			path = APIContext;
+			sourceTree = "<group>";
+		};
+		D02AAFB2283B7D960044BCE7 /* APIV2Context */ = {
+			isa = PBXGroup;
+			children = (
+				D02AAFB3283B7F220044BCE7 /* CryptohopperV2Currency.swift */,
+				D02AAFB5283B7F520044BCE7 /* CryptohopperV2Exchange.swift */,
+				D02AAFB7283B7F680044BCE7 /* CryptohopperV2Onboarding.swift */,
+				D02AAFB9283B7F720044BCE7 /* CryptohopperV2Signal.swift */,
+				D02AAFBB283B7F7B0044BCE7 /* CryptohopperV2Strategy.swift */,
+				D02AAFBD283B7F860044BCE7 /* CryptohopperV2Tournament.swift */,
+				D02AAFBF283B7F910044BCE7 /* CryptohopperV2User.swift */,
+			);
+			path = APIV2Context;
+			sourceTree = "<group>";
+		};
+		D02AAFC1283B809E0044BCE7 /* GetCurrencies */ = {
+			isa = PBXGroup;
+			children = (
+				D02AAFC2283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift */,
+				D02AAFC4283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift */,
+			);
+			path = GetCurrencies;
+			sourceTree = "<group>";
+		};
+		D02AAFC6283B873B0044BCE7 /* V1Models */ = {
+			isa = PBXGroup;
+			children = (
+				D07BDD49254718B8008081E3 /* Hopper */,
+				D0231C10255039070057A293 /* Marketplace */,
+				D0231D1625514CE10057A293 /* User */,
+				D0231E3E2552AE040057A293 /* Template */,
+				D0231E552552B91E0057A293 /* Exchange */,
+				D0231F862552F1600057A293 /* Strategy */,
+				D047A8B62779C9D1007D5485 /* AI */,
+			);
+			path = V1Models;
+			sourceTree = "<group>";
+		};
+		D02AAFC7283B874B0044BCE7 /* V2Models */ = {
+			isa = PBXGroup;
+			children = (
+				D02AAFC8283B87540044BCE7 /* Currency */,
+				D02AAFCE283B87910044BCE7 /* Exchange */,
+				D02AAFC9283B87620044BCE7 /* Onboarding */,
+				D02AAFCA283B87670044BCE7 /* Signal */,
+				D02AAFCB283B876C0044BCE7 /* Strategy */,
+				D02AAFCD283B87840044BCE7 /* User */,
+				D02AAFCC283B87760044BCE7 /* Tournament */,
+			);
+			path = V2Models;
+			sourceTree = "<group>";
+		};
+		D02AAFC8283B87540044BCE7 /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		D02AAFC9283B87620044BCE7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D02AAFCA283B87670044BCE7 /* Signal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signal;
+			sourceTree = "<group>";
+		};
+		D02AAFCB283B876C0044BCE7 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		D02AAFCC283B87760044BCE7 /* Tournament */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tournament;
+			sourceTree = "<group>";
+		};
+		D02AAFCD283B87840044BCE7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D02AAFCE283B87910044BCE7 /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exchange;
+			sourceTree = "<group>";
+		};
 		D037FA0625406FD7003CF793 = {
 			isa = PBXGroup;
 			children = (
@@ -2108,18 +2306,12 @@
 				D037FA2D25408E77003CF793 /* SharedModels */,
 				D037FA2C25408E67003CF793 /* Managers */,
 				D037FA2E25408E7B003CF793 /* API */,
+				D02AAFA8283B794F0044BCE7 /* APIV2 */,
 				D037FA1325406FD7003CF793 /* Cryptohopper_iOS_SDK.h */,
 				D037FA1425406FD7003CF793 /* Info.plist */,
 				D037FA2F25408EA3003CF793 /* CryptoHopperConfig.swift */,
-				D0231F91255406950057A293 /* CryptohopperAuth.swift */,
-				D0231F95255406A70057A293 /* CryptohopperHopper.swift */,
-				D0231F99255406B50057A293 /* CryptohopperMarketplace.swift */,
-				D0231F9D255406C60057A293 /* CryptohopperUser.swift */,
-				D0231FA1255406D10057A293 /* CryptohopperTemplate.swift */,
-				D0231FA5255406DB0057A293 /* CryptohopperExchange.swift */,
-				D0231FA9255406E40057A293 /* CryptohopperStrategy.swift */,
-				D023F388265FD588001D1880 /* CryptohopperPurchase.swift */,
-				D047A8BA2779CA3C007D5485 /* CryptohopperAI.swift */,
+				D02AAFB1283B7D880044BCE7 /* APIContext */,
+				D02AAFB2283B7D960044BCE7 /* APIV2Context */,
 			);
 			path = "Cryptohopper-iOS-SDK";
 			sourceTree = "<group>";
@@ -2139,13 +2331,8 @@
 			children = (
 				D023B4002593549400EC97CD /* Helpers */,
 				D07BDD48254718A1008081E3 /* ConfigModels */,
-				D07BDD49254718B8008081E3 /* Hopper */,
-				D0231C10255039070057A293 /* Marketplace */,
-				D0231D1625514CE10057A293 /* User */,
-				D0231E3E2552AE040057A293 /* Template */,
-				D0231E552552B91E0057A293 /* Exchange */,
-				D0231F862552F1600057A293 /* Strategy */,
-				D047A8B62779C9D1007D5485 /* AI */,
+				D02AAFC6283B873B0044BCE7 /* V1Models */,
+				D02AAFC7283B874B0044BCE7 /* V2Models */,
 			);
 			path = SharedModels;
 			sourceTree = "<group>";
@@ -3350,7 +3537,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					D0231FBD25542CAF0057A293 = {
 						CreatedOnToolsVersion = 12.1;
@@ -3527,6 +3714,7 @@
 				D0C76AAC2549C8A30094ED9B /* HopperAPIReassignSubsriptionRequest.swift in Sources */,
 				D0DB8E4A257E85F70009BB39 /* HopperTradeHistory.swift in Sources */,
 				D023B3FC2593406900EC97CD /* HopperAPIGetHopperStatsResponse.swift in Sources */,
+				D02AAFBA283B7F720044BCE7 /* CryptohopperV2Signal.swift in Sources */,
 				D0E192A025835F2F0013C7B0 /* TAValue.swift in Sources */,
 				D0231F202552E7000057A293 /* HopperAPIGetSignalsInHopperResponse.swift in Sources */,
 				D07BDD122546D142008081E3 /* HopperAPIGetAllHoppersResponse.swift in Sources */,
@@ -3597,6 +3785,7 @@
 				D07571D727C3B569002242C7 /* HopperAPIGetActivityRequest.swift in Sources */,
 				D0231CB3255064040057A293 /* HopperAPIGetStrategyRequest.swift in Sources */,
 				D0C76AF2254AFAA30094ED9B /* HopperAPIGetAllConfigPoolsResponse.swift in Sources */,
+				D02AAFC3283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift in Sources */,
 				D0231F6F2552F1180057A293 /* HopperAPIChangeImageOfStrategyRequest.swift in Sources */,
 				D047A8BB2779CA3C007D5485 /* CryptohopperAI.swift in Sources */,
 				D0D6D83B281D7C6E004ECFF4 /* HopperAPICreateSimpleOrderRequest.swift in Sources */,
@@ -3652,6 +3841,7 @@
 				D0231DA325518C900057A293 /* HopperAPIGetUserPurchasesResponse.swift in Sources */,
 				D037FA50254095A1003CF793 /* HopperAPIRequest.swift in Sources */,
 				D0231F0E2552E6C10057A293 /* HopperAPIGetLastSignalRequest.swift in Sources */,
+				D02AAFBE283B7F860044BCE7 /* CryptohopperV2Tournament.swift in Sources */,
 				D047A8B32779C96C007D5485 /* HopperAPIGetAIsRequest.swift in Sources */,
 				D0C76A492549B5BE0094ED9B /* HopperAPIActivateDCAForMultiplePositionsRequest.swift in Sources */,
 				D0231F4D2552F0920057A293 /* HopperAPIGetStrategiesRequest.swift in Sources */,
@@ -3680,6 +3870,7 @@
 				D0C76B64254C50C90094ED9B /* HopperAPIRemoveOnePositionRequest.swift in Sources */,
 				D037FA4C2540955D003CF793 /* HopperError.swift in Sources */,
 				D07BDD7B254720DC008081E3 /* HopperAPIDisableHopperRequest.swift in Sources */,
+				D02AAFC0283B7F910044BCE7 /* CryptohopperV2User.swift in Sources */,
 				D0C76AEA254AF6B40094ED9B /* HopperAPIUpdateConfigPoolRequest.swift in Sources */,
 				D05E781C25D6C22A008C4E4A /* HopperAPIGetMarketSellerRequest.swift in Sources */,
 				D0231CEA255068BA0057A293 /* HopperAPIGetTemplateReviewsRequest.swift in Sources */,
@@ -3700,6 +3891,7 @@
 				D0231D73255182420057A293 /* HopperAPIGetAvailableCreditsResponse.swift in Sources */,
 				D0231C82255052350057A293 /* HopperAPIGetOneReviewResponse.swift in Sources */,
 				D06876F726D7CE5D001E51A9 /* HopperAPIGetSignalChartDataRequest.swift in Sources */,
+				D02AAFB8283B7F680044BCE7 /* CryptohopperV2Onboarding.swift in Sources */,
 				D07BDDAE25472797008081E3 /* HopperAPIHopperMostTradedCurrencyRequest.swift in Sources */,
 				D0231D65255181FC0057A293 /* HopperAPIGetUserProfileResponse.swift in Sources */,
 				D0231D9F25518C560057A293 /* HopperAPIGetUserPurchasesRequest.swift in Sources */,
@@ -3732,6 +3924,7 @@
 				D05D92D72653B42A00094911 /* HopperAPIRegisterUserResponse.swift in Sources */,
 				D0231EB42552D31F0057A293 /* HopperAPIGetPrecisionForCurrenciesOfExchangeRequest.swift in Sources */,
 				D0231F96255406A70057A293 /* CryptohopperHopper.swift in Sources */,
+				D02AAFB4283B7F220044BCE7 /* CryptohopperV2Currency.swift in Sources */,
 				D0231E372552AD1D0057A293 /* HopperAPIChangeImageOfTemplateRequest.swift in Sources */,
 				D00A9145257A525600E30BE8 /* HopperAPIGetShortsResponse.swift in Sources */,
 				D07BDD9D25472419008081E3 /* HopperAPIEnableHopperBuyingRequest.swift in Sources */,
@@ -3743,6 +3936,7 @@
 				D094401D25A3680A008A4818 /* HopperAPISyncPositionRequest.swift in Sources */,
 				D0231E232552AA9E0057A293 /* HopperAPILoadMarketTemplateRequest.swift in Sources */,
 				D0231BF925502FEA0057A293 /* HopperAPIGetTradeHistoryByIdResponse.swift in Sources */,
+				D02AAFBC283B7F7B0044BCE7 /* CryptohopperV2Strategy.swift in Sources */,
 				D0231CF6255069060057A293 /* HopperAPIGetOneReviewForTemplateRequest.swift in Sources */,
 				D07BDDA525472438008081E3 /* HopperAPIEnableHopperSellingRequest.swift in Sources */,
 				D0231C3D255046810057A293 /* HopperAPIDeleteReviewRequest.swift in Sources */,
@@ -3750,6 +3944,7 @@
 				D0231EE22552D41B0057A293 /* HopperAPIGetAllTickerOfExchangeRequest.swift in Sources */,
 				D0EBCB4B26C419C800CE10D3 /* HopperAPIHoldShortPositionRequest.swift in Sources */,
 				D0231E482552B1B30057A293 /* BasicTemplate.swift in Sources */,
+				D02AAFB6283B7F520044BCE7 /* CryptohopperV2Exchange.swift in Sources */,
 				D0BD279E2697435400E0C5E1 /* HopperAPIReleaseReservedPositionRequest.swift in Sources */,
 				D0231C1625503C880057A293 /* HopperAPIDownloadItemRequest.swift in Sources */,
 				D0231BFD255035E60057A293 /* HopperSearchOptionsItemEntry.swift in Sources */,
@@ -3788,6 +3983,7 @@
 				D0231C622550518A0057A293 /* HopperAPIGetSignalResponse.swift in Sources */,
 				D0231DFB2552A0760057A293 /* HopperAPIGetTemplatesResponse.swift in Sources */,
 				D0C76B3B254C31620094ED9B /* HopperAPIHoldOnePositionRequest.swift in Sources */,
+				D02AAFC5283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift in Sources */,
 				D0C76B96254C56550094ED9B /* HopperPosition.swift in Sources */,
 				D0C76AF6254B00CB0094ED9B /* HopperAPIGetOneConfigPoolResponse.swift in Sources */,
 				D08359982729621600495D08 /* HopperAPIReleaseShortPositionRequest.swift in Sources */,
@@ -3924,12 +4120,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					"x86_64-apple-ios-simulator",
-					x86_64,
-					i386,
-				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -3996,12 +4186,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					"x86_64-apple-ios-simulator",
-					x86_64,
-					i386,
-				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -4064,7 +4248,7 @@
 			baseConfigurationReference = 7296243D426B7AF70EFD92CC /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -4097,7 +4281,7 @@
 			baseConfigurationReference = 86C14D0C7771439F41C0C74C /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
