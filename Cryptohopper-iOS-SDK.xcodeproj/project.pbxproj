@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1782BB3EBFA96D2E71C3B6EC /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4AA6D440730232B3BD601E6 /* Pods_Cryptohopper_iOS_SDK.framework */; };
+		7DACC745DA6DD73E57509727 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB4BD3C80DC8B87F9D90EE9 /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
 		D0021D3C2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */; };
 		D007DF3C2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */; };
 		D00A9145257A525600E30BE8 /* HopperAPIGetShortsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9144257A525600E30BE8 /* HopperAPIGetShortsResponse.swift */; };
@@ -209,10 +209,6 @@
 		D0231FA6255406DB0057A293 /* CryptohopperExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FA5255406DB0057A293 /* CryptohopperExchange.swift */; };
 		D0231FAA255406E40057A293 /* CryptohopperStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FA9255406E40057A293 /* CryptohopperStrategy.swift */; };
 		D0231FAF25541DEA0057A293 /* HopperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FAE25541DEA0057A293 /* HopperSpec.swift */; };
-		D0231FC125542CAF0057A293 /* TestHostAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FC025542CAF0057A293 /* TestHostAppApp.swift */; };
-		D0231FC325542CAF0057A293 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231FC225542CAF0057A293 /* ContentView.swift */; };
-		D0231FC525542CB20057A293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0231FC425542CB20057A293 /* Assets.xcassets */; };
-		D0231FC825542CB20057A293 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0231FC725542CB20057A293 /* Preview Assets.xcassets */; };
 		D023B3FC2593406900EC97CD /* HopperAPIGetHopperStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023B3FB2593406900EC97CD /* HopperAPIGetHopperStatsResponse.swift */; };
 		D023B402259354A000EC97CD /* AnyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023B401259354A000EC97CD /* AnyType.swift */; };
 		D023F385265FC77D001D1880 /* HopperAPIPurchaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023F384265FC77D001D1880 /* HopperAPIPurchaseRequest.swift */; };
@@ -229,7 +225,15 @@
 		D02AAFBE283B7F860044BCE7 /* CryptohopperV2Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFBD283B7F860044BCE7 /* CryptohopperV2Tournament.swift */; };
 		D02AAFC0283B7F910044BCE7 /* CryptohopperV2User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFBF283B7F910044BCE7 /* CryptohopperV2User.swift */; };
 		D02AAFC3283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFC2283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift */; };
-		D02AAFC5283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFC4283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift */; };
+		D02AAFD0283B887D0044BCE7 /* V2Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFCF283B887D0044BCE7 /* V2Currency.swift */; };
+		D02AAFD5283B8B370044BCE7 /* CurrencyAPIV2Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFD4283B8B370044BCE7 /* CurrencyAPIV2Spec.swift */; };
+		D02AB037283BA72A0044BCE7 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D02AB054283BBD850044BCE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AB053283BBD850044BCE7 /* AppDelegate.swift */; };
+		D02AB056283BBD850044BCE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AB055283BBD850044BCE7 /* SceneDelegate.swift */; };
+		D02AB058283BBD850044BCE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AB057283BBD850044BCE7 /* ViewController.swift */; };
+		D02AB05B283BBD850044BCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02AB059283BBD850044BCE7 /* Main.storyboard */; };
+		D02AB05D283BBD860044BCE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02AB05C283BBD860044BCE7 /* Assets.xcassets */; };
+		D02AB060283BBD860044BCE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02AB05E283BBD860044BCE7 /* LaunchScreen.storyboard */; };
 		D037FA2125406FD8003CF793 /* Cryptohopper_iOS_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D037FA1325406FD7003CF793 /* Cryptohopper_iOS_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D037FA3025408EA3003CF793 /* CryptoHopperConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA2F25408EA3003CF793 /* CryptoHopperConfig.swift */; };
 		D037FA3425409145003CF793 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037FA3325409145003CF793 /* Keychain.swift */; };
@@ -382,16 +386,16 @@
 		D0F3D4EF25655F020036B130 /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D4EE25655F020036B130 /* UserSpec.swift */; };
 		D0F3D4F8256570280036B130 /* TemplateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D4F7256570280036B130 /* TemplateSpec.swift */; };
 		D0F3D50125657EDB0036B130 /* ExchangeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3D50025657EDB0036B130 /* ExchangeSpec.swift */; };
-		F78A0DFA7C5D82FBC2710B6F /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CD88054C4826CD5F017BCC /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
+		FD8B86D116360B08F1C19997 /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387CC08945F96D9DB978D771 /* Pods_Cryptohopper_iOS_SDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D0231FD025542CB70057A293 /* PBXContainerItemProxy */ = {
+		D02AB065283BBDAF0044BCE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D037FA0725406FD7003CF793 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D0231FBD25542CAF0057A293;
-			remoteInfo = TestHostApp;
+			remoteGlobalIDString = D02AB050283BBD850044BCE7;
+			remoteInfo = HostTestApp;
 		};
 		D0A0427F2542D84400ECA43C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -402,12 +406,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D02AB038283BA72A0044BCE7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D02AB037283BA72A0044BCE7 /* (null) in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		37CD88054C4826CD5F017BCC /* Pods_Cryptohopper_iOS_SDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		410EDBC577BB0C5808DFD24A /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7296243D426B7AF70EFD92CC /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
-		86C14D0C7771439F41C0C74C /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
-		B2CD7B98F0C43DA11A7880F7 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		20C1E7A6F9F6656872C371F9 /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		387CC08945F96D9DB978D771 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC0B419704221ADD4BC729B /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		BEBDF24E76D3A1BE1C66CE3E /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		CEB4BD3C80DC8B87F9D90EE9 /* Pods_Cryptohopper_iOS_SDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthWithCodeRequest.swift; sourceTree = "<group>"; };
 		D007DF3B2617364B00DA99E4 /* HopperAPICreateHopperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICreateHopperResponse.swift; sourceTree = "<group>"; };
 		D00A9144257A525600E30BE8 /* HopperAPIGetShortsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetShortsResponse.swift; sourceTree = "<group>"; };
@@ -609,13 +627,6 @@
 		D0231FA5255406DB0057A293 /* CryptohopperExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperExchange.swift; sourceTree = "<group>"; };
 		D0231FA9255406E40057A293 /* CryptohopperStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperStrategy.swift; sourceTree = "<group>"; };
 		D0231FAE25541DEA0057A293 /* HopperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperSpec.swift; sourceTree = "<group>"; };
-		D0231FBE25542CAF0057A293 /* TestHostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0231FC025542CAF0057A293 /* TestHostAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHostAppApp.swift; sourceTree = "<group>"; };
-		D0231FC225542CAF0057A293 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D0231FC425542CB20057A293 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D0231FC725542CB20057A293 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D0231FC925542CB20057A293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0231FD525542CC20057A293 /* TestHostApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestHostApp.entitlements; sourceTree = "<group>"; };
 		D023B3FB2593406900EC97CD /* HopperAPIGetHopperStatsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetHopperStatsResponse.swift; sourceTree = "<group>"; };
 		D023B401259354A000EC97CD /* AnyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyType.swift; sourceTree = "<group>"; };
 		D023F384265FC77D001D1880 /* HopperAPIPurchaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIPurchaseRequest.swift; sourceTree = "<group>"; };
@@ -632,7 +643,17 @@
 		D02AAFBD283B7F860044BCE7 /* CryptohopperV2Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2Tournament.swift; sourceTree = "<group>"; };
 		D02AAFBF283B7F910044BCE7 /* CryptohopperV2User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptohopperV2User.swift; sourceTree = "<group>"; };
 		D02AAFC2283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2GetAllCurrenciesRequest.swift; sourceTree = "<group>"; };
-		D02AAFC4283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2GetAllCurrenciesResponse.swift; sourceTree = "<group>"; };
+		D02AAFCF283B887D0044BCE7 /* V2Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Currency.swift; sourceTree = "<group>"; };
+		D02AAFD4283B8B370044BCE7 /* CurrencyAPIV2Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPIV2Spec.swift; sourceTree = "<group>"; };
+		D02AB051283BBD850044BCE7 /* HostTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02AB053283BBD850044BCE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D02AB055283BBD850044BCE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D02AB057283BBD850044BCE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D02AB05A283BBD850044BCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D02AB05C283BBD860044BCE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D02AB05F283BBD860044BCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D02AB061283BBD860044BCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02AB080283BC0950044BCE7 /* HostTestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HostTestApp.entitlements; sourceTree = "<group>"; };
 		D037FA1025406FD7003CF793 /* Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D037FA1325406FD7003CF793 /* Cryptohopper_iOS_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cryptohopper_iOS_SDK.h; sourceTree = "<group>"; };
 		D037FA1425406FD7003CF793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -788,11 +809,11 @@
 		D0F3D4EE25655F020036B130 /* UserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSpec.swift; sourceTree = "<group>"; };
 		D0F3D4F7256570280036B130 /* TemplateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSpec.swift; sourceTree = "<group>"; };
 		D0F3D50025657EDB0036B130 /* ExchangeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeSpec.swift; sourceTree = "<group>"; };
-		D4AA6D440730232B3BD601E6 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3B8071F5DE52EAEEC66793F /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D0231FBB25542CAF0057A293 /* Frameworks */ = {
+		D02AB04E283BBD850044BCE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -803,7 +824,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1782BB3EBFA96D2E71C3B6EC /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */,
+				FD8B86D116360B08F1C19997 /* Pods_Cryptohopper_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,7 +833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A0427E2542D84400ECA43C /* Cryptohopper_iOS_SDK.framework in Frameworks */,
-				F78A0DFA7C5D82FBC2710B6F /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */,
+				7DACC745DA6DD73E57509727 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,19 +843,19 @@
 		1AF7BFB7D52C96D9AE8AE457 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7296243D426B7AF70EFD92CC /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */,
-				86C14D0C7771439F41C0C74C /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */,
-				410EDBC577BB0C5808DFD24A /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */,
-				B2CD7B98F0C43DA11A7880F7 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */,
+				BEBDF24E76D3A1BE1C66CE3E /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */,
+				F3B8071F5DE52EAEEC66793F /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */,
+				20C1E7A6F9F6656872C371F9 /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */,
+				7FC0B419704221ADD4BC729B /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A8E54C9F4C6250A42BCA8246 /* Frameworks */ = {
+		5FEFF22B653E54C708068659 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D4AA6D440730232B3BD601E6 /* Pods_Cryptohopper_iOS_SDK.framework */,
-				37CD88054C4826CD5F017BCC /* Pods_Cryptohopper_iOS_SDKTests.framework */,
+				387CC08945F96D9DB978D771 /* Pods_Cryptohopper_iOS_SDK.framework */,
+				CEB4BD3C80DC8B87F9D90EE9 /* Pods_Cryptohopper_iOS_SDKTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2034,27 +2055,6 @@
 			path = Hopper;
 			sourceTree = "<group>";
 		};
-		D0231FBF25542CAF0057A293 /* TestHostApp */ = {
-			isa = PBXGroup;
-			children = (
-				D0231FD525542CC20057A293 /* TestHostApp.entitlements */,
-				D0231FC025542CAF0057A293 /* TestHostAppApp.swift */,
-				D0231FC225542CAF0057A293 /* ContentView.swift */,
-				D0231FC425542CB20057A293 /* Assets.xcassets */,
-				D0231FC925542CB20057A293 /* Info.plist */,
-				D0231FC625542CB20057A293 /* Preview Content */,
-			);
-			path = TestHostApp;
-			sourceTree = "<group>";
-		};
-		D0231FC625542CB20057A293 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				D0231FC725542CB20057A293 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		D023B4002593549400EC97CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -2195,7 +2195,6 @@
 			isa = PBXGroup;
 			children = (
 				D02AAFC2283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift */,
-				D02AAFC4283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift */,
 			);
 			path = GetCurrencies;
 			sourceTree = "<group>";
@@ -2231,6 +2230,7 @@
 		D02AAFC8283B87540044BCE7 /* Currency */ = {
 			isa = PBXGroup;
 			children = (
+				D02AAFCF283B887D0044BCE7 /* V2Currency.swift */,
 			);
 			path = Currency;
 			sourceTree = "<group>";
@@ -2277,15 +2277,46 @@
 			path = Exchange;
 			sourceTree = "<group>";
 		};
+		D02AAFD2283B8B240044BCE7 /* APIV2Spec */ = {
+			isa = PBXGroup;
+			children = (
+				D02AAFD3283B8B2C0044BCE7 /* Currency */,
+			);
+			path = APIV2Spec;
+			sourceTree = "<group>";
+		};
+		D02AAFD3283B8B2C0044BCE7 /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				D02AAFD4283B8B370044BCE7 /* CurrencyAPIV2Spec.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		D02AB052283BBD850044BCE7 /* HostTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				D02AB080283BC0950044BCE7 /* HostTestApp.entitlements */,
+				D02AB053283BBD850044BCE7 /* AppDelegate.swift */,
+				D02AB055283BBD850044BCE7 /* SceneDelegate.swift */,
+				D02AB057283BBD850044BCE7 /* ViewController.swift */,
+				D02AB059283BBD850044BCE7 /* Main.storyboard */,
+				D02AB05C283BBD860044BCE7 /* Assets.xcassets */,
+				D02AB05E283BBD860044BCE7 /* LaunchScreen.storyboard */,
+				D02AB061283BBD860044BCE7 /* Info.plist */,
+			);
+			path = HostTestApp;
+			sourceTree = "<group>";
+		};
 		D037FA0625406FD7003CF793 = {
 			isa = PBXGroup;
 			children = (
 				D037FA1225406FD7003CF793 /* Cryptohopper-iOS-SDK */,
 				D0A0427A2542D84400ECA43C /* Cryptohopper-iOS-SDKTests */,
-				D0231FBF25542CAF0057A293 /* TestHostApp */,
+				D02AB052283BBD850044BCE7 /* HostTestApp */,
 				D037FA1125406FD7003CF793 /* Products */,
 				1AF7BFB7D52C96D9AE8AE457 /* Pods */,
-				A8E54C9F4C6250A42BCA8246 /* Frameworks */,
+				5FEFF22B653E54C708068659 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2294,7 +2325,7 @@
 			children = (
 				D037FA1025406FD7003CF793 /* Cryptohopper_iOS_SDK.framework */,
 				D0A042792542D84400ECA43C /* Cryptohopper-iOS-SDKTests.xctest */,
-				D0231FBE25542CAF0057A293 /* TestHostApp.app */,
+				D02AB051283BBD850044BCE7 /* HostTestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2800,6 +2831,7 @@
 				D0A042B52543401D00ECA43C /* GlobalVariables.swift */,
 				D0A0429E2542E3AC00ECA43C /* ManagerSpec */,
 				D0A0429F2542E3C900ECA43C /* APISpec */,
+				D02AAFD2283B8B240044BCE7 /* APIV2Spec */,
 				D0A0427D2542D84400ECA43C /* Info.plist */,
 			);
 			path = "Cryptohopper-iOS-SDKTests";
@@ -3473,32 +3505,33 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D0231FBD25542CAF0057A293 /* TestHostApp */ = {
+		D02AB050283BBD850044BCE7 /* HostTestApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0231FCA25542CB20057A293 /* Build configuration list for PBXNativeTarget "TestHostApp" */;
+			buildConfigurationList = D02AB062283BBD860044BCE7 /* Build configuration list for PBXNativeTarget "HostTestApp" */;
 			buildPhases = (
-				D0231FBA25542CAF0057A293 /* Sources */,
-				D0231FBB25542CAF0057A293 /* Frameworks */,
-				D0231FBC25542CAF0057A293 /* Resources */,
+				D02AB04D283BBD850044BCE7 /* Sources */,
+				D02AB04E283BBD850044BCE7 /* Frameworks */,
+				D02AB04F283BBD850044BCE7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TestHostApp;
-			productName = TestHostApp;
-			productReference = D0231FBE25542CAF0057A293 /* TestHostApp.app */;
+			name = HostTestApp;
+			productName = HostTestApp;
+			productReference = D02AB051283BBD850044BCE7 /* HostTestApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D037FA0F25406FD7003CF793 /* Cryptohopper-iOS-SDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D037FA2425406FD8003CF793 /* Build configuration list for PBXNativeTarget "Cryptohopper-iOS-SDK" */;
 			buildPhases = (
-				2C748DFB59F9429B2EA82720 /* [CP] Check Pods Manifest.lock */,
+				26741D0C72CCD94959F219BF /* [CP] Check Pods Manifest.lock */,
 				D037FA0B25406FD7003CF793 /* Headers */,
 				D037FA0C25406FD7003CF793 /* Sources */,
 				D037FA0D25406FD7003CF793 /* Frameworks */,
 				D037FA0E25406FD7003CF793 /* Resources */,
+				D02AB038283BA72A0044BCE7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3513,17 +3546,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A042812542D84400ECA43C /* Build configuration list for PBXNativeTarget "Cryptohopper-iOS-SDKTests" */;
 			buildPhases = (
-				BCCAF569E15896ECD0BA27FB /* [CP] Check Pods Manifest.lock */,
+				85352BAD38BBACABDC42062A /* [CP] Check Pods Manifest.lock */,
 				D0A042752542D84400ECA43C /* Sources */,
 				D0A042762542D84400ECA43C /* Frameworks */,
 				D0A042772542D84400ECA43C /* Resources */,
-				C91F6250F634404C17A9911A /* [CP] Embed Pods Frameworks */,
+				9B5A01E3E412E04F23F2E124 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D0A042802542D84400ECA43C /* PBXTargetDependency */,
-				D0231FD125542CB70057A293 /* PBXTargetDependency */,
+				D02AB066283BBDAF0044BCE7 /* PBXTargetDependency */,
 			);
 			name = "Cryptohopper-iOS-SDKTests";
 			productName = "Cryptohopper-iOS-SDKTests";
@@ -3536,11 +3569,11 @@
 		D037FA0725406FD7003CF793 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					D0231FBD25542CAF0057A293 = {
-						CreatedOnToolsVersion = 12.1;
+					D02AB050283BBD850044BCE7 = {
+						CreatedOnToolsVersion = 13.3.1;
 					};
 					D037FA0F25406FD7003CF793 = {
 						CreatedOnToolsVersion = 12.1;
@@ -3548,7 +3581,7 @@
 					};
 					D0A042782542D84400ECA43C = {
 						CreatedOnToolsVersion = 12.1;
-						TestTargetID = D0231FBD25542CAF0057A293;
+						TestTargetID = D02AB050283BBD850044BCE7;
 					};
 				};
 			};
@@ -3567,18 +3600,19 @@
 			targets = (
 				D037FA0F25406FD7003CF793 /* Cryptohopper-iOS-SDK */,
 				D0A042782542D84400ECA43C /* Cryptohopper-iOS-SDKTests */,
-				D0231FBD25542CAF0057A293 /* TestHostApp */,
+				D02AB050283BBD850044BCE7 /* HostTestApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D0231FBC25542CAF0057A293 /* Resources */ = {
+		D02AB04F283BBD850044BCE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0231FC825542CB20057A293 /* Preview Assets.xcassets in Resources */,
-				D0231FC525542CB20057A293 /* Assets.xcassets in Resources */,
+				D02AB060283BBD860044BCE7 /* LaunchScreen.storyboard in Resources */,
+				D02AB05D283BBD860044BCE7 /* Assets.xcassets in Resources */,
+				D02AB05B283BBD850044BCE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3599,7 +3633,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C748DFB59F9429B2EA82720 /* [CP] Check Pods Manifest.lock */ = {
+		26741D0C72CCD94959F219BF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3621,7 +3655,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BCCAF569E15896ECD0BA27FB /* [CP] Check Pods Manifest.lock */ = {
+		85352BAD38BBACABDC42062A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3643,7 +3677,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C91F6250F634404C17A9911A /* [CP] Embed Pods Frameworks */ = {
+		9B5A01E3E412E04F23F2E124 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3663,12 +3697,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D0231FBA25542CAF0057A293 /* Sources */ = {
+		D02AB04D283BBD850044BCE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0231FC325542CAF0057A293 /* ContentView.swift in Sources */,
-				D0231FC125542CAF0057A293 /* TestHostAppApp.swift in Sources */,
+				D02AB058283BBD850044BCE7 /* ViewController.swift in Sources */,
+				D02AB054283BBD850044BCE7 /* AppDelegate.swift in Sources */,
+				D02AB056283BBD850044BCE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3876,6 +3911,7 @@
 				D0231CEA255068BA0057A293 /* HopperAPIGetTemplateReviewsRequest.swift in Sources */,
 				D0231CCF255065AB0057A293 /* MarketStrategy.swift in Sources */,
 				D0231EC22552D38D0057A293 /* HopperAPIGetPrecisionForCurrencyOfExchangeRequest.swift in Sources */,
+				D02AAFD0283B887D0044BCE7 /* V2Currency.swift in Sources */,
 				D0231E032552A93B0057A293 /* HopperAPIGetBasicTemplatesResponse.swift in Sources */,
 				D0231F372552EB970057A293 /* HopperAPIUnsubscribeToSignalRequest.swift in Sources */,
 				D0231EBA2552D33A0057A293 /* HopperAPIGetSingleCurrencyOfExchangeRequest.swift in Sources */,
@@ -3983,7 +4019,6 @@
 				D0231C622550518A0057A293 /* HopperAPIGetSignalResponse.swift in Sources */,
 				D0231DFB2552A0760057A293 /* HopperAPIGetTemplatesResponse.swift in Sources */,
 				D0C76B3B254C31620094ED9B /* HopperAPIHoldOnePositionRequest.swift in Sources */,
-				D02AAFC5283B830F0044BCE7 /* HopperAPIV2GetAllCurrenciesResponse.swift in Sources */,
 				D0C76B96254C56550094ED9B /* HopperPosition.swift in Sources */,
 				D0C76AF6254B00CB0094ED9B /* HopperAPIGetOneConfigPoolResponse.swift in Sources */,
 				D08359982729621600495D08 /* HopperAPIReleaseShortPositionRequest.swift in Sources */,
@@ -4050,6 +4085,7 @@
 				D047A8BE2779CAC4007D5485 /* AISpec.swift in Sources */,
 				D0A042B02542F5B400ECA43C /* AuthenticationAPISpec.swift in Sources */,
 				D0F3D4F8256570280036B130 /* TemplateSpec.swift in Sources */,
+				D02AAFD5283B8B370044BCE7 /* CurrencyAPIV2Spec.swift in Sources */,
 				D0F3D4EF25655F020036B130 /* UserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4057,10 +4093,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D0231FD125542CB70057A293 /* PBXTargetDependency */ = {
+		D02AB066283BBDAF0044BCE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0231FBD25542CAF0057A293 /* TestHostApp */;
-			targetProxy = D0231FD025542CB70057A293 /* PBXContainerItemProxy */;
+			target = D02AB050283BBD850044BCE7 /* HostTestApp */;
+			targetProxy = D02AB065283BBDAF0044BCE7 /* PBXContainerItemProxy */;
 		};
 		D0A042802542D84400ECA43C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4069,48 +4105,85 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		D02AB059283BBD850044BCE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02AB05A283BBD850044BCE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D02AB05E283BBD860044BCE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02AB05F283BBD860044BCE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		D0231FCB25542CB20057A293 /* Debug */ = {
+		D02AB063283BBD860044BCE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TestHostApp/TestHostApp.entitlements;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = HostTestApp/HostTestApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TestHostApp/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7MFX4TNW4;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TestHostApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HostTestApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Cryptohopper.TestHostApp;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryptohopper.HostTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D0231FCC25542CB20057A293 /* Release */ = {
+		D02AB064283BBD860044BCE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TestHostApp/TestHostApp.entitlements;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = HostTestApp/HostTestApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TestHostApp/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7MFX4TNW4;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TestHostApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HostTestApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Cryptohopper.TestHostApp;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryptohopper.HostTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -4154,7 +4227,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -4220,7 +4293,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -4245,7 +4318,7 @@
 		};
 		D037FA2525406FD8003CF793 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7296243D426B7AF70EFD92CC /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */;
+			baseConfigurationReference = BEBDF24E76D3A1BE1C66CE3E /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -4256,6 +4329,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Cryptohopper-iOS-SDK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -4278,7 +4352,7 @@
 		};
 		D037FA2625406FD8003CF793 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86C14D0C7771439F41C0C74C /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */;
+			baseConfigurationReference = F3B8071F5DE52EAEEC66793F /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -4289,6 +4363,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Cryptohopper-iOS-SDK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -4310,54 +4385,68 @@
 		};
 		D0A042822542D84400ECA43C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 410EDBC577BB0C5808DFD24A /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */;
+			baseConfigurationReference = 20C1E7A6F9F6656872C371F9 /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7MFX4TNW4;
+				EXCLUDED_ARCHS = "";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Nimble/Nimble.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Quick/Quick.framework/Headers\"",
+					"$(SRCROOT)/Pods",
+				);
 				INFOPLIST_FILE = "Cryptohopper-iOS-SDKTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Cryptohopper.Cryptohopper-iOS-SDKTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHostApp.app/TestHostApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HostTestApp.app/HostTestApp";
 			};
 			name = Debug;
 		};
 		D0A042832542D84400ECA43C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2CD7B98F0C43DA11A7880F7 /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */;
+			baseConfigurationReference = 7FC0B419704221ADD4BC729B /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7MFX4TNW4;
+				EXCLUDED_ARCHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Nimble/Nimble.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Quick/Quick.framework/Headers\"",
+					"$(SRCROOT)/Pods",
+				);
 				INFOPLIST_FILE = "Cryptohopper-iOS-SDKTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Cryptohopper.Cryptohopper-iOS-SDKTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHostApp.app/TestHostApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HostTestApp.app/HostTestApp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0231FCA25542CB20057A293 /* Build configuration list for PBXNativeTarget "TestHostApp" */ = {
+		D02AB062283BBD860044BCE7 /* Build configuration list for PBXNativeTarget "HostTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D0231FCB25542CB20057A293 /* Debug */,
-				D0231FCC25542CB20057A293 /* Release */,
+				D02AB063283BBD860044BCE7 /* Debug */,
+				D02AB064283BBD860044BCE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

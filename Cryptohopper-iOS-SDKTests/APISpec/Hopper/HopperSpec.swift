@@ -176,7 +176,7 @@ class HopperGeneralSpec : QuickSpec {
             
             it("Get Assets Of Hopper"){
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperHopper.getAssets(hopperId: self.hopperId) { (result) in
+                    CryptohopperHopper.getAssets(hopperId: self.hopperId, reserved: false) { (result) in
                         switch(result){
                         case .success(let result):
                             expect(result).to(beAKindOf([String:String].self))
@@ -302,7 +302,7 @@ class HopperGeneralSpec : QuickSpec {
             
             it("Get Trade"){
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperHopper.getTradeHistory(hopperId: self.hopperId) { (result) in
+                    CryptohopperHopper.getTradeHistory(hopperId: self.hopperId, tradeId: 0) { (result) in
                         switch(result){
                         case .success(let orders):
                             expect(orders).to(beAKindOf([HopperTradeHistory].self))
