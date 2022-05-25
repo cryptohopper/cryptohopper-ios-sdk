@@ -1,8 +1,8 @@
 //
-//  CurrencyAPIV2Spec.swift
+//  ExchangeAPIV2Spec.swift
 //  Cryptohopper-iOS-SDKTests
 //
-//  Created by CH Kaan Bayrak on 23/05/2022.
+//  Created by CH Kaan Bayrak on 25/05/2022.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import Quick
 import Nimble
 @testable import Cryptohopper_iOS_SDK
 
-class CurrencyAPIV2Spec : QuickSpec {
+class ExchangeAPIV2Spec : QuickSpec {
     
     override func spec() {
         
@@ -37,14 +37,15 @@ class CurrencyAPIV2Spec : QuickSpec {
             }
         }
         
-        context("V2 Currency"){
-            it("Get All Currencies "){
+        context("V2 Exchange"){
+            
+            it("Get All Exchanges "){
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperV2Currency.getCurrencies(completion: { result in
+                    CryptohopperV2Exchange.getExchanges(completion: { result in
                         switch(result){
-                        case .success(let currencies):
-                            expect(currencies).to(beAKindOf([V2Currency].self))
-                            expect(currencies?.count).to(beGreaterThan(0))
+                        case .success(let exchanges):
+                            expect(exchanges).to(beAKindOf([V2Exchange].self))
+                            expect(exchanges?.count).to(beGreaterThan(0))
                             done()
                         case .failure(let err):
                             expect(err).to(beNil())
@@ -53,6 +54,23 @@ class CurrencyAPIV2Spec : QuickSpec {
                     })
                 }
             }
+            
+            it("Get Markets Of Poloniex"){
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperV2Exchange.getExchangeMarkets(exchangeId: 1, completion: { result in
+                        switch(result){
+                        case .success(let pairs):
+                            expect(pairs).to(beAKindOf([V2Pair].self))
+                            expect(pairs?.count).to(beGreaterThan(0))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    })
+                }
+            }
+            
         }
         
     }
