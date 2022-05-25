@@ -3,3 +3,4 @@ xcuserdata/
 project.xcworkspace/
 DerivedData/
 Pods/
+Cryptohopper-iOS-SDKTests/GlobalVariables.swift
