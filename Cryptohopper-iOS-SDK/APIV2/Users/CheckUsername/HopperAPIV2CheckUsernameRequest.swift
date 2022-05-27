@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HopperAPIV2CheckUsernameRequest: HopperAPIRequest<Bool?> {
+class HopperAPIV2CheckUsernameRequest: HopperAPIRequest<HopperAPIV2CheckUsernameResponse?> {
     
     convenience init(username : String) {
         self.init()

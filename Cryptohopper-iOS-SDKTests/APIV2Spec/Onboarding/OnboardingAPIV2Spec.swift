@@ -39,9 +39,12 @@ class OnboardingAPIV2Spec : QuickSpec {
             }
         }
         
-        context("V2 Onboarding"){
+        context("V2 Onboarding Init"){
             
-            it("Onboarding Init"){
+            let hopperIdExpectation = self.expectation(description: "HopperId filled")
+            let hopperCreatedExpectation = self.expectation(description: "HopperCreated filled")
+            
+            it("1 Onboarding Init"){
                 waitUntil(timeout: apiTimeout) { done in
                     CryptohopperV2Onboarding.initOnboarding(exchangeId: 5, apiDetails: [String:Any](), isPaperTrading: true, quoteCurrency: "USDT",completion: { result in
                         switch(result){
@@ -49,6 +52,7 @@ class OnboardingAPIV2Spec : QuickSpec {
                             expect(initHopperId).to(beAKindOf(Int.self))
                             expect(initHopperId).notTo(beNil())
                             self.hopperId = initHopperId ?? 0
+                            hopperIdExpectation.fulfill()
                             done()
                         case .failure(let err):
                             expect(err).to(beNil())
@@ -58,8 +62,25 @@ class OnboardingAPIV2Spec : QuickSpec {
                 }
             }
             
-            
-            it("Onboarding Edit"){
+            it("2 Onboarding Create"){
+                self.wait(for: [hopperIdExpectation], timeout: 60.0)
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperV2Onboarding.createOnboardingHopper(hopperId: self.hopperId, isBuyingEnabled: true, isSellingEnabled: true, isEnabled: true, isPaperTrading: true, quoteCurrency: "EUR", signallerId: nil, riskLevel: "low") { result in
+                        switch(result){
+                        case .success(let successMsg):
+                            expect(successMsg).notTo(beNil())
+                            hopperCreatedExpectation.fulfill()
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    }
+                }
+            }
+
+            it("3 Onboarding Edit"){
+                self.wait(for: [hopperCreatedExpectation], timeout: 60.0)
                 waitUntil(timeout: apiTimeout) { done in
                     CryptohopperV2Onboarding.editOnboarding(hopperId: self.hopperId, exchangeId: 26, apiDetails: [String:Any](), isPaperTrading: true, quoteCurrency: "EUR",completion: { result in
                         switch(result){
@@ -74,23 +95,7 @@ class OnboardingAPIV2Spec : QuickSpec {
                 }
             }
             
-            it("Onboarding Create"){
-                waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperV2Onboarding.createOnboardingHopper(hopperId: self.hopperId, isBuyingEnabled: true, isSellingEnabled: true, isEnabled: true, isPaperTrading: true, quoteCurrency: "EUR", signallerId: nil, riskLevel: "low") { result in
-                        switch(result){
-                        case .success(let successMsg):
-                            expect(successMsg).notTo(beNil())
-                            done()
-                        case .failure(let err):
-                            expect(err).to(beNil())
-                            done()
-                        }
-                    }
-                }
-            }
-            
         }
-        
     }
     
 }

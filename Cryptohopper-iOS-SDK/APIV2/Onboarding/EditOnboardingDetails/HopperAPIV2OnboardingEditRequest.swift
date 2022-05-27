@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HopperAPIV2OnboardingEditRequest: HopperAPIRequest<HopperCommonMessageResponse> {
+class HopperAPIV2OnboardingEditRequest: HopperAPIRequest<HopperCommonMessageResponse?> {
     
     convenience init(hopperId : Int,exchangeId : Int, apiDetails : [String:Any], isPaperTrading : Bool , quoteCurrency : String) {
         self.init()

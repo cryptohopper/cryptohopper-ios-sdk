@@ -56,8 +56,7 @@ class UserAPIV2Spec : QuickSpec {
             
             it("Edit User Property"){
                 waitUntil(timeout: apiTimeout) { done in
-                    let properties = [ "name" : "AppTesterNameTest" ]
-                    CryptohopperV2User.editUserProperties(properties : properties,completion: { result in
+                    CryptohopperV2User.editUserProperties(name: "AppTesterNameTest", countryISOCode: "TR", completion: { result in
                         switch(result){
                         case .success(let successStr):
                             expect(successStr).toNot(beNil())
@@ -104,20 +103,6 @@ class UserAPIV2Spec : QuickSpec {
                 }
             }
             
-            it("Create contact request"){
-                waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperV2User.createContactMessage(email: "kaan@cryptohpper.com", message: "Test Kaan Message", name: "CH Kaan", subject: "Test message from mobile", completion: { result in
-                        switch(result){
-                        case .success(let successStr):
-                            expect(successStr).toNot(beNil())
-                            done()
-                        case .failure(let err):
-                            expect(err).to(beNil())
-                            done()
-                        }
-                    })
-                }
-            }
             
         }
         

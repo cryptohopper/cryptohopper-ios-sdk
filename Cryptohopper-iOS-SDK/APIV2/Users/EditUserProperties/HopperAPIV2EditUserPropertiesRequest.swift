@@ -10,12 +10,11 @@ import UIKit
 
 class HopperAPIV2EditUserPropertiesRequest: HopperAPIRequest<HopperCommonMessageResponse?> {
     
-    convenience init(properties : [String:Any]) {
+    convenience init(name: String, countryISOCode : String) {
         self.init()
         self.changeUrlPath(path: "/rest/api/v2/user",isV2Endpoint: true)
-        for p in properties {
-            addBodyItem(name: p.key, value: p.value)
-        }
+        addBodyItem(name: "name", value: name)
+        addBodyItem(name: "countryIsoCode", value: countryISOCode)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

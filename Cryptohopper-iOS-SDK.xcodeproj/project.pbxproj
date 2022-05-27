@@ -311,7 +311,6 @@
 		D09CD49D2840CA03009B503F /* HopperAPIV2EditUserPropertiesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CD49C2840CA03009B503F /* HopperAPIV2EditUserPropertiesRequest.swift */; };
 		D09CD49F2840CA4C009B503F /* HopperAPIV2CheckUserBalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CD49E2840CA4C009B503F /* HopperAPIV2CheckUserBalanceRequest.swift */; };
 		D09CD4A12840CB0C009B503F /* HopperAPIV2CheckUsernameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CD4A02840CB0C009B503F /* HopperAPIV2CheckUsernameRequest.swift */; };
-		D09CD4A32840CB1E009B503F /* HopperAPIV2CreateContactMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CD4A22840CB1E009B503F /* HopperAPIV2CreateContactMessageRequest.swift */; };
 		D09CD4A52840CB90009B503F /* V2User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CD4A42840CB90009B503F /* V2User.swift */; };
 		D09CD4A72840CD9A009B503F /* HopperAPIV2CheckUsernameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CD4A62840CD9A009B503F /* HopperAPIV2CheckUsernameResponse.swift */; };
 		D09CD4AA2840D413009B503F /* UserAPIV2Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CD4A92840D413009B503F /* UserAPIV2Spec.swift */; };
@@ -760,7 +759,6 @@
 		D09CD49C2840CA03009B503F /* HopperAPIV2EditUserPropertiesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2EditUserPropertiesRequest.swift; sourceTree = "<group>"; };
 		D09CD49E2840CA4C009B503F /* HopperAPIV2CheckUserBalanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2CheckUserBalanceRequest.swift; sourceTree = "<group>"; };
 		D09CD4A02840CB0C009B503F /* HopperAPIV2CheckUsernameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2CheckUsernameRequest.swift; sourceTree = "<group>"; };
-		D09CD4A22840CB1E009B503F /* HopperAPIV2CreateContactMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2CreateContactMessageRequest.swift; sourceTree = "<group>"; };
 		D09CD4A42840CB90009B503F /* V2User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2User.swift; sourceTree = "<group>"; };
 		D09CD4A62840CD9A009B503F /* HopperAPIV2CheckUsernameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2CheckUsernameResponse.swift; sourceTree = "<group>"; };
 		D09CD4A92840D413009B503F /* UserAPIV2Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIV2Spec.swift; sourceTree = "<group>"; };
@@ -2201,7 +2199,6 @@
 				D09CD4962840C8FF009B503F /* EditUserProperties */,
 				D09CD4972840C910009B503F /* CheckUserBalances */,
 				D09CD4982840C97C009B503F /* CheckUsername */,
-				D09CD4992840C983009B503F /* CreateContactMessage */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -2985,14 +2982,6 @@
 				D09CD4A62840CD9A009B503F /* HopperAPIV2CheckUsernameResponse.swift */,
 			);
 			path = CheckUsername;
-			sourceTree = "<group>";
-		};
-		D09CD4992840C983009B503F /* CreateContactMessage */ = {
-			isa = PBXGroup;
-			children = (
-				D09CD4A22840CB1E009B503F /* HopperAPIV2CreateContactMessageRequest.swift */,
-			);
-			path = CreateContactMessage;
 			sourceTree = "<group>";
 		};
 		D09CD4A82840D405009B503F /* User */ = {
@@ -4045,7 +4034,6 @@
 				D06876F926D7CE6E001E51A9 /* HopperAPIGetSignalChartDataResponse.swift in Sources */,
 				D0231BF125501C360057A293 /* HopperAPIGetOutputRequest.swift in Sources */,
 				D07BDD172546D187008081E3 /* Hopper.swift in Sources */,
-				D09CD4A32840CB1E009B503F /* HopperAPIV2CreateContactMessageRequest.swift in Sources */,
 				D0231C8E255054060057A293 /* HopperAPIPostSignalReviewRequest.swift in Sources */,
 				D0231DD625519C4B0057A293 /* HopperAPIValidateTwoFactorAuthRequest.swift in Sources */,
 				D0231DB12551927C0057A293 /* UserPurchase.swift in Sources */,

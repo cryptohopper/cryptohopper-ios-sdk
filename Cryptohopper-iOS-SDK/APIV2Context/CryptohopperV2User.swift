@@ -19,8 +19,8 @@ import UIKit
         }
     }
     
-    public static func editUserProperties(properties: [String:Any],completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIV2EditUserPropertiesRequest.init(properties: properties).request { (_) in
+    public static func editUserProperties(name: String, countryISOCode : String,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIV2EditUserPropertiesRequest.init(name: name,countryISOCode : countryISOCode).request { (_) in
             completion(.success("Success"))
         } _: { (err) in
             completion(.failure(err))
@@ -35,17 +35,9 @@ import UIKit
         }
     }
     
-    public static func checkUsername(username : String,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIV2CheckUsernameRequest.init(username: username).request { (_) in
-            completion(.success("Success"))
-        } _: { (err) in
-            completion(.failure(err))
-        }
-    }
-    
-    public static func createContactMessage(email : String , message : String, name : String, subject : String,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIV2CreateContactMessageRequest.init(email: email, message: message, name: name, subject: subject).request { (_) in
-            completion(.success("Success"))
+    public static func checkUsername(username : String,completion: @escaping (Result<Bool?, Error>) -> Void) {
+        HopperAPIV2CheckUsernameRequest.init(username: username).request { (result) in
+            completion(.success(result?.exists))
         } _: { (err) in
             completion(.failure(err))
         }

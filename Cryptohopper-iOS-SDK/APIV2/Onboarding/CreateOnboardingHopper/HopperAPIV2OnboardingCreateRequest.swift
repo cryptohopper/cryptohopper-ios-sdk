@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class HopperAPIV2OnboardingCreateRequest: HopperAPIRequest<HopperCommonMessageResponse> {
+class HopperAPIV2OnboardingCreateRequest: HopperAPIRequest<HopperCommonMessageResponse?> {
     
     convenience init(hopperId : Int,isBuyingEnabled : Bool,isSellingEnabled : Bool, isEnabled : Bool, isPaperTrading : Bool , quoteCurrency : String , signallerId : Int? , riskLevel : String?) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/onboarding/edit",isV2Endpoint: true)
+        self.changeUrlPath(path: "/rest/api/v2/onboarding/create",isV2Endpoint: true)
         
         var exchangeObject = [String:Any]()
         exchangeObject["paperTrading"] = isPaperTrading
