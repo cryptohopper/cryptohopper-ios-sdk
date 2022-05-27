@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 public class V2Currency : Codable {
     
     public private(set) var id : String?
