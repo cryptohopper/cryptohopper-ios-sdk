@@ -36,9 +36,9 @@ class HopperAPIConfiguration {
     var v2Host: String {
         switch environment {
         case .Sandbox:
-            return "www-dev.cryptohopper.com"
+            return "restapi-dev.cryptohopper.com"
         case .Production:
-            return "www.cryptohopper.com/rest/api/v2"
+            return "restapi.cryptohopper.com"
         }
     }
     
