@@ -15,6 +15,7 @@
 		D00A914F257A529C00E30BE8 /* HopperShortPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */; };
 		D00A9154257A543800E30BE8 /* HopperReserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A9153257A543700E30BE8 /* HopperReserved.swift */; };
 		D00A91A0257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */; };
+		D00DDE2B28535C0A00FBCFC0 /* HopperAPIIAPPurchaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00DDE2A28535C0A00FBCFC0 /* HopperAPIIAPPurchaseRequest.swift */; };
 		D017A1242692F345000B62F5 /* HopperAPIMoveReservedPositionToOpenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017A1232692F345000B62F5 /* HopperAPIMoveReservedPositionToOpenRequest.swift */; };
 		D017A12626932A11000B62F5 /* HopperCustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017A12526932A11000B62F5 /* HopperCustomError.swift */; };
 		D0231BC2255010B90057A293 /* HopperAPIUpdateShortPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231BC1255010B80057A293 /* HopperAPIUpdateShortPositionRequest.swift */; };
@@ -459,6 +460,7 @@
 		D00A914E257A529C00E30BE8 /* HopperShortPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperShortPosition.swift; sourceTree = "<group>"; };
 		D00A9153257A543700E30BE8 /* HopperReserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperReserved.swift; sourceTree = "<group>"; };
 		D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIForgetPasswordRequest.swift; sourceTree = "<group>"; };
+		D00DDE2A28535C0A00FBCFC0 /* HopperAPIIAPPurchaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIIAPPurchaseRequest.swift; sourceTree = "<group>"; };
 		D017A1232692F345000B62F5 /* HopperAPIMoveReservedPositionToOpenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIMoveReservedPositionToOpenRequest.swift; sourceTree = "<group>"; };
 		D017A12526932A11000B62F5 /* HopperCustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperCustomError.swift; sourceTree = "<group>"; };
 		D0231BC1255010B80057A293 /* HopperAPIUpdateShortPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIUpdateShortPositionRequest.swift; sourceTree = "<group>"; };
@@ -928,6 +930,14 @@
 				D00A919F257A91A600E30BE8 /* HopperAPIForgetPasswordRequest.swift */,
 			);
 			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		D00DDE2928535BF100FBCFC0 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				D00DDE2A28535C0A00FBCFC0 /* HopperAPIIAPPurchaseRequest.swift */,
+			);
+			path = IAP;
 			sourceTree = "<group>";
 		};
 		D017A1222692F2DC000B62F5 /* MoveReservedPositionToOpen */ = {
@@ -2120,6 +2130,7 @@
 		D023F382265FB647001D1880 /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
+				D00DDE2928535BF100FBCFC0 /* IAP */,
 				D023F383265FB64D001D1880 /* General */,
 			);
 			path = Purchase;
@@ -4133,6 +4144,7 @@
 				D00A914F257A529C00E30BE8 /* HopperShortPosition.swift in Sources */,
 				D0C76B04254B0EDB0094ED9B /* HopperAPIUpdateConfigResponse.swift in Sources */,
 				D0231C5225504FB50057A293 /* MarketSignal.swift in Sources */,
+				D00DDE2B28535C0A00FBCFC0 /* HopperAPIIAPPurchaseRequest.swift in Sources */,
 				D0231EB02552D3130057A293 /* HopperAPIGetPrecisionForCurrenciesOfExchangeResponse.swift in Sources */,
 				D07A953926BBE5CD00BCA23A /* HopperBotType.swift in Sources */,
 				D07BDD9125472351008081E3 /* HopperAPIDisableHopperSellingRequest.swift in Sources */,

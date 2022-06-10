@@ -28,4 +28,21 @@ import UIKit
 
     }
     
+    /*!
+     * @discussion purchase
+     *
+     * @param planId String if it's a signal
+     * @param marketplaceId String id of the item
+     * @param hopperId String your hopper's id
+     * @param transactionId of your transaction
+     */
+    public static func purhaseIAP(planId: String?,marketplaceId: String?,hopperId: String?,transactionId: String,completion: @escaping (Result<HopperAPIPurchaseResponse, Error>) -> Void) {
+        HopperAPIIAPPurchaseRequest.init(planId: planId, marketplaceId: marketplaceId, hopperId: hopperId, transactionId: transactionId).request { resp in
+            completion(.success(resp))
+        } _: { err in
+            completion(.failure(err))
+        }
+
+    }
+    
 }
