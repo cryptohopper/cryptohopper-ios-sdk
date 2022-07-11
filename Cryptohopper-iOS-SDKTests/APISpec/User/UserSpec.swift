@@ -146,7 +146,35 @@ class UserSpec : QuickSpec {
                 
             }
             
+            it("Check Password Check"){
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperUser.checkPasswordReset(completion: { result in
+                        switch(result){
+                        case .success(let result):
+                            expect(result).to(beAKindOf(Bool.self))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    })
+                }
+            }
             
+            it("Check 2FA Check"){
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperUser.check2FAReset(completion: { result in
+                        switch(result){
+                        case .success(let result):
+                            expect(result).to(beAKindOf(Bool.self))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    })
+                }
+            }
             
         }
        

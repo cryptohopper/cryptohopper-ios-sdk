@@ -37,6 +37,28 @@ import UIKit
     }
     
     /*!
+    * @discussion Check 2FA Reset
+    */
+    public static func check2FAReset(completion: @escaping (Result<Bool?, Error>) -> Void) {
+        HopperAPICheck2FAResetRequest.init("").request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+    * @discussion Check Password reset
+    */
+    public static func checkPasswordReset(completion: @escaping (Result<Bool?, Error>) -> Void) {
+        HopperAPICheckPasswordResetRequest.init("").request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
     * @discussion Update User Profile
     *
     * @param name: (required) name
