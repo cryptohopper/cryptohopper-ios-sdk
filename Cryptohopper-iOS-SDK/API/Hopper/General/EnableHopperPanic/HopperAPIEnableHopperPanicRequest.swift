@@ -10,9 +10,12 @@ import UIKit
 
 class HopperAPIEnableHopperPanicRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(hopperId : String ) {
+    convenience init(hopperId : String,useMarketOrder : Bool) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/panicbutton")
+        if(useMarketOrder){
+            self.addQueryItem(name: "market_orders", value: "1")
+        }
     }
     
     override var httpMethod: HopperAPIHttpMethod {

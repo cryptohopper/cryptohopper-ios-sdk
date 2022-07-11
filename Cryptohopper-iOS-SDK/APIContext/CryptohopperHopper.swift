@@ -251,8 +251,21 @@ import UIKit
     *
     *  @param hopperId:  (required) Hopper id
     */
-    public static func enableHopperPanic(hopperId : String,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIEnableHopperPanicRequest.init(hopperId: hopperId).request { (message) in
+    public static func stopHopperWithoutSelling(hopperId : String,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIStopHopperWithoutSellingRequest.init(hopperId: hopperId).request { (message) in
+            completion(.success(message.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+    * @discussion Enable Hopper Panic
+    *
+    *  @param hopperId:  (required) Hopper id
+    */
+    public static func enableHopperPanic(hopperId : String,useMarketOrder: Bool,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIEnableHopperPanicRequest.init(hopperId: hopperId,useMarketOrder: useMarketOrder).request { (message) in
             completion(.success(message.data))
         } _: { (err) in
             completion(.failure(err))

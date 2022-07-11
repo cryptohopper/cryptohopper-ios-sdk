@@ -172,6 +172,7 @@ public class HopperConfig : Codable {
     public var auto_dca_strategy : String?
     public var auto_dca_size : String?
     public var auto_dca_size_custom : String?
+    public var load_api_from : String?
     
     //AI Configs
     public var buy_score_corrected : String?
@@ -350,6 +351,7 @@ public class HopperConfig : Codable {
             case sell_score_corrected = "sell_score_corrected"
             case min_buy_score = "min_buy_score"
             case min_sell_score = "min_sell_score"
+            case load_api_from = "load_api_from"
     }
     
 }
