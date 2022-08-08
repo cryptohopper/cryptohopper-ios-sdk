@@ -337,5 +337,17 @@ import UIKit
         }
     }
     
+    /*!
+    * @discussion Delete User
+    *
+    */
+    public static func deleteUser(completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIDeleteUserRequest.init("").request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     
 }
