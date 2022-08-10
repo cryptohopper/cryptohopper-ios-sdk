@@ -22,7 +22,7 @@ class HopperAPIConfiguration {
     var isAuthenticationRequest = false
     var v2ApiValidationKey : String = ""
     var v2ApiValidationValue : String = ""
-    var authenticationHost : String = "www.cryptohopper.com"
+    var authenticationHost : String = "app-aws-useast1.cryptohopper.com"
     
     var host: String {
         switch environment {
