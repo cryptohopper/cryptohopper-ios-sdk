@@ -10,5 +10,6 @@ import Foundation
 public struct CustomError: Error {
     
     public var localizedDescription : String
+    public var code: Int?
     
 }

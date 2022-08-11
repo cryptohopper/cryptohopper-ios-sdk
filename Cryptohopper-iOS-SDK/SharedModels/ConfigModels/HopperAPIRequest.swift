@@ -145,7 +145,7 @@ class HopperAPIRequest<T:Codable> {
                                 errCode?.error != nil &&
                                 errCode?.status != nil
                             ){
-                                let err = CustomError(localizedDescription: errCode?.message ?? "")
+                                let err = CustomError(localizedDescription: errCode?.message ?? "",code: errCode?.code)
                                 onFail?(err)
                             }else{
                                 let response = try decoder.decode(T.self , from: data)
