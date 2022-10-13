@@ -19,12 +19,12 @@ class UserSpec : QuickSpec {
         
         beforeEach {
             
-            CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: environment)
+            CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: .Sandbox,v2Key: v2Key,v2Value: v2Value,validationKey: validationKey,validationValue: validationValue)
 
             if(HopperAPISessionManager.shared.session?.accessToken == nil){
                 print("Hopper General Spec Authenication : Making Authentication ...")
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent) { (result) in
+                    CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent, appCheckToken: "") { (result) in
                         switch(result){
                         case .success(let successStr):
                             expect(successStr).toNot(beNil())

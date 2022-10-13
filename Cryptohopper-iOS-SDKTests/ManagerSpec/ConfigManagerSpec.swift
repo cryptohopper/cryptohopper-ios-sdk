@@ -18,7 +18,7 @@ class ConfigManagerSpec : QuickSpec {
         var configManager : HopperAPIConfigurationManager!
         
         beforeEach {
-            CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: environment)
+            CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: .Sandbox,v2Key: v2Key,v2Value: v2Value,validationKey: validationKey,validationValue: validationValue)
             configManager = HopperAPIConfigurationManager.shared
         }
         

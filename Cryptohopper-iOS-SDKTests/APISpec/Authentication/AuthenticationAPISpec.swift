@@ -16,13 +16,13 @@ class AuthenticationAPISpec : QuickSpec {
     override func spec() {
         
         beforeEach {
-            CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: environment)
+            CryptoHopperConfig.configure(clientId: clientId,clientSecret: clientSecret, environment: .Sandbox,v2Key: v2Key,v2Value: v2Value,validationKey: validationKey,validationValue: validationValue)
         }
         
         context("Authentication"){
             it("Correct Credentials"){
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent) { (result) in
+                    CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent, appCheckToken: "") { (result) in
                         switch(result){
                         case .success(let successStr):
                             expect(successStr).toNot(beNil())
