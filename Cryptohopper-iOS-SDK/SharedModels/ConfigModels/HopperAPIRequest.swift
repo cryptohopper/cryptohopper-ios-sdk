@@ -197,9 +197,12 @@ class HopperAPIRequest<T:Codable> {
     
     
     func request(_ onSuccess:HopperAPIRequestSuccessClosure? = nil, _ onFail:HopperAPIRequestFailClosure? = nil) {
+        self.addRequiredHeaders()
+        
         if(isV2Api){
             self.addV2Headers()
         }
+        
         
         if needsAuthentication {
             self.authenticateAndRequestAgain(onSuccess, onFail)
@@ -243,6 +246,12 @@ class HopperAPIRequest<T:Codable> {
     
     func addV2Headers(){
         self.addHeader(name: HopperAPIConfigurationManager.shared.config.v2ApiValidationKey, value: HopperAPIConfigurationManager.shared.config.v2ApiValidationValue)
+    }
+    
+    func addRequiredHeaders(){
+        self.addHeader(name: "Platform", value: "iOS")
+        self.addHeader(name: "DeviceId", value: UIDevice.current.identifierForVendor!.uuidString)
+        self.addHeader(name: HopperAPIConfigurationManager.shared.config.apiBasicValidationKey, value: HopperAPIConfigurationManager.shared.config.apiBasicValidationValue)
     }
 
 }

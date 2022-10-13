@@ -22,6 +22,8 @@ class HopperAPIConfiguration {
     var isAuthenticationRequest = false
     var v2ApiValidationKey : String = ""
     var v2ApiValidationValue : String = ""
+    var apiBasicValidationKey : String = ""
+    var apiBasicValidationValue : String = ""
     var authenticationHost : String = "app.cryptohopper.com"
     
     var host: String {
