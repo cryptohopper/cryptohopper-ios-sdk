@@ -173,12 +173,18 @@ public class HopperConfig : Codable {
     public var auto_dca_size : String?
     public var auto_dca_size_custom : String?
     public var load_api_from : String?
+    public var only_when_new : String?
+    public var only_when_new_range : String?
     
     //AI Configs
     public var buy_score_corrected : String?
     public var sell_score_corrected : String?
     public var min_buy_score : String?
     public var min_sell_score : String?
+    
+    //CopyBot Configs
+    public var buy_order_type_copy : String?
+    public var sell_order_type_copy : String?
     
     
     public init(){}
@@ -352,6 +358,10 @@ public class HopperConfig : Codable {
             case min_buy_score = "min_buy_score"
             case min_sell_score = "min_sell_score"
             case load_api_from = "load_api_from"
+            case buy_order_type_copy = "buy_order_type_copy"
+            case sell_order_type_copy = "sell_order_type_copy"
+            case only_when_new = "only_when_new"
+            case only_when_new_range = "only_when_new_range"
     }
     
 }
