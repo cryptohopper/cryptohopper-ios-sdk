@@ -19,8 +19,8 @@ import UIKit
      * @param password String
      * @param verificationCode String? optional
      */
-    public static func login(username: String,password: String,verificationCode: String?,userAgent: String,completion: @escaping (Result<String, Error>) -> Void) {
-        HopperAPIAuthenticationRequest.init(username: username, password: password, verificationCode: verificationCode,userAgent : userAgent).request { (authResponse) in
+    public static func login(username: String,password: String,verificationCode: String?,userAgent: String,appCheckToken : String?,completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPIAuthenticationRequest.init(username: username, password: password, verificationCode: verificationCode,userAgent : userAgent,appCheckToken: appCheckToken).request { (authResponse) in
             HopperAPISessionManager.shared.handleAuthResponse(response: authResponse)
             completion(.success("Successfully Logged In"))
         } _: { (err) in
@@ -45,8 +45,8 @@ import UIKit
      * @param token String
      * @param nonce String? optional
      */
-    public static func socialLogin(socialType: String,token: String,nonce: String?,userAgent: String,completion: @escaping (Result<String, Error>) -> Void) {
-        HopperAPISocialLoginRequest.init(socialType: socialType, token : token, nonce : nonce, userAgent: userAgent).request { (authResponse) in
+    public static func socialLogin(socialType: String,token: String,nonce: String?,userAgent: String,appCheckToken : String?,completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPISocialLoginRequest.init(socialType: socialType, token : token, nonce : nonce, userAgent: userAgent,appCheckToken: appCheckToken).request { (authResponse) in
             HopperAPISessionManager.shared.handleAuthResponse(response: authResponse)
             completion(.success("Successfully Logged In"))
         } _: { (err) in

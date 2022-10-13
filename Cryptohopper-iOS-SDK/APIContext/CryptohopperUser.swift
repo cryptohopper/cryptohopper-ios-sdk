@@ -28,8 +28,8 @@ import UIKit
     /*!
     * @discussion Forget Password
     */
-    public static func forgetPassword(email :String,userAgent: String, completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIForgetPasswordRequest.init(email: email,userAgent: userAgent).request { (data) in
+    public static func forgetPassword(email :String,userAgent: String,appCheckToken: String?, completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIForgetPasswordRequest.init(email: email,userAgent: userAgent,appCheckToken : appCheckToken).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -205,8 +205,8 @@ import UIKit
     * @param subscribeNewsletter: (required) subscribe newsletter
     * @param password: (required) password
     */
-    public static func registerUser(name : String, email : String, username : String, subscribeNewsLetter : Bool , password : String,userAgent: String,completion: @escaping (Result<HopperAPIRegisterUserResponse?, Error>) -> Void) {
-        HopperAPIRegisterUserRequest.init(name: name, email: email, username: username, subscribe_newsletter: subscribeNewsLetter, password: password,userAgent: userAgent).request { (data) in
+    public static func registerUser(name : String, email : String, username : String, subscribeNewsLetter : Bool , password : String,userAgent: String,appCheckToken: String?,completion: @escaping (Result<HopperAPIRegisterUserResponse?, Error>) -> Void) {
+        HopperAPIRegisterUserRequest.init(name: name, email: email, username: username, subscribe_newsletter: subscribeNewsLetter, password: password,userAgent: userAgent,appCheckToken:appCheckToken).request { (data) in
             completion(.success(data))
         } _: { (err) in
             completion(.failure(err))

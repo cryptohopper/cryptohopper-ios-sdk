@@ -9,7 +9,7 @@ import Foundation
 
 class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserResponse> {
     
-    convenience init(name : String,email : String,username : String,subscribe_newsletter : Bool,password : String,userAgent: String) {
+    convenience init(name : String,email : String,username : String,subscribe_newsletter : Bool,password : String,userAgent: String,appCheckToken: String?) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/user/register")
         addHeader(name: "name", value: name)
@@ -19,6 +19,10 @@ class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserRespon
         addHeader(name: "password", value: password)
         
         addHeader(name: "User-Agent", value: userAgent)
+        
+        if(appCheckToken != nil){
+            addHeader(name: "X-Firebase-AppCheck", value: (appCheckToken ?? "") )
+        }
     }
     
     override var httpMethod: HopperAPIHttpMethod {
