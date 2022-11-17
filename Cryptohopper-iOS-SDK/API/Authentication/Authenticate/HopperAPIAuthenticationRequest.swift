@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPIAuthenticationRequest: HopperAPIRequest<HopperAPIAuthenticationResponse> {
     
-    convenience init(username : String , password : String , verificationCode : String?, userAgent : String, appCheckToken: String?) {
+    convenience init(username : String , password : String , verificationCode : String?, userAgent : String, appCheckToken: String?, deviceName : String?) {
         self.init()
         self.changeUrlPath(path:"/oauth2/token")
         self.setIsAuthenticationRequest(isAuthenticationMethod: true)
@@ -27,6 +27,10 @@ class HopperAPIAuthenticationRequest: HopperAPIRequest<HopperAPIAuthenticationRe
         
         if(appCheckToken != nil){
             addHeader(name: "X-Firebase-AppCheck", value: (appCheckToken ?? "") )
+        }
+        
+        if(deviceName != nil){
+            addBodyItem(name: "deviceName", value: (deviceName ?? ""))
         }
         
         addHeader(name: "User-Agent", value: userAgent)
