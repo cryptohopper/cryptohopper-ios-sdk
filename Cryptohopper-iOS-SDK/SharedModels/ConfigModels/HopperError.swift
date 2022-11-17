@@ -24,6 +24,7 @@ public enum HopperError: Error {
     case APILimitExceed
     case ServerError
     case ServiceUnavailable
+    case DeviceUnauthorized
     case UnknownError
 }
 
@@ -51,6 +52,8 @@ extension HopperError: LocalizedError {
             return "The server cannot or will not process the request due to an apparent client error."
         case .UnAuthorized:
             return "The request requires user authentication and has been refused due to invalid or missing API credential"
+        case .DeviceUnauthorized:
+            return "Your device is not authorized to use this app. Please check your email."
         case .EndpointForbidden:
             return "The server understood the request, but is refusing to fulfill it because you are not allowed to access it or your credentials have been revoked to access it."
         case .EndpointNotFound:

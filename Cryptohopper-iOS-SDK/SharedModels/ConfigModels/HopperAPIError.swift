@@ -27,6 +27,8 @@ class HopperAPIError: Codable {
             return .BadRequest
         case 401:
             return .UnAuthorized
+        case 402:
+            return .DeviceUnauthorized
         case 403:
             return .EndpointForbidden
         case 404:
