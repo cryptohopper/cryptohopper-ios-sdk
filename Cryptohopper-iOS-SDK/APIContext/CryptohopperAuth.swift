@@ -54,6 +54,9 @@ import UIKit
         }
     }
     
+    
+    //----------DEVICE AUTHORIZATION---------
+    
     /*!
      *
      * @discussion Device authorization with code
@@ -62,6 +65,58 @@ import UIKit
      */
     public static func authDeviceWithCode(code: String,completion: @escaping (Result<String, Error>) -> Void) {
         HopperAPIAuthDeviceWithCodeRequest.init(code: code).request { (response) in
+            completion(.success(response.message ?? ""))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+     *
+     * @discussion Device authorization resend email (60 second cooldown)
+     *
+     */
+    public static func authDeviceResendEmail(completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPIAuthDeviceResendEmailRequest.init("").request { (response) in
+            completion(.success(response.message ?? ""))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+     *
+     * @discussion Device authorization check if device authorized
+     *
+     */
+    public static func authDeviceCheck(completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPIAuthDeviceCheckIfAuthorizedRequest.init("").request { (response) in
+            completion(.success(response.message ?? ""))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+     *
+     * @discussion Device authorization get list
+     *
+     */
+    public static func authDeviceList(completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPIAuthDeviceGetListRequest.init("").request { (response) in
+            completion(.success(response.message ?? ""))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+     *
+     * @discussion Device authorization revoke device
+     *
+     */
+    public static func authDeviceRevoke(deviceId: String,completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPIAuthDeviceRevokeRequest.init(deviceId: deviceId).request { (response) in
             completion(.success(response.message ?? ""))
         } _: { (err) in
             completion(.failure(err))

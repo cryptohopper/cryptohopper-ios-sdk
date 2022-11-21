@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 import UIKit
 
 class HopperAPIAuthDeviceWithCodeRequest: HopperAPIRequest<HopperCommonMessageResponse> {
@@ -22,7 +21,7 @@ class HopperAPIAuthDeviceWithCodeRequest: HopperAPIRequest<HopperCommonMessageRe
     }
     
     override var needsAuthentication: Bool {
-        return false
+        return true
     }
     
 }
