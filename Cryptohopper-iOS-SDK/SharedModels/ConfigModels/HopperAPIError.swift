@@ -42,8 +42,32 @@ class HopperAPIError: Codable {
         case 503:
             return .ServiceUnavailable
         default:
-            return .UnknownError
+            guard let statusCode = status else {return .UnknownError}
+            switch statusCode {
+            case 400:
+                return .BadRequest
+            case 401:
+                return .UnAuthorized
+            case 402:
+                return .DeviceUnauthorized
+            case 403:
+                return .EndpointForbidden
+            case 404:
+                return .EndpointNotFound
+            case 405:
+                return .EndpointNotAllowed
+            case 429:
+                return .APILimitExceed
+            case 500:
+                return .ServerError
+            case 503:
+                return .ServiceUnavailable
+            default:
+                return .UnknownError
+            }
         }
+        
+        
     }
     
 }
