@@ -12,7 +12,7 @@ class HopperAPIAuthDeviceGetListRequest: HopperAPIRequest<HopperCommonMessageRes
     
     convenience init(_ data : String) {
         self.init()
-        self.changeUrlPath(path:"/device/list")
+        self.changeUrlPath(path:"/v1" + "/device/list")
     }
     
     override var httpMethod: HopperAPIHttpMethod {

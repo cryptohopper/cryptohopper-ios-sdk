@@ -12,7 +12,7 @@ class HopperAPIAuthDeviceCheckIfAuthorizedRequest: HopperAPIRequest<HopperCommon
     
     convenience init(_ data : String) {
         self.init()
-        self.changeUrlPath(path:"/device/check")
+        self.changeUrlPath(path:"/v1" + "/device/check")
     }
     
     override var httpMethod: HopperAPIHttpMethod {

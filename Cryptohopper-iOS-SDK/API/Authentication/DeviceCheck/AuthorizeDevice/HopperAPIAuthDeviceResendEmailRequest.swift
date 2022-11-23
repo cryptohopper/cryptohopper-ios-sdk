@@ -12,7 +12,7 @@ class HopperAPIAuthDeviceResendEmailRequest: HopperAPIRequest<HopperCommonMessag
     
     convenience init(_ data : String) {
         self.init()
-        self.changeUrlPath(path:"/device/code")
+        self.changeUrlPath(path:"/v1" + "/device/code")
     }
     
     override var httpMethod: HopperAPIHttpMethod {

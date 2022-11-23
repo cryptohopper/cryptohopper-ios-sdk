@@ -12,7 +12,7 @@ class HopperAPIAuthDeviceWithCodeRequest: HopperAPIRequest<HopperCommonMessageRe
     
     convenience init(code : String) {
         self.init()
-        self.changeUrlPath(path:"/device/authorize")
+        self.changeUrlPath(path:"/v1" + "/device/authorize")
         addQueryItem(name: "code", value: code)
     }
     

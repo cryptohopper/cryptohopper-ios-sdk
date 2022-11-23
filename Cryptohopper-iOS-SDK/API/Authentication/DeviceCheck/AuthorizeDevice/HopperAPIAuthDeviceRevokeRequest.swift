@@ -12,7 +12,7 @@ class HopperAPIAuthDeviceRevokeRequest: HopperAPIRequest<HopperCommonMessageResp
     
     convenience init(deviceId : String) {
         self.init()
-        self.changeUrlPath(path:"/device/\(deviceId)/revoke")
+        self.changeUrlPath(path:"/v1" + "/device/\(deviceId)/revoke")
     }
     
     override var httpMethod: HopperAPIHttpMethod {

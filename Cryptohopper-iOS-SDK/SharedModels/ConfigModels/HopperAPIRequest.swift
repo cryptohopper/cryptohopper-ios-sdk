@@ -183,6 +183,9 @@ class HopperAPIRequest<T:Codable> {
                         responseOK()
                     }
                     else {
+                        if(response.statusCode == 402){
+                            self.triggerDeviceUnauthorized()
+                        }
                         apiError()
                     }
                 }
@@ -252,6 +255,10 @@ class HopperAPIRequest<T:Codable> {
         self.addHeader(name: "Platform", value: "iOS")
         self.addHeader(name: "DeviceId", value: UIDevice.current.identifierForVendor!.uuidString)
         self.addHeader(name: HopperAPIConfigurationManager.shared.config.apiBasicValidationKey, value: HopperAPIConfigurationManager.shared.config.apiBasicValidationValue)
+    }
+    
+    func triggerDeviceUnauthorized(){
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CH_DEVICE_UNAUTHORIZED"), object: nil)
     }
 
 }
