@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPISocialLoginRequest: HopperAPIRequest<HopperAPIAuthenticationResponse> {
     
-    convenience init(socialType : String , token : String , nonce : String?, userAgent : String, appCheckToken : String?) {
+    convenience init(socialType : String , token : String , nonce : String?, userAgent : String, appCheckToken : String?, deviceName : String?) {
         self.init()
         self.changeUrlPath(path:"/oauth2/social-login")
         self.setIsAuthenticationRequest(isAuthenticationMethod: true)
@@ -25,6 +25,10 @@ class HopperAPISocialLoginRequest: HopperAPIRequest<HopperAPIAuthenticationRespo
         
         if(appCheckToken != nil){
             addHeader(name: "X-Firebase-AppCheck", value: (appCheckToken ?? "") )
+        }
+        
+        if(deviceName != nil){
+            addBodyItem(name: "deviceName", value: (deviceName ?? ""))
         }
         
         addHeader(name: "User-Agent", value: userAgent)

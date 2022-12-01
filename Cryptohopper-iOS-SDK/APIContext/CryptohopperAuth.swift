@@ -45,8 +45,8 @@ import UIKit
      * @param token String
      * @param nonce String? optional
      */
-    public static func socialLogin(socialType: String,token: String,nonce: String?,userAgent: String,appCheckToken : String?,completion: @escaping (Result<String, Error>) -> Void) {
-        HopperAPISocialLoginRequest.init(socialType: socialType, token : token, nonce : nonce, userAgent: userAgent,appCheckToken: appCheckToken).request { (authResponse) in
+    public static func socialLogin(socialType: String,token: String,nonce: String?,userAgent: String,appCheckToken : String?,deviceName : String?,completion: @escaping (Result<String, Error>) -> Void) {
+        HopperAPISocialLoginRequest.init(socialType: socialType, token : token, nonce : nonce, userAgent: userAgent,appCheckToken: appCheckToken,deviceName: deviceName).request { (authResponse) in
             HopperAPISessionManager.shared.handleAuthResponse(response: authResponse)
             completion(.success("Successfully Logged In"))
         } _: { (err) in
@@ -102,9 +102,9 @@ import UIKit
      * @discussion Device authorization get list
      *
      */
-    public static func authDeviceList(completion: @escaping (Result<String, Error>) -> Void) {
+    public static func authDeviceList(completion: @escaping (Result<[HopperDevice], Error>) -> Void) {
         HopperAPIAuthDeviceGetListRequest.init("").request { (response) in
-            completion(.success(response.message ?? ""))
+            completion(.success( ( response.data ?? [HopperDevice]() ) ))
         } _: { (err) in
             completion(.failure(err))
         }
