@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HopperAPIAuthDeviceGetListRequest: HopperAPIRequest<HopperCommonMessageResponse> {
+class HopperAPIAuthDeviceGetListRequest: HopperAPIRequest<HopperAPIAuthDeviceGetListResponse> {
     
     convenience init(_ data : String) {
         self.init()
