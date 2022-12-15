@@ -10,9 +10,14 @@ import UIKit
 
 class HopperAPIDCAOnePositionRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(hopperId : String , positionId : Int ) {
+    convenience init(hopperId : String , positionId : Int , marketOrder : Bool) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/position/dca/\(positionId)")
+        if(marketOrder){
+            self.addBodyItem(name: "market_order", value: 1)
+        }else{
+            self.addBodyItem(name: "market_order", value: 0)
+        }
     }
     
     override var httpMethod: HopperAPIHttpMethod {

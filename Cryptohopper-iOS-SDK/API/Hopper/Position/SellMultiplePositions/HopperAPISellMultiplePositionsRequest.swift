@@ -10,10 +10,15 @@ import UIKit
 
 class HopperAPISellMultiplePositionsRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(hopperId : String,positionIds : [Int]) {
+    convenience init(hopperId : String,positionIds : [Int],marketOrder : Bool) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/position/sell")
         addBodyItem(name: "position_id", value: positionIds)
+        if(marketOrder){
+            self.addBodyItem(name: "market_order", value: 1)
+        }else{
+            self.addBodyItem(name: "market_order", value: 0)
+        }
     }
     
     override var httpMethod: HopperAPIHttpMethod {

@@ -839,8 +839,8 @@ import UIKit
     *  @param hopperId:  (required) Hopper Id
     *  @param positionIds:  (required) Position Ids
     */
-    public static func sellMultiplePositions(hopperId : String,positionIds : [Int],completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPISellMultiplePositionsRequest.init(hopperId: hopperId, positionIds: positionIds).request { (data) in
+    public static func sellMultiplePositions(hopperId : String,positionIds : [Int],marketOrder :Bool,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPISellMultiplePositionsRequest.init(hopperId: hopperId, positionIds: positionIds,marketOrder: marketOrder).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -854,8 +854,8 @@ import UIKit
     *  @param hopperId:  (required) Hopper Id
     *  @param positionId:  (required) Position Ids
     */
-    public static func sellOnePosition(hopperId : String,positionId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPISellOnePositionRequest.init(hopperId: hopperId, positionId: positionId).request { (data) in
+    public static func sellOnePosition(hopperId : String,positionId : Int,marketOrder :Bool,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPISellOnePositionRequest.init(hopperId: hopperId, positionId: positionId,marketOrder: marketOrder).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -1012,8 +1012,8 @@ import UIKit
     *  @param hopperId:  (required) Hopper Id
     *  @param positionId:  (required) Position Id
     */
-    public static func dcaOnePosition(hopperId : String,positionId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIDCAOnePositionRequest.init(hopperId: hopperId, positionId: positionId).request { (data) in
+    public static func dcaOnePosition(hopperId : String,positionId : Int,marketOrder :Bool ,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIDCAOnePositionRequest.init(hopperId: hopperId, positionId: positionId,marketOrder: marketOrder).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
