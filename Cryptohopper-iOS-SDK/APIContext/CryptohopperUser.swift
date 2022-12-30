@@ -349,5 +349,16 @@ import UIKit
         }
     }
     
+    /*!
+    * @discussion Get Platform Countries
+    *
+    */
+    public static func getCountries(completion: @escaping (Result<HopperAPICountriesResult?, Error>) -> Void) {
+        HopperAPIGetPlatformCountriesRequest.init("").request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
     
 }

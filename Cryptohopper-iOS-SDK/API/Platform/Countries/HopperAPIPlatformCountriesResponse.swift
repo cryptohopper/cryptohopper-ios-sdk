@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HopperAPIPlatformCountriesResponse: Codable {
+public class HopperAPIPlatformCountriesResponse: Codable {
     
     var data : HopperAPICountriesResult?
     
@@ -17,7 +17,7 @@ class HopperAPIPlatformCountriesResponse: Codable {
     
 }
 
-class HopperAPICountriesResult: Codable {
+public class HopperAPICountriesResult: Codable {
     
     var countries : [String:String]?
     var ipCountry : String?
