@@ -36,6 +36,17 @@ import UIKit
     }
     
     /*!
+    * @discussion Get Exchanges IP Whitelist
+    */
+    public static func getExchangeWhitelistIps(exchangeKey : String,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIGetExchangeWhitelistIPRequest.init(exchange: exchangeKey).request { (data) in
+            completion(.success(data.data?.ips))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
     * @discussion Get Exchange Forex Rates
     */
     public static func getExchangeForexRates(completion: @escaping (Result<[ExchangeForexRates]?, Error>) -> Void) {

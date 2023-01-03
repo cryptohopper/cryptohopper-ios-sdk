@@ -41,6 +41,19 @@ import UIKit
         }
     }
     
+    /*
+    * @discussion Gets Hopper Whitelist Ips
+    *
+    *  @param hopperId: (required) Hopper's id
+    */
+    public static func getHopperIPWhitelist(hopperId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIGetHopperWhitelistIPRequest.init(hopperId: hopperId).request { (hopper) in
+            completion(.success(hopper.data?.ips))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     /*!
     * @discussion Create new Hopper with parameters
     *
