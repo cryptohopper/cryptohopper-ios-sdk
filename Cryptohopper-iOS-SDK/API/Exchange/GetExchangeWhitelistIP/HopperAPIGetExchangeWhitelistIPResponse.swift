@@ -19,10 +19,14 @@ class HopperAPIGetExchangeWhitelistIPResponse: Codable {
 
 class CHIPWhitelist : Codable {
     
-    var ips : String
+    var ips : String?
+    var showIpAddresses : String?
+    var copyIPAddresses : String?
     
     private enum CodingKeys : String, CodingKey {
         case ips = "ip_addresses"
+        case showIpAddresses = "show_ip_addresses"
+        case copyIPAddresses = "copy_ip_addresses"
     }
     
 }

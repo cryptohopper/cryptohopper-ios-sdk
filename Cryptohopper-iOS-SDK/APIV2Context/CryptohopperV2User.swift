@@ -43,9 +43,9 @@ import UIKit
         }
     }
     
-    public static func testKeys(exchange : String?,apiKey : String?,apiSecret : String?,apiPassphrase : String?,extraApiKey : String?,extraApiSecret : String?,subAccount : String?,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func testKeys(exchange : String?,apiKey : String?,apiSecret : String?,apiPassphrase : String?,extraApiKey : String?,extraApiSecret : String?,subAccount : String?,completion: @escaping (Result<[String:Double]?, Error>) -> Void) {
         HopperAPIV2TestApiKeyRequest.init(exchange : exchange,apiKey : apiKey,apiSecret : apiSecret,apiPassphrase : apiPassphrase,extraApiKey : extraApiKey,extraApiSecret : extraApiSecret,subAccount: subAccount).request { (result) in
-            completion(.success("Success"))
+            completion(.success(result?.balances))
         } _: { (err) in
             completion(.failure(err))
         }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HopperAPIV2TestApiKeyRequest: HopperAPIRequest<HopperCommonMessageResponse?> {
+class HopperAPIV2TestApiKeyRequest: HopperAPIRequest<HopperAPIV2TestApiKeyResponse?> {
     
     convenience init(exchange : String?,apiKey : String?,apiSecret : String?,apiPassphrase : String?,extraApiKey : String?,extraApiSecret : String?,subAccount : String?) {
         self.init()
