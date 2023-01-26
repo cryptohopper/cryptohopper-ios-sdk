@@ -380,4 +380,17 @@ import UIKit
     }
     
     
+    /*!
+    * @discussion Get Marketplace Copy Bots
+    *
+    *
+    */
+    public static func getMarketCopyBots(completion: @escaping (Result<[MarketCopyBot]?, Error>) -> Void) {
+        HopperAPIGetCopyBotsRequest.init("").request { (data) in
+            completion(.success(data.data?.copybots))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
 }
