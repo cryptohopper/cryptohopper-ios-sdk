@@ -58,20 +58,20 @@ public class MarketCopyBot: Codable {
 
 public class MarketCopyBotStats : Codable {
     
-    public private(set) var totalTrades : Int?
-    public private(set) var totalBuys : Int?
-    public private(set) var totalSells : Int?
-    public private(set) var tradesWin : Int?
-    public private(set) var tradesLoss : Int?
-    public private(set) var highestProfit : QuantumValue?
+    public private(set) var totalTrades : String?
+    public private(set) var totalBuys : String?
+    public private(set) var totalSells : String?
+    public private(set) var tradesWin : String?
+    public private(set) var tradesLoss : String?
+    public private(set) var highestProfit : String?
     public private(set) var drawdown : MarketCopyBotStatsDrawdown?
-    public private(set) var averageProfit : Double?
-    public private(set) var tradesWinPerc : QuantumValue?
-    public private(set) var tradesLossPerc : QuantumValue?
-    public private(set) var winLossRatio : Double?
-    public private(set) var chart : [[QuantumValue]]?
-    public private(set) var chartAssets : [String:[[QuantumValue]]?]?
-    public private(set) var totalCopiers : QuantumValue?
+    public private(set) var averageProfit : String?
+    public private(set) var tradesWinPerc : String?
+    public private(set) var tradesLossPerc : String?
+    public private(set) var winLossRatio : String?
+    public private(set) var chart : [[String]]?
+    public private(set) var chartAssets : [String:[[String]]?]?
+    public private(set) var totalCopiers : String?
     public private(set) var tradeCurrencies : [MarketCopyBotStatsTradeCurrency]?
     public private(set) var tradeCurrenciesStats : [MarketCopyBotStatsTradeCurrencyStats]?
     public private(set) var startDate : String?
@@ -100,11 +100,11 @@ public class MarketCopyBotStats : Codable {
 
 public class MarketCopyBotStatsDrawdown : Codable {
     
-    public private(set) var inValue : Double?
-    public private(set) var percentage : Double?
-    public private(set) var peak : Double?
-    public private(set) var low : Double?
-    public private(set) var all : [[String:Double]]?
+    public private(set) var inValue : String?
+    public private(set) var percentage : String?
+    public private(set) var peak : String?
+    public private(set) var low : String?
+    public private(set) var all : [[String:String]]?
     
     private enum CodingKeys: String, CodingKey {
         case inValue = "in_value"
@@ -119,11 +119,11 @@ public class MarketCopyBotStatsDrawdown : Codable {
 public class MarketCopyBotStatsTradeCurrency : Codable {
     
     public private(set) var cur : String?
-    public private(set) var count : QuantumValue?
-    public private(set) var perc : QuantumValue?
-    public private(set) var highestProfit : QuantumValue?
-    public private(set) var lowestProfit : QuantumValue?
-    public private(set) var averageProfit : QuantumValue?
+    public private(set) var count : String?
+    public private(set) var perc : String?
+    public private(set) var highestProfit : String?
+    public private(set) var lowestProfit : String?
+    public private(set) var averageProfit : String?
     
     private enum CodingKeys: String, CodingKey {
         case cur = "cur"
@@ -139,11 +139,11 @@ public class MarketCopyBotStatsTradeCurrency : Codable {
 public class MarketCopyBotStatsTradeCurrencyStats : Codable {
     
     public private(set) var cur : String?
-    public private(set) var count : QuantumValue?
-    public private(set) var highestProfit : QuantumValue?
-    public private(set) var lowestProfit : QuantumValue?
-    public private(set) var averageProfit : QuantumValue?
-    public private(set) var perc : QuantumValue?
+    public private(set) var count : String?
+    public private(set) var highestProfit : String?
+    public private(set) var lowestProfit : String?
+    public private(set) var averageProfit : String?
+    public private(set) var perc : String?
     
     private enum CodingKeys: String, CodingKey {
         case cur = "cur"
