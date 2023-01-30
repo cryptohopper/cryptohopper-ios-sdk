@@ -24,7 +24,7 @@ class StrategySpec : QuickSpec {
             if(HopperAPISessionManager.shared.session?.accessToken == nil){
                 print("Hopper General Spec Authenication : Making Authentication ...")
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent, appCheckToken: "") { (result) in
+                    CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent, appCheckToken: "", deviceName: "") { (result) in
                         switch(result){
                         case .success(let successStr):
                             expect(successStr).toNot(beNil())

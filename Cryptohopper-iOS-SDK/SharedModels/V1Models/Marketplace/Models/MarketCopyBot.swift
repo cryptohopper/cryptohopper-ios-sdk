@@ -63,15 +63,15 @@ public class MarketCopyBotStats : Codable {
     public private(set) var totalSells : Int?
     public private(set) var tradesWin : Int?
     public private(set) var tradesLoss : Int?
-    public private(set) var highestProfit : String?
+    public private(set) var highestProfit : QuantumValue?
     public private(set) var drawdown : MarketCopyBotStatsDrawdown?
     public private(set) var averageProfit : Double?
-    public private(set) var tradesWinPerc : String?
-    public private(set) var tradesLossPerc : String?
+    public private(set) var tradesWinPerc : QuantumValue?
+    public private(set) var tradesLossPerc : QuantumValue?
     public private(set) var winLossRatio : Double?
     public private(set) var chart : [[QuantumValue]]?
-    public private(set) var chartAssets : [String:[[QuantumValue]]]?
-    public private(set) var totalCopiers : String?
+    public private(set) var chartAssets : [String:[[QuantumValue]]?]?
+    public private(set) var totalCopiers : QuantumValue?
     public private(set) var tradeCurrencies : [MarketCopyBotStatsTradeCurrency]?
     public private(set) var tradeCurrenciesStats : [MarketCopyBotStatsTradeCurrencyStats]?
     public private(set) var startDate : String?
@@ -119,13 +119,19 @@ public class MarketCopyBotStatsDrawdown : Codable {
 public class MarketCopyBotStatsTradeCurrency : Codable {
     
     public private(set) var cur : String?
-    public private(set) var count : String?
-    public private(set) var perc : Double?
+    public private(set) var count : QuantumValue?
+    public private(set) var perc : QuantumValue?
+    public private(set) var highestProfit : QuantumValue?
+    public private(set) var lowestProfit : QuantumValue?
+    public private(set) var averageProfit : QuantumValue?
     
     private enum CodingKeys: String, CodingKey {
         case cur = "cur"
         case count = "count"
         case perc = "perc"
+        case highestProfit = "highest_profit"
+        case lowestProfit = "lowest_profit"
+        case averageProfit = "average_profit"
     }
     
 }
@@ -133,11 +139,11 @@ public class MarketCopyBotStatsTradeCurrency : Codable {
 public class MarketCopyBotStatsTradeCurrencyStats : Codable {
     
     public private(set) var cur : String?
-    public private(set) var count : Int?
-    public private(set) var highestProfit : String?
-    public private(set) var lowestProfit : String?
-    public private(set) var averageProfit : Double?
-    public private(set) var perc : Double?
+    public private(set) var count : QuantumValue?
+    public private(set) var highestProfit : QuantumValue?
+    public private(set) var lowestProfit : QuantumValue?
+    public private(set) var averageProfit : QuantumValue?
+    public private(set) var perc : QuantumValue?
     
     private enum CodingKeys: String, CodingKey {
         case cur = "cur"

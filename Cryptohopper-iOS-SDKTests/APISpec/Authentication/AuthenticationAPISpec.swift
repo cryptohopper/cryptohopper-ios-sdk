@@ -22,7 +22,7 @@ class AuthenticationAPISpec : QuickSpec {
         context("Authentication"){
             it("Correct Credentials"){
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent, appCheckToken: "") { (result) in
+                    CryptohopperAuth.login(username: username, password: password, verificationCode: "", userAgent: userAgent, appCheckToken: "", deviceName: "") { (result) in
                         switch(result){
                         case .success(let successStr):
                             expect(successStr).toNot(beNil())
@@ -37,7 +37,7 @@ class AuthenticationAPISpec : QuickSpec {
             
             it("Wrong Credentials"){
                 waitUntil(timeout: apiTimeout) { done in
-                    CryptohopperAuth.login(username: username, password: "WrongPassword", verificationCode: "", userAgent: "") { (result) in
+                    CryptohopperAuth.login(username: username, password: "WrongPassword", verificationCode: "", userAgent: "" , appCheckToken: "" , deviceName: "") { (result) in
                         switch(result){
                         case .success(let successStr):
                             expect(successStr).to(beNil())

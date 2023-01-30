@@ -177,6 +177,26 @@ class MarketplaceSpec : QuickSpec {
             
         }
        
+        context("Marketplace Copy Bot Context"){
+            
+            it("Get Marketplace Copy Bots"){
+                
+                waitUntil(timeout: apiTimeout) { done in
+                    CryptohopperMarketplace.getMarketCopyBots(completion: { (result) in
+                        switch(result){
+                        case .success(let items):
+                            expect(items).to(beAKindOf([MarketCopyBot].self))
+                            done()
+                        case .failure(let err):
+                            expect(err).to(beNil())
+                            done()
+                        }
+                    })
+                }
+                
+            }
+            
+        }
         
     }
     
