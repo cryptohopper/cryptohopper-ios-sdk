@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HopperAPIGetExchangeWhitelistIPResponse: Codable {
+public class HopperAPIGetExchangeWhitelistIPResponse: Codable {
     
     var data : CHIPWhitelist?
     
@@ -17,11 +17,11 @@ class HopperAPIGetExchangeWhitelistIPResponse: Codable {
     
 }
 
-class CHIPWhitelist : Codable {
+public class CHIPWhitelist : Codable {
     
-    var ips : String?
-    var showIpAddresses : String?
-    var copyIPAddresses : String?
+    public private(set) var ips : String?
+    public private(set) var showIpAddresses : String?
+    public private(set) var copyIPAddresses : String?
     
     private enum CodingKeys : String, CodingKey {
         case ips = "ip_addresses"

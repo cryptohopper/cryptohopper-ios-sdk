@@ -9,9 +9,10 @@ import Foundation
 
 class HopperAPIGetHopperWhitelistIPRequest: HopperAPIRequest<HopperAPIGetHopperWhitelistIPResponse> {
     
-    convenience init(hopperId : Int) {
+    convenience init(hopperId : Int,exchange : String) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/hopper/\(hopperId)/ipwhitelist")
+        self.addQueryItem(name: "exchange", value: exchange)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

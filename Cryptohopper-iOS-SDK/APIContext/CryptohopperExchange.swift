@@ -38,9 +38,9 @@ import UIKit
     /*!
     * @discussion Get Exchanges IP Whitelist
     */
-    public static func getExchangeWhitelistIps(exchangeKey : String,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func getExchangeWhitelistIps(exchangeKey : String,completion: @escaping (Result<CHIPWhitelist?, Error>) -> Void) {
         HopperAPIGetExchangeWhitelistIPRequest.init(exchange: exchangeKey).request { (data) in
-            completion(.success(data.data?.ips))
+            completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
         }
