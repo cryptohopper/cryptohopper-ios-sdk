@@ -46,9 +46,9 @@ import UIKit
     *
     *  @param hopperId: (required) Hopper's id
     */
-    public static func getHopperIPWhitelist(hopperId : Int,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIGetHopperWhitelistIPRequest.init(hopperId: hopperId).request { (hopper) in
-            completion(.success(hopper.data?.ips))
+    public static func getHopperIPWhitelist(hopperId : Int,exchange: String,completion: @escaping (Result<CHIPWhitelist?, Error>) -> Void) {
+        HopperAPIGetHopperWhitelistIPRequest.init(hopperId: hopperId,exchange: exchange).request { (hopper) in
+            completion(.success(hopper.data))
         } _: { (err) in
             completion(.failure(err))
         }
@@ -1391,6 +1391,17 @@ import UIKit
         }
     }
     
-    
+    /*!
+    * @discussion Create CopyBot with Free trial
+    *
+    *
+    */
+    public static func createCopyBot(copyBotMarketplaceId : String , paperTrading: Bool , apiKey : String? , apiSecret : String? , apiPassphrase : String? , extraApiKey : String? , extraApiSecret : String?,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPICopyBotCreateHopperRequest.init(copyBotMarketplaceId: copyBotMarketplaceId, paperTrading: paperTrading, apiKey: apiKey, apiSecret: apiSecret, apiPassphrase: apiPassphrase, extraApiKey: extraApiKey, extraApiSecret: extraApiSecret).request { (data) in
+            completion(.success(data.message))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
     
 }
