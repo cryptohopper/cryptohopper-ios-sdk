@@ -22,6 +22,7 @@ public class UserProfile : Codable {
     public private(set) var addressOne : String?
     public private(set) var addressTwo : String?
     public private(set) var enableTwoFactorAuth : Bool?
+    public private(set) var userHasTrial : String?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -37,6 +38,7 @@ public class UserProfile : Codable {
         case addressOne = "address1"
         case addressTwo = "address2"
         case enableTwoFactorAuth = "enabled_2fa"
+        case userHasTrial = "user_has_trial"
     }
     
 }
