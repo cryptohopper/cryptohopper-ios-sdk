@@ -48,6 +48,7 @@ public class MarketCopyBot: Codable {
         case totalVotes = "total_votes"
         case sales = "sales"
         case price = "price"
+        case rating = "rating"
         case created = "created"
         case priceCurrency = "price_currency"
         case maxDownloads = "max_downloads"
