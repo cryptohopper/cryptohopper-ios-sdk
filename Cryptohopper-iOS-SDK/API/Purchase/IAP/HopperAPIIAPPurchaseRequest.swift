@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPIIAPPurchaseRequest: HopperAPIRequest<HopperAPIPurchaseResponse> {
     
-    convenience init(planId : String? , marketplaceId : String?, hopperId : String?, transactionId : String) {
+    convenience init(planId : String? , marketplaceId : String?, hopperId : String?, transactionId : String, isSandbox : Bool = false) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/app/mobile/iap")
         
@@ -26,6 +26,10 @@ class HopperAPIIAPPurchaseRequest: HopperAPIRequest<HopperAPIPurchaseResponse> {
         
         if(hopperId != nil){
             addBodyItem(name: "hopper_id", value: hopperId!)
+        }
+        
+        if(isSandbox){
+            addBodyItem(name: "sandbox", value: "1")
         }
         
         addBodyItem(name: "transaction_id", value: transactionId)

@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPICopyBotCreateHopperRequest: HopperAPIRequest<HopperAPIPurchaseResponse> {
     
-    convenience init(copyBotMarketplaceId : String , paperTrading: Bool , apiKey : String? , apiSecret : String? , apiPassphrase : String? , extraApiKey : String? , extraApiSecret : String? ) {
+    convenience init(copyBotMarketplaceId : String , paperTrading: Bool , apiKey : String? , apiSecret : String? , apiPassphrase : String? , extraApiKey : String? , extraApiSecret : String? , isSandbox : Bool = false) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/app/mobile/iap")
         
@@ -45,6 +45,10 @@ class HopperAPICopyBotCreateHopperRequest: HopperAPIRequest<HopperAPIPurchaseRes
         
         if(extraApiSecret != nil){
             addBodyItem(name: "extra_api_secret", value: extraApiSecret!)
+        }
+        
+        if(isSandbox){
+            addBodyItem(name: "sandbox", value: "1")
         }
         
     }

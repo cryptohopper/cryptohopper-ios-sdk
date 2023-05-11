@@ -1396,8 +1396,8 @@ import UIKit
     *
     *
     */
-    public static func createCopyBot(copyBotMarketplaceId : String , paperTrading: Bool , apiKey : String? , apiSecret : String? , apiPassphrase : String? , extraApiKey : String? , extraApiSecret : String?,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPICopyBotCreateHopperRequest.init(copyBotMarketplaceId: copyBotMarketplaceId, paperTrading: paperTrading, apiKey: apiKey, apiSecret: apiSecret, apiPassphrase: apiPassphrase, extraApiKey: extraApiKey, extraApiSecret: extraApiSecret).request { (data) in
+    public static func createCopyBot(copyBotMarketplaceId : String , paperTrading: Bool , apiKey : String? , apiSecret : String? , apiPassphrase : String? , extraApiKey : String? , extraApiSecret : String?, isSandbox : Bool = false,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPICopyBotCreateHopperRequest.init(copyBotMarketplaceId: copyBotMarketplaceId, paperTrading: paperTrading, apiKey: apiKey, apiSecret: apiSecret, apiPassphrase: apiPassphrase, extraApiKey: extraApiKey, extraApiSecret: extraApiSecret,isSandbox: isSandbox).request { (data) in
             completion(.success(data.message))
         } _: { (err) in
             completion(.failure(err))

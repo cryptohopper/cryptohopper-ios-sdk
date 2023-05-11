@@ -36,8 +36,8 @@ import UIKit
      * @param hopperId String your hopper's id
      * @param transactionId of your transaction
      */
-    public static func purhaseIAP(planId: String?,marketplaceId: String?,hopperId: String?,transactionId: String,completion: @escaping (Result<HopperAPIPurchaseResponse, Error>) -> Void) {
-        HopperAPIIAPPurchaseRequest.init(planId: planId, marketplaceId: marketplaceId, hopperId: hopperId, transactionId: transactionId).request { resp in
+    public static func purhaseIAP(planId: String?,marketplaceId: String?,hopperId: String?,transactionId: String,isSandbox : Bool = false,completion: @escaping (Result<HopperAPIPurchaseResponse, Error>) -> Void) {
+        HopperAPIIAPPurchaseRequest.init(planId: planId, marketplaceId: marketplaceId, hopperId: hopperId, transactionId: transactionId,isSandbox: isSandbox).request { resp in
             completion(.success(resp))
         } _: { err in
             completion(.failure(err))
