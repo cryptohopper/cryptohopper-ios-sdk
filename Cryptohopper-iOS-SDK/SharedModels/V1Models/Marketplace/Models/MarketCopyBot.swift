@@ -12,6 +12,7 @@ public class MarketCopyBot: Codable {
     public private(set) var id : String?
     public private(set) var itemId : String?
     public private(set) var exchange : String?
+    public private(set) var description : String?
     public private(set) var quoteCurrency : String?
     public private(set) var allowedCoins : [String]?
     public private(set) var freeTrial : String?
