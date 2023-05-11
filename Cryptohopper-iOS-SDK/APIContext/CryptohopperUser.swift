@@ -71,7 +71,7 @@ import UIKit
     * @param phone: (required) phone
     * @param website: (required) website
     */
-    public static func updateUserProfile(name : String,addressOne : String,addressTwo : String,city : String,region : String,country : String,postalCode : String,phone : String,website : String,completion: @escaping (Result<String?, Error>) -> Void) {
+    public static func updateUserProfile(name : String?,addressOne : String?,addressTwo : String?,city : String?,region : String?,country : String?,postalCode : String?,phone : String?,website : String?,completion: @escaping (Result<String?, Error>) -> Void) {
         HopperAPIUpdateUserProfileRequest.init(name: name, addressOne: addressOne, addressTwo: addressTwo, city: city, region: region, country: country, postalCode: postalCode, phone: phone, website: website).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
