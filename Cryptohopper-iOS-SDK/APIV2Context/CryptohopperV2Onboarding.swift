@@ -29,8 +29,8 @@ import UIKit
         }
     }
     
-    public static func createOnboardingHopper(hopperId : Int, isBuyingEnabled : Bool , isSellingEnabled : Bool , isEnabled : Bool, isPaperTrading : Bool , quoteCurrency : String, signallerId : Int? , riskLevel : String?, completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIV2OnboardingCreateRequest.init(hopperId: hopperId, isBuyingEnabled: isBuyingEnabled, isSellingEnabled: isSellingEnabled, isEnabled: isEnabled, isPaperTrading: isPaperTrading, quoteCurrency: quoteCurrency, signallerId: signallerId, riskLevel: riskLevel).request { (_) in
+    public static func createOnboardingHopper(hopperId : Int, isBuyingEnabled : Bool , isSellingEnabled : Bool , isHopperEnabled : Bool,isPortfolioSyncEnabled: Bool, isPaperTrading : Bool , quoteCurrency : String, signallerId : Int? , riskLevel : String?, completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIV2OnboardingCreateRequest.init(hopperId: hopperId, isBuyingEnabled: isBuyingEnabled, isSellingEnabled: isSellingEnabled, isHopperEnabled: isHopperEnabled,isPortfolioSyncEnabled : isPortfolioSyncEnabled, isPaperTrading: isPaperTrading, quoteCurrency: quoteCurrency, signallerId: signallerId, riskLevel: riskLevel).request { (_) in
             completion(.success("Success"))
         } _: { (err) in
             completion(.failure(err))

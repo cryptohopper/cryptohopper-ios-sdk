@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPIV2OnboardingCreateRequest: HopperAPIRequest<HopperCommonMessageResponse?> {
     
-    convenience init(hopperId : Int,isBuyingEnabled : Bool,isSellingEnabled : Bool, isEnabled : Bool, isPaperTrading : Bool , quoteCurrency : String , signallerId : Int? , riskLevel : String?) {
+    convenience init(hopperId : Int,isBuyingEnabled : Bool,isSellingEnabled : Bool, isHopperEnabled : Bool, isPortfolioSyncEnabled : Bool,isPaperTrading : Bool , quoteCurrency : String , signallerId : Int? , riskLevel : String?) {
         self.init()
         self.changeUrlPath(path: "/rest/api/v2/onboarding/create",isV2Endpoint: true)
         
@@ -25,7 +25,8 @@ class HopperAPIV2OnboardingCreateRequest: HopperAPIRequest<HopperCommonMessageRe
         settingsObject["id"] = hopperId
         settingsObject["buying"] = isBuyingEnabled
         settingsObject["selling"] = isSellingEnabled
-        settingsObject["enabled"] = isEnabled
+        settingsObject["enabled"] = isHopperEnabled
+        settingsObject["autosync"] = isPortfolioSyncEnabled
         
         botObject["settings"] = settingsObject
         
