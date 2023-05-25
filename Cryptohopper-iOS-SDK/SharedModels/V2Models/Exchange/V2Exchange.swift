@@ -39,6 +39,7 @@ public class V2Exchange : Codable {
     public private(set) var images : [String:String]?
     public private(set) var apiConfigFields : [String]?
     public private(set) var optionalConfigFields : [String]?
+    public private(set) var fastApiHook : String?
     
     
     private enum CodingKeys: String, CodingKey {
@@ -72,6 +73,7 @@ public class V2Exchange : Codable {
         case images = "images"
         case apiConfigFields = "apiConfigFields"
         case optionalConfigFields = "optionalConfigFields"
+        case fastApiHook = "fastApiHook"
     }
     
 }

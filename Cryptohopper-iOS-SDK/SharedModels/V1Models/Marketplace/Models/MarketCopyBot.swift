@@ -36,6 +36,7 @@ public class MarketCopyBot: Codable {
         case id = "id"
         case itemId = "item_id"
         case exchange = "exchange"
+        case description = "description"
         case quoteCurrency = "quote_currency"
         case allowedCoins = "allowed_coins"
         case freeTrial = "free_trial"

@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPICopyBotCreateHopperRequest: HopperAPIRequest<HopperAPIPurchaseResponse> {
     
-    convenience init(copyBotMarketplaceId : String , paperTrading: Bool , apiKey : String? , apiSecret : String? , apiPassphrase : String? , extraApiKey : String? , extraApiSecret : String? , autoSync : Bool = true, isSandbox : Bool = false) {
+    convenience init(hopperId : String?,copyBotMarketplaceId : String , paperTrading: Bool , apiKey : String? , apiSecret : String? , apiPassphrase : String? , extraApiKey : String? , extraApiSecret : String? , autoSync : Bool = true, isSandbox : Bool = false) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/app/mobile/iap")
         
@@ -19,6 +19,10 @@ class HopperAPICopyBotCreateHopperRequest: HopperAPIRequest<HopperAPIPurchaseRes
         addBodyItem(name: "load_into_bot", value: "0")
         addBodyItem(name: "free_trial", value: "1")
         addBodyItem(name: "walletscrubber", value: "1")
+        
+        if((hopperId ?? "") != ""){
+            addBodyItem(name: "load_into_bot", value: hopperId!)
+        }
         
         if(autoSync){
             addBodyItem(name: "autosync", value: "1")
