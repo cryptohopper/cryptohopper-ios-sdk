@@ -243,5 +243,30 @@ import UIKit
     }
     
     
+    /*!
+    * @discussion Get Portal Exchange Key Maps
+    *
+    */
+    public static func getPortalExchangeKeyMaps(completion: @escaping (Result<[String:String]?, Error>) -> Void) {
+        HopperAPIGetPortalExchangeKeyMapsRequest.init("").request { (data) in
+            completion(.success(data.maps))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+    * @discussion Get Portal Pairs
+    *
+    */
+    public static func getPortalExchangePairMaps(exchangeKey : String,completion: @escaping (Result<[String:[String:String]]?, Error>) -> Void) {
+        HopperAPIGetPortalExchangePairMapsRequest.init(exchangeKey: exchangeKey).request { (data) in
+            completion(.success(data.maps))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    
     
 }
