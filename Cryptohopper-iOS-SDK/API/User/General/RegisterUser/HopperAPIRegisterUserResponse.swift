@@ -29,10 +29,12 @@ public class HopperRegisterData: Codable {
     
     public var userId : String?
     public var message : String?
+    public var userActivationNeeded : String?
     
     private enum CodingKeys: String, CodingKey {
         case userId = "user_id"
         case message = "message"
+        case userActivationNeeded = "user_activation_needed"
     }
     
 }

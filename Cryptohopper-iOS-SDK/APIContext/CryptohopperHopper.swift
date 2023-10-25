@@ -1404,4 +1404,22 @@ import UIKit
         }
     }
     
+    // ----------- Troubleshooter ----------------
+    
+    /*!
+    * @discussion Troubleshoot your hopper and see status
+    *
+    * @param hopperId : (required) Hopper Id
+    * @param platform : (required) "app"
+    * @param lang : (required) App language (en , tr , nl , etc..)
+    *
+    */
+    public static func getTroubleshooter(hopperId : String , platform : String , lang : String ,completion: @escaping (Result<[TroubleshooterItem]?, Error>) -> Void) {
+        HopperAPIGetTroubleshooterRequest.init(hopperId : hopperId, platform: platform , lang: lang).request { (data) in
+            completion(.success(data.data?.troubleshooter ?? [TroubleshooterItem]()))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
 }

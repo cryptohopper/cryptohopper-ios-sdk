@@ -186,6 +186,10 @@ public class HopperConfig : Codable {
     public var buy_order_type_copy : String?
     public var sell_order_type_copy : String?
     
+    //Sell Strategy extra parameters
+    public var strategy_sell_in_profit : String?
+    public var strategy_sell_in_profit_percentage : String?
+    
     
     public init(){}
 
@@ -362,6 +366,8 @@ public class HopperConfig : Codable {
             case sell_order_type_copy = "sell_order_type_copy"
             case only_when_new = "only_when_new"
             case only_when_new_range = "only_when_new_range"
+            case strategy_sell_in_profit = "strategy_sell_in_profit"
+            case strategy_sell_in_profit_percentage = "strategy_sell_in_profit_percentage"
     }
     
 }

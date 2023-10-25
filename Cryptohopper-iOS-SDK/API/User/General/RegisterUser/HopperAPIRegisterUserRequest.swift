@@ -15,7 +15,7 @@ class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserRespon
         addHeader(name: "name", value: name)
         addHeader(name: "email", value: email)
         addHeader(name: "username", value: username)
-        addHeader(name: "subscribe_newsletter", value: subscribe_newsletter.description)
+        addHeader(name: "subscribe", value: subscribe_newsletter.description)
         addHeader(name: "password", value: password)
         
         addHeader(name: "User-Agent", value: userAgent)

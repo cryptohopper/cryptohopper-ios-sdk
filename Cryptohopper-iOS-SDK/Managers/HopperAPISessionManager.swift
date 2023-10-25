@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class HopperAPISessionManager {
+public class HopperAPISessionManager {
     
-    static let shared = HopperAPISessionManager()
+    public static let shared = HopperAPISessionManager()
     private init () {}
     private let keychain = Keychain(service: "cryptohopper-keychain-group")
     
@@ -36,7 +36,7 @@ class HopperAPISessionManager {
         return true
     }
     
-    func injectSession(accessToken : String , refreshToken : String , expireDate : Date){
+    public func injectSession(accessToken : String , refreshToken : String , expireDate : Date){
         session = HopperAPISession(accessToken: accessToken, refreshToken: refreshToken, accessTokenExpiresAt: expireDate)
     }
     
