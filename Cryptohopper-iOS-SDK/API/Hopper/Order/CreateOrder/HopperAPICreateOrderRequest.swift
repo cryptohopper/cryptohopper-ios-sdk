@@ -26,6 +26,7 @@ class HopperAPICreateOrderRequest: HopperAPIRequest<HopperCommonMessageResponse>
         addBodyItem(name: "stop_loss_percentage", value: stopLossPercentage)
         addBodyItem(name: "trailing_stop_loss_percentage", value: trailingStopLossPercentage)
         addBodyItem(name: "trailing_arm_percentage", value: trailingArmPercentage)
+        addBodyItem(name: "manual",value:1)
     }
     
     override var httpMethod: HopperAPIHttpMethod {
