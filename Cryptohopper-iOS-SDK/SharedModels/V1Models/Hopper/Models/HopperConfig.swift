@@ -17,6 +17,7 @@ public class HopperConfig : Codable {
     public var api_passphrase : String?
     public var api_key : String?
     public var api_secret : String?
+    public var api_key_type : String?
     public var stop_buying : String?
     public var stop_selling : String?
     public var paper_trading : String?
@@ -201,6 +202,7 @@ public class HopperConfig : Codable {
             case api_passphrase = "api_passphrase"
             case api_key = "api_key"
             case api_secret = "api_secret"
+            case api_key_type = "api_key_type"
             case live = "live"
             case stop_buying = "stop_buying"
             case stop_selling = "stop_selling"
