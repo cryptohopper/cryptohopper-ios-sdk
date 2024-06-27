@@ -259,8 +259,8 @@ import UIKit
     * @discussion Get Portal Pairs
     *
     */
-    public static func getPortalExchangePairMaps(exchangeKey : String,completion: @escaping (Result<[String:[String:String]]?, Error>) -> Void) {
-        HopperAPIGetPortalExchangePairMapsRequest.init(exchangeKey: exchangeKey).request { (data) in
+    public static func getPortalExchangePairMaps(completion: @escaping (Result<CHPortalMaps?, Error>) -> Void) {
+        HopperAPIGetPortalExchangePairMapsRequest.init("").request { (data) in
             completion(.success(data.maps))
         } _: { (err) in
             completion(.failure(err))

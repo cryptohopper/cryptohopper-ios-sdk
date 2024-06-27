@@ -191,6 +191,8 @@ public class HopperConfig : Codable {
     public var strategy_sell_in_profit : String?
     public var strategy_sell_in_profit_percentage : String?
     
+    public var fast_api_connected : String?
+    
     
     public init(){}
 
@@ -370,6 +372,7 @@ public class HopperConfig : Codable {
             case only_when_new_range = "only_when_new_range"
             case strategy_sell_in_profit = "strategy_sell_in_profit"
             case strategy_sell_in_profit_percentage = "strategy_sell_in_profit_percentage"
+            case fast_api_connected = "fast_api_connected"
     }
     
 }

@@ -40,6 +40,7 @@ public class V2Exchange : Codable {
     public private(set) var apiConfigFields : [String]?
     public private(set) var optionalConfigFields : [String]?
     public private(set) var fastApiHook : String?
+    public private(set) var isIpWhitelistAvailable : Bool?
     
     
     private enum CodingKeys: String, CodingKey {
@@ -74,6 +75,7 @@ public class V2Exchange : Codable {
         case apiConfigFields = "apiConfigFields"
         case optionalConfigFields = "optionalConfigFields"
         case fastApiHook = "fastApiHook"
+        case isIpWhitelistAvailable = "ip_whitelist_available"
     }
     
 }

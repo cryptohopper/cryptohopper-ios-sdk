@@ -1422,4 +1422,18 @@ import UIKit
         }
     }
     
+    
+    /*!
+    * @discussion Disconnects from Fast API
+    *
+    * @param hopperId : (required) Hopper Id
+    */
+    public static func disconnectFastAPI(hopperId : String ,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIFastApiDisconnectRequest.init(hopperId: hopperId).request { (data) in
+            completion(.success(data.message))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
 }

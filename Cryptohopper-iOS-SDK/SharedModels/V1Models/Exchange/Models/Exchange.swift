@@ -32,6 +32,9 @@ public class Exchange : Codable {
     public private(set) var preiumPartner : String?
     public private(set) var maintence : String?
     public private(set) var maintanceMessage : String?
+    public private(set) var fastApiHook : String?
+    public private(set) var ipWhitelistAvailable : String?
+    
     
     private enum CodingKeys: String, CodingKey {
         case exchangeKey = "exchange_key"
@@ -54,6 +57,8 @@ public class Exchange : Codable {
         case preiumPartner = "premium_partner"
         case maintence = "maintenance"
         case maintanceMessage = "maintenance_message"
+        case fastApiHook = "fast_api_hook"
+        case ipWhitelistAvailable = "ip_whitelist_available"
     }
     
 }

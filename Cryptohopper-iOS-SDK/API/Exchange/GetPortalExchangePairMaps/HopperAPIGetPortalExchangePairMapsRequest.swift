@@ -9,9 +9,9 @@ import Foundation
 
 class HopperAPIGetPortalExchangePairMapsRequest: HopperAPIRequest<HopperAPIGetPortalExchangePairMapsResponse> {
     
-    convenience init(exchangeKey : String) {
+    convenience init(_ data : String) {
         self.init()
-        self.changeUrlPath(path: "/v1" + "/exchange/" + exchangeKey + "/portal/pairs")
+        self.changeUrlPath(path: "/v1" + "/exchange/portal/map")
     }
     
     override var httpMethod: HopperAPIHttpMethod {
