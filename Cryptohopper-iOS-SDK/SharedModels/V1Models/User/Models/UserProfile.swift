@@ -18,6 +18,7 @@ public class UserProfile : Codable {
     public private(set) var postalCode : String?
     public private(set) var phone : String?
     public private(set) var country : String?
+    public private(set) var countryNationality : String?
     public private(set) var city : String?
     public private(set) var addressOne : String?
     public private(set) var addressTwo : String?
@@ -34,6 +35,7 @@ public class UserProfile : Codable {
         case postalCode = "postal_code"
         case phone = "phone"
         case country = "country"
+        case countryNationality = "country_nationality"
         case city = "city"
         case addressOne = "address1"
         case addressTwo = "address2"

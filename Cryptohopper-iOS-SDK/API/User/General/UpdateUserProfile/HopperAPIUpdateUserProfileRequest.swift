@@ -9,7 +9,7 @@ import Foundation
 
 class HopperAPIUpdateUserProfileRequest: HopperAPIRequest<HopperCommonMessageResponse> {
     
-    convenience init(name : String?, addressOne : String?,addressTwo : String?, city : String?,region : String?,country : String? , postalCode : String?,phone : String? ,website : String?) {
+    convenience init(name : String?, addressOne : String?,addressTwo : String?, city : String?,region : String?,country : String? , countryNationality : String?, postalCode : String?,phone : String? ,website : String?) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/user")
         
@@ -35,6 +35,10 @@ class HopperAPIUpdateUserProfileRequest: HopperAPIRequest<HopperCommonMessageRes
         
         if(country != nil && country != ""){
             addBodyItem(name: "country", value: country!)
+        }
+        
+        if(countryNationality != nil && countryNationality != ""){
+            addBodyItem(name: "country_nationality", value: countryNationality!)
         }
         
         if(postalCode != nil && postalCode != ""){

@@ -71,8 +71,8 @@ import UIKit
     * @param phone: (required) phone
     * @param website: (required) website
     */
-    public static func updateUserProfile(name : String?,addressOne : String?,addressTwo : String?,city : String?,region : String?,country : String?,postalCode : String?,phone : String?,website : String?,completion: @escaping (Result<String?, Error>) -> Void) {
-        HopperAPIUpdateUserProfileRequest.init(name: name, addressOne: addressOne, addressTwo: addressTwo, city: city, region: region, country: country, postalCode: postalCode, phone: phone, website: website).request { (data) in
+    public static func updateUserProfile(name : String?,addressOne : String?,addressTwo : String?,city : String?,region : String?,country : String?,countryNationality : String?, postalCode : String?,phone : String?,website : String?,completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIUpdateUserProfileRequest.init(name: name, addressOne: addressOne, addressTwo: addressTwo, city: city, region: region, country: country,countryNationality: countryNationality, postalCode: postalCode, phone: phone, website: website).request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
@@ -355,6 +355,19 @@ import UIKit
     */
     public static func getCountries(completion: @escaping (Result<HopperAPICountriesResult?, Error>) -> Void) {
         HopperAPIGetPlatformCountriesRequest.init("").request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+    * @discussion Get Exchanges filtered by platform
+    *
+    */
+    
+    public static func getCountryAllowExchange(completion: @escaping (Result<HopperAPICountryAllowExchangeResult?, Error>) -> Void) {
+        HopperAPIGetCountryAllowExchangeRequest.init("").request { (data) in
             completion(.success(data.data))
         } _: { (err) in
             completion(.failure(err))
