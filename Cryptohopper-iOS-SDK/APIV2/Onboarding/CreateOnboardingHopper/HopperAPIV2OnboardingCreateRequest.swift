@@ -10,7 +10,7 @@ import UIKit
 
 class HopperAPIV2OnboardingCreateRequest: HopperAPIRequest<HopperCommonMessageResponse?> {
     
-    convenience init(hopperId : Int,isBuyingEnabled : Bool,isSellingEnabled : Bool, isHopperEnabled : Bool, isPortfolioSyncEnabled : Bool,isPaperTrading : Bool , quoteCurrency : String , signallerId : Int? , riskLevel : String?) {
+    convenience init(hopperId : Int,isBuyingEnabled : Bool,isSellingEnabled : Bool, isHopperEnabled : Bool, isPortfolioSyncEnabled : Bool,isPaperTrading : Bool , quoteCurrency : String , signallerId : Int? , riskLevel : String?,portfolioBotId : Int?, botType : Int?) {
         self.init()
         self.changeUrlPath(path: "/rest/api/v2/onboarding/create",isV2Endpoint: true)
         
@@ -27,6 +27,7 @@ class HopperAPIV2OnboardingCreateRequest: HopperAPIRequest<HopperCommonMessageRe
         settingsObject["selling"] = isSellingEnabled
         settingsObject["enabled"] = isHopperEnabled
         settingsObject["autosync"] = isPortfolioSyncEnabled
+        settingsObject["botType"] = botType ?? 0
         
         botObject["settings"] = settingsObject
         
@@ -40,6 +41,12 @@ class HopperAPIV2OnboardingCreateRequest: HopperAPIRequest<HopperCommonMessageRe
             var strategyObject = [String:Any]()
             strategyObject["riskLevel"] = riskLevel
             botObject["strategy"] = strategyObject
+        }
+        
+        if(portfolioBotId != nil){
+            var portfolioObject = [String:Any]()
+            portfolioObject["portfolioId"] = portfolioBotId
+            botObject["portfolio"] = portfolioObject
         }
         
         addBodyItem(name: "bot", value: botObject)

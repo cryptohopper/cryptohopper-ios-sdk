@@ -9,7 +9,16 @@ import Foundation
 
 class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserResponse> {
     
-    convenience init(name : String,email : String,username : String,subscribe_newsletter : Bool,password : String,userAgent: String,appCheckToken: String?) {
+    convenience init(
+        name: String,
+        email: String,
+        username: String,
+        subscribe_newsletter: Bool,
+        password: String,
+        userAgent: String,
+        appCheckToken: String?,
+        deviceName: String?
+    ) {
         self.init()
         self.changeUrlPath(path: "/v1" + "/user/register")
         addHeader(name: "name", value: name)
@@ -17,11 +26,15 @@ class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserRespon
         addHeader(name: "username", value: username)
         addHeader(name: "subscribe", value: subscribe_newsletter.description)
         addHeader(name: "password", value: password)
-        
         addHeader(name: "User-Agent", value: userAgent)
         
-        if(appCheckToken != nil){
-            addHeader(name: "X-Firebase-AppCheck", value: (appCheckToken ?? "") )
+        if let appCheckToken = appCheckToken {
+            addHeader(name: "X-Firebase-AppCheck", value: appCheckToken)
+        }
+        
+        if let deviceName = deviceName {
+            // Match Android: send deviceName as a header for register
+            addHeader(name: "deviceName", value: deviceName)
         }
     }
     
@@ -32,5 +45,4 @@ class HopperAPIRegisterUserRequest: HopperAPIRequest<HopperAPIRegisterUserRespon
     override var needsAuthentication: Bool {
         return false
     }
-    
 }

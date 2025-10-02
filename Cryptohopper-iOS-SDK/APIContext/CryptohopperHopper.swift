@@ -1033,6 +1033,64 @@ import UIKit
         }
     }
     
+    /*!
+    * @discussion DCA Block One Position
+    *
+    * @param hopperId:  (required) Hopper Id
+    * @param positionId:  (required) Position Id
+    * @param block:  (required) Block status
+    */
+    public static func dcaBlockOnePosition(hopperId: String, positionId: Int, block: Bool, completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIDCABlockOnePositionRequest.init(hopperId: hopperId, positionId: positionId, block: block).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
+    /*!
+    * @discussion DCA Block Coin
+    *
+    * @param hopperId:  (required) Hopper Id
+    * @param coin:  (required) Coin to block DCA for
+    * @param block:  (required) Block status
+    */
+    public static func dcaBlockCoin(hopperId: String, coin: String, block: Bool, completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIDCABlockCoinRequest.init(hopperId: hopperId, coin: coin, block: block).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
+    /*!
+    * @discussion DCA Reset Coin
+    *
+    * @param hopperId:  (required) Hopper Id
+    * @param coin:  (required) Coin to reset DCA for
+    */
+    public static func dcaResetCoin(hopperId: String, coin: String, completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIDCAResetCoinRequest.init(hopperId: hopperId, coin: coin).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
+    /*!
+    * @discussion DCA Reset One Position
+    *
+    * @param hopperId:  (required) Hopper Id
+    * @param positionId:  (required) Position Id
+    */
+    public static func dcaResetOnePosition(hopperId: String, positionId: Int, completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIDCAResetOnePositionRequest.init(hopperId: hopperId, positionId: positionId).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
     
     /*!
     * @discussion Short Multiple Position

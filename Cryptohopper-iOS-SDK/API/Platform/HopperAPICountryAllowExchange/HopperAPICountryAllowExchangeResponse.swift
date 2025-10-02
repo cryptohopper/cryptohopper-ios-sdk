@@ -19,8 +19,8 @@ public class HopperAPICountryAllowExchangeResponse: Codable {
 
 public class HopperAPICountryAllowExchangeResult: Codable {
     
-    var countrySettings : [String:HopperAPICountryAllowExchangeSetting]?
-    var ipCountry : String?
+    public var countrySettings : [String:HopperAPICountryAllowExchangeSetting]?
+    public var ipCountry : String?
     
     private enum CodingKeys: String, CodingKey {
         case countrySettings = "country_settings"
@@ -31,8 +31,8 @@ public class HopperAPICountryAllowExchangeResult: Codable {
 
 public class HopperAPICountryAllowExchangeSetting: Codable {
     
-    var nationality : [String]?
-    var residence : [String]?
+    public var nationality : [String]?
+    public var residence : [String]?
     
     private enum CodingKeys: String, CodingKey {
         case nationality = "nationality"

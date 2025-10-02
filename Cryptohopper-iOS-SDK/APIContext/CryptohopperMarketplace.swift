@@ -393,4 +393,17 @@ import UIKit
         }
     }
     
+    
+    /*!
+     * @discussion Get Marketplace Portfolio Bots
+     *
+     *
+     */
+    public static func getMarketPortfolioBots(completion: @escaping (Result<[MarketPortfolioBot]?, Error>) -> Void) {
+        HopperAPIGetPortfolioBotsRequest.init("").request { (data) in
+            completion(.success(data.data?.portfolio))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
 }

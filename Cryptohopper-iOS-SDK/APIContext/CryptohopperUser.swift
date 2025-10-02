@@ -197,18 +197,36 @@ import UIKit
     }
     
     /*!
-    * @discussion Change Password
-    *
-    * @param name: (required) name
-    * @param email: (required) email
-    * @param username: (required) username
-    * @param subscribeNewsletter: (required) subscribe newsletter
-    * @param password: (required) password
-    */
-    public static func registerUser(name : String, email : String, username : String, subscribeNewsLetter : Bool , password : String,userAgent: String,appCheckToken: String?,completion: @escaping (Result<HopperAPIRegisterUserResponse?, Error>) -> Void) {
-        HopperAPIRegisterUserRequest.init(name: name, email: email, username: username, subscribe_newsletter: subscribeNewsLetter, password: password,userAgent: userAgent,appCheckToken:appCheckToken).request { (data) in
+     * @discussion Change Password
+     *
+     * @param name: (required) name
+     * @param email: (required) email
+     * @param username: (required) username
+     * @param subscribeNewsletter: (required) subscribe newsletter
+     * @param password: (required) password
+     * @param userAgent: (required) encrypted UA
+     * @param appCheckToken: (optional) Firebase App Check token
+     * @param deviceName: (optional) device name to register
+     */
+    public static func registerUser(name : String,
+                                    email : String,
+                                    username : String,
+                                    subscribeNewsLetter : Bool,
+                                    password : String,
+                                    userAgent: String,
+                                    appCheckToken: String?,
+                                    deviceName: String?,
+                                    completion: @escaping (Result<HopperAPIRegisterUserResponse?, Error>) -> Void) {
+        HopperAPIRegisterUserRequest.init(name: name,
+                                          email: email,
+                                          username: username,
+                                          subscribe_newsletter: subscribeNewsLetter,
+                                          password: password,
+                                          userAgent: userAgent,
+                                          appCheckToken: appCheckToken,
+                                          deviceName: deviceName).request { data in
             completion(.success(data))
-        } _: { (err) in
+        } _: { err in
             completion(.failure(err))
         }
     }
