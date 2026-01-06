@@ -392,4 +392,61 @@ import UIKit
         }
     }
     
+    // ------------- ASK AI ----------------------------------------
+    
+    /*!
+    * @discussion Get Ask AI Pages
+    *
+    */
+    public static func getAskAIPages(completion: @escaping (Result<[AskAIPage]?, Error>) -> Void) {
+        HopperAPIGetAskAIPagesRequest.init("").request { (data) in
+            completion(.success(data.pages))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+    * @discussion New Ask AI Session
+    *
+    * @param page: (required) The page key for the AI session
+    * @param newSession: (required) Whether to start a new session
+    */
+    public static func newAskAISession(page: String, newSession: Bool, completion: @escaping (Result<AskAIChat?, Error>) -> Void) {
+        HopperAPINewAskAISessionRequest.init(page: page, newSession: newSession).request { (data) in
+            completion(.success(data.chat))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+    * @discussion Perform Ask AI (Send Message)
+    *
+    * @param page: (required) The page key for the AI session
+    * @param question: (optional) The question to ask
+    * @param suggestionId: (optional) The suggestion ID to use instead of a question
+    */
+    public static func performAskAI(page: String, question: String?, suggestionId: String?, completion: @escaping (Result<AskAIAnswer?, Error>) -> Void) {
+        HopperAPIPerformAskAIRequest.init(page: page, question: question, suggestionId: suggestionId).request { (data) in
+            completion(.success(data.answer))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
+    /*!
+    * @discussion Vote Ask AI (Feedback)
+    *
+    * @param voteId: (required) The vote ID from the AI response
+    * @param vote: (required) The vote value (1 for thumbs up, -1 for thumbs down)
+    */
+    public static func voteAskAI(voteId: String, vote: Int, completion: @escaping (Result<String?, Error>) -> Void) {
+        HopperAPIVoteAskAIRequest.init(voteId: voteId, vote: vote).request { (data) in
+            completion(.success(data.data))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+    
 }
