@@ -12,7 +12,7 @@ class HopperAPIV2GetAllBuiltinStrategiesRequest: HopperAPIRequest<[V2Strategy]?>
     
     convenience init(_ data : String?) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/strategy/list",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/strategy/list",isV2Endpoint: true)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

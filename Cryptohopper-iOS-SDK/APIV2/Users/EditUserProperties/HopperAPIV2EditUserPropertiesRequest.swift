@@ -12,7 +12,7 @@ class HopperAPIV2EditUserPropertiesRequest: HopperAPIRequest<HopperCommonMessage
     
     convenience init(name: String, countryISOCode : String) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/user",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/user",isV2Endpoint: true)
         addBodyItem(name: "name", value: name)
         addBodyItem(name: "countryIsoCode", value: countryISOCode)
     }

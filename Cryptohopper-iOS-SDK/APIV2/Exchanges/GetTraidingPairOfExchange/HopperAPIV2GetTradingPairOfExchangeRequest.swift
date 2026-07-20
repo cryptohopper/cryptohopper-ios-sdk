@@ -12,7 +12,7 @@ class HopperAPIV2GetTradingPairOfExchangeRequest: HopperAPIRequest<[V2Pair]?> {
     
     convenience init(exchangeId : Int) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/exchange/\(exchangeId)/markets",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/exchange/\(exchangeId)/markets",isV2Endpoint: true)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

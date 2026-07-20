@@ -12,7 +12,7 @@ class HopperAPIV2OnboardingEditRequest: HopperAPIRequest<HopperCommonMessageResp
     
     convenience init(hopperId : Int,exchangeId : Int, apiDetails : [String:Any], isPaperTrading : Bool , quoteCurrency : String) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/onboarding/edit",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/onboarding/edit",isV2Endpoint: true)
         
         var exchangeObject = [String:Any]()
         exchangeObject["id"] = exchangeId

@@ -12,7 +12,7 @@ class HopperAPIV2CheckUsernameRequest: HopperAPIRequest<HopperAPIV2CheckUsername
     
     convenience init(username : String) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/user/check",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/user/check",isV2Endpoint: true)
         addQueryItem(name: "username", value: username)
     }
     

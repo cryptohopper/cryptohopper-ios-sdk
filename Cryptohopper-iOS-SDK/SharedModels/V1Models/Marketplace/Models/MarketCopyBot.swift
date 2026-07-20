@@ -31,6 +31,8 @@ public class MarketCopyBot: Codable {
     public private(set) var priceCurrency : String?
     public private(set) var maxDownloads : String?
     public private(set) var availableInApp : String?
+    public private(set) var profit : String?
+    
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -55,6 +57,7 @@ public class MarketCopyBot: Codable {
         case priceCurrency = "price_currency"
         case maxDownloads = "max_downloads"
         case availableInApp = "available_in_app"
+        case profit = "profit"
     }
     
 }

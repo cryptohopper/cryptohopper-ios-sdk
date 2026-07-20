@@ -12,7 +12,7 @@ class HopperAPIV2GetAllTournamentsRequest: HopperAPIRequest<[V2Tournament]?> {
     
     convenience init(_ data : String?) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/tournaments/list",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/tournaments/list",isV2Endpoint: true)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

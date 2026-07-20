@@ -48,7 +48,7 @@ class HopperAPIConfiguration {
         case .Sandbox:
             return "restapi-dev.cryptohopper.com"
         case .Production:
-            return "restapi.cryptohopper.com"
+            return "api-rest.aws.cryptohopper.tech"
         }
     }
     

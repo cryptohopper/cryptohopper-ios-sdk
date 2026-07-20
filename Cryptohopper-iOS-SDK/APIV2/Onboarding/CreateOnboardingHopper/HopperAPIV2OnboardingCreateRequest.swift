@@ -12,7 +12,7 @@ class HopperAPIV2OnboardingCreateRequest: HopperAPIRequest<HopperCommonMessageRe
     
     convenience init(hopperId : Int,isBuyingEnabled : Bool,isSellingEnabled : Bool, isHopperEnabled : Bool, isPortfolioSyncEnabled : Bool,isPaperTrading : Bool , quoteCurrency : String , signallerId : Int? , riskLevel : String?,portfolioBotId : Int?, botType : Int?) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/onboarding/create",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/onboarding/create",isV2Endpoint: true)
         
         var exchangeObject = [String:Any]()
         exchangeObject["paperTrading"] = isPaperTrading

@@ -12,7 +12,7 @@ class HopperAPIV2GetAllExchangesRequest: HopperAPIRequest<[V2Exchange]?> {
     
     convenience init(_ data : String) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/exchange/list",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/exchange/list",isV2Endpoint: true)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

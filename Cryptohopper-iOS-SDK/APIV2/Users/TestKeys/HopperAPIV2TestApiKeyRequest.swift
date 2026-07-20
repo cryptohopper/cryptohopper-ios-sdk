@@ -12,7 +12,7 @@ class HopperAPIV2TestApiKeyRequest: HopperAPIRequest<HopperAPIV2TestApiKeyRespon
     
     convenience init(exchange : String?,apiKey : String?,apiSecret : String?,apiPassphrase : String?,extraApiKey : String?,extraApiSecret : String?,subAccount : String?) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/user/test-keys",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/user/test-keys",isV2Endpoint: true)
         if(exchange != nil){
             addBodyItem(name: "exchange", value: (exchange ?? ""))
         }

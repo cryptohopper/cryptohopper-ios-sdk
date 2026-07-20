@@ -12,7 +12,7 @@ class HopperAPIV2GetUserProfileRequest: HopperAPIRequest<V2User?> {
     
     convenience init(_ data : String) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/user",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/user",isV2Endpoint: true)
     }
     
     override var httpMethod: HopperAPIHttpMethod {

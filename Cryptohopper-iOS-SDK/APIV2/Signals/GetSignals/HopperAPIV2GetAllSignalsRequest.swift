@@ -12,7 +12,7 @@ class HopperAPIV2GetAllSignalsRequest: HopperAPIRequest<[V2Signal]?> {
     
     convenience init(exchange : String?) {
         self.init()
-        self.changeUrlPath(path: "/rest/api/v2/signal/list",isV2Endpoint: true)
+        self.changeUrlPath(path: "/v2/signal/list",isV2Endpoint: true)
         
         if(exchange != nil){
             addQueryItem(name: "exchange", value: exchange)
