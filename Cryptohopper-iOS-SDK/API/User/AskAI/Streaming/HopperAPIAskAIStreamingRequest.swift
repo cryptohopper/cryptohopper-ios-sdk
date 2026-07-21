@@ -90,6 +90,14 @@ final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
         completionHandler(.allow)
     }
 
+    /// SSE bodies start with "event:", "data:" or a ":" comment line
+    /// (optionally after whitespace); JSON starts with "{" or "[".
+    private static func looksLikeEventStream(_ body: Data) -> Bool {
+        guard let prefix = String(data: body.prefix(32), encoding: .utf8)?
+            .trimmingCharacters(in: .whitespacesAndNewlines), !prefix.isEmpty else { return false }
+        return prefix.hasPrefix("event:") || prefix.hasPrefix("data:") || prefix.hasPrefix(":")
+    }
+
     /// Case-insensitive header lookup. `HTTPURLResponse.value(forHTTPHeaderField:)`
     /// is iOS 13+ only; this SDK's deployment target is iOS 12, so headers are
     /// read directly from `allHeaderFields` instead.
@@ -104,6 +112,15 @@ final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
     }
 
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        if !isEventStream && jsonBody.isEmpty {
+            // The public API router sets a global application/json header
+            // before the askai SSE branch runs, so a stream can arrive
+            // mislabeled. Sniff the first chunk: SSE bodies start with
+            // "event:", "data:" or a ":" comment line; JSON never does.
+            if Self.looksLikeEventStream(data) {
+                isEventStream = true
+            }
+        }
         if isEventStream {
             emit(parser.feed(data))
         } else {
@@ -116,6 +133,12 @@ final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
         if let error = error {
             finish(.failure(error))
             return
+        }
+        // Belt and braces: a fully buffered, mislabeled stream (or one whose
+        // first chunk was too short to classify) is still parseable here.
+        if !isEventStream && Self.looksLikeEventStream(jsonBody) {
+            isEventStream = true
+            emit(parser.feed(jsonBody))
         }
         if isEventStream {
             emit(parser.flush())
