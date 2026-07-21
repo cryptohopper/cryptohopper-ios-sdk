@@ -34,15 +34,21 @@ final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
     }
 
     func start() {
-        HopperAPISessionManager.shared.checkAuthentication(onSuccess: { [weak self] in
-            guard let self = self else { return }
+        // Capture self STRONGLY here: the only strong reference to this request
+        // lives in the caller's local variable, which goes out of scope as soon
+        // as `start()` returns. checkAuthentication's refresh path is async, so
+        // a weak capture would let this object deallocate before the callback
+        // runs, silently dropping the request. This closure keeps it alive
+        // until startRequest(accessToken:) hands retention to the URLSession
+        // delegate, or the fail path calls finish(...).
+        HopperAPISessionManager.shared.checkAuthentication(onSuccess: {
             guard let accessToken = HopperAPISessionManager.shared.session?.accessToken else {
                 self.finish(.failure(HopperError.missingAccessToken))
                 return
             }
             self.startRequest(accessToken: accessToken)
-        }, onFail: { [weak self] error in
-            self?.finish(.failure(error))
+        }, onFail: { error in
+            self.finish(.failure(error))
         })
     }
 
