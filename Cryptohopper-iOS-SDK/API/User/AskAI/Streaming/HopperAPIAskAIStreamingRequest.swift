@@ -128,9 +128,22 @@ final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .secondsSince1970
             if statusCode >= 200 && statusCode < 300 {
+                // Mirror HopperAPIRequest.startRequest's responseOK check: a 2xx
+                // body can still carry a common error payload with status 402.
+                if let errCode = try? decoder.decode(HopperCommonMessageResponse.self, from: jsonBody),
+                   errCode.error != nil, errCode.status == 402 {
+                    triggerDeviceUnauthorized()
+                    finish(.failure(HopperError.DeviceUnauthorized))
+                    return
+                }
                 let response = try decoder.decode(HopperAPIPerformAskAIResponse.self, from: jsonBody)
                 finish(.success(response.answer))
             } else {
+                if statusCode == 402 {
+                    triggerDeviceUnauthorized()
+                    finish(.failure(HopperError.DeviceUnauthorized))
+                    return
+                }
                 let apiError = try decoder.decode(HopperAPIError.self, from: jsonBody)
                 finish(.failure(apiError.error))
             }
@@ -140,6 +153,13 @@ final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
     }
 
     // MARK: - Helpers
+
+    /// Mirrors HopperAPIRequest.triggerDeviceUnauthorized(): posts the same
+    /// notification so observers (e.g. a global logout handler) react the
+    /// same way regardless of which request path hit the 402.
+    private func triggerDeviceUnauthorized() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CH_DEVICE_UNAUTHORIZED"), object: nil)
+    }
 
     private func emit(_ events: [AskAIStreamEvent]) {
         guard !events.isEmpty else { return }
