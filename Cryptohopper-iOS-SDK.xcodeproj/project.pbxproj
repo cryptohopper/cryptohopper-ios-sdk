@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCD96FB134CBEA7B93F5E8A /* HopperAPIAskAIStreamingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */; };
 		375AE192EF5DDEF2CA81F7ED /* AskAIStreamParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */; };
 		59576957B76E88660EDCD9F6 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F006D690718FB3AD4ACF2C61 /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
 		631307BD7693BAAF7B72B206 /* AskAIStreamEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211C9DED44706861D3FE369A /* AskAIStreamEvent.swift */; };
@@ -489,6 +490,7 @@
 /* Begin PBXFileReference section */
 		1A1FB7E16BBDF708C509A103 /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		211C9DED44706861D3FE369A /* AskAIStreamEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamEvent.swift; sourceTree = "<group>"; };
+		5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPIAskAIStreamingRequest.swift; sourceTree = "<group>"; };
 		59BF9CCB664C3FC5A211DB13 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamParserSpec.swift; sourceTree = "<group>"; };
 		ACA94F67F40DFEC2AE6EB5E6 /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1004,6 +1006,7 @@
 			children = (
 				211C9DED44706861D3FE369A /* AskAIStreamEvent.swift */,
 				B8CE3F96121E01342108AEAE /* AskAIStreamParser.swift */,
+				5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */,
 			);
 			name = Streaming;
 			path = Streaming;
@@ -4714,6 +4717,7 @@
 				D0231F5B2552F0AE0057A293 /* HopperAPIGetStrategyByIdResponse.swift in Sources */,
 				631307BD7693BAAF7B72B206 /* AskAIStreamEvent.swift in Sources */,
 				D6C357EB6E8B7C3E1D33FC41 /* AskAIStreamParser.swift in Sources */,
+				0CCD96FB134CBEA7B93F5E8A /* HopperAPIAskAIStreamingRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
