@@ -240,7 +240,7 @@
 		D02AAFC3283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFC2283B83050044BCE7 /* HopperAPIV2GetAllCurrenciesRequest.swift */; };
 		D02AAFD0283B887D0044BCE7 /* V2Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFCF283B887D0044BCE7 /* V2Currency.swift */; };
 		D02AAFD5283B8B370044BCE7 /* CurrencyAPIV2Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AAFD4283B8B370044BCE7 /* CurrencyAPIV2Spec.swift */; };
-		D02AB037283BA72A0044BCE7 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D02AB037283BA72A0044BCE7 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D02AB054283BBD850044BCE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AB053283BBD850044BCE7 /* AppDelegate.swift */; };
 		D02AB056283BBD850044BCE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AB055283BBD850044BCE7 /* SceneDelegate.swift */; };
 		D02AB058283BBD850044BCE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AB057283BBD850044BCE7 /* ViewController.swift */; };
@@ -480,7 +480,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D0F8C503283E5273006A8CE7 /* Pods_Cryptohopper_iOS_SDK.framework in Embed Frameworks */,
-				D02AB037283BA72A0044BCE7 /* BuildFile in Embed Frameworks */,
+				D02AB037283BA72A0044BCE7 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
