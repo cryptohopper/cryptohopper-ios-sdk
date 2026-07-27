@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCD96FB134CBEA7B93F5E8A /* HopperAPIAskAIStreamingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */; };
+		375AE192EF5DDEF2CA81F7ED /* AskAIStreamParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */; };
 		59576957B76E88660EDCD9F6 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F006D690718FB3AD4ACF2C61 /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
+		631307BD7693BAAF7B72B206 /* AskAIStreamEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211C9DED44706861D3FE369A /* AskAIStreamEvent.swift */; };
 		D0021D3C2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */; };
 		D002BE81292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002BE80292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift */; };
 		D002BE83292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002BE82292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift */; };
@@ -449,6 +452,7 @@
 		D0F8C511283E5E0C006A8CE7 /* HopperAPIV2OnboardingCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8C510283E5E0C006A8CE7 /* HopperAPIV2OnboardingCreateRequest.swift */; };
 		D0F8C513283E5F1B006A8CE7 /* HopperAPIV2OnboardingInitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8C512283E5F1B006A8CE7 /* HopperAPIV2OnboardingInitResponse.swift */; };
 		D0F8C516283E692F006A8CE7 /* OnboardingAPIV2Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8C515283E692F006A8CE7 /* OnboardingAPIV2Spec.swift */; };
+		D6C357EB6E8B7C3E1D33FC41 /* AskAIStreamParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE3F96121E01342108AEAE /* AskAIStreamParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -485,8 +489,12 @@
 
 /* Begin PBXFileReference section */
 		1A1FB7E16BBDF708C509A103 /* Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		211C9DED44706861D3FE369A /* AskAIStreamEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamEvent.swift; sourceTree = "<group>"; };
+		5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPIAskAIStreamingRequest.swift; sourceTree = "<group>"; };
 		59BF9CCB664C3FC5A211DB13 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamParserSpec.swift; sourceTree = "<group>"; };
 		ACA94F67F40DFEC2AE6EB5E6 /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		B8CE3F96121E01342108AEAE /* AskAIStreamParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamParser.swift; sourceTree = "<group>"; };
 		D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthWithCodeRequest.swift; sourceTree = "<group>"; };
 		D002BE80292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthDeviceResendEmailRequest.swift; sourceTree = "<group>"; };
 		D002BE82292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift; sourceTree = "<group>"; };
@@ -964,6 +972,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1591570A537B53DD3C26F25D /* AskAI */ = {
+			isa = PBXGroup;
+			children = (
+				C4A9C4CBF2CB789F5B2682AC /* Streaming */,
+			);
+			name = AskAI;
+			path = AskAI;
+			sourceTree = "<group>";
+		};
 		1AF7BFB7D52C96D9AE8AE457 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -982,6 +999,17 @@
 				F006D690718FB3AD4ACF2C61 /* Pods_Cryptohopper_iOS_SDKTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4A9C4CBF2CB789F5B2682AC /* Streaming */ = {
+			isa = PBXGroup;
+			children = (
+				211C9DED44706861D3FE369A /* AskAIStreamEvent.swift */,
+				B8CE3F96121E01342108AEAE /* AskAIStreamParser.swift */,
+				5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */,
+			);
+			name = Streaming;
+			path = Streaming;
 			sourceTree = "<group>";
 		};
 		D0021D3A2718788F0050D7CC /* AuthWithCode */ = {
@@ -1413,6 +1441,7 @@
 				D0231D1025514BE40057A293 /* Subscription */,
 				D0AC8A11285B570B0071B90E /* CheckPasswordReset */,
 				D0AC8A10285B56FC0071B90E /* Check2FAReset */,
+				1591570A537B53DD3C26F25D /* AskAI */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -2660,6 +2689,7 @@
 			isa = PBXGroup;
 			children = (
 				D047A8BD2779CAC4007D5485 /* AISpec.swift */,
+				7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -4685,6 +4715,9 @@
 				D0AF9E092625A3AC001FFDF3 /* AnyCodable.swift in Sources */,
 				D0231ECA2552D3A80057A293 /* HopperAPIGetTradingPairOfExchangeRequest.swift in Sources */,
 				D0231F5B2552F0AE0057A293 /* HopperAPIGetStrategyByIdResponse.swift in Sources */,
+				631307BD7693BAAF7B72B206 /* AskAIStreamEvent.swift in Sources */,
+				D6C357EB6E8B7C3E1D33FC41 /* AskAIStreamParser.swift in Sources */,
+				0CCD96FB134CBEA7B93F5E8A /* HopperAPIAskAIStreamingRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4709,6 +4742,7 @@
 				D0F8C501283E0D40006A8CE7 /* ExchangeAPIV2Spec.swift in Sources */,
 				D09CD4942840C83B009B503F /* TournamentAPIV2Spec.swift in Sources */,
 				D0F3D4EF25655F020036B130 /* UserSpec.swift in Sources */,
+				375AE192EF5DDEF2CA81F7ED /* AskAIStreamParserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

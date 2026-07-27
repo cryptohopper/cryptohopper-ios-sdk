@@ -434,7 +434,21 @@ import UIKit
             completion(.failure(err))
         }
     }
-    
+
+    /// Ask AI with streaming support. onEvent fires per SSE event (main
+    /// queue). completion fires once: AskAIAnswer for a plain-JSON reply,
+    /// nil after a successful stream, or an error.
+    public static func performAskAIStreaming(page: String,
+                                             question: String,
+                                             onEvent: @escaping (AskAIStreamEvent) -> Void,
+                                             completion: @escaping (Result<AskAIAnswer?, Error>) -> Void) {
+        let request = HopperAPIAskAIStreamingRequest(page: page,
+                                                     question: question,
+                                                     onEvent: onEvent,
+                                                     completion: completion)
+        request.start()
+    }
+
     /*!
     * @discussion Vote Ask AI (Feedback)
     *

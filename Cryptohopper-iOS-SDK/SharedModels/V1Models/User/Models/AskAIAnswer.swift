@@ -20,6 +20,12 @@ public class AskAIAnswer: Codable {
         case question = "question"
         case voteId = "vote_id"
     }
-    
+
+    /// Suggestion answers arrive from the API as a bare string in `data`
+    /// instead of an object; this lets the response wrap them.
+    internal init(content: String?) {
+        self.content = content
+    }
+
 }
 
