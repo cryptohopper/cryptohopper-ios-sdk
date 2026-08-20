@@ -475,7 +475,11 @@ import UIKit
     */
     public static func getAskAITradingTools(completion: @escaping (Result<Bool, Error>) -> Void) {
         HopperAPIGetAskAITradingToolsRequest.init("").request { (data) in
-            completion(.success(data.enabled ?? false))
+            guard let enabled = data.enabled else {
+                completion(.failure(CustomError(localizedDescription: "Missing ask_ai_trading_tools in response")))
+                return
+            }
+            completion(.success(enabled))
         } _: { (err) in
             completion(.failure(err))
         }
@@ -488,9 +492,11 @@ import UIKit
     */
     public static func setAskAITradingTools(enabled: Bool, completion: @escaping (Result<Bool, Error>) -> Void) {
         HopperAPISetAskAITradingToolsRequest.init(enabled: enabled).request { (data) in
-            // The endpoint echoes the stored value; fall back to the value we
-            // sent so a terse response still reports the state it just wrote.
-            completion(.success(data.enabled ?? enabled))
+            guard let enabled = data.enabled else {
+                completion(.failure(CustomError(localizedDescription: "Missing ask_ai_trading_tools in response")))
+                return
+            }
+            completion(.success(enabled))
         } _: { (err) in
             completion(.failure(err))
         }
