@@ -93,8 +93,21 @@ public final class AskAIStreamParser {
                          sessionId: payload["session_id"] as? String)
         case "error":
             return .error(message: (payload["message"] as? String) ?? "Unknown stream error")
+        case "tool_call":
+            // Every field is optional here: the status this drives ("Working…")
+            // is still useful when the frame names no tool.
+            return .toolCall(name: (payload["tool_name"] as? String) ?? (payload["name"] as? String))
+        case "tool_result":
+            return .toolResult
+        case "confirm":
+            // Without a confirm_id there is nothing the app could send back,
+            // so an incomplete frame is dropped instead of shown as a card.
+            guard let confirmId = payload["confirm_id"] as? String, !confirmId.isEmpty else { return nil }
+            return .confirm(confirmId: confirmId,
+                            toolName: payload["tool_name"] as? String,
+                            description: payload["description"] as? String)
         default:
-            // conversation / tool_call / tool_result / metadata / unknown: ignore.
+            // conversation / metadata / unknown: ignore.
             return nil
         }
     }
