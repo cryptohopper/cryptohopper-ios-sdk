@@ -53,10 +53,44 @@ class AskAIStreamParserSpec: QuickSpec {
             }
         }
 
+        context("tool and confirm frames") {
+            it("parses a tool_call frame with its tool name") {
+                let events = feed("event: tool_call\ndata: {\"tool_call_id\": \"t\", \"tool_name\": \"place_order\"}\n\n")
+                guard case .toolCall(let name)? = events.first else { return fail("expected toolCall") }
+                expect(name).to(equal("place_order"))
+            }
+            it("parses a tool_call frame without a name") {
+                let events = feed("event: tool_call\ndata: {\"tool_call_id\": \"t\"}\n\n")
+                guard case .toolCall(let name)? = events.first else { return fail("expected toolCall") }
+                expect(name).to(beNil())
+            }
+            it("parses a tool_result frame") {
+                let events = feed("event: tool_result\ndata: {\"tool_call_id\": \"t\", \"output\": \"ok\"}\n\n")
+                guard case .toolResult? = events.first else { return fail("expected toolResult") }
+            }
+            it("parses a confirm frame") {
+                let events = feed("event: confirm\ndata: {\"confirm_id\": \"c1\", \"tool_name\": \"place_order\", \"description\": \"Buy 1 BTC\"}\n\n")
+                guard case .confirm(let confirmId, let toolName, let description)? = events.first else { return fail("expected confirm") }
+                expect(confirmId).to(equal("c1"))
+                expect(toolName).to(equal("place_order"))
+                expect(description).to(equal("Buy 1 BTC"))
+            }
+            it("leaves the optional confirm fields nil when absent") {
+                let events = feed("event: confirm\ndata: {\"confirm_id\": \"c2\"}\n\n")
+                guard case .confirm(let confirmId, let toolName, let description)? = events.first else { return fail("expected confirm") }
+                expect(confirmId).to(equal("c2"))
+                expect(toolName).to(beNil())
+                expect(description).to(beNil())
+            }
+            it("drops a confirm frame with no confirm_id") {
+                let events = feed("event: confirm\ndata: {\"tool_name\": \"place_order\"}\n\n")
+                expect(events).to(beEmpty())
+            }
+        }
+
         context("frames to ignore") {
-            it("ignores conversation, tool and metadata events without failing") {
+            it("ignores conversation and metadata events without failing") {
                 let raw = "event: conversation\ndata: {\"conversation_id\": \"c1\"}\n\n"
-                    + "event: tool_call\ndata: {\"tool_call_id\": \"t\", \"tool_name\": \"n\"}\n\n"
                     + "event: metadata\ndata: {\"outcome\": \"answered\"}\n\n"
                     + "event: delta\ndata: {\"content\": \"kept\"}\n\n"
                 let events = feed(raw)

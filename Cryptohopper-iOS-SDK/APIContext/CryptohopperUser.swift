@@ -449,6 +449,59 @@ import UIKit
         request.start()
     }
 
+    /// Answers an `AskAIStreamEvent.confirm` and streams the continuation of
+    /// the same conversation — same endpoint, same frame types, same
+    /// completion semantics as `performAskAIStreaming`. Confirmations expire
+    /// after 5 minutes server-side; an expired one arrives as an `.error`
+    /// event and should be surfaced like any other chat error.
+    ///
+    /// - Parameters:
+    ///   - confirmId: (required) The `confirm_id` from the `.confirm` event
+    ///   - action: (required) `.confirm` to run the tool, `.cancel` to skip it
+    public static func confirmAskAIAction(confirmId: String,
+                                          action: AskAIConfirmAction,
+                                          onEvent: @escaping (AskAIStreamEvent) -> Void,
+                                          completion: @escaping (Result<AskAIAnswer?, Error>) -> Void) {
+        let request = HopperAPIAskAIStreamingRequest(confirmId: confirmId,
+                                                     action: action.rawValue,
+                                                     onEvent: onEvent,
+                                                     completion: completion)
+        request.start()
+    }
+
+    /*!
+    * @discussion Get whether Ask AI may use trading tools for this user
+    *
+    */
+    public static func getAskAITradingTools(completion: @escaping (Result<Bool, Error>) -> Void) {
+        HopperAPIGetAskAITradingToolsRequest.init("").request { (data) in
+            guard let enabled = data.enabled else {
+                completion(.failure(CustomError(localizedDescription: "Missing ask_ai_trading_tools in response")))
+                return
+            }
+            completion(.success(enabled))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
+    /*!
+    * @discussion Set whether Ask AI may use trading tools for this user
+    *
+    * @param enabled: (required) Whether the trading tools are allowed
+    */
+    public static func setAskAITradingTools(enabled: Bool, completion: @escaping (Result<Bool, Error>) -> Void) {
+        HopperAPISetAskAITradingToolsRequest.init(enabled: enabled).request { (data) in
+            guard let enabled = data.enabled else {
+                completion(.failure(CustomError(localizedDescription: "Missing ask_ai_trading_tools in response")))
+                return
+            }
+            completion(.success(enabled))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
     /*!
     * @discussion Vote Ask AI (Feedback)
     *

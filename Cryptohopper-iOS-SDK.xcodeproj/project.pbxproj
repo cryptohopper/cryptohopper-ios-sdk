@@ -9,8 +9,33 @@
 /* Begin PBXBuildFile section */
 		0CCD96FB134CBEA7B93F5E8A /* HopperAPIAskAIStreamingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */; };
 		375AE192EF5DDEF2CA81F7ED /* AskAIStreamParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */; };
+		5E42734D5F7A454CA55D5680 /* HopperAPIGetAskAITradingToolsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C144EF67FA4978A6CA9F96 /* HopperAPIGetAskAITradingToolsRequest.swift */; };
 		59576957B76E88660EDCD9F6 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F006D690718FB3AD4ACF2C61 /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
 		631307BD7693BAAF7B72B206 /* AskAIStreamEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211C9DED44706861D3FE369A /* AskAIStreamEvent.swift */; };
+		DE2BBAAA01EC4424A3A82BE8 /* HopperAPISetAskAITradingToolsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50156250DF45999F60C713 /* HopperAPISetAskAITradingToolsRequest.swift */; };
+		FEEEA73B03AF41AB9638F6B3 /* HopperAPIAskAITradingToolsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A37F05641DF465E87C1D005 /* HopperAPIAskAITradingToolsResponse.swift */; };
+		F9A072FDD6E6AB970AE442F4 /* HopperAPIDCABlockCoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D828D4A1E17B48EF2C13FDB /* HopperAPIDCABlockCoinRequest.swift */; };
+		B996CE9745EC8CC988815CF3 /* HopperAPIDCABlockOnePositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2965CA083B0BE0995648ACD /* HopperAPIDCABlockOnePositionRequest.swift */; };
+		4E04C5325F05223D9E9AFDE9 /* HopperAPIDCAResetCoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C933B31603DC2FD9A189E6A4 /* HopperAPIDCAResetCoinRequest.swift */; };
+		224A2422EB4C55DC358EB11D /* HopperAPIDCAResetOnePositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1519FEF2CC4E53321D1C84A /* HopperAPIDCAResetOnePositionRequest.swift */; };
+		531A05BBAF724CC96B822C17 /* HopperAPIGetPortfolioBotsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC78E96F0A35A3AE1D5D52 /* HopperAPIGetPortfolioBotsRequest.swift */; };
+		088B1BE4EC3070BEA0474514 /* HopperAPIGetPortfolioBotsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EC16CD850125F5B51FEBD /* HopperAPIGetPortfolioBotsResponse.swift */; };
+		F8E72D28830F4E31131694AC /* HopperAPICountryAllowExchangeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F7183375E5BD2E4351FB9 /* HopperAPICountryAllowExchangeResponse.swift */; };
+		B12A275271EDB68B93304F96 /* HopperAPIGetCountryAllowExchangeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53FED0C7835B84706CB6572 /* HopperAPIGetCountryAllowExchangeRequest.swift */; };
+		0369D05F2A37255CD627AAF6 /* HopperAPIGetAskAIPagesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212214A21807743110E16A2B /* HopperAPIGetAskAIPagesRequest.swift */; };
+		37D0EB7818755FB23E6BFC5E /* HopperAPIGetAskAIPagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387F1517E22D1A2D77F688F /* HopperAPIGetAskAIPagesResponse.swift */; };
+		35B08449DBE97D02D909F274 /* HopperAPINewAskAISessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE01F35D84C9C4E45018444 /* HopperAPINewAskAISessionRequest.swift */; };
+		E6B1BF238D0D1D85D080B91B /* HopperAPINewAskAISessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B50B2CE1661EB8C2E694E7 /* HopperAPINewAskAISessionResponse.swift */; };
+		E6890322FE042DFCB0417948 /* HopperAPIPerformAskAIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9338F21B62388BA3F658FC2 /* HopperAPIPerformAskAIRequest.swift */; };
+		92ADB1E4FBEBD57F3E22A44A /* HopperAPIPerformAskAIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943D2234AE4C95AE0640F0F /* HopperAPIPerformAskAIResponse.swift */; };
+		24EE8FAA5975891E58CF9F5F /* HopperAPIVoteAskAIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8774688CD6CADC7B4BACE791 /* HopperAPIVoteAskAIRequest.swift */; };
+		FBEE0EBA45479D7778F9E872 /* HopperAPIVoteAskAIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C27B0B50708E5A609CD53E2 /* HopperAPIVoteAskAIResponse.swift */; };
+		18493A910C82E2DCE9F1CC9E /* MarketPortfolioBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA134482994B2AC5ADC191 /* MarketPortfolioBot.swift */; };
+		E3CCB5AAC6906F48917CF53B /* AskAIAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D39DC14B2761A81709AE861 /* AskAIAnswer.swift */; };
+		610FBFFCE4240F57E4F75EB2 /* AskAIChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B22A7B0751D3C5C85193F5 /* AskAIChat.swift */; };
+		8D3B0BEB434411687BBA91CF /* AskAIMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB3CCCEA9D79CFFEFD5CF4 /* AskAIMessage.swift */; };
+		3648C0FFAAD51E7DD193ABD8 /* AskAIPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC4C54C0C2FEE93E321B97F /* AskAIPage.swift */; };
+		739067408BD10E9042247036 /* AskAISuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5298A2540F90D2D44E8A228 /* AskAISuggestion.swift */; };
 		D0021D3C2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */; };
 		D002BE81292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002BE80292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift */; };
 		D002BE83292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002BE82292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift */; };
@@ -493,8 +518,11 @@
 		5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPIAskAIStreamingRequest.swift; sourceTree = "<group>"; };
 		59BF9CCB664C3FC5A211DB13 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamParserSpec.swift; sourceTree = "<group>"; };
+		8A37F05641DF465E87C1D005 /* HopperAPIAskAITradingToolsResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPIAskAITradingToolsResponse.swift; sourceTree = "<group>"; };
+		9C50156250DF45999F60C713 /* HopperAPISetAskAITradingToolsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPISetAskAITradingToolsRequest.swift; sourceTree = "<group>"; };
 		ACA94F67F40DFEC2AE6EB5E6 /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		B8CE3F96121E01342108AEAE /* AskAIStreamParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamParser.swift; sourceTree = "<group>"; };
+		D3C144EF67FA4978A6CA9F96 /* HopperAPIGetAskAITradingToolsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAskAITradingToolsRequest.swift; sourceTree = "<group>"; };
 		D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthWithCodeRequest.swift; sourceTree = "<group>"; };
 		D002BE80292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthDeviceResendEmailRequest.swift; sourceTree = "<group>"; };
 		D002BE82292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift; sourceTree = "<group>"; };
@@ -940,6 +968,28 @@
 		D0F8C512283E5F1B006A8CE7 /* HopperAPIV2OnboardingInitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIV2OnboardingInitResponse.swift; sourceTree = "<group>"; };
 		D0F8C515283E692F006A8CE7 /* OnboardingAPIV2Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAPIV2Spec.swift; sourceTree = "<group>"; };
 		F006D690718FB3AD4ACF2C61 /* Pods_Cryptohopper_iOS_SDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D828D4A1E17B48EF2C13FDB /* HopperAPIDCABlockCoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIDCABlockCoinRequest.swift; sourceTree = "<group>"; };
+		A2965CA083B0BE0995648ACD /* HopperAPIDCABlockOnePositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIDCABlockOnePositionRequest.swift; sourceTree = "<group>"; };
+		C933B31603DC2FD9A189E6A4 /* HopperAPIDCAResetCoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIDCAResetCoinRequest.swift; sourceTree = "<group>"; };
+		E1519FEF2CC4E53321D1C84A /* HopperAPIDCAResetOnePositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIDCAResetOnePositionRequest.swift; sourceTree = "<group>"; };
+		FDDC78E96F0A35A3AE1D5D52 /* HopperAPIGetPortfolioBotsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetPortfolioBotsRequest.swift; sourceTree = "<group>"; };
+		CC0EC16CD850125F5B51FEBD /* HopperAPIGetPortfolioBotsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetPortfolioBotsResponse.swift; sourceTree = "<group>"; };
+		635F7183375E5BD2E4351FB9 /* HopperAPICountryAllowExchangeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPICountryAllowExchangeResponse.swift; sourceTree = "<group>"; };
+		B53FED0C7835B84706CB6572 /* HopperAPIGetCountryAllowExchangeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetCountryAllowExchangeRequest.swift; sourceTree = "<group>"; };
+		212214A21807743110E16A2B /* HopperAPIGetAskAIPagesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAskAIPagesRequest.swift; sourceTree = "<group>"; };
+		4387F1517E22D1A2D77F688F /* HopperAPIGetAskAIPagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAskAIPagesResponse.swift; sourceTree = "<group>"; };
+		5AE01F35D84C9C4E45018444 /* HopperAPINewAskAISessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPINewAskAISessionRequest.swift; sourceTree = "<group>"; };
+		06B50B2CE1661EB8C2E694E7 /* HopperAPINewAskAISessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPINewAskAISessionResponse.swift; sourceTree = "<group>"; };
+		E9338F21B62388BA3F658FC2 /* HopperAPIPerformAskAIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIPerformAskAIRequest.swift; sourceTree = "<group>"; };
+		2943D2234AE4C95AE0640F0F /* HopperAPIPerformAskAIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIPerformAskAIResponse.swift; sourceTree = "<group>"; };
+		8774688CD6CADC7B4BACE791 /* HopperAPIVoteAskAIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIVoteAskAIRequest.swift; sourceTree = "<group>"; };
+		8C27B0B50708E5A609CD53E2 /* HopperAPIVoteAskAIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIVoteAskAIResponse.swift; sourceTree = "<group>"; };
+		DFCA134482994B2AC5ADC191 /* MarketPortfolioBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPortfolioBot.swift; sourceTree = "<group>"; };
+		5D39DC14B2761A81709AE861 /* AskAIAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAIAnswer.swift; sourceTree = "<group>"; };
+		A0B22A7B0751D3C5C85193F5 /* AskAIChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAIChat.swift; sourceTree = "<group>"; };
+		ACBB3CCCEA9D79CFFEFD5CF4 /* AskAIMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAIMessage.swift; sourceTree = "<group>"; };
+		DCC4C54C0C2FEE93E321B97F /* AskAIPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAIPage.swift; sourceTree = "<group>"; };
+		C5298A2540F90D2D44E8A228 /* AskAISuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAISuggestion.swift; sourceTree = "<group>"; };
 		F08C8C8493D361F7DB16057B /* Pods-Cryptohopper-iOS-SDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDKTests/Pods-Cryptohopper-iOS-SDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7B07F7DAA9E49C56D765936 /* Pods-Cryptohopper-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.release.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -975,7 +1025,12 @@
 		1591570A537B53DD3C26F25D /* AskAI */ = {
 			isa = PBXGroup;
 			children = (
+				ABC32D041BE8C3AC2109C3EB /* GetAskAIPages */,
+				879D7521537BD4ECCBC8016B /* NewAskAISession */,
+				DB36C0B4DD84396EF91C16B8 /* PerformAskAI */,
 				C4A9C4CBF2CB789F5B2682AC /* Streaming */,
+				5716F00C843643939208EB42 /* TradingTools */,
+				AED450DF9207911470A2EF8B /* VoteAskAI */,
 			);
 			name = AskAI;
 			path = AskAI;
@@ -999,6 +1054,53 @@
 				F006D690718FB3AD4ACF2C61 /* Pods_Cryptohopper_iOS_SDKTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5716F00C843643939208EB42 /* TradingTools */ = {
+			isa = PBXGroup;
+			children = (
+				8A37F05641DF465E87C1D005 /* HopperAPIAskAITradingToolsResponse.swift */,
+				D3C144EF67FA4978A6CA9F96 /* HopperAPIGetAskAITradingToolsRequest.swift */,
+				9C50156250DF45999F60C713 /* HopperAPISetAskAITradingToolsRequest.swift */,
+			);
+			name = TradingTools;
+			path = TradingTools;
+			sourceTree = "<group>";
+		};
+		ABC32D041BE8C3AC2109C3EB /* GetAskAIPages */ = {
+			isa = PBXGroup;
+			children = (
+				212214A21807743110E16A2B /* HopperAPIGetAskAIPagesRequest.swift */,
+				4387F1517E22D1A2D77F688F /* HopperAPIGetAskAIPagesResponse.swift */,
+			);
+			path = GetAskAIPages;
+			sourceTree = "<group>";
+		};
+		879D7521537BD4ECCBC8016B /* NewAskAISession */ = {
+			isa = PBXGroup;
+			children = (
+				5AE01F35D84C9C4E45018444 /* HopperAPINewAskAISessionRequest.swift */,
+				06B50B2CE1661EB8C2E694E7 /* HopperAPINewAskAISessionResponse.swift */,
+			);
+			path = NewAskAISession;
+			sourceTree = "<group>";
+		};
+		DB36C0B4DD84396EF91C16B8 /* PerformAskAI */ = {
+			isa = PBXGroup;
+			children = (
+				E9338F21B62388BA3F658FC2 /* HopperAPIPerformAskAIRequest.swift */,
+				2943D2234AE4C95AE0640F0F /* HopperAPIPerformAskAIResponse.swift */,
+			);
+			path = PerformAskAI;
+			sourceTree = "<group>";
+		};
+		AED450DF9207911470A2EF8B /* VoteAskAI */ = {
+			isa = PBXGroup;
+			children = (
+				8774688CD6CADC7B4BACE791 /* HopperAPIVoteAskAIRequest.swift */,
+				8C27B0B50708E5A609CD53E2 /* HopperAPIVoteAskAIResponse.swift */,
+			);
+			path = VoteAskAI;
 			sourceTree = "<group>";
 		};
 		C4A9C4CBF2CB789F5B2682AC /* Streaming */ = {
@@ -1138,6 +1240,7 @@
 				D0231C0D255038CC0057A293 /* Strategy */,
 				D0231C0E255038D60057A293 /* Templates */,
 				D0CA11912982B030000749E8 /* Copybot */,
+				1B147E258910189C44B6369D /* Portfoliobot */,
 			);
 			path = Marketplace;
 			sourceTree = "<group>";
@@ -1222,8 +1325,18 @@
 				D0231D01255069D20057A293 /* MarketplaceTemplate.swift */,
 				D05E781525D6BF8E008C4E4A /* MarketplaceSeller.swift */,
 				D0CA11972982BF87000749E8 /* MarketCopyBot.swift */,
+				DFCA134482994B2AC5ADC191 /* MarketPortfolioBot.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1B147E258910189C44B6369D /* Portfoliobot */ = {
+			isa = PBXGroup;
+			children = (
+				FDDC78E96F0A35A3AE1D5D52 /* HopperAPIGetPortfolioBotsRequest.swift */,
+				CC0EC16CD850125F5B51FEBD /* HopperAPIGetPortfolioBotsResponse.swift */,
+			);
+			path = Portfoliobot;
 			sourceTree = "<group>";
 		};
 		D0231C1325503B9D0057A293 /* GetHomePage */ = {
@@ -1521,6 +1634,11 @@
 				D0231DD925519EF90057A293 /* UserTransaction.swift */,
 				D0231DDF25519F650057A293 /* UserMetadata.swift */,
 				D0231D3D25514F650057A293 /* SubscriptionPlan.swift */,
+				5D39DC14B2761A81709AE861 /* AskAIAnswer.swift */,
+				A0B22A7B0751D3C5C85193F5 /* AskAIChat.swift */,
+				ACBB3CCCEA9D79CFFEFD5CF4 /* AskAIMessage.swift */,
+				DCC4C54C0C2FEE93E321B97F /* AskAIPage.swift */,
+				C5298A2540F90D2D44E8A228 /* AskAISuggestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2981,6 +3099,10 @@
 		D07BDDB625472879008081E3 /* Position */ = {
 			isa = PBXGroup;
 			children = (
+				7C551D39F51B2A3B56938675 /* DCABlockCoin */,
+				7A2614313615049AA8FB0420 /* DCABlockOnePosition */,
+				076268BC30E6AAD7D69C1E16 /* DCAResetCoin */,
+				289E10BD7F3D93F0962C1D00 /* DCAResetOnePosition */,
 				D094401025A316C8008A4818 /* SyncPosition */,
 				D094400F25A316BC008A4818 /* GetUnsyncedPositions */,
 				D0231BBA25500F160057A293 /* DeleteMultipleShortPositions */,
@@ -3021,6 +3143,38 @@
 				D017A1222692F2DC000B62F5 /* MoveReservedPositionToOpen */,
 			);
 			path = Position;
+			sourceTree = "<group>";
+		};
+		7C551D39F51B2A3B56938675 /* DCABlockCoin */ = {
+			isa = PBXGroup;
+			children = (
+				1D828D4A1E17B48EF2C13FDB /* HopperAPIDCABlockCoinRequest.swift */,
+			);
+			path = DCABlockCoin;
+			sourceTree = "<group>";
+		};
+		7A2614313615049AA8FB0420 /* DCABlockOnePosition */ = {
+			isa = PBXGroup;
+			children = (
+				A2965CA083B0BE0995648ACD /* HopperAPIDCABlockOnePositionRequest.swift */,
+			);
+			path = DCABlockOnePosition;
+			sourceTree = "<group>";
+		};
+		076268BC30E6AAD7D69C1E16 /* DCAResetCoin */ = {
+			isa = PBXGroup;
+			children = (
+				C933B31603DC2FD9A189E6A4 /* HopperAPIDCAResetCoinRequest.swift */,
+			);
+			path = DCAResetCoin;
+			sourceTree = "<group>";
+		};
+		289E10BD7F3D93F0962C1D00 /* DCAResetOnePosition */ = {
+			isa = PBXGroup;
+			children = (
+				E1519FEF2CC4E53321D1C84A /* HopperAPIDCAResetOnePositionRequest.swift */,
+			);
+			path = DCAResetOnePosition;
 			sourceTree = "<group>";
 		};
 		D0835996272961FE00495D08 /* ReleaseShortPosition */ = {
@@ -3331,8 +3485,18 @@
 			isa = PBXGroup;
 			children = (
 				D0BD0671295C7A6A0077CC6A /* Countries */,
+				60F32054AD6C1BDD0C188975 /* HopperAPICountryAllowExchange */,
 			);
 			path = Platform;
+			sourceTree = "<group>";
+		};
+		60F32054AD6C1BDD0C188975 /* HopperAPICountryAllowExchange */ = {
+			isa = PBXGroup;
+			children = (
+				635F7183375E5BD2E4351FB9 /* HopperAPICountryAllowExchangeResponse.swift */,
+				B53FED0C7835B84706CB6572 /* HopperAPIGetCountryAllowExchangeRequest.swift */,
+			);
+			path = HopperAPICountryAllowExchange;
 			sourceTree = "<group>";
 		};
 		D0BD0671295C7A6A0077CC6A /* Countries */ = {
@@ -4718,6 +4882,31 @@
 				631307BD7693BAAF7B72B206 /* AskAIStreamEvent.swift in Sources */,
 				D6C357EB6E8B7C3E1D33FC41 /* AskAIStreamParser.swift in Sources */,
 				0CCD96FB134CBEA7B93F5E8A /* HopperAPIAskAIStreamingRequest.swift in Sources */,
+				FEEEA73B03AF41AB9638F6B3 /* HopperAPIAskAITradingToolsResponse.swift in Sources */,
+				5E42734D5F7A454CA55D5680 /* HopperAPIGetAskAITradingToolsRequest.swift in Sources */,
+				DE2BBAAA01EC4424A3A82BE8 /* HopperAPISetAskAITradingToolsRequest.swift in Sources */,
+				F9A072FDD6E6AB970AE442F4 /* HopperAPIDCABlockCoinRequest.swift in Sources */,
+				B996CE9745EC8CC988815CF3 /* HopperAPIDCABlockOnePositionRequest.swift in Sources */,
+				4E04C5325F05223D9E9AFDE9 /* HopperAPIDCAResetCoinRequest.swift in Sources */,
+				224A2422EB4C55DC358EB11D /* HopperAPIDCAResetOnePositionRequest.swift in Sources */,
+				531A05BBAF724CC96B822C17 /* HopperAPIGetPortfolioBotsRequest.swift in Sources */,
+				088B1BE4EC3070BEA0474514 /* HopperAPIGetPortfolioBotsResponse.swift in Sources */,
+				F8E72D28830F4E31131694AC /* HopperAPICountryAllowExchangeResponse.swift in Sources */,
+				B12A275271EDB68B93304F96 /* HopperAPIGetCountryAllowExchangeRequest.swift in Sources */,
+				0369D05F2A37255CD627AAF6 /* HopperAPIGetAskAIPagesRequest.swift in Sources */,
+				37D0EB7818755FB23E6BFC5E /* HopperAPIGetAskAIPagesResponse.swift in Sources */,
+				35B08449DBE97D02D909F274 /* HopperAPINewAskAISessionRequest.swift in Sources */,
+				E6B1BF238D0D1D85D080B91B /* HopperAPINewAskAISessionResponse.swift in Sources */,
+				E6890322FE042DFCB0417948 /* HopperAPIPerformAskAIRequest.swift in Sources */,
+				92ADB1E4FBEBD57F3E22A44A /* HopperAPIPerformAskAIResponse.swift in Sources */,
+				24EE8FAA5975891E58CF9F5F /* HopperAPIVoteAskAIRequest.swift in Sources */,
+				FBEE0EBA45479D7778F9E872 /* HopperAPIVoteAskAIResponse.swift in Sources */,
+				18493A910C82E2DCE9F1CC9E /* MarketPortfolioBot.swift in Sources */,
+				E3CCB5AAC6906F48917CF53B /* AskAIAnswer.swift in Sources */,
+				610FBFFCE4240F57E4F75EB2 /* AskAIChat.swift in Sources */,
+				8D3B0BEB434411687BBA91CF /* AskAIMessage.swift in Sources */,
+				3648C0FFAAD51E7DD193ABD8 /* AskAIPage.swift in Sources */,
+				739067408BD10E9042247036 /* AskAISuggestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

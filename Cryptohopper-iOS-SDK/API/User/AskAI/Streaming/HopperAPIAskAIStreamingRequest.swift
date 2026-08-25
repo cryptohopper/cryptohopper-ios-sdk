@@ -9,10 +9,13 @@ import UIKit
 /// Calls POST /v1/user/askai and handles BOTH response shapes:
 /// - text/event-stream (AI Gateway active): incremental AskAIStreamEvents
 /// - application/json (legacy path): decoded AskAIAnswer in the completion
+///
+/// Both the ask ({"page","question"}) and the confirm
+/// ({"confirm_id","action"}) bodies hit the same endpoint and stream the
+/// same frame types, so they share this one request: only `body` differs.
 final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
 
-    private let page: String
-    private let question: String
+    private let body: [String: Any]
     private let onEvent: (AskAIStreamEvent) -> Void
     private let completion: (Result<AskAIAnswer?, Error>) -> Void
 
@@ -22,15 +25,34 @@ final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
     private var jsonBody = Data()
     private var completed = false
 
-    init(page: String,
-         question: String,
+    init(body: [String: Any],
          onEvent: @escaping (AskAIStreamEvent) -> Void,
          completion: @escaping (Result<AskAIAnswer?, Error>) -> Void) {
-        self.page = page
-        self.question = question
+        self.body = body
         self.onEvent = onEvent
         self.completion = completion
         super.init()
+    }
+
+    /// Ask a question: streams the assistant's answer.
+    convenience init(page: String,
+                     question: String,
+                     onEvent: @escaping (AskAIStreamEvent) -> Void,
+                     completion: @escaping (Result<AskAIAnswer?, Error>) -> Void) {
+        self.init(body: ["page": page, "question": question],
+                  onEvent: onEvent,
+                  completion: completion)
+    }
+
+    /// Answer a `.confirm` event: streams the continuation of the same
+    /// conversation. `action` is "confirm" or "cancel".
+    convenience init(confirmId: String,
+                     action: String,
+                     onEvent: @escaping (AskAIStreamEvent) -> Void,
+                     completion: @escaping (Result<AskAIAnswer?, Error>) -> Void) {
+        self.init(body: ["confirm_id": confirmId, "action": action],
+                  onEvent: onEvent,
+                  completion: completion)
     }
 
     func start() {
@@ -71,7 +93,7 @@ final class HopperAPIAskAIStreamingRequest: NSObject, URLSessionDataDelegate {
         request.setValue(UIDevice.current.identifierForVendor?.uuidString ?? "", forHTTPHeaderField: "DeviceId")
         request.setValue(config.apiBasicValidationValue, forHTTPHeaderField: config.apiBasicValidationKey)
         request.setValue(accessToken, forHTTPHeaderField: "access-token")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: ["page": page, "question": question])
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
 
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = 120 // gateway upstream timeout is 90s
