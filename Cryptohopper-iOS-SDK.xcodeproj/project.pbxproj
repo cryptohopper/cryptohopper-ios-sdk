@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		0CCD96FB134CBEA7B93F5E8A /* HopperAPIAskAIStreamingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */; };
 		375AE192EF5DDEF2CA81F7ED /* AskAIStreamParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */; };
+		5E42734D5F7A454CA55D5680 /* HopperAPIGetAskAITradingToolsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C144EF67FA4978A6CA9F96 /* HopperAPIGetAskAITradingToolsRequest.swift */; };
 		59576957B76E88660EDCD9F6 /* Pods_Cryptohopper_iOS_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F006D690718FB3AD4ACF2C61 /* Pods_Cryptohopper_iOS_SDKTests.framework */; };
 		631307BD7693BAAF7B72B206 /* AskAIStreamEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211C9DED44706861D3FE369A /* AskAIStreamEvent.swift */; };
+		DE2BBAAA01EC4424A3A82BE8 /* HopperAPISetAskAITradingToolsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50156250DF45999F60C713 /* HopperAPISetAskAITradingToolsRequest.swift */; };
+		FEEEA73B03AF41AB9638F6B3 /* HopperAPIAskAITradingToolsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A37F05641DF465E87C1D005 /* HopperAPIAskAITradingToolsResponse.swift */; };
 		D0021D3C2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */; };
 		D002BE81292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002BE80292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift */; };
 		D002BE83292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002BE82292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift */; };
@@ -493,8 +496,11 @@
 		5587C9978A676EF22081303D /* HopperAPIAskAIStreamingRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPIAskAIStreamingRequest.swift; sourceTree = "<group>"; };
 		59BF9CCB664C3FC5A211DB13 /* Pods_Cryptohopper_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptohopper_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7933BD30DEFF47AD510CCDC9 /* AskAIStreamParserSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamParserSpec.swift; sourceTree = "<group>"; };
+		8A37F05641DF465E87C1D005 /* HopperAPIAskAITradingToolsResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPIAskAITradingToolsResponse.swift; sourceTree = "<group>"; };
+		9C50156250DF45999F60C713 /* HopperAPISetAskAITradingToolsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPISetAskAITradingToolsRequest.swift; sourceTree = "<group>"; };
 		ACA94F67F40DFEC2AE6EB5E6 /* Pods-Cryptohopper-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; path = "Target Support Files/Pods-Cryptohopper-iOS-SDK/Pods-Cryptohopper-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		B8CE3F96121E01342108AEAE /* AskAIStreamParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AskAIStreamParser.swift; sourceTree = "<group>"; };
+		D3C144EF67FA4978A6CA9F96 /* HopperAPIGetAskAITradingToolsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HopperAPIGetAskAITradingToolsRequest.swift; sourceTree = "<group>"; };
 		D0021D3B2718789F0050D7CC /* HopperAPIAuthWithCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthWithCodeRequest.swift; sourceTree = "<group>"; };
 		D002BE80292B9F5300E74B6A /* HopperAPIAuthDeviceResendEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthDeviceResendEmailRequest.swift; sourceTree = "<group>"; };
 		D002BE82292B9F6C00E74B6A /* HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperAPIAuthDeviceCheckIfAuthorizedRequest.swift; sourceTree = "<group>"; };
@@ -976,6 +982,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A9C4CBF2CB789F5B2682AC /* Streaming */,
+				5716F00C843643939208EB42 /* TradingTools */,
 			);
 			name = AskAI;
 			path = AskAI;
@@ -999,6 +1006,17 @@
 				F006D690718FB3AD4ACF2C61 /* Pods_Cryptohopper_iOS_SDKTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5716F00C843643939208EB42 /* TradingTools */ = {
+			isa = PBXGroup;
+			children = (
+				8A37F05641DF465E87C1D005 /* HopperAPIAskAITradingToolsResponse.swift */,
+				D3C144EF67FA4978A6CA9F96 /* HopperAPIGetAskAITradingToolsRequest.swift */,
+				9C50156250DF45999F60C713 /* HopperAPISetAskAITradingToolsRequest.swift */,
+			);
+			name = TradingTools;
+			path = TradingTools;
 			sourceTree = "<group>";
 		};
 		C4A9C4CBF2CB789F5B2682AC /* Streaming */ = {
@@ -4718,6 +4736,9 @@
 				631307BD7693BAAF7B72B206 /* AskAIStreamEvent.swift in Sources */,
 				D6C357EB6E8B7C3E1D33FC41 /* AskAIStreamParser.swift in Sources */,
 				0CCD96FB134CBEA7B93F5E8A /* HopperAPIAskAIStreamingRequest.swift in Sources */,
+				FEEEA73B03AF41AB9638F6B3 /* HopperAPIAskAITradingToolsResponse.swift in Sources */,
+				5E42734D5F7A454CA55D5680 /* HopperAPIGetAskAITradingToolsRequest.swift in Sources */,
+				DE2BBAAA01EC4424A3A82BE8 /* HopperAPISetAskAITradingToolsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
