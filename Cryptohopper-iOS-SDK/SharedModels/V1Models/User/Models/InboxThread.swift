@@ -105,7 +105,9 @@ public struct InboxThread: Codable {
         typeHint = InboxLenient.string(c, .typeHint)
         status = InboxLenient.string(c, .status)
         attention = InboxLenient.bool(c, .attention)
-        timeline = try? c.decodeIfPresent([InboxTimelineEntry].self, forKey: .timeline)
+        let decodedTimeline = try? c.decodeIfPresent([FailableDecodable<InboxTimelineEntry>].self,
+                                                     forKey: .timeline)
+        timeline = decodedTimeline?.compactMap(\.value)
         hopperId = InboxLenient.int(c, .hopperId)
         episodeId = InboxLenient.int(c, .episodeId)
         episodeOpened = InboxLenient.int(c, .episodeOpened)

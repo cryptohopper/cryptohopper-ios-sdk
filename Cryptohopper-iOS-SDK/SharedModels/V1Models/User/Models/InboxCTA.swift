@@ -24,6 +24,11 @@ public struct InboxCTA: Codable {
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         label = InboxLenient.string(c, .label) ?? ""
-        url = InboxLenient.string(c, .url) ?? ""
+        guard let decodedURL = InboxLenient.string(c, .url), !decodedURL.isEmpty else {
+            throw DecodingError.dataCorruptedError(forKey: .url,
+                                                   in: c,
+                                                   debugDescription: "url must be a non-empty string")
+        }
+        url = decodedURL
     }
 }

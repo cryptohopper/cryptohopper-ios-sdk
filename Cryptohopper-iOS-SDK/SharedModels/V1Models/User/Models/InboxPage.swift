@@ -5,16 +5,6 @@
 
 import Foundation
 
-private struct FailableDecodable<Value: Decodable>: Decodable {
-
-    let value: Value?
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        value = try? container.decode(Value.self)
-    }
-}
-
 /// The `data` of `GET /v1/user/inbox`.
 public struct InboxPage: Codable {
 
