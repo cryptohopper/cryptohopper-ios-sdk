@@ -171,6 +171,58 @@ import UIKit
     }
     
     /*!
+    * @discussion Get the mobile inbox feed (board, blog and event threads)
+    *
+    * @param cursor: (optional) the `nextCursor` of the previous page
+    * @param limit: (optional) page size, 1...50, default 30
+    * @param lang: (optional) language code for board/blog content
+    */
+    public static func getInbox(cursor: String?, limit: Int = 30, lang: String? = nil, completion: @escaping (Result<InboxPage?, Error>) -> Void) {
+        HopperAPIGetInboxRequest.init(cursor: cursor, limit: limit, lang: lang).request { (data) in
+            completion(.success(data.page))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
+    /*!
+    * @discussion Get the number of unread inbox threads
+    *
+    */
+    public static func getInboxUnread(completion: @escaping (Result<Int?, Error>) -> Void) {
+        HopperAPIGetInboxUnreadRequest.init("").request { (data) in
+            completion(.success(data.unread?.unread))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
+    /*!
+    * @discussion Mark one inbox thread as read
+    *
+    * @param threadKey: (required) the thread's `threadKey`
+    */
+    public static func markInboxThreadRead(threadKey: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        HopperAPIMarkInboxReadRequest.init(threadKey: threadKey).request { (data) in
+            completion(.success(data.result != nil))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
+    /*!
+    * @discussion Mark the whole inbox as read
+    *
+    */
+    public static func markAllInboxRead(completion: @escaping (Result<Bool, Error>) -> Void) {
+        HopperAPIMarkInboxReadRequest.init(all: true).request { (data) in
+            completion(.success(data.result?.all ?? false))
+        } _: { (err) in
+            completion(.failure(err))
+        }
+    }
+
+    /*!
     * @discussion Change Password
     *
     * @param newPassword: (required) your new password
