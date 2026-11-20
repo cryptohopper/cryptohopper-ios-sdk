@@ -88,7 +88,12 @@ public struct InboxThread: Codable {
 
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        threadKey = InboxLenient.string(c, .threadKey) ?? ""
+        guard let decodedThreadKey = InboxLenient.string(c, .threadKey), !decodedThreadKey.isEmpty else {
+            throw DecodingError.dataCorruptedError(forKey: .threadKey,
+                                                   in: c,
+                                                   debugDescription: "thread_key must be a non-empty string")
+        }
+        threadKey = decodedThreadKey
         source = InboxLenient.string(c, .source) ?? ""
         title = InboxLenient.string(c, .title) ?? ""
         snippet = InboxLenient.string(c, .snippet) ?? ""

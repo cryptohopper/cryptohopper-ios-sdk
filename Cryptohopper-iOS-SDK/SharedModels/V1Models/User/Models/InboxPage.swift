@@ -5,6 +5,16 @@
 
 import Foundation
 
+private struct FailableDecodable<Value: Decodable>: Decodable {
+
+    let value: Value?
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        value = try? container.decode(Value.self)
+    }
+}
+
 /// The `data` of `GET /v1/user/inbox`.
 public struct InboxPage: Codable {
 
@@ -30,7 +40,8 @@ public struct InboxPage: Codable {
 
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        threads = (try? c.decodeIfPresent([InboxThread].self, forKey: .threads)) ?? []
+        let decodedThreads = try? c.decodeIfPresent([FailableDecodable<InboxThread>].self, forKey: .threads)
+        threads = decodedThreads?.compactMap(\.value) ?? []
         nextCursor = InboxLenient.string(c, .nextCursor)
         updatesEnabled = InboxLenient.bool(c, .updatesEnabled) ?? false
         eventsEnabled = InboxLenient.bool(c, .eventsEnabled) ?? false
