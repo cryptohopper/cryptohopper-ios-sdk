@@ -32,8 +32,8 @@ public struct InboxPage: Codable {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         let decodedThreads = try? c.decodeIfPresent([FailableDecodable<InboxThread>].self, forKey: .threads)
         threads = decodedThreads?.compactMap(\.value) ?? []
-        nextCursor = InboxLenient.string(c, .nextCursor)
-        updatesEnabled = InboxLenient.bool(c, .updatesEnabled) ?? false
-        eventsEnabled = InboxLenient.bool(c, .eventsEnabled) ?? false
+        nextCursor = LenientDecoding.string(c, .nextCursor)
+        updatesEnabled = LenientDecoding.bool(c, .updatesEnabled) ?? false
+        eventsEnabled = LenientDecoding.bool(c, .eventsEnabled) ?? false
     }
 }

@@ -65,6 +65,7 @@ class HopperAPIRequest<T:Codable> {
         
         components.path = path
         components.queryItems = queryItems
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
         return components.url
     }
     

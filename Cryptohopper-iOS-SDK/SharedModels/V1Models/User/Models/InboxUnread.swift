@@ -20,6 +20,6 @@ public struct InboxUnread: Codable {
 
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        unread = InboxLenient.int(c, .unread) ?? 0
+        unread = LenientDecoding.int(c, .unread) ?? 0
     }
 }

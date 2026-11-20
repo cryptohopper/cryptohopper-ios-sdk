@@ -231,7 +231,7 @@ import UIKit
     *
     */
     public static func markAllInboxRead(completion: @escaping (Result<Bool, Error>) -> Void) {
-        HopperAPIMarkInboxReadRequest.init(all: true).request { (data) in
+        HopperAPIMarkInboxReadRequest.markAll().request { (data) in
             guard let result = data.result else {
                 completion(.failure(CustomError(localizedDescription: "Missing data in inbox mark-read response")))
                 return

@@ -27,8 +27,8 @@ public struct InboxTimelineEntry: Codable {
 
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        id = InboxLenient.int(c, .id) ?? 0
-        text = InboxLenient.string(c, .text) ?? ""
-        created = InboxLenient.int(c, .created) ?? 0
+        id = LenientDecoding.int(c, .id) ?? 0
+        text = LenientDecoding.string(c, .text) ?? ""
+        created = LenientDecoding.int(c, .created) ?? 0
     }
 }

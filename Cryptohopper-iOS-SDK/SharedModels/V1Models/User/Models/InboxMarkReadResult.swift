@@ -23,7 +23,7 @@ public struct InboxMarkReadResult: Codable {
 
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        all = InboxLenient.bool(c, .all) ?? false
-        threadKey = InboxLenient.string(c, .threadKey)
+        all = LenientDecoding.bool(c, .all) ?? false
+        threadKey = LenientDecoding.string(c, .threadKey)
     }
 }

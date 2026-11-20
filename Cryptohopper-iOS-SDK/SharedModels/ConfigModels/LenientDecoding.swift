@@ -1,5 +1,5 @@
 //
-//  InboxLenient.swift
+//  LenientDecoding.swift
 //  Cryptohopper-iOS-SDK
 //
 
@@ -15,13 +15,13 @@ struct FailableDecodable<Value: Decodable>: Decodable {
     }
 }
 
-/// Lenient decoding helpers for the inbox payloads: the monolith may send
-/// Ints and Bools as numbers, 0/1, or numeric strings.
-enum InboxLenient {
+/// Shared helpers for payloads whose scalar types vary between API responses.
+enum LenientDecoding {
 
     static func string<K: CodingKey>(_ c: KeyedDecodingContainer<K>, _ key: K) -> String? {
         if let s = try? c.decodeIfPresent(String.self, forKey: key) { return s }
         if let i = try? c.decodeIfPresent(Int.self, forKey: key) { return String(i) }
+        if let d = try? c.decodeIfPresent(Double.self, forKey: key) { return String(d) }
         return nil
     }
 

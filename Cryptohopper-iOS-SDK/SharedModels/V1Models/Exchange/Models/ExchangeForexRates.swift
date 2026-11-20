@@ -33,17 +33,9 @@ public class ExchangeForexRates : Codable {
     
     public required init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        quoteCurrency = ExchangeForexRates.string(c, .quoteCurrency)
-        currency = ExchangeForexRates.string(c, .currency)
-        exchangeRate = ExchangeForexRates.string(c, .exchangeRate)
-    }
-    
-    /// Decodes a String, Double or Int into a String; nil if absent or null.
-    private static func string(_ c: KeyedDecodingContainer<CodingKeys>, _ key: CodingKeys) -> String? {
-        if let s = try? c.decodeIfPresent(String.self, forKey: key) { return s }
-        if let i = try? c.decodeIfPresent(Int.self, forKey: key) { return String(i) }
-        if let d = try? c.decodeIfPresent(Double.self, forKey: key) { return String(d) }
-        return nil
+        quoteCurrency = LenientDecoding.string(c, .quoteCurrency)
+        currency = LenientDecoding.string(c, .currency)
+        exchangeRate = LenientDecoding.string(c, .exchangeRate)
     }
     
 }

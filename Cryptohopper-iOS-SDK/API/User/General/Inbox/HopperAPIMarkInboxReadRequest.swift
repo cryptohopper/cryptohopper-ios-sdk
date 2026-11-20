@@ -15,10 +15,11 @@ class HopperAPIMarkInboxReadRequest: HopperAPIRequest<HopperAPIMarkInboxReadResp
     }
 
     /// Marks the whole inbox read. The endpoint takes the flag as 1, not a JSON bool.
-    convenience init(all: Bool) {
-        self.init()
-        self.changeUrlPath(path: "/v1" + "/user/inboxmarkread")
-        addBodyItem(name: "all", value: all ? 1 : 0)
+    static func markAll() -> HopperAPIMarkInboxReadRequest {
+        let request = HopperAPIMarkInboxReadRequest()
+        request.changeUrlPath(path: "/v1" + "/user/inboxmarkread")
+        request.addBodyItem(name: "all", value: 1)
+        return request
     }
 
     override var httpMethod: HopperAPIHttpMethod {

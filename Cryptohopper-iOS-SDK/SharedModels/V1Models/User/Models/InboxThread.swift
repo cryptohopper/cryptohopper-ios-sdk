@@ -88,28 +88,28 @@ public struct InboxThread: Codable {
 
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        guard let decodedThreadKey = InboxLenient.string(c, .threadKey), !decodedThreadKey.isEmpty else {
+        guard let decodedThreadKey = LenientDecoding.string(c, .threadKey), !decodedThreadKey.isEmpty else {
             throw DecodingError.dataCorruptedError(forKey: .threadKey,
                                                    in: c,
                                                    debugDescription: "thread_key must be a non-empty string")
         }
         threadKey = decodedThreadKey
-        source = InboxLenient.string(c, .source) ?? ""
-        title = InboxLenient.string(c, .title) ?? ""
-        snippet = InboxLenient.string(c, .snippet) ?? ""
-        body = InboxLenient.string(c, .body) ?? ""
+        source = LenientDecoding.string(c, .source) ?? ""
+        title = LenientDecoding.string(c, .title) ?? ""
+        snippet = LenientDecoding.string(c, .snippet) ?? ""
+        body = LenientDecoding.string(c, .body) ?? ""
         cta = try? c.decodeIfPresent(InboxCTA.self, forKey: .cta)
-        created = InboxLenient.int(c, .created) ?? 0
-        unread = InboxLenient.bool(c, .unread) ?? false
-        muted = InboxLenient.bool(c, .muted) ?? false
-        typeHint = InboxLenient.string(c, .typeHint)
-        status = InboxLenient.string(c, .status)
-        attention = InboxLenient.bool(c, .attention)
+        created = LenientDecoding.int(c, .created) ?? 0
+        unread = LenientDecoding.bool(c, .unread) ?? false
+        muted = LenientDecoding.bool(c, .muted) ?? false
+        typeHint = LenientDecoding.string(c, .typeHint)
+        status = LenientDecoding.string(c, .status)
+        attention = LenientDecoding.bool(c, .attention)
         let decodedTimeline = try? c.decodeIfPresent([FailableDecodable<InboxTimelineEntry>].self,
                                                      forKey: .timeline)
         timeline = decodedTimeline?.compactMap(\.value)
-        hopperId = InboxLenient.int(c, .hopperId)
-        episodeId = InboxLenient.int(c, .episodeId)
-        episodeOpened = InboxLenient.int(c, .episodeOpened)
+        hopperId = LenientDecoding.int(c, .hopperId)
+        episodeId = LenientDecoding.int(c, .episodeId)
+        episodeOpened = LenientDecoding.int(c, .episodeOpened)
     }
 }
